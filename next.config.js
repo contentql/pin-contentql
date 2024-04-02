@@ -10,6 +10,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'payload-in-next-production.up.railway.app', //TODO: update accordingly
       },
+      {
+        protocol: 'https',
+        hostname: 'r2.cloudflarestorage.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'https://pub-128201e10cff4a06a89e702ab9da2b1e.r2.dev',
+      },
     ],
   },
 };
