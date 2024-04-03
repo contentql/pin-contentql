@@ -1,12 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import template1 from "/public/images/template/template-1.png";
+import template2 from "/public/images/template/template-2.png";
+import template3 from "/public/images/template/template-3.png";
 
 function TemplateDesigns() {
   const templates = [
     {
       id: 1,
       name: "Template 1",
-      backgroundImage: "images/template/template-1.png",
+      backgroundImage: template1,
       design:
         "https://cloud.contentql.io/projects/20156605/editor/page/4837646",
       preview: "https://multiworkshop.resonateaes.com/",
@@ -15,7 +18,7 @@ function TemplateDesigns() {
     {
       id: 2,
       name: "Template 2",
-      backgroundImage: "images/template/template-2.png",
+      backgroundImage: template2,
       design:
         "https://cloud.contentql.io/projects/20156900/editor/page/4837927",
       preview: "https://podcastlanding.resonateaes.com/",
@@ -24,7 +27,7 @@ function TemplateDesigns() {
     {
       id: 3,
       name: "Template 3",
-      backgroundImage: "images/template/template-3.png",
+      backgroundImage: template3,
       design:
         "https://cloud.contentql.io/projects/20156911/editor/page/4837944",
       preview: "https://halbor.resonateaes.com/",
