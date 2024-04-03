@@ -141,7 +141,7 @@ export default function HelpCenterView() {
                             {/* Question */}
                             <div className="accordion-thumb">
                               <h5 className="s-22 w-700">
-                                What is Martex and how does it work?
+                                What is ContentQL and how does it work?
                               </h5>
                             </div>
                             {/* Answer */}
@@ -269,7 +269,7 @@ export default function HelpCenterView() {
                             {/* Question */}
                             <div className="accordion-thumb">
                               <h5 className="s-22 w-700">
-                                Which languages does Martex support?
+                                Which languages does ContentQL support?
                               </h5>
                             </div>
                             {/* Answer */}
@@ -616,7 +616,7 @@ export default function HelpCenterView() {
                             {/* Question */}
                             <div className="accordion-thumb">
                               <h5 className="s-22 w-700">
-                                How much does Martex cost?
+                                How much does ContentQL cost?
                               </h5>
                             </div>
                             {/* Answer */}

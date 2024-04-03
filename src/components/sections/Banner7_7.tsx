@@ -14,7 +14,7 @@ export default function Banner7_7() {
                   <div className="banner-7-txt text-center">
                     {/* Title */}
                     <h2 className="s-50 w-700">
-                      Starting with Martex is easy, fast and free
+                      Starting with ContentQL is easy, fast and free
                     </h2>
                     {/* Buttons */}
                     <div className="btns-group">

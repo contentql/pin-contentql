@@ -40,7 +40,7 @@ export default function MobileMenu() {
             style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}
           >
             <li  >
-              <Link href="#lnk-1">Why Martex?</Link>
+              <Link href="#lnk-1">Why ContentQL?</Link>
             </li>
             <li  >
               <Link href="#lnk-2">Integrations</Link>

@@ -10,7 +10,7 @@ export default function Brands1_22() {
             <div className="col-md-10 col-lg-9">
               <div className="brands-title mb-50">
                 <h5 className="s-19 w-700">
-                  Over 100 companies sign up Martex every day!
+                  Over 100 companies sign up ContentQL every day!
                 </h5>
               </div>
             </div>

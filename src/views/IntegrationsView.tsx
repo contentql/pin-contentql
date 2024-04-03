@@ -409,7 +409,7 @@ export default function IntegrationsView() {
                       <div className="banner-3-txt color--white">
                         {/* Title */}
                         <h2 className="s-48 w-700">
-                          Starting with Martex is easy, fast and free
+                          Starting with ContentQL is easy, fast and free
                         </h2>
                         {/* Text */}
                         <p className="p-xl">

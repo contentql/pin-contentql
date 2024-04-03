@@ -573,7 +573,7 @@ export default function PricingView() {
                       <h6 className="s-18 w-700">Money Back Guarantee</h6>
                       {/* Text */}
                       <p>
-                        Explore Martex Premium for 14 days. If it’s not a
+                        Explore ContentQL Premium for 14 days. If it’s not a
                         perfect fit, receive a full refund.
                       </p>
                     </div>
@@ -623,7 +623,7 @@ export default function PricingView() {
                       <div className="question mb-35 wow fadeInUp">
                         {/* Question */}
                         <h5 className="s-22 w-700">
-                          <span>1.</span> Getting started with Martex
+                          <span>1.</span> Getting started with ContentQL
                         </h5>
                         {/* Answer */}
                         <p className="color--grey">
