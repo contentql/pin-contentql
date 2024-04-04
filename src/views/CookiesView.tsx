@@ -6,7 +6,7 @@ export default function CookiesView() {
     <>
       <Layout
         headerStyle={1}
-        footerStyle={1}
+        footerStyle={3}
         headerCls="navbar-dark inner-page-header"
       >
         <section
