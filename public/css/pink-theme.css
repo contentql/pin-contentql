@@ -10949,6 +10949,7 @@ img.footer-logo-dark {
 }
 
 .footer .foo-links li p {
+  font-size: medium;
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -13635,12 +13636,11 @@ html {
   justify-content: center;
   align-items: center;
   gap: 30px;
- 
 }
 .search-input {
   width: 40vw;
   padding-top: 8px;
-  padding-bottom:8px;
+  padding-bottom: 8px;
   border-radius: 30px;
   padding-left: 12px;
   border-color: black;
@@ -13679,11 +13679,11 @@ html {
 .individual-item.active {
   color: #b476e5;
 }
-.template-not-found{
-  color:red;
+.template-not-found {
+  color: red;
   text-align: center;
 }
 
-.page-header{
+.page-header {
   margin-top: 60px;
 }
