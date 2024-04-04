@@ -19,7 +19,7 @@ export default function Ct02_34() {
               <div className="txt-block right-column wow fadeInLeft">
                 {/* Title */}
                 <h2 className="s-46 w-700">
-                  Bring your ideas to life with Martex
+                  Bring your ideas to life with ContentQL
                 </h2>
                 {/* Text */}
                 <p>

@@ -28,7 +28,7 @@ export default function Faqs3_13() {
                   <div className="question mb-35 wow fadeInUp">
                     {/* Question */}
                     <h5 className="s-22 w-700">
-                      <span>1.</span> Getting started with Martex
+                      <span>1.</span> Getting started with ContentQL
                     </h5>
                     {/* Answer */}
                     <p className="color--grey">
@@ -83,7 +83,7 @@ export default function Faqs3_13() {
                   <div className="question mb-35 wow fadeInUp">
                     {/* Question */}
                     <h5 className="s-22 w-700">
-                      <span>4.</span> How does Martex handle my privacy?
+                      <span>4.</span> How does ContentQL handle my privacy?
                     </h5>
                     {/* Answer */}
                     <p className="color--grey">

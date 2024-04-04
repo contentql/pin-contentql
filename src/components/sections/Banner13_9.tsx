@@ -16,7 +16,7 @@ export default function Banner13_9() {
                   <div className="banner-13-txt color--white">
                     {/* Title */}
                     <h2 className="s-46 w-700">
-                      Getting started with Martex today!
+                      Getting started with ContentQL today!
                     </h2>
                     {/* Text */}
                     <p className="p-lg">

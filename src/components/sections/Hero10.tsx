@@ -13,7 +13,9 @@ export default function Hero10() {
             <div className="col-md-6">
               <div className="hero-10-txt wow fadeInRight">
                 {/* Title */}
-                <h2 className="s-52 w-700">Keep your files safe with Martex</h2>
+                <h2 className="s-52 w-700">
+                  Keep your files safe with ContentQL
+                </h2>
                 {/* Text */}
                 <h4 className="s-28 color--grey">
                   Your content is secure and stays private anywhere, anytime

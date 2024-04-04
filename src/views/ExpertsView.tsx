@@ -574,7 +574,7 @@ export default function ExpertsView() {
                 <div className="col-md-10 col-lg-9">
                   <div className="section-title mb-70">
                     {/* Title */}
-                    <h2 className="s-52 w-700">Open Roles at Martex</h2>
+                    <h2 className="s-52 w-700">Open Roles at ContentQL</h2>
                     {/* Text */}
                     <p className="p-lg">
                       We’re building a better way to work, fueled by

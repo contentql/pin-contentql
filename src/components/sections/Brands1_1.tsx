@@ -10,7 +10,7 @@ export default function Brands1_1() {
             <div className="col-md-10 col-lg-9">
               <div className="brands-title mb-50">
                 <h5 className="s-18">
-                  Martex is loved and trusted by thousands:
+                  ContentQL is loved and trusted by thousands:
                 </h5>
               </div>
             </div>

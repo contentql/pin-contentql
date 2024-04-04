@@ -155,7 +155,7 @@ export default function Footer3() {
               <div className="col">
                 <div className="footer-copyright">
                   <p className="p-sm">
-                    © 2023 Martex. <span>All Rights Reserved</span>
+                    © 2023 ContentQL. <span>All Rights Reserved</span>
                   </p>
                 </div>
               </div>

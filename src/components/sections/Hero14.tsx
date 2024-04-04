@@ -12,7 +12,7 @@ export default function Hero14() {
               <div className="hero-14-txt color--white wow fadeInUp">
                 {/* Title */}
                 <h2 className="s-60 w-700">
-                  Automate your way to success with Martex
+                  Automate your way to success with ContentQL
                 </h2>
                 {/* Text */}
                 <p className="s-21">
