@@ -2,6 +2,7 @@
   "watch": [
     "server.ts",
     "src/collections/**/*.ts",
+    "src/blocks/**/*.ts",
     "src/trpc/**/*.ts",
     "src/routers/**/*.ts"
   ],
