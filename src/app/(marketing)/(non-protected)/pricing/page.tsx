@@ -3,8 +3,16 @@ import { Metadata } from "next";
 import PricingView from "@/views/PricingView";
 
 export const metadata: Metadata = {
-  title: "contentQL",
-  description: "This is a pricing page",
+  title: "pricing",
+  description: "Simple, Flexible Pricing",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    title: "pricing",
+    description: "Simple, Flexible Pricing",
+    url: "https://contentql.com/pricing",
+    images: "/images/favicon.png",
+  },
 };
 
 const Home = () => {

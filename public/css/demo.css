@@ -9,6 +9,15 @@
   Tags: Responsive, HTML5, JThemes, Landing, Software, Mobile App, SaaS, Startup, Creative, Digital Produc
 */
 
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta.woff2") format("woff2");
+  src: url("/fonts/Averta.woff") format("woff");
+  src: url("/fonts/Averta.ttf") format("truetype");
+  src: url("/fonts/Averta.otf") format("otf");
+  /* Add other font weights/styles as needed */
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
@@ -57,7 +66,7 @@ h4,
 h5,
 h6 {
   color: #353f4f;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   line-height: 1.35;
   font-weight: 700;
   letter-spacing: 0;

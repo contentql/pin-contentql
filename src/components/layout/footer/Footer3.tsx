@@ -44,7 +44,7 @@ export default function Footer3() {
                   </li>
                   <li>
                     <p>
-                      <Link href="/testimonials">Customers</Link>
+                      <Link href="#">Customers</Link>
                     </p>
                   </li>
                   <li>
@@ -65,7 +65,7 @@ export default function Footer3() {
                 <ul className="foo-links clearfix">
                   <li>
                     <p>
-                      <Link href="/features">Integration</Link>
+                      <Link href="/integrations">Integration</Link>
                     </p>
                   </li>
                   <li>
@@ -75,7 +75,7 @@ export default function Footer3() {
                   </li>
                   <li>
                     <p>
-                      <Link href="/pricing-1">Pricing</Link>
+                      <Link href="/pricing">Pricing</Link>
                     </p>
                   </li>
                   <li>
