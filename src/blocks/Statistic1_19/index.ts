@@ -11,11 +11,13 @@ export const Statistic1_19: Block = {
       name: "integer",
       label: "Integer",
       type: "number",
+      required: true,
     },
     {
       name: "description",
       label: "Description",
       type: "textarea",
+      required: true,
     },
   ],
 };

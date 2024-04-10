@@ -11,11 +11,13 @@ export const Banner7_7: Block = {
       name: "title",
       label: "Title",
       type: "text",
+      required: true,
     },
     {
       name: "description",
       label: "Description",
       type: "textarea",
+      required: true,
     },
   ],
 };

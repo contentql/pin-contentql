@@ -11,18 +11,41 @@ export const Ct02_45: Block = {
       name: "features",
       label: "Features",
       type: "array",
+      required: true,
       fields: [
         {
           name: "title",
           label: "Title",
           type: "text",
+          required: true,
         },
         {
           name: "description",
           label: "Description",
           type: "textarea",
+          required: true,
+        },
+        {
+          name: "feature_image",
+          label: "Feature Image",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+          admin: {
+            description: "feature image",
+          },
         },
       ],
+    },
+    {
+      name: "background_image",
+      label: "Background Image",
+      type: "upload",
+      relationTo: "media",
+      required: true,
+      admin: {
+        description: "background image",
+      },
     },
   ],
 };

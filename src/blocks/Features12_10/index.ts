@@ -11,43 +11,61 @@ export const Features12_10: Block = {
       name: "caption",
       label: "Caption",
       type: "text",
+      required: true,
     },
     {
       name: "title",
       label: "Title",
       type: "text",
+      required: true,
     },
     {
       name: "subtitle",
       label: "Subtitle",
       type: "textarea",
+      required: true,
     },
     {
       name: "points",
       label: "Points",
+      required: true,
       type: "array",
       fields: [
         {
           name: "point",
           label: "Point",
           type: "textarea",
+          required: true,
         },
       ],
     },
     {
       name: "features",
       label: "Features",
+      required: true,
       type: "array",
       fields: [
         {
           name: "title",
           label: "Title",
           type: "text",
+          required: true,
         },
         {
           name: "description",
           label: "Description",
           type: "textarea",
+          required: true,
+        },
+        {
+          name: "feature_image",
+          label: "Feature Image",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+          admin: {
+            description: "feature image",
+          },
         },
       ],
     },
