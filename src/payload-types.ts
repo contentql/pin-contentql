@@ -106,26 +106,156 @@ export interface Page {
   layout?:
     | (
         | {
-            title?: string | null;
-            subtitle?: string | null;
+            title: string;
+            subtitle: string;
+            background_image: string | Media;
             id?: string | null;
             blockName?: string | null;
-            blockType: 'hero';
+            blockType: 'hero5';
           }
         | {
-            caption?: string | null;
-            title?: string | null;
-            subtitle?: string | null;
-            heading?: string | null;
-            points?:
-              | {
-                  point?: string | null;
-                  id?: string | null;
-                }[]
-              | null;
+            caption: string;
+            title: string;
+            subtitle: string;
+            heading: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
             id?: string | null;
             blockName?: string | null;
-            blockType: 'creator1';
+            blockType: 'lnk1_23';
+          }
+        | {
+            caption: string;
+            title: string;
+            paragraphs: {
+              paragraph: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct01_28';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            heading: string;
+            paragraph: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct02_44';
+          }
+        | {
+            caption: string;
+            title: string;
+            subtitle: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            features: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features12_10';
+          }
+        | {
+            statistics: {
+              integer: number;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'statistic1_19';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk2_22';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            features: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features11_10';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            features: {
+              title: string;
+              description: string;
+              feature_image: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features2_21';
+          }
+        | {
+            features: {
+              s_no: number;
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct04_16';
+          }
+        | {
+            features: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct02_45';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            reviews: {
+              review: string;
+              name: string;
+              designation: string;
+              reviewer_image: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'reviews2_8';
+          }
+        | {
+            title: string;
+            description: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'banner7_7';
           }
       )[]
     | null;

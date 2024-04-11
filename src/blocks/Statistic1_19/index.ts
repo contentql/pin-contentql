@@ -8,16 +8,24 @@ export const Statistic1_19: Block = {
   },
   fields: [
     {
-      name: "integer",
-      label: "Integer",
-      type: "number",
+      name: "statistics",
+      label: "Statistics",
       required: true,
-    },
-    {
-      name: "description",
-      label: "Description",
-      type: "textarea",
-      required: true,
+      type: "array",
+      fields: [
+        {
+          name: "integer",
+          label: "Integer",
+          type: "number",
+          required: true,
+        },
+        {
+          name: "description",
+          label: "Description",
+          type: "textarea",
+          required: true,
+        },
+      ],
     },
   ],
 };

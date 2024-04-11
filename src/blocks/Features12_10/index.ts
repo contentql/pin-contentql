@@ -57,16 +57,6 @@ export const Features12_10: Block = {
           type: "textarea",
           required: true,
         },
-        {
-          name: "feature_image",
-          label: "Feature Image",
-          type: "upload",
-          relationTo: "media",
-          required: true,
-          admin: {
-            description: "feature image",
-          },
-        },
       ],
     },
   ],
