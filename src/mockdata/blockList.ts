@@ -1,4 +1,5 @@
 import Banner7_7 from "@/components/sections/Banner7_7";
+import Ct01_28 from "@/components/sections/Ct01_28";
 import Ct02_44 from "@/components/sections/Ct02_44";
 import Ct02_45 from "@/components/sections/Ct02_45";
 import Ct04_16 from "@/components/sections/Ct04_16";
@@ -14,6 +15,7 @@ import Statistic1_19 from "@/components/sections/Statistic1_19";
 export const blocks: any = {
   hero5: Hero5,
   lnk1_23: Lnk1_23,
+  ct01_28: Ct01_28,
   ct02_44: Ct02_44,
   features12_10: Features12_10,
   statistic1_19: Statistic1_19,

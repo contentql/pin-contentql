@@ -20,6 +20,12 @@ export const Statistic1_19: Block = {
           required: true,
         },
         {
+          name: "character",
+          label: "Character",
+          type: "text",
+          required: true,
+        },
+        {
           name: "description",
           label: "Description",
           type: "textarea",

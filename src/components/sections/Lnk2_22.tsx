@@ -1,8 +1,16 @@
+import { Media } from "@/payload-types";
 import Image from "next/image";
 import VideoPopup from "../elements/VidepPopup";
-import dashboard02 from "/public/images/dashboard-02.png";
 
-export default function Lnk2_22() {
+export default function Lnk2_22({
+  title,
+  subtitle,
+  background_image,
+}: {
+  title: string;
+  subtitle: string;
+  background_image: Media;
+}) {
   return (
     <>
       <section id="lnk-2" className="pt-100 ct-08 content-section division">
@@ -12,13 +20,9 @@ export default function Lnk2_22() {
             <div className="col-md-10 col-lg-9">
               <div className="section-title mb-70">
                 {/* Title */}
-                <h2 className="s-50 w-700">
-                  Track the progress towards objectives with key results
-                </h2>
+                <h2 className="s-50 w-700">{title}</h2>
                 {/* Text */}
-                <p className="s-21">
-                  Ligula risus auctor tempus magna feugiat lacinia.
-                </p>
+                <p className="s-21">{subtitle}</p>
               </div>
             </div>
           </div>
@@ -31,8 +35,10 @@ export default function Lnk2_22() {
                 {/* Preview Image */}
                 <Image
                   className="img-fluid"
-                  src={dashboard02}
-                  alt="video-preview"
+                  src={background_image?.url || ""}
+                  alt={background_image?.alt || ""}
+                  height={1500}
+                  width={1500}
                 />
               </div>
             </div>

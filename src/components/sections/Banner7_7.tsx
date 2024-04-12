@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-export default function Banner7_7() {
+export default function Banner7_7({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <>
       <section id="banner-7" className="banner-section">
@@ -13,9 +19,7 @@ export default function Banner7_7() {
                 <div className="col-md-8">
                   <div className="banner-7-txt text-center">
                     {/* Title */}
-                    <h2 className="s-50 w-700">
-                      Starting with ContentQL is easy, fast and free
-                    </h2>
+                    <h2 className="s-50 w-700">{title}</h2>
                     {/* Buttons */}
                     <div className="btns-group">
                       <Link
@@ -32,9 +36,7 @@ export default function Banner7_7() {
                       </Link>
                     </div>
                     {/* Button Text */}
-                    <p className="btn-txt ico-15">
-                      Free for 14 days - no credit card required.
-                    </p>
+                    <p className="btn-txt ico-15">{description}</p>
                   </div>
                 </div>
               </div>{" "}

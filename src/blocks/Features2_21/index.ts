@@ -38,13 +38,23 @@ export const Features2_21: Block = {
           required: true,
         },
         {
-          name: "feature_image",
+          name: "feature_image_light",
           label: "Feature Image",
           type: "upload",
           relationTo: "media",
           required: true,
           admin: {
-            description: "feature image",
+            description: "feature image light",
+          },
+        },
+        {
+          name: "feature_image_dark",
+          label: "Feature Image",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+          admin: {
+            description: "feature image dark",
           },
         },
       ],

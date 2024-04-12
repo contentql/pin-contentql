@@ -1,8 +1,21 @@
+import { Media } from "@/payload-types";
 import Image from "next/image";
 import Link from "next/link";
-import img09 from "/public/images/img-09.png";
 
-export default function Ct01_28() {
+export default function Ct01_28({
+  caption,
+  title,
+  paragraphs,
+  background_image,
+}: {
+  caption: string;
+  title: string;
+  paragraphs: {
+    paragraph: string;
+    id?: string | null;
+  }[];
+  background_image: Media;
+}) {
   return (
     <>
       <section className="bg--white-400 py-100 ct-01 content-section division">
@@ -13,26 +26,13 @@ export default function Ct01_28() {
             <div className="col-md-6 order-last order-md-2">
               <div className="txt-block left-column wow fadeInRight">
                 {/* Section ID */}
-                <span className="section-id color--grey">
-                  One-Stop Solution
-                </span>
+                <span className="section-id color--grey">{caption}</span>
                 {/* Title */}
-                <h2 className="s-46 w-700">
-                  Smart solutions, real-time results
-                </h2>
+                <h2 className="s-46 w-700">{title}</h2>
                 {/* Text */}
-                <p>
-                  Sodales tempor sapien quaerat ipsum undo congue laoreet turpis
-                  neque auctor turpis vitae dolor luctus placerat magna and
-                  ligula cursus purus vitae purus an ipsum suscipit
-                </p>
-                {/* Text */}
-                <p className="mb-0">
-                  Nemo ipsam egestas volute turpis egestas ipsum and purus
-                  sapien ultrice an aliquam quaerat ipsum augue turpis sapien
-                  cursus congue magna purus quaerat at ligula purus egestas
-                  magna cursus undo varius purus magnis sapien quaerat
-                </p>
+                {paragraphs?.map((paragraph) => (
+                  <p key={paragraph?.id}>{paragraph?.paragraph}</p>
+                ))}
                 {/* Link */}
                 <div className="txt-block-tra-link mt-25">
                   <Link
@@ -48,7 +48,13 @@ export default function Ct01_28() {
             {/* IMAGE BLOCK */}
             <div className="col-md-6 order-first order-md-2">
               <div className="img-block right-column wow fadeInLeft">
-                <Image className="img-fluid" src={img09} alt="content-image" />
+                <Image
+                  className="img-fluid"
+                  src={background_image?.url || ""}
+                  alt={background_image?.alt || ""}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
           </div>{" "}

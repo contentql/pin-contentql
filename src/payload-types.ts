@@ -173,6 +173,7 @@ export interface Page {
         | {
             statistics: {
               integer: number;
+              character: string;
               description: string;
               id?: string | null;
             }[];
@@ -206,7 +207,8 @@ export interface Page {
             features: {
               title: string;
               description: string;
-              feature_image: string | Media;
+              feature_image_light: string | Media;
+              feature_image_dark: string | Media;
               id?: string | null;
             }[];
             id?: string | null;
