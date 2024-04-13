@@ -1,3 +1,5 @@
+"use client";
+import { Header } from "@/payload-types";
 import { useEffect, useState } from "react";
 import BackToTop from "../elements/BackToTop";
 import Breadcrumb from "./Breadcrumb";
@@ -15,6 +17,7 @@ interface Props {
   breadcrumbTitle?: string;
   children?: React.ReactNode;
   headerCls?: string;
+  headerData?: Header;
 }
 
 declare global {
@@ -31,6 +34,7 @@ export default function Layout({
   breadcrumbTitle,
   children,
   headerCls,
+  headerData,
 }: Props) {
   const [scroll, setScroll] = useState(false);
   const [isMobileMenu, setMobileMenu] = useState(false);
@@ -119,6 +123,7 @@ export default function Layout({
             isMobileMenu={isMobileMenu}
             handleMobileMenu={handleMobileMenu}
             headerCls={headerCls}
+            headerData={headerData}
           />
         ) : null}
         {headerStyle === 2 ? (

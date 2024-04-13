@@ -14,7 +14,9 @@ export interface Config {
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
-  globals: {};
+  globals: {
+    header: Header;
+  };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -297,6 +299,39 @@ export interface PayloadMigration {
   batch?: number | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "header".
+ */
+export interface Header {
+  id: string;
+  logo_pink: string | Media;
+  logo_pink_white: string | Media;
+  logo_white: string | Media;
+  product_links: {
+    title: string;
+    description: string;
+    path: string;
+    id?: string | null;
+  }[];
+  explore_path: string;
+  resources1_links: {
+    title: string;
+    description: string;
+    path: string;
+    id?: string | null;
+  }[];
+  resources2_links: {
+    title: string;
+    description: string;
+    path: string;
+    id?: string | null;
+  }[];
+  templates_path: string;
+  pricing_path: string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
 }
 
 
