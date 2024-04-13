@@ -8,6 +8,7 @@ import { buildConfig } from "payload/config";
 import { Media } from "./collections/Media";
 import { Pages } from "./collections/Pages";
 import Users from "./collections/Users";
+import { Footer } from "./globals/Footer";
 import { Header } from "./globals/Header";
 import { s3StorageAdapter } from "./plugins/s3";
 
@@ -18,7 +19,7 @@ dotenv.config({
 export default buildConfig({
   serverURL: process.env.NEXT_PUBLIC_SERVER_URL!,
   collections: [Users, Media, Pages],
-  globals: [Header],
+  globals: [Header, Footer],
   routes: {
     admin: "/admin",
   },

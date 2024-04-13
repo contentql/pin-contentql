@@ -16,6 +16,7 @@ export interface Config {
   };
   globals: {
     header: Header;
+    footer: Footer;
   };
 }
 /**
@@ -330,6 +331,37 @@ export interface Header {
   }[];
   templates_path: string;
   pricing_path: string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer".
+ */
+export interface Footer {
+  id: string;
+  logo_pink: string | Media;
+  logo_pink_white: string | Media;
+  footer_title1: string;
+  title1_links: {
+    footer_name: string;
+    footer_path: string;
+    id?: string | null;
+  }[];
+  footer_title2: string;
+  title2_links: {
+    footer_name: string;
+    footer_path: string;
+    id?: string | null;
+  }[];
+  footer_title3: string;
+  title3_links: {
+    footer_name: string;
+    footer_path: string;
+    id?: string | null;
+  }[];
+  newsletter_title: string;
+  copyright_description: string;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
