@@ -83,7 +83,7 @@ export default function Header1({
                 style={{ height: `${isMobileMenu ? "100vh" : ""}` }}
               >
                 {isMobileMenu ? (
-                  <MobileMenu headerData={headerData} />
+                  <MobileMenu />
                 ) : (
                   <Menu headerData={headerData} />
                 )}
