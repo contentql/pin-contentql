@@ -33,6 +33,7 @@ export default async function RootLayout({
 }>) {
   const payload = await getPayloadClient();
   const headerData = await payload.findGlobal({ slug: "header" });
+  const footerData = await payload.findGlobal({ slug: "footer" });
   return (
     <html lang="en">
       <body>
@@ -41,6 +42,7 @@ export default async function RootLayout({
           footerStyle={3}
           headerCls="navbar-dark inner-page-header"
           headerData={headerData}
+          footerData={footerData}
         >
           <Providers>{children}</Providers>
         </Layout>

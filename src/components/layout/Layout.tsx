@@ -1,5 +1,5 @@
 "use client";
-import { Header } from "@/payload-types";
+import { Footer, Header } from "@/payload-types";
 import { useEffect, useState } from "react";
 import BackToTop from "../elements/BackToTop";
 import Breadcrumb from "./Breadcrumb";
@@ -18,6 +18,7 @@ interface Props {
   children?: React.ReactNode;
   headerCls?: string;
   headerData?: Header;
+  footerData?: Footer;
 }
 
 declare global {
@@ -35,6 +36,7 @@ export default function Layout({
   children,
   headerCls,
   headerData,
+  footerData,
 }: Props) {
   const [scroll, setScroll] = useState(false);
   const [isMobileMenu, setMobileMenu] = useState(false);
@@ -143,7 +145,7 @@ export default function Layout({
         {!footerStyle && <Footer1 />}
         {footerStyle === 1 ? <Footer1 /> : null}
         {footerStyle === 2 ? <Footer2 /> : null}
-        {footerStyle === 3 ? <Footer3 /> : null}
+        {footerStyle === 3 ? <Footer3 footerData={footerData} /> : null}
 
         <BackToTop />
       </div>
