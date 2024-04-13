@@ -80,7 +80,7 @@ export default function Footer3({ footerData }: Props) {
                 {/* Links */}
                 <ul className="foo-links clearfix">
                   {footerData?.title3_links?.map((title3_link) => (
-                    <li>
+                    <li key={title3_link?.id}>
                       <p>
                         <Link href={title3_link?.footer_path}>
                           {title3_link?.footer_name}

@@ -19,59 +19,80 @@ export default function Features12_10({
   }[];
 }) {
   const arrayOfSvgs = [
-    <div className="fbox-ico ico-50">
-      <div className="shape-ico color--theme">
-        {/* Vector Icon */}
-        <span className="flaticon-layers-1" />
-        {/* Shape */}
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-            transform="translate(100 100)"
-          />
-        </svg>
-      </div>
-    </div>,
-    <div className="fbox-ico ico-50">
-      <div className="shape-ico color--theme">
-        {/* Vector Icon */}
-        <span className="flaticon-click-1" />
-        {/* Shape */}
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-            transform="translate(100 100)"
-          />
-        </svg>
-      </div>
-    </div>,
-    <div className="fbox-ico ico-50">
-      <div className="shape-ico color--theme">
-        {/* Vector Icon */}
-        <span className="flaticon-prioritize" />
-        {/* Shape */}
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-            transform="translate(100 100)"
-          />
-        </svg>
-      </div>
-    </div>,
-    <div className="fbox-ico ico-50">
-      <div className="shape-ico color--theme">
-        {/* Vector Icon */}
-        <span className="flaticon-analytics" />
-        {/* Shape */}
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-            transform="translate(100 100)"
-          />
-        </svg>
-      </div>
-    </div>,
+    {
+      svg: (
+        <div className="fbox-ico ico-50">
+          <div className="shape-ico color--theme">
+            {/* Vector Icon */}
+            <span className="flaticon-layers-1" />
+            {/* Shape */}
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+        </div>
+      ),
+      key: "layers",
+    },
+    {
+      svg: (
+        <div className="fbox-ico ico-50">
+          <div className="shape-ico color--theme">
+            {/* Vector Icon */}
+            <span className="flaticon-click-1" />
+            {/* Shape */}
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+        </div>
+      ),
+      key: "click",
+    },
+    {
+      svg: (
+        <div className="fbox-ico ico-50">
+          <div className="shape-ico color--theme">
+            {/* Vector Icon */}
+            <span className="flaticon-prioritize" />
+            {/* Shape */}
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+        </div>
+      ),
+      key: "prioritize",
+    },
+    {
+      svg: (
+        <div className="fbox-ico ico-50">
+          <div className="shape-ico color--theme">
+            {/* Vector Icon */}
+            <span className="flaticon-analytics" />
+            {/* Shape */}
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+        </div>
+      ),
+      key: "analytics",
+    },
   ];
+
   return (
     <>
       <section
@@ -112,7 +133,7 @@ export default function Features12_10({
                         className="fbox-12 bg--white-100 block-shadow r-12 mb-30"
                       >
                         {/* Icon */}
-                        {arrayOfSvgs[index]} {/* End Icon */}
+                        {arrayOfSvgs[index]?.svg} {/* End Icon */}
                         {/* Text */}
                         <div className="fbox-txt">
                           <h5 className="s-20 w-700">{feature?.title}</h5>

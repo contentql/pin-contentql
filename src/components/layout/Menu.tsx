@@ -23,48 +23,31 @@ export default function Menu({ headerData }: Props) {
 
   console.log("hedaerlinks", headerData?.resources1_links);
 
-  const product = [
-    <SiSpringCreators size={26} />,
-    <MdOutlinePublish size={26} />,
-    <MdOutlineIntegrationInstructions size={26} />,
-    <IoIosCode size={26} />,
+  const products = [
+    { icon: <SiSpringCreators size={26} />, key: "springCreators" },
+    { icon: <MdOutlinePublish size={26} />, key: "publish" },
+    {
+      icon: <MdOutlineIntegrationInstructions size={26} />,
+      key: "integrationInstructions",
+    },
+    { icon: <IoIosCode size={26} />, key: "code" },
   ];
 
   const resources1 = [
-    <MdOutlineFeaturedPlayList size={26} />,
-    <FaAffiliatetheme size={26} />,
-    <MdOutlineIntegrationInstructions size={26} />,
-    <IoIosCode size={26} />,
+    { icon: <MdOutlineFeaturedPlayList size={26} />, key: "featuredPlayList" },
+    { icon: <FaAffiliatetheme size={26} />, key: "affiliateTheme" },
+    {
+      icon: <MdOutlineIntegrationInstructions size={26} />,
+      key: "integrationInstructions",
+    },
+    { icon: <IoIosCode size={26} />, key: "code" },
   ];
 
   const resources2 = [
-    {
-      title: "Start here",
-      description:
-        "A huge library of guides, stories, interviews and tips for success",
-      path: "/start-here",
-      icon: <GoBook size={26} />,
-    },
-    {
-      title: "Help center",
-      description:
-        "Get help from product features and answers to common questions",
-      path: "/help-center",
-      icon: <TbHelpCircle size={26} />,
-    },
-    {
-      title: "Product updates",
-      description: "all the latest changes and improvements to contentQL",
-      path: "/product-updates",
-      icon: <MdOutlineSystemUpdateAlt size={26} />,
-    },
-    {
-      title: "About us",
-      description:
-        "Learn more about the people behind the platform (we're hiring)",
-      path: "/about",
-      icon: <AiFillEdit size={26} />,
-    },
+    { icon: <GoBook size={26} />, key: "book" },
+    { icon: <TbHelpCircle size={26} />, key: "helpCircle" },
+    { icon: <MdOutlineSystemUpdateAlt size={26} />, key: "systemUpdateAlt" },
+    { icon: <AiFillEdit size={26} />, key: "edit" },
   ];
 
   return (
@@ -80,7 +63,7 @@ export default function Menu({ headerData }: Props) {
               <li key={product_link?.id} className="fst-li">
                 <Link href={product_link?.path}>
                   <div className="navbar-icon">
-                    <div className="icon">{product[index]}</div>
+                    <div className="icon">{products[index]?.icon}</div>
                     <div>
                       {" "}
                       <p className="navitem-title">{product_link?.title}</p>
@@ -115,7 +98,9 @@ export default function Menu({ headerData }: Props) {
                       <li key={resources1_link?.id} className="fst-li">
                         <Link href={resources1_link?.path}>
                           <div className="navbar-icon">
-                            <div className="icon">{resources1[index]}</div>
+                            <div className="icon">
+                              {resources1[index]?.icon}
+                            </div>
 
                             <div>
                               {" "}
@@ -133,22 +118,28 @@ export default function Menu({ headerData }: Props) {
                   )}
                 </ul>
                 <ul className="col-md-12 col-lg-6 link-list">
-                  {resources2.map((navitem) => (
-                    <li key={navitem.title} className="fst-li">
-                      <Link href={navitem.path}>
-                        <div className="navbar-icon">
-                          <div className="icon">{navitem.icon}</div>
-                          <div>
-                            {" "}
-                            <p className="navitem-title">{navitem.title}</p>
-                            <span className="navitem-description">
-                              {navitem.description}
-                            </span>
+                  {headerData?.resources2_links?.map(
+                    (resources2_link, index) => (
+                      <li key={resources2_link.id} className="fst-li">
+                        <Link href={resources2_link.path}>
+                          <div className="navbar-icon">
+                            <div className="icon">
+                              {resources2[index]?.icon}
+                            </div>
+                            <div>
+                              {" "}
+                              <p className="navitem-title">
+                                {resources2_link.title}
+                              </p>
+                              <span className="navitem-description">
+                                {resources2_link.description}
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                      </Link>
-                    </li>
-                  ))}
+                        </Link>
+                      </li>
+                    )
+                  )}
                 </ul>
                 {/* MEGAMENU LINKS */}
               </div>{" "}

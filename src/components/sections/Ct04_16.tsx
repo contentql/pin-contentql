@@ -24,7 +24,7 @@ export default function Ct04_16({
               <div className="txt-block left-column wow fadeInRight">
                 {/* CONTENT BOX #1 */}
                 {features?.map((feature, index) => (
-                  <div className="cbox-2 process-step">
+                  <div key={feature?.id} className="cbox-2 process-step">
                     {/* Icon */}
                     <div className="ico-wrap">
                       <div className="cbox-2-ico bg--theme color--white">
