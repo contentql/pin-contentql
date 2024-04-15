@@ -8,13 +8,13 @@ export default function Ct01_28({
   paragraphs,
   background_image,
 }: {
-  caption: string;
-  title: string;
-  paragraphs: {
+  caption?: string;
+  title?: string;
+  paragraphs?: {
     paragraph: string;
     id?: string | null;
   }[];
-  background_image: Media;
+  background_image?: Media;
 }) {
   return (
     <>

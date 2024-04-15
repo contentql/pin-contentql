@@ -4,8 +4,8 @@ export default function Banner7_7({
   title,
   description,
 }: {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 }) {
   return (
     <>

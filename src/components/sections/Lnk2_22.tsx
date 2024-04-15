@@ -7,9 +7,9 @@ export default function Lnk2_22({
   subtitle,
   background_image,
 }: {
-  title: string;
-  subtitle: string;
-  background_image: Media;
+  title?: string;
+  subtitle?: string;
+  background_image?: Media;
 }) {
   return (
     <>

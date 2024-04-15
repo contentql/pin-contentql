@@ -5,13 +5,13 @@ export default function Ct04_16({
   features,
   background_image,
 }: {
-  features: {
+  features?: {
     s_no: number;
     title: string;
     description: string;
     id?: string | null;
   }[];
-  background_image: Media;
+  background_image?: Media;
 }) {
   return (
     <>

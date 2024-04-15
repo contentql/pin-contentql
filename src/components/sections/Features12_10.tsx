@@ -5,14 +5,14 @@ export default function Features12_10({
   points,
   features,
 }: {
-  caption: string;
-  title: string;
-  subtitle: string;
-  points: {
+  caption?: string;
+  title?: string;
+  subtitle?: string;
+  points?: {
     point: string;
     id?: string | null;
   }[];
-  features: {
+  features?: {
     title: string;
     description: string;
     id?: string | null;

@@ -3,7 +3,7 @@ import CounterUp from "../elements/CounterUp";
 export default function Statistic1_19({
   statistics,
 }: {
-  statistics: {
+  statistics?: {
     integer: number;
     character: string;
     description: string;

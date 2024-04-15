@@ -10,15 +10,15 @@ export default function Ct02_44({
   points,
   background_image,
 }: {
-  title: string;
-  subtitle: string;
-  heading: string;
-  paragraph: string;
-  points: {
+  title?: string;
+  subtitle?: string;
+  heading?: string;
+  paragraph?: string;
+  points?: {
     point: string;
     id?: string | null;
   }[];
-  background_image: Media;
+  background_image?: Media;
 }) {
   return (
     <>

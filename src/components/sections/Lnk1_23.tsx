@@ -9,15 +9,15 @@ export default function Lnk1_23({
   points,
   background_image,
 }: {
-  caption: string;
-  title: string;
-  subtitle: string;
-  heading: string;
-  points: {
+  caption?: string;
+  title?: string;
+  subtitle?: string;
+  heading?: string;
+  points?: {
     point: string;
     id?: string | null;
   }[];
-  background_image: Media;
+  background_image?: Media;
 }) {
   return (
     <>

@@ -5,12 +5,12 @@ export default function Ct02_45({
   features,
   background_image,
 }: {
-  features: {
+  features?: {
     title: string;
     description: string;
     id?: string | null;
   }[];
-  background_image: Media;
+  background_image?: Media;
 }) {
   const listOfIcons = [
     "flaticon-paper-sizes",

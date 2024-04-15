@@ -6,9 +6,9 @@ export default function Features2_21({
   subtitle,
   features,
 }: {
-  title: string;
-  subtitle: string;
-  features: {
+  title?: string;
+  subtitle?: string;
+  features?: {
     title: string;
     description: string;
     feature_image_light: string | Media;

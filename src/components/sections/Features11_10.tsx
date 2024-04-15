@@ -3,9 +3,9 @@ export default function Features11_10({
   subtitle,
   features,
 }: {
-  title: string;
-  subtitle: string;
-  features: {
+  title?: string;
+  subtitle?: string;
+  features?: {
     title: string;
     description: string;
     id?: string | null;

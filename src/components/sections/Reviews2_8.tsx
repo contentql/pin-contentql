@@ -6,9 +6,9 @@ export default function Reviews2_8({
   subtitle,
   reviews,
 }: {
-  title: string;
-  subtitle: string;
-  reviews: {
+  title?: string;
+  subtitle?: string;
+  reviews?: {
     review: string;
     name: string;
     designation: string;
