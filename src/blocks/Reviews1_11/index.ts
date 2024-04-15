@@ -14,8 +14,8 @@ export const Reviews1_11: Block = {
       required: true,
     },
     {
-      name: "subtitle",
-      label: "Subtitle",
+      name: "sub_title",
+      label: "Sub Title",
       type: "text",
       required: true,
     },

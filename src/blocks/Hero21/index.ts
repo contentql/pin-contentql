@@ -15,14 +15,20 @@ export const Hero21: Block = {
       required: true,
     },
     {
-      name: "Button2_text",
+      name: "button2_text",
       label: "Button 2 Text",
       type: "text",
       required: true,
     },
     {
-      name: "sub_title",
-      label: "Sub Title",
+      name: "sub_title1",
+      label: "Sub Title1",
+      type: "text",
+      required: true,
+    },
+    {
+      name: "sub_title2",
+      label: "Sub Title2",
       type: "text",
       required: true,
     },

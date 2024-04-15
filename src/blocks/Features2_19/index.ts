@@ -14,8 +14,8 @@ export const Features2_19: Block = {
       required: true,
     },
     {
-      name: "subtitle",
-      label: "Subtitle",
+      name: "sub_title",
+      label: "Sub Title",
       type: "text",
       required: true,
     },

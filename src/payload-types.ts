@@ -265,8 +265,9 @@ export interface Page {
         | {
             title: string;
             button1_text: string;
-            Button2_text: string;
-            sub_title: string;
+            button2_text: string;
+            sub_title1: string;
+            sub_title2: string;
             background_image: string | Media;
             id?: string | null;
             blockName?: string | null;
@@ -274,7 +275,7 @@ export interface Page {
           }
         | {
             title: string;
-            subtitle: string;
+            sub_title: string;
             heading1: string;
             paragraph1: string;
             heading2: string;
@@ -304,7 +305,7 @@ export interface Page {
           }
         | {
             title: string;
-            subtitle: string;
+            sub_title: string;
             features: {
               title: string;
               description: string;
@@ -347,7 +348,7 @@ export interface Page {
           }
         | {
             title: string;
-            subtitle: string;
+            sub_title: string;
             heading: string;
             paragraph: string;
             points: {
@@ -414,7 +415,7 @@ export interface Page {
           }
         | {
             title: string;
-            subtitle: string;
+            sub_title: string;
             reviews: {
               review: string;
               name: string;
@@ -430,6 +431,7 @@ export interface Page {
             title: string;
             sub_title: string;
             questions: {
+              question_number: number;
               question: string;
               answer: string;
               id?: string | null;

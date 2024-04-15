@@ -3,8 +3,8 @@ import { Block } from "payload/types";
 export const Wswrapper_10: Block = {
   slug: "wswrapper_10",
   labels: {
-    singular: "Wswrapper Block",
-    plural: "Wswrapper Blocks",
+    singular: "Wswrapper_10 Block",
+    plural: "Wswrapper_10 Blocks",
   },
   fields: [
     {

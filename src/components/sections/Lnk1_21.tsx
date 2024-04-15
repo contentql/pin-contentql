@@ -1,7 +1,28 @@
+import { Media } from "@/payload-types";
 import Image from "next/image";
-import img06 from "/public/images/img-06.png";
 
-export default function Lnk1_21() {
+export default function Lnk1_21({
+  title,
+  sub_title,
+  heading1,
+  paragraph1,
+  heading2,
+  paragraph2,
+  points,
+  background_image,
+}: {
+  title?: string;
+  sub_title?: string;
+  heading1?: string;
+  paragraph1?: string;
+  heading2?: string;
+  paragraph2?: string;
+  points?: {
+    point?: string;
+    id?: string | null;
+  }[];
+  background_image?: Media;
+}) {
   return (
     <>
       <section id="lnk-1" className="pt-100 ct-01 content-section division">
@@ -11,11 +32,9 @@ export default function Lnk1_21() {
             <div className="col-md-10 col-lg-9">
               <div className="section-title mb-80">
                 {/* Title */}
-                <h2 className="s-50 w-700">Everything in One Place</h2>
+                <h2 className="s-50 w-700">{title}</h2>
                 {/* Text */}
-                <p className="s-21 color--grey">
-                  Ligula risus auctor tempus magna feugiat lacinia.
-                </p>
+                <p className="s-21 color--grey"> {sub_title}</p>
               </div>
             </div>
           </div>
@@ -27,40 +46,24 @@ export default function Lnk1_21() {
                 {/* TEXT BOX */}
                 <div className="txt-box">
                   {/* Title */}
-                  <h5 className="s-24 w-700">Solution that grows with you</h5>
+                  <h5 className="s-24 w-700">{heading1}</h5>
                   {/* Text */}
-                  <p>
-                    Sodales tempor sapien quaerat ipsum undo congue laoreet
-                    turpis neque auctor turpis vitae dolor luctus placerat magna
-                    and ligula cursus purus vitae purus an ipsum suscipit
-                  </p>
+                  <p>{paragraph1}</p>
                 </div>{" "}
                 {/* END TEXT BOX */}
                 {/* TEXT BOX */}
                 <div className="txt-box mb-0">
                   {/* Title */}
-                  <h5 className="s-24 w-700">Your data, where you need it</h5>
+                  <h5 className="s-24 w-700">{heading2}</h5>
                   {/* Text */}
-                  <p>
-                    Tempor sapien sodales quaerat ipsum undo congue laoreet
-                    turpis neque auctor turpis vitae dolor luctus placerat magna
-                    and ligula cursus purus an ipsum vitae suscipit purus
-                  </p>
+                  <p>{paragraph2}</p>
                   {/* List */}
                   <ul className="simple-list">
-                    <li className="list-item">
-                      <p>
-                        Tempor sapien quaerat an ipsum laoreet purus and sapien
-                        dolor an ultrice ipsum aliquam undo congue dolor cursus
-                      </p>
-                    </li>
-                    <li className="list-item">
-                      <p className="mb-0">
-                        Cursus purus suscipit vitae cubilia magnis volute
-                        egestas vitae sapien turpis ultrice auctor congue magna
-                        placerat
-                      </p>
-                    </li>
+                    {points?.map((point, index) => (
+                      <li key={point?.id} className="list-item">
+                        <p>{point?.point}</p>
+                      </li>
+                    ))}
                   </ul>
                 </div>{" "}
                 {/* END TEXT BOX */}
@@ -70,7 +73,13 @@ export default function Lnk1_21() {
             {/* IMAGE BLOCK */}
             <div className="col-md-6 order-first order-md-2">
               <div className="img-block right-column wow fadeInLeft">
-                <Image className="img-fluid" src={img06} alt="content-image" />
+                <Image
+                  className="img-fluid"
+                  src={(background_image as Media)?.url || ""}
+                  alt={(background_image as Media)?.alt || ""}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
           </div>{" "}

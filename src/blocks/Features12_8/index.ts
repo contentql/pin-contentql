@@ -3,8 +3,8 @@ import { Block } from "payload/types";
 export const Features12_8: Block = {
   slug: "features12_8",
   labels: {
-    singular: "Features12 Block",
-    plural: "Features12 Blocks",
+    singular: "Features12_8 Block",
+    plural: "Features12_8 Blocks",
   },
   fields: [
     {
