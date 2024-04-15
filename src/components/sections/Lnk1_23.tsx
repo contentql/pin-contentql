@@ -49,7 +49,7 @@ export default function Lnk1_23({
                 {/* Small Title */}
                 <h5 className="s-24 w-700">{heading}</h5>
                 {/* CONTENT BOX #1 */}
-                {points.map((point, index) => (
+                {points?.map((point, index) => (
                   <div key={point?.id} className="cbox-1 ico-15">
                     <div className="ico-wrap color--theme">
                       <div className="cbox-1-ico">
