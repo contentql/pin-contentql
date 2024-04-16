@@ -1,6 +1,25 @@
 import Link from "next/link";
 
-export default function Features12_8() {
+export default function Features12_8({
+  caption,
+  title,
+  sub_title,
+  points,
+  features,
+}: {
+  caption?: string;
+  title?: string;
+  sub_title?: string;
+  points?: {
+    point: string;
+    id?: string | null;
+  }[];
+  features?: {
+    title: string;
+    description: string;
+    id?: string | null;
+  }[];
+}) {
   return (
     <>
       <section
@@ -13,29 +32,18 @@ export default function Features12_8() {
             <div className="col-md-5">
               <div className="txt-block left-column wow fadeInRight">
                 {/* Section ID */}
-                <span className="section-id">Real-time Analytics</span>
+                <span className="section-id">{caption}</span>
                 {/* Title */}
-                <h2 className="s-46 w-700">A single tool for all your needs</h2>
+                <h2 className="s-46 w-700">{title}</h2>
                 {/* Text */}
-                <p>
-                  Sodales tempor sapien quaerat ipsum and congue undo laoreet
-                  turpis neque auctor turpis vitae dolor luctus placerat magna
-                  ligula and cursus vitae
-                </p>
+                <p>{sub_title}</p>
                 {/* List */}
                 <ul className="simple-list">
-                  <li className="list-item">
-                    <p>
-                      Tempor sapien quaerat undo ipsum laoreet diam purus sapien
-                      a dolor ociis ultrice ipsum aliquam
-                    </p>
-                  </li>
-                  <li className="list-item">
-                    <p className="mb-0">
-                      Cursus purus suscipit vitae cubilia magnis diam volute
-                      egestas sapien ultrice auctor
-                    </p>
-                  </li>
+                  {points?.map((point, index) => (
+                    <li key={point?.id} className="list-item">
+                      <p>{point?.point}</p>
+                    </li>
+                  ))}
                 </ul>
                 {/* Link */}
                 <div className="txt-block-tra-link mt-25">

@@ -11,26 +11,31 @@ export const Features11_10: Block = {
       name: "title",
       label: "Title",
       type: "text",
+      required: true,
     },
     {
       name: "subtitle",
       label: "Subtitle",
       type: "textarea",
+      required: true,
     },
     {
       name: "features",
       label: "Features",
+      required: true,
       type: "array",
       fields: [
         {
           name: "title",
           label: "Title",
           type: "text",
+          required: true,
         },
         {
           name: "description",
           label: "Description",
           type: "textarea",
+          required: true,
         },
       ],
     },

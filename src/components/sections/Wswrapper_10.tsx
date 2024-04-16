@@ -1,7 +1,21 @@
+import { Media } from "@/payload-types";
 import Image from "next/image";
-import img08 from "/public/images/img-08.png";
 
-export default function Wswrapper_10() {
+export default function Wswrapper_10({
+  caption,
+  title,
+  sub_title,
+  heading,
+  description,
+  background_image,
+}: {
+  caption?: string;
+  title?: string;
+  sub_title?: string;
+  heading?: string;
+  description?: string;
+  background_image?: Media;
+}) {
   return (
     <>
       <section className="pt-100 ws-wrapper content-section">
@@ -13,25 +27,15 @@ export default function Wswrapper_10() {
                 <div className="col-md-6 order-last order-md-2">
                   <div className="txt-block left-column wow fadeInRight">
                     {/* Section ID */}
-                    <span className="section-id">Productivity Focused</span>
+                    <span className="section-id">{caption}</span>
                     {/* Title */}
-                    <h2 className="s-46 w-700">Automate your way to success</h2>
+                    <h2 className="s-46 w-700">{title}</h2>
                     {/* Text */}
-                    <p>
-                      Sodales tempor sapien quaerat congue eget ipsum laoreet
-                      turpis neque auctor vitae eros dolor luctus placerat magna
-                      ligula cursus and purus pretium
-                    </p>
+                    <p>{sub_title}</p>
                     {/* Small Title */}
-                    <h5 className="s-24 w-700 h5-title">
-                      The smarter way to work
-                    </h5>
+                    <h5 className="s-24 w-700 h5-title">{heading}</h5>
                     {/* Text */}
-                    <p className="mb-0">
-                      Sapien tempor sodales quaerat ipsum undo congue laoreet
-                      turpis neque auctor turpis vitae dolor luctus placerat
-                      magna and ligula cursus purus vitae
-                    </p>
+                    <p className="mb-0">{description}</p>
                   </div>
                 </div>{" "}
                 {/* END TEXT BLOCK */}
@@ -40,8 +44,10 @@ export default function Wswrapper_10() {
                   <div className="img-block right-column wow fadeInLeft">
                     <Image
                       className="img-fluid"
-                      src={img08}
-                      alt="content-image"
+                      src={background_image?.url || ""}
+                      alt={background_image?.alt || ""}
+                      height={1000}
+                      width={1000}
                     />
                   </div>
                 </div>

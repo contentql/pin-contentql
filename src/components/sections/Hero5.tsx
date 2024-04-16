@@ -1,8 +1,16 @@
+import { Media } from "@/payload-types";
 import Image from "next/image";
 import Link from "next/link";
-import img18 from "/public/images/img-18.png";
 
-export default function Hero5() {
+export default function Hero5({
+  title,
+  subtitle,
+  background_image,
+}: {
+  title?: string;
+  subtitle?: string;
+  background_image?: Media;
+}) {
   return (
     <>
       <section id="hero-5" className="bg--scroll hero-section">
@@ -12,14 +20,9 @@ export default function Hero5() {
             <div className="col-md-6">
               <div className="hero-5-txt wow fadeInRight">
                 {/* Title */}
-                <h2 className="s-58 w-700">
-                  The growth accelerator for your startup
-                </h2>
+                <h2 className="s-58 w-700">{title}</h2>
                 {/* Text */}
-                <p className="p-lg">
-                  Mauris donec turpis suscipit sapien ociis sagittis sapien
-                  tempor a volute ligula and aliquet tortor
-                </p>
+                <p className="p-lg">{subtitle}</p>
                 {/* Button */}
                 <Link
                   href="#banner-7"
@@ -33,7 +36,13 @@ export default function Hero5() {
             {/* HERO IMAGE */}
             <div className="col-md-6">
               <div className="hero-5-img wow fadeInLeft">
-                <Image className="img-fluid" src={img18} alt="hero-image" />
+                <Image
+                  className="img-fluid"
+                  src={background_image?.url || ""}
+                  alt="hero-image"
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
           </div>{" "}

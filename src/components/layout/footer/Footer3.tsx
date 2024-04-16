@@ -1,9 +1,12 @@
+import { Footer, Media } from "@/payload-types";
 import Image from "next/image";
 import Link from "next/link";
-import logoPinkWhite from "/public/images/logo-pink-white.png";
-import logoPink from "/public/images/logo-pink.png";
 
-export default function Footer3() {
+interface Props {
+  footerData?: Footer;
+}
+
+export default function Footer3({ footerData }: Props) {
   return (
     <>
       <footer id="footer-3" className="pt-100 footer ft-3-ntr">
@@ -15,13 +18,17 @@ export default function Footer3() {
               <div className="footer-info">
                 <Image
                   className="footer-logo"
-                  src={logoPink}
-                  alt="footer-logo"
+                  src={(footerData?.logo_pink as Media)?.url || ""}
+                  alt={(footerData?.logo_pink as Media)?.alt || ""}
+                  height={500}
+                  width={500}
                 />
                 <Image
                   className="footer-logo-dark"
-                  src={logoPinkWhite}
-                  alt="footer-logo"
+                  src={(footerData?.logo_pink_white as Media)?.url || ""}
+                  alt={(footerData?.logo_pink_white as Media)?.alt || ""}
+                  height={500}
+                  width={500}
                 />
               </div>
             </div>
@@ -29,29 +36,18 @@ export default function Footer3() {
             <div className="col-sm-4 col-lg-3 col-xl-2">
               <div className="footer-links fl-1">
                 {/* Title */}
-                <h6 className="s-17 w-700">Company</h6>
+                <h6 className="s-17 w-700">{footerData?.footer_title1}</h6>
                 {/* Links */}
                 <ul className="foo-links clearfix">
-                  <li>
-                    <p>
-                      <Link href="/about">About Us</Link>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <Link href="/blog-listing">Our Blog</Link>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <Link href="#">Customers</Link>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <Link href="#">Community</Link>
-                    </p>
-                  </li>
+                  {footerData?.title1_links?.map((title1_link) => (
+                    <li key={title1_link?.id}>
+                      <p>
+                        <Link href={title1_link?.footer_path}>
+                          {title1_link?.footer_name}
+                        </Link>
+                      </p>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>{" "}
@@ -60,29 +56,18 @@ export default function Footer3() {
             <div className="col-sm-4 col-lg-2">
               <div className="footer-links fl-2">
                 {/* Title */}
-                <h6 className="s-17 w-700">Product</h6>
+                <h6 className="s-17 w-700">{footerData?.footer_title2}</h6>
                 {/* Links */}
                 <ul className="foo-links clearfix">
-                  <li>
-                    <p>
-                      <Link href="/integrations">Integration</Link>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <Link href="/download">What&apos;s New</Link>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <Link href="/pricing">Pricing</Link>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <Link href="/help-center">Help Center</Link>
-                    </p>
-                  </li>
+                  {footerData?.title2_links?.map((title2_link) => (
+                    <li key={title2_link?.id}>
+                      <p>
+                        <Link href={title2_link?.footer_path}>
+                          {title2_link?.footer_name}
+                        </Link>
+                      </p>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>{" "}
@@ -91,29 +76,18 @@ export default function Footer3() {
             <div className="col-sm-4 col-lg-3 col-xl-2">
               <div className="footer-links fl-3">
                 {/* Title */}
-                <h6 className="s-17 w-700">Legal</h6>
+                <h6 className="s-17 w-700">{footerData?.footer_title3}</h6>
                 {/* Links */}
                 <ul className="foo-links clearfix">
-                  <li>
-                    <p>
-                      <Link href="/terms">Terms of Use</Link>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <Link href="/privacy">Privacy Policy</Link>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <Link href="/cookies">Cookie Policy</Link>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <Link href="#">Site Map</Link>
-                    </p>
-                  </li>
+                  {footerData?.title3_links?.map((title3_link) => (
+                    <li key={title3_link?.id}>
+                      <p>
+                        <Link href={title3_link?.footer_path}>
+                          {title3_link?.footer_name}
+                        </Link>
+                      </p>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>{" "}
@@ -122,7 +96,7 @@ export default function Footer3() {
             <div className="col-sm-10 col-md-8 col-lg-4 col-xl-3">
               <div className="footer-form">
                 {/* Title */}
-                <h6 className="s-17 w-700">Follow the Best</h6>
+                <h6 className="s-17 w-700">{footerData?.newsletter_title}</h6>
                 {/* Newsletter Form Input */}
                 <form className="newsletter-form">
                   <div className="input-group r-06">
@@ -154,9 +128,7 @@ export default function Footer3() {
               {/* FOOTER COPYRIGHT */}
               <div className="col">
                 <div className="footer-copyright">
-                  <p className="p-sm">
-                    © 2023 ContentQL. <span>All Rights Reserved</span>
-                  </p>
+                  <p className="p-sm">{footerData?.copyright_description}</p>
                 </div>
               </div>
               {/* FOOTER SOCIALS */}
