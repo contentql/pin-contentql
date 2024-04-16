@@ -1,6 +1,6 @@
 import { Block } from 'payload/types'
 
-export const Features12_10: Block = {
+export const Features12_1: Block = {
   slug: 'features12_1',
   labels: {
     singular: 'Features12_1 Block',

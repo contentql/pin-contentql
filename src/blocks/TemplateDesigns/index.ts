@@ -20,7 +20,7 @@ export const TemplateDesigns: Block = {
       required: true,
     },
     {
-      name: 'button text',
+      name: 'button_text',
       label: 'Button Text',
       type: 'text',
       required: true,
