@@ -1,22 +1,22 @@
-import { Metadata } from "next";
+import { Metadata } from 'next'
 
-import DevelopersView from "@/views/DevelopersView";
+import DevelopersView from '@/views/DevelopersView'
 
 export const metadata: Metadata = {
-  title: "developers",
-  description: "The Complete Solutions",
+  title: 'developers',
+  description: 'The Complete Solutions',
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    title: "developers",
-    description: "The Complete Solutions",
-    url: "https://contentql.com/developers",
-    images: "/images/img-11.png",
+    type: 'website',
+    locale: 'en_US',
+    title: 'developers',
+    description: 'The Complete Solutions',
+    url: 'https://contentql.com/developers',
+    images: '/images/img-11.png',
   },
-};
+}
 
 const Home = () => {
-  return <DevelopersView />;
-};
+  return <DevelopersView />
+}
 
-export default Home;
+export default Home

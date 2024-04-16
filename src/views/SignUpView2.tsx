@@ -1,141 +1,142 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import google from "/public/images/png_icons/google.png";
+'use client'
+
+import google from '/public/images/png_icons/google.png'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function SignUpView2() {
   return (
     <>
-      <div id="page" className="page font--jakarta">
+      <div id='page' className='page font--jakarta'>
         {/* SIGN UP PAGE
 ============================================= */}
-        <div id="signup" className="bg--scroll login-section division">
-          <div className="container">
-            <div className="row justify-content-center">
+        <div id='signup' className='bg--scroll login-section division'>
+          <div className='container'>
+            <div className='row justify-content-center'>
               {/* REGISTER PAGE WRAPPER */}
-              <div className="col-lg-11">
-                <div className="register-page-wrapper r-16 bg--fixed">
-                  <div className="row">
+              <div className='col-lg-11'>
+                <div className='register-page-wrapper r-16 bg--fixed'>
+                  <div className='row'>
                     {/* SIGN UP FORM */}
-                    <div className="col-md-6">
-                      <div className="register-page-form">
-                        <form name="signupform" className="row sign-up-form">
+                    <div className='col-md-6'>
+                      <div className='register-page-form'>
+                        <form name='signupform' className='row sign-up-form'>
                           {/* Google Button */}
-                          <div className="col-md-12">
-                            <Link href="#" className="btn btn-google ico-left">
-                              <Image src={google} alt="google-icon" /> Sign up
+                          <div className='col-md-12'>
+                            <Link href='#' className='btn btn-google ico-left'>
+                              <Image src={google} alt='google-icon' /> Sign up
                               with Google
                             </Link>
                           </div>
                           {/* Login Separator */}
-                          <div className="col-md-12 text-center">
-                            <div className="separator-line">
+                          <div className='col-md-12 text-center'>
+                            <div className='separator-line'>
                               Or, sign up with your email
                             </div>
                           </div>
                           {/* Form Input */}
-                          <div className="col-md-12">
-                            <p className="p-sm input-header">Full name</p>
+                          <div className='col-md-12'>
+                            <p className='p-sm input-header'>Full name</p>
                             <input
-                              className="form-control name"
-                              type="text"
-                              name="name"
-                              placeholder="John Doe"
+                              className='form-control name'
+                              type='text'
+                              name='name'
+                              placeholder='John Doe'
                             />
                           </div>
                           {/* Form Input */}
-                          <div className="col-md-12">
-                            <p className="p-sm input-header">Email address</p>
+                          <div className='col-md-12'>
+                            <p className='p-sm input-header'>Email address</p>
                             <input
-                              className="form-control email"
-                              type="email"
-                              name="email"
-                              placeholder="example@example.com"
+                              className='form-control email'
+                              type='email'
+                              name='email'
+                              placeholder='example@example.com'
                             />
                           </div>
                           {/* Form Input */}
-                          <div className="col-md-12">
-                            <p className="p-sm input-header">Password</p>
-                            <div className="wrap-input">
-                              <span className="btn-show-pass ico-20">
-                                <span className="flaticon-visibility eye-pass" />
+                          <div className='col-md-12'>
+                            <p className='p-sm input-header'>Password</p>
+                            <div className='wrap-input'>
+                              <span className='btn-show-pass ico-20'>
+                                <span className='flaticon-visibility eye-pass' />
                               </span>
                               <input
-                                className="form-control password"
-                                type="password"
-                                name="password"
-                                placeholder="min 8 characters"
+                                className='form-control password'
+                                type='password'
+                                name='password'
+                                placeholder='min 8 characters'
                               />
                             </div>
                           </div>
                           {/* Checkbox */}
-                          <div className="col-md-12">
-                            <div className="form-data">
+                          <div className='col-md-12'>
+                            <div className='form-data'>
                               <span>
                                 By clicking “Create Account”, you agree to our
-                                <Link href="/terms">Terms</Link> and that you
+                                <Link href='/terms'>Terms</Link> and that you
                                 have read our
-                                <Link href="/privacy"> Privacy Policy</Link>
+                                <Link href='/privacy'> Privacy Policy</Link>
                               </span>
                             </div>
                           </div>
                           {/* Form Submit Button */}
-                          <div className="col-md-12">
+                          <div className='col-md-12'>
                             <button
-                              type="submit"
-                              className="btn btn--theme hover--theme submit"
+                              type='submit'
+                              className='btn btn--theme hover--theme submit'
                             >
                               Create Account
                             </button>
                           </div>
                           {/* Log In Link */}
-                          <div className="col-md-12">
-                            <p className="create-account text-center">
-                              Already have an account?{" "}
-                              <Link href="/login-2" className="color--theme">
+                          <div className='col-md-12'>
+                            <p className='create-account text-center'>
+                              Already have an account?{' '}
+                              <Link href='/login-2' className='color--theme'>
                                 Log in
                               </Link>
                             </p>
                           </div>
                         </form>
                       </div>
-                    </div>{" "}
+                    </div>{' '}
                     {/* END SIGN UP FORM */}
                     {/* SIGN UP PAGE TEXT */}
-                    <div className="col-md-6">
-                      <div className="register-page-txt color--white">
+                    <div className='col-md-6'>
+                      <div className='register-page-txt color--white'>
                         {/* Section ID */}
-                        <span className="section-id">Start for free</span>
+                        <span className='section-id'>Start for free</span>
                         {/* Title */}
-                        <h2 className="s-48 w-700">Create</h2>
-                        <h2 className="s-48 w-700">an account</h2>
+                        <h2 className='s-48 w-700'>Create</h2>
+                        <h2 className='s-48 w-700'>an account</h2>
                         {/* Text */}
-                        <p className="p-md mt-25">
+                        <p className='p-md mt-25'>
                           Start building and managing your website efficiently
                           with ContentQL
                         </p>
                         {/* Copyright */}
-                        <div className="register-page-copyright">
-                          <p className="p-sm">
+                        <div className='register-page-copyright'>
+                          <p className='p-sm'>
                             © 2024 ContentQL. <span>All Rights Reserved</span>
                           </p>
                         </div>
                       </div>
-                    </div>{" "}
+                    </div>{' '}
                     {/* END SIGN UP PAGE TEXT */}
-                  </div>{" "}
+                  </div>{' '}
                   {/* End row */}
-                </div>{" "}
+                </div>{' '}
                 {/* End register-page-wrapper */}
-              </div>{" "}
+              </div>{' '}
               {/* END REGISTER PAGE WRAPPER */}
-            </div>{" "}
+            </div>{' '}
             {/* End row */}
-          </div>{" "}
+          </div>{' '}
           {/* End container */}
-        </div>{" "}
+        </div>{' '}
         {/* END SIGN UP PAGE */}
       </div>
     </>
-  );
+  )
 }

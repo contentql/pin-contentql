@@ -1,36 +1,37 @@
-import { useEffect, useState } from "react";
-import Counter from "./Counter";
+import { useEffect, useState } from 'react'
+
+import Counter from './Counter'
 
 interface Props {
-  end: number;
+  end: number
 }
 
 export default function CounterUp({ end }: Props) {
-  const [inViewport, setInViewport] = useState(false);
+  const [inViewport, setInViewport] = useState(false)
 
   const handleScroll = () => {
-    const elements = document.getElementsByClassName("count-element");
+    const elements = document.getElementsByClassName('count-element')
     if (elements.length > 0) {
-      const element = elements[0];
-      const rect = element.getBoundingClientRect();
-      const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      const element = elements[0]
+      const rect = element.getBoundingClientRect()
+      const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight
       if (isInViewport && !inViewport) {
-        setInViewport(true);
+        setInViewport(true)
       }
     }
-  };
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
     <>
-      <span className="count-element">
+      <span className='count-element'>
         {inViewport && <Counter end={end} duration={20} />}
       </span>
     </>
-  );
+  )
 }

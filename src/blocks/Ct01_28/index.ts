@@ -1,47 +1,47 @@
-import { Block } from "payload/types";
+import { Block } from 'payload/types'
 
 export const Ct01_28: Block = {
-  slug: "ct01_28",
+  slug: 'ct01_28',
   labels: {
-    singular: "Ct01_28 Block",
-    plural: "Ct01_28 Blocks",
+    singular: 'Ct01_28 Block',
+    plural: 'Ct01_28 Blocks',
   },
   fields: [
     {
-      name: "caption",
-      label: "Caption",
-      type: "text",
+      name: 'caption',
+      label: 'Caption',
+      type: 'text',
       required: true,
     },
     {
-      name: "title",
-      label: "Title",
-      type: "text",
+      name: 'title',
+      label: 'Title',
+      type: 'text',
       required: true,
     },
     {
-      name: "paragraphs",
-      label: "Paragraphs",
+      name: 'paragraphs',
+      label: 'Paragraphs',
       required: true,
-      type: "array",
+      type: 'array',
       fields: [
         {
-          name: "paragraph",
-          label: "Paragraph",
-          type: "textarea",
+          name: 'paragraph',
+          label: 'Paragraph',
+          type: 'textarea',
           required: true,
         },
       ],
     },
     {
-      name: "background_image",
-      label: "Background Image",
-      type: "upload",
-      relationTo: "media",
+      name: 'background_image',
+      label: 'Background Image',
+      type: 'upload',
+      relationTo: 'media',
       required: true,
       admin: {
-        description: "background image",
+        description: 'background image',
       },
     },
   ],
-};
+}

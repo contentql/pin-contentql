@@ -1,33 +1,33 @@
-import { Block } from "payload/types";
+import { Block } from 'payload/types'
 
 export const Banner13_9: Block = {
-  slug: "banner13_9",
+  slug: 'banner13_9',
   labels: {
-    singular: "Banner13_9 Block",
-    plural: "Banner13_9 Blocks",
+    singular: 'Banner13_9 Block',
+    plural: 'Banner13_9 Blocks',
   },
   fields: [
     {
-      name: "title",
-      label: "Title",
-      type: "text",
+      name: 'title',
+      label: 'Title',
+      type: 'text',
       required: true,
     },
     {
-      name: "sub_title",
-      label: "Sub Title",
-      type: "text",
+      name: 'sub_title',
+      label: 'Sub Title',
+      type: 'text',
       required: true,
     },
     {
-      name: "background_image",
-      label: "Background Image",
-      type: "upload",
-      relationTo: "media",
+      name: 'background_image',
+      label: 'Background Image',
+      type: 'upload',
+      relationTo: 'media',
       required: true,
       admin: {
-        description: "Background Image",
+        description: 'Background Image',
       },
     },
   ],
-};
+}

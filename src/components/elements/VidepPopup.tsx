@@ -1,12 +1,13 @@
-import { useState } from "react";
-import ModalVideo from "react-modal-video";
+import { useState } from 'react'
+import ModalVideo from 'react-modal-video'
+
 // import "../../node_modules/react-modal-video/css/modal-video.css";
 
 interface Props {
-  style: number;
+  style: number
 }
 export default function VideoPopup({ style }: Props) {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false)
   return (
     <>
       {style === 1 && (
@@ -17,19 +18,19 @@ export default function VideoPopup({ style }: Props) {
         //         </div>
         //     </div>
         // </a>
-        <a className="video-popup1" onClick={() => setOpen(true)}>
-          <div className="video-btn video-btn-xl bg--theme">
-            <div className="video-block-wrapper">
-              <span className="flaticon-play-button" />
+        <a className='video-popup1' onClick={() => setOpen(true)}>
+          <div className='video-btn video-btn-xl bg--theme'>
+            <div className='video-block-wrapper'>
+              <span className='flaticon-play-button' />
             </div>
           </div>
         </a>
       )}
       {style === 2 && (
-        <a className="video-popup2" onClick={() => setOpen(true)}>
-          <div className="video-btn video-btn-xl bg--theme">
-            <div className="video-block-wrapper">
-              <span className="flaticon-play-button" />
+        <a className='video-popup2' onClick={() => setOpen(true)}>
+          <div className='video-btn video-btn-xl bg--theme'>
+            <div className='video-block-wrapper'>
+              <span className='flaticon-play-button' />
             </div>
           </div>
         </a>
@@ -37,7 +38,7 @@ export default function VideoPopup({ style }: Props) {
       {style === 3 && (
         <a
           onClick={() => setOpen(true)}
-          className="video-popup2 btn r-04 btn--tra-black hover--violet-100"
+          className='video-popup2 btn r-04 btn--tra-black hover--violet-100'
         >
           See how it works
         </a>
@@ -45,27 +46,27 @@ export default function VideoPopup({ style }: Props) {
       {style === 4 && (
         <a
           onClick={() => setOpen(true)}
-          className="video-popup2 btn r-04 btn--theme hover--tra-black ico-20 ico-right"
+          className='video-popup2 btn r-04 btn--theme hover--tra-black ico-20 ico-right'
         >
-          See how it works <span className="flaticon-play" />
+          See how it works <span className='flaticon-play' />
         </a>
       )}
       {style === 5 && (
         <a
           onClick={() => setOpen(true)}
-          className="video-popup2 btn r-04 btn--tra-black hover--theme ico-20 ico-right"
+          className='video-popup2 btn r-04 btn--tra-black hover--theme ico-20 ico-right'
         >
-          See how it works <span className="flaticon-play" />
+          See how it works <span className='flaticon-play' />
         </a>
       )}
 
       <ModalVideo
-        channel="youtube"
+        channel='youtube'
         youtube={{ autoplay: 1 }}
         isOpen={isOpen}
-        videoId="vfhzo499OeA"
+        videoId='vfhzo499OeA'
         onClose={() => setOpen(false)}
       />
     </>
-  );
+  )
 }

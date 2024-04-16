@@ -1,59 +1,59 @@
-import { Block } from "payload/types";
+import { Block } from 'payload/types'
 
 export const Ct02_44: Block = {
-  slug: "ct02_44",
+  slug: 'ct02_44',
   labels: {
-    singular: "Ct02_44 Block",
-    plural: "Ct02_44 Blocks",
+    singular: 'Ct02_44 Block',
+    plural: 'Ct02_44 Blocks',
   },
   fields: [
     {
-      name: "title",
-      label: "Title",
-      type: "text",
+      name: 'title',
+      label: 'Title',
+      type: 'text',
       required: true,
     },
     {
-      name: "subtitle",
-      label: "Subtitle",
-      type: "textarea",
+      name: 'subtitle',
+      label: 'Subtitle',
+      type: 'textarea',
       required: true,
     },
     {
-      name: "heading",
-      label: "Heading",
-      type: "text",
+      name: 'heading',
+      label: 'Heading',
+      type: 'text',
       required: true,
     },
     {
-      name: "paragraph",
-      label: "Paragraph",
-      type: "textarea",
+      name: 'paragraph',
+      label: 'Paragraph',
+      type: 'textarea',
       required: true,
     },
     {
-      name: "points",
-      label: "Points",
+      name: 'points',
+      label: 'Points',
       required: true,
-      type: "array",
+      type: 'array',
       fields: [
         {
-          name: "point",
-          label: "Point",
-          type: "textarea",
+          name: 'point',
+          label: 'Point',
+          type: 'textarea',
           required: true,
         },
       ],
     },
     {
-      name: "background_image",
-      label: "Background Image",
-      type: "upload",
-      relationTo: "media",
+      name: 'background_image',
+      label: 'Background Image',
+      type: 'upload',
+      relationTo: 'media',
       required: true,
       admin: {
-        description: "background image",
+        description: 'background image',
       },
     },
   ],
-};
+}

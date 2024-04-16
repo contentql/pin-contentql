@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function Features12_8({
   caption,
@@ -7,87 +7,87 @@ export default function Features12_8({
   points,
   features,
 }: {
-  caption?: string;
-  title?: string;
-  sub_title?: string;
+  caption?: string
+  title?: string
+  sub_title?: string
   points?: {
-    point: string;
-    id?: string | null;
-  }[];
+    point: string
+    id?: string | null
+  }[]
   features?: {
-    title: string;
-    description: string;
-    id?: string | null;
-  }[];
+    title: string
+    description: string
+    id?: string | null
+  }[]
 }) {
   return (
     <>
       <section
-        id="features-12"
-        className="shape--bg shape--white-400 pt-100 features-section division"
+        id='features-12'
+        className='shape--bg shape--white-400 pt-100 features-section division'
       >
-        <div className="container">
-          <div className="row d-flex align-items-center">
+        <div className='container'>
+          <div className='row d-flex align-items-center'>
             {/* TEXT BLOCK */}
-            <div className="col-md-5">
-              <div className="txt-block left-column wow fadeInRight">
+            <div className='col-md-5'>
+              <div className='txt-block left-column wow fadeInRight'>
                 {/* Section ID */}
-                <span className="section-id">{caption}</span>
+                <span className='section-id'>{caption}</span>
                 {/* Title */}
-                <h2 className="s-46 w-700">{title}</h2>
+                <h2 className='s-46 w-700'>{title}</h2>
                 {/* Text */}
                 <p>{sub_title}</p>
                 {/* List */}
-                <ul className="simple-list">
+                <ul className='simple-list'>
                   {points?.map((point, index) => (
-                    <li key={point?.id} className="list-item">
+                    <li key={point?.id} className='list-item'>
                       <p>{point?.point}</p>
                     </li>
                   ))}
                 </ul>
                 {/* Link */}
-                <div className="txt-block-tra-link mt-25">
+                <div className='txt-block-tra-link mt-25'>
                   <Link
-                    href="#features-5"
-                    className="tra-link ico-20 color--theme"
+                    href='#features-5'
+                    className='tra-link ico-20 color--theme'
                   >
-                    Optimize your results <span className="flaticon-next" />
+                    Optimize your results <span className='flaticon-next' />
                   </Link>
                 </div>
               </div>
-            </div>{" "}
+            </div>{' '}
             {/* END TEXT BLOCK */}
             {/* FEATURES-12 WRAPPER */}
-            <div className="col-md-7">
-              <div className="fbox-12-wrapper wow fadeInLeft">
-                <div className="row">
-                  <div className="col-md-6">
+            <div className='col-md-7'>
+              <div className='fbox-12-wrapper wow fadeInLeft'>
+                <div className='row'>
+                  <div className='col-md-6'>
                     {/* FEATURE BOX #1 */}
                     <div
-                      id="fb-12-1"
-                      className="fbox-12 bg--white-100 block-shadow r-12 mb-30"
+                      id='fb-12-1'
+                      className='fbox-12 bg--white-100 block-shadow r-12 mb-30'
                     >
                       {/* Icon */}
-                      <div className="fbox-ico ico-50">
-                        <div className="shape-ico color--theme">
+                      <div className='fbox-ico ico-50'>
+                        <div className='shape-ico color--theme'>
                           {/* Vector Icon */}
-                          <span className="flaticon-maximize" />
+                          <span className='flaticon-maximize' />
                           {/* Shape */}
                           <svg
-                            viewBox="0 0 200 200"
-                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox='0 0 200 200'
+                            xmlns='http://www.w3.org/2000/svg'
                           >
                             <path
-                              d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                              transform="translate(100 100)"
+                              d='M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z'
+                              transform='translate(100 100)'
                             />
                           </svg>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* End Icon */}
                       {/* Text */}
-                      <div className="fbox-txt">
-                        <h5 className="s-19 w-700">Cross-Platform</h5>
+                      <div className='fbox-txt'>
+                        <h5 className='s-19 w-700'>Cross-Platform</h5>
                         <p>
                           Porta semper lacus and cursus feugiat at primis
                           ultrice a ligula auctor
@@ -96,30 +96,30 @@ export default function Features12_8({
                     </div>
                     {/* FEATURE BOX #2 */}
                     <div
-                      id="fb-12-2"
-                      className="fbox-12 bg--white-100 block-shadow r-12"
+                      id='fb-12-2'
+                      className='fbox-12 bg--white-100 block-shadow r-12'
                     >
                       {/* Icon */}
-                      <div className="fbox-ico ico-50">
-                        <div className="shape-ico color--theme">
+                      <div className='fbox-ico ico-50'>
+                        <div className='shape-ico color--theme'>
                           {/* Vector Icon */}
-                          <span className="flaticon-manager" />
+                          <span className='flaticon-manager' />
                           {/* Shape */}
                           <svg
-                            viewBox="0 0 200 200"
-                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox='0 0 200 200'
+                            xmlns='http://www.w3.org/2000/svg'
                           >
                             <path
-                              d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                              transform="translate(100 100)"
+                              d='M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z'
+                              transform='translate(100 100)'
                             />
                           </svg>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* End Icon */}
                       {/* Text */}
-                      <div className="fbox-txt">
-                        <h5 className="s-19 w-700">Multiple Accounts</h5>
+                      <div className='fbox-txt'>
+                        <h5 className='s-19 w-700'>Multiple Accounts</h5>
                         <p>
                           Porta semper lacus and cursus feugiat at primis
                           ultrice a ligula auctor
@@ -127,33 +127,33 @@ export default function Features12_8({
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-6">
+                  <div className='col-md-6'>
                     {/* FEATURE BOX #3 */}
                     <div
-                      id="fb-12-3"
-                      className="fbox-12 bg--white-100 block-shadow r-12 mb-30"
+                      id='fb-12-3'
+                      className='fbox-12 bg--white-100 block-shadow r-12 mb-30'
                     >
                       {/* Icon */}
-                      <div className="fbox-ico ico-50">
-                        <div className="shape-ico color--theme">
+                      <div className='fbox-ico ico-50'>
+                        <div className='shape-ico color--theme'>
                           {/* Vector Icon */}
-                          <span className="flaticon-rotate" />
+                          <span className='flaticon-rotate' />
                           {/* Shape */}
                           <svg
-                            viewBox="0 0 200 200"
-                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox='0 0 200 200'
+                            xmlns='http://www.w3.org/2000/svg'
                           >
                             <path
-                              d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                              transform="translate(100 100)"
+                              d='M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z'
+                              transform='translate(100 100)'
                             />
                           </svg>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* End Icon */}
                       {/* Text */}
-                      <div className="fbox-txt">
-                        <h5 className="s-19 w-700">Extremely Flexible</h5>
+                      <div className='fbox-txt'>
+                        <h5 className='s-19 w-700'>Extremely Flexible</h5>
                         <p>
                           Porta semper lacus and cursus feugiat at primis
                           ultrice a ligula auctor
@@ -162,30 +162,30 @@ export default function Features12_8({
                     </div>
                     {/* FEATURE BOX #4 */}
                     <div
-                      id="fb-12-4"
-                      className="fbox-12 bg--white-100 block-shadow r-12"
+                      id='fb-12-4'
+                      className='fbox-12 bg--white-100 block-shadow r-12'
                     >
                       {/* Icon */}
-                      <div className="fbox-ico ico-50">
-                        <div className="shape-ico color--theme">
+                      <div className='fbox-ico ico-50'>
+                        <div className='shape-ico color--theme'>
                           {/* Vector Icon */}
-                          <span className="flaticon-prioritize" />
+                          <span className='flaticon-prioritize' />
                           {/* Shape */}
                           <svg
-                            viewBox="0 0 200 200"
-                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox='0 0 200 200'
+                            xmlns='http://www.w3.org/2000/svg'
                           >
                             <path
-                              d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                              transform="translate(100 100)"
+                              d='M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z'
+                              transform='translate(100 100)'
                             />
                           </svg>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* End Icon */}
                       {/* Text */}
-                      <div className="fbox-txt">
-                        <h5 className="s-19 w-700">Easy to Embed</h5>
+                      <div className='fbox-txt'>
+                        <h5 className='s-19 w-700'>Easy to Embed</h5>
                         <p>
                           Porta semper lacus and cursus feugiat at primis
                           ultrice a ligula auctor
@@ -194,15 +194,15 @@ export default function Features12_8({
                     </div>
                   </div>
                 </div>
-              </div>{" "}
+              </div>{' '}
               {/* End row */}
-            </div>{" "}
+            </div>{' '}
             {/* END FEATURES-12 WRAPPER */}
-          </div>{" "}
+          </div>{' '}
           {/* End row */}
-        </div>{" "}
+        </div>{' '}
         {/* End container */}
       </section>
     </>
-  );
+  )
 }
