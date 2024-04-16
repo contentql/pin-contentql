@@ -1,32 +1,33 @@
-import { Block } from "payload/types";
+import { Block } from 'payload/types';
 
 export const Hero5: Block = {
-  slug: "hero5",
+  slug: 'hero5',
+  imageURL: '/images/demo/hero.jpg',
   labels: {
-    singular: "Hero5 Block",
-    plural: "Hero5 Blocks",
+    singular: 'Hero5 Block',
+    plural: 'Hero5 Blocks',
   },
   fields: [
     {
-      name: "title",
-      label: "Title",
-      type: "text",
+      name: 'title',
+      label: 'Title',
+      type: 'text',
       required: true,
     },
     {
-      name: "subtitle",
-      label: "Subtitle",
-      type: "textarea",
+      name: 'subtitle',
+      label: 'Subtitle',
+      type: 'textarea',
       required: true,
     },
     {
-      name: "background_image",
-      label: "Background Image",
-      type: "upload",
-      relationTo: "media",
+      name: 'background_image',
+      label: 'Background Image',
+      type: 'upload',
+      relationTo: 'media',
       required: true,
       admin: {
-        description: "background image",
+        description: 'background image',
       },
     },
   ],
