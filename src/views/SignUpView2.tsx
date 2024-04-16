@@ -117,7 +117,7 @@ export default function SignUpView2() {
                         {/* Copyright */}
                         <div className="register-page-copyright">
                           <p className="p-sm">
-                            © 2024 Martex. <span>All Rights Reserved</span>
+                            © 2024 ContentQL. <span>All Rights Reserved</span>
                           </p>
                         </div>
                       </div>

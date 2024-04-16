@@ -1,23 +1,27 @@
-import { buildConfig } from 'payload/config';
-import { webpackBundler } from '@payloadcms/bundler-webpack';
-import { mongooseAdapter } from '@payloadcms/db-mongodb';
-import { slateEditor } from '@payloadcms/richtext-slate';
-import path from 'path';
-import Users from './collections/Users';
-import dotenv from 'dotenv';
-import { cloudStorage } from '@payloadcms/plugin-cloud-storage';
-import { s3StorageAdapter } from './plugins/s3';
-import { Media } from './collections/Media';
+import { webpackBundler } from "@payloadcms/bundler-webpack";
+import { mongooseAdapter } from "@payloadcms/db-mongodb";
+import { cloudStorage } from "@payloadcms/plugin-cloud-storage";
+import { slateEditor } from "@payloadcms/richtext-slate";
+import dotenv from "dotenv";
+import path from "path";
+import { buildConfig } from "payload/config";
+import { Media } from "./collections/Media";
+import { Pages } from "./collections/Pages";
+import Users from "./collections/Users";
+import { Footer } from "./globals/Footer";
+import { Header } from "./globals/Header";
+import { s3StorageAdapter } from "./plugins/s3";
 
 dotenv.config({
-  path: path.resolve(__dirname, '../.env'),
+  path: path.resolve(__dirname, "../.env"),
 });
 
 export default buildConfig({
   serverURL: process.env.NEXT_PUBLIC_SERVER_URL!,
-  collections: [Users, Media],
+  collections: [Users, Media, Pages],
+  globals: [Header, Footer],
   routes: {
-    admin: '/admin',
+    admin: "/admin",
   },
   admin: {
     user: Users.slug,
@@ -32,7 +36,7 @@ export default buildConfig({
       return config;
     },
     meta: {
-      titleSuffix: '- ContentQL',
+      titleSuffix: "- ContentQL",
     },
   },
   rateLimit: {
@@ -52,7 +56,7 @@ export default buildConfig({
     }),
   ],
   typescript: {
-    outputFile: path.resolve(__dirname, 'payload-types.ts'),
+    outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
   cors: [process.env.NEXT_PUBLIC_SERVER_URL!].filter(Boolean),
   csrf: [process.env.NEXT_PUBLIC_SERVER_URL!].filter(Boolean),

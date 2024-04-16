@@ -101,7 +101,7 @@ export default function Blog1_6() {
                   <div className="blog-post-meta mt-20">
                     <ul className="post-meta-list ico-10">
                       <li>
-                        <p className="p-sm w-500">By Martex Team</p>
+                        <p className="p-sm w-500">By ContentQL Team</p>
                       </li>
                       <li className="meta-list-divider">
                         <p>
@@ -138,7 +138,7 @@ export default function Blog1_6() {
                   {/* Post Link */}
                   <h6 className="s-20 w-700">
                     <Link href="/single-post">
-                      Cubilia laoreet augue egestas and Martex magna impedit
+                      Cubilia laoreet augue egestas and ContentQL magna impedit
                     </Link>
                   </h6>
                   {/* Text */}

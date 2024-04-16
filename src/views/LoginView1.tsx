@@ -17,7 +17,7 @@ export default function LoginView1() {
                   {/* TITLE */}
                   <div className="col-md-12">
                     <div className="register-form-title">
-                      <h3 className="s-32 w-700">Log in to Martex</h3>
+                      <h3 className="s-32 w-700">Log in to ContentQL</h3>
                       <p className="p-md">
                         Don&apos;t have an account?{" "}
                         <Link href="/signup-1" className="color--theme">

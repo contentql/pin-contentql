@@ -302,7 +302,7 @@ export default function AboutUsView() {
                 <div className="col-md-6 order-last order-md-2">
                   <div className="txt-block left-column wow fadeInRight">
                     {/* Section ID */}
-                    <span className="section-id">Co-founder at Martex</span>
+                    <span className="section-id">Co-founder at ContentQL</span>
                     {/* Title */}
                     <h2 className="s-50 w-700">Henry Adams</h2>
                     {/* Text */}
@@ -1400,7 +1400,7 @@ export default function AboutUsView() {
                       <div className="blog-post-meta mt-20">
                         <ul className="post-meta-list ico-10">
                           <li>
-                            <p className="p-sm w-500">By Martex Team</p>
+                            <p className="p-sm w-500">By ContentQL Team</p>
                           </li>
                           <li className="meta-list-divider">
                             <p>
@@ -1437,7 +1437,8 @@ export default function AboutUsView() {
                       {/* Post Link */}
                       <h6 className="s-20 w-700">
                         <Link href="/single-post">
-                          Cubilia laoreet augue egestas and Martex magna impedit
+                          Cubilia laoreet augue egestas and ContentQL magna
+                          impedit
                         </Link>
                       </h6>
                       {/* Text */}

@@ -1,3 +1,4 @@
+import { Header } from "@/payload-types";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { AiFillEdit } from "react-icons/ai";
@@ -13,93 +14,38 @@ import {
 import { SiSpringCreators } from "react-icons/si";
 import { TbHelpCircle } from "react-icons/tb";
 
-export default function Menu() {
+interface Props {
+  headerData?: Header;
+}
+export default function Menu({ headerData }: Props) {
   const router = useRouter();
   // const parser = new DOMParser();
 
-  const product = [
+  const products = [
+    { icon: <SiSpringCreators size={26} />, key: "springCreators" },
+    { icon: <MdOutlinePublish size={26} />, key: "publish" },
     {
-      title: "For creators",
-      description: "YouTubers, bloggers, podcasters, musicians and artists",
-      path: "/creators",
-      icon: <SiSpringCreators size={26} />,
-    },
-    {
-      title: "For Publishers",
-      description: "Writers,journalists, local news and new media outlets",
-      path: "/publishers",
-      icon: <MdOutlinePublish size={26} />,
-    },
-    {
-      title: "For Business",
-      description: "Modern brands & companies with ambitious content marketing",
-      path: "/business",
       icon: <MdOutlineIntegrationInstructions size={26} />,
+      key: "integrationInstructions",
     },
-    {
-      title: "For Developers",
-      description: "Source code, documentation,guides and tutorials",
-      path: "/developers",
-      icon: <IoIosCode size={26} />,
-    },
+    { icon: <IoIosCode size={26} />, key: "code" },
   ];
 
-  const Resources1 = [
+  const resources1 = [
+    { icon: <MdOutlineFeaturedPlayList size={26} />, key: "featuredPlayList" },
+    { icon: <FaAffiliatetheme size={26} />, key: "affiliateTheme" },
     {
-      title: "Marketplace",
-      description:
-        "Professional themes, custom integrations and qualifed experts",
-      path: "/market-place",
-      icon: <MdOutlineFeaturedPlayList size={26} />,
-    },
-    {
-      title: "Themes",
-      description: "Hundreds of beautifully designed publication templates",
-      path: "/themes",
-      icon: <FaAffiliatetheme size={26} />,
-    },
-    {
-      title: "Integrations",
-      description: "Connect thousands of apps and services with your website",
-      path: "/integrations",
       icon: <MdOutlineIntegrationInstructions size={26} />,
+      key: "integrationInstructions",
     },
-    {
-      title: "Experts",
-      description:
-        "Get help building your site from certified ContentQL developers",
-      path: "/experts",
-      icon: <IoIosCode size={26} />,
-    },
+    { icon: <IoIosCode size={26} />, key: "code" },
   ];
+
   const resources2 = [
-    {
-      title: "Start here",
-      description:
-        "A huge library of guides, stories, interviews and tips for success",
-      path: "/start-here",
-      icon: <GoBook size={26} />,
-    },
-    {
-      title: "Help center",
-      description:
-        "Get help from product features and answers to common questions",
-      path: "/help-center",
-      icon: <TbHelpCircle size={26} />,
-    },
-    {
-      title: "Product updates",
-      description: "all the latest changes and improvements to contentQL",
-      path: "/product-updates",
-      icon: <MdOutlineSystemUpdateAlt size={26} />,
-    },
-    {
-      title: "About us",
-      description:
-        "Learn more about the people behind the platform (we're hiring)",
-      path: "/about",
-      icon: <AiFillEdit size={26} />,
-    },
+    { icon: <GoBook size={26} />, key: "book" },
+    { icon: <TbHelpCircle size={26} />, key: "helpCircle" },
+    { icon: <MdOutlineSystemUpdateAlt size={26} />, key: "systemUpdateAlt" },
+    { icon: <AiFillEdit size={26} />, key: "edit" },
   ];
 
   return (
@@ -111,16 +57,16 @@ export default function Menu() {
             Product <span className="wsarrow" />
           </Link>
           <ul className="sub-menu w-20">
-            {product.map((navitem) => (
-              <li key={navitem.title} className="fst-li">
-                <Link href={navitem.path}>
+            {headerData?.product_links?.map((product_link, index) => (
+              <li key={product_link?.id} className="fst-li">
+                <Link href={product_link?.path}>
                   <div className="navbar-icon">
-                    <div className="icon">{navitem.icon}</div>
+                    <div className="icon">{products[index]?.icon}</div>
                     <div>
                       {" "}
-                      <p className="navitem-title">{navitem.title}</p>
+                      <p className="navitem-title">{product_link?.title}</p>
                       <span className="navitem-description">
-                        {navitem.description}
+                        {product_link?.description}
                       </span>
                     </div>
                   </div>
@@ -131,7 +77,7 @@ export default function Menu() {
         </li>
         {/* SIMPLE NAVIGATION LINK */}
         <li className="nl-simple">
-          <Link href="/explore" className="h-link">
+          <Link href={headerData?.explore_path || ""} className="h-link">
             Explore
           </Link>
         </li>
@@ -145,41 +91,53 @@ export default function Menu() {
               <div className="row">
                 {/* MEGAMENU LINKS */}
                 <ul className="col-md-12 col-lg-6 link-list">
-                  {Resources1.map((resource) => (
-                    <li key={resource.title} className="fst-li">
-                      <Link href={resource.path}>
-                        <div className="navbar-icon">
-                          <div className="icon">{resource.icon}</div>
+                  {headerData?.resources1_links?.map(
+                    (resources1_link, index) => (
+                      <li key={resources1_link?.id} className="fst-li">
+                        <Link href={resources1_link?.path}>
+                          <div className="navbar-icon">
+                            <div className="icon">
+                              {resources1[index]?.icon}
+                            </div>
 
-                          <div>
-                            {" "}
-                            <p className="navitem-title">{resource.title}</p>
-                            <span className="navitem-description">
-                              {resource.description}
-                            </span>
+                            <div>
+                              {" "}
+                              <p className="navitem-title">
+                                {resources1_link?.title}
+                              </p>
+                              <span className="navitem-description">
+                                {resources1_link?.description}
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                      </Link>
-                    </li>
-                  ))}
+                        </Link>
+                      </li>
+                    )
+                  )}
                 </ul>
                 <ul className="col-md-12 col-lg-6 link-list">
-                  {resources2.map((navitem) => (
-                    <li key={navitem.title} className="fst-li">
-                      <Link href={navitem.path}>
-                        <div className="navbar-icon">
-                          <div className="icon">{navitem.icon}</div>
-                          <div>
-                            {" "}
-                            <p className="navitem-title">{navitem.title}</p>
-                            <span className="navitem-description">
-                              {navitem.description}
-                            </span>
+                  {headerData?.resources2_links?.map(
+                    (resources2_link, index) => (
+                      <li key={resources2_link.id} className="fst-li">
+                        <Link href={resources2_link.path}>
+                          <div className="navbar-icon">
+                            <div className="icon">
+                              {resources2[index]?.icon}
+                            </div>
+                            <div>
+                              {" "}
+                              <p className="navitem-title">
+                                {resources2_link.title}
+                              </p>
+                              <span className="navitem-description">
+                                {resources2_link.description}
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                      </Link>
-                    </li>
-                  ))}
+                        </Link>
+                      </li>
+                    )
+                  )}
                 </ul>
                 {/* MEGAMENU LINKS */}
               </div>{" "}
@@ -192,12 +150,12 @@ export default function Menu() {
         {/* END MEGAMENU */}
         {/* SIMPLE NAVIGATION LINK */}
         <li className="nl-simple reg-fst-link mobile-last-link">
-          <Link href="/templates" className="h-link">
+          <Link href={headerData?.templates_path || ""} className="h-link">
             Templates
           </Link>
         </li>
         <li className="nl-simple">
-          <Link href="/pricing" className="h-link">
+          <Link href={headerData?.pricing_path || ""} className="h-link">
             Pricing
           </Link>
         </li>

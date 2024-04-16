@@ -83,8 +83,8 @@ export default function ContactsView() {
                           Explain your question in details:{" "}
                         </p>
                         <span>
-                          Your OS version, Martex version &amp; build, steps you
-                          did. Be VERY precise!
+                          Your OS version, ContentQL version &amp; build, steps
+                          you did. Be VERY precise!
                         </span>
                         <textarea
                           className="form-control message"
@@ -104,7 +104,7 @@ export default function ContactsView() {
                       </div>
                       <div className="contact-form-notice">
                         <p className="p-sm">
-                          We are committed to your privacy. Martex uses the
+                          We are committed to your privacy. ContentQL uses the
                           information you provide us to contact you about our
                           relevant content, products, and services. You may
                           unsubscribe from these communications at any time. For

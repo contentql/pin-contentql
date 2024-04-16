@@ -1,6 +1,18 @@
 import Link from "next/link";
 
-export default function Faqs3_13() {
+export default function Faqs3_13({
+  title,
+  sub_title,
+  questions,
+}: {
+  title?: string;
+  sub_title?: string;
+  questions?: {
+    question: string;
+    answer: string;
+    id?: string | null;
+  }[];
+}) {
   return (
     <>
       <section id="faqs-3" className="pt-100 faqs-section">
@@ -10,11 +22,9 @@ export default function Faqs3_13() {
             <div className="col-md-10 col-lg-9">
               <div className="section-title mb-70">
                 {/* Title */}
-                <h2 className="s-50 w-700">Questions &amp; Answers</h2>
+                <h2 className="s-50 w-700">{title}</h2>
                 {/* Text */}
-                <p className="s-21 color--grey">
-                  Ligula risus auctor tempus magna feugiat lacinia.
-                </p>
+                <p className="s-21 color--grey">{sub_title}</p>
               </div>
             </div>
           </div>
@@ -28,7 +38,7 @@ export default function Faqs3_13() {
                   <div className="question mb-35 wow fadeInUp">
                     {/* Question */}
                     <h5 className="s-22 w-700">
-                      <span>1.</span> Getting started with Martex
+                      <span>1.</span> Getting started with ContentQL
                     </h5>
                     {/* Answer */}
                     <p className="color--grey">
@@ -83,7 +93,7 @@ export default function Faqs3_13() {
                   <div className="question mb-35 wow fadeInUp">
                     {/* Question */}
                     <h5 className="s-22 w-700">
-                      <span>4.</span> How does Martex handle my privacy?
+                      <span>4.</span> How does ContentQL handle my privacy?
                     </h5>
                     {/* Answer */}
                     <p className="color--grey">

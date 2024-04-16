@@ -19,7 +19,7 @@ import Statistic1_11 from "../components/sections/Statistic1_11";
 export default function StartHereView() {
   return (
     <>
-      <Layout headerStyle={1} footerStyle={1} headerCls="navbar-light">
+      <Layout headerStyle={1} footerStyle={3} headerCls="navbar-light">
         <Hero14 />
         <Statistic1_11 />
         <hr className="divider" />

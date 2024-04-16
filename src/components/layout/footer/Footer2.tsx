@@ -9,7 +9,7 @@ export default function Footer2() {
               {/* FOOTER COPYRIGHT */}
               <div className="col">
                 <div className="footer-copyright">
-                  <p className="p-sm">© 2014-2023 Martex Labs, Inc.</p>
+                  <p className="p-sm">© 2014-2023 ContentQL Labs, Inc.</p>
                 </div>
               </div>
               {/* FOOTER LINKS */}

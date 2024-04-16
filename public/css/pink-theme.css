@@ -13,13 +13,22 @@
   01. GENERAL & BASIC STYLES
   =========================================================================== */
 
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta.woff2") format("woff2");
+  src: url("/fonts/Averta.woff") format("woff");
+  src: url("/fonts/Averta.ttf") format("truetype");
+  src: url("/fonts/Averta.otf") format("otf");
+  /* Add other font weights/styles as needed */
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
 }
 
 body {
-  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Averta"; /*"Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   color: #6c757d;
   line-height: 1.6666;
   font-weight: 400;
@@ -1295,7 +1304,7 @@ h6 {
 .font--jakarta h4,
 .font--jakarta h5,
 .font--jakarta h6 {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   line-height: 1.35;
 }
 
@@ -1310,7 +1319,7 @@ h6 {
 .font--inter h4,
 .font--inter h5,
 .font--inter h6 {
-  font-family: "Inter", sans-serif;
+  font-family: "Averta"; /*"Inter", sans-serif;*/
   letter-spacing: -0.5px;
 }
 
@@ -3138,11 +3147,11 @@ p.video-txt-sm {
 }
 
 .font--jakarta .section-id {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
 }
 
 .font--inter .section-id {
-  font-family: "Inter", sans-serif;
+  font-family: "Averta"; /*"Inter", sans-serif;*/
 }
 
 /*------------------------------------------*/
@@ -3839,7 +3848,7 @@ p.video-txt-sm {
 /*------------------------------------------*/
 
 .wsmenu > .wsmenu-list > li > a {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   display: block;
   font-size: 1rem;
   line-height: 50px;
@@ -4093,7 +4102,7 @@ span.sm-info {
 
 .wsmenu > .wsmenu-list > li > ul.sub-menu > li > a {
   background-color: rgba(244, 244, 249, 0);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   color: #353f4f;
   font-size: 1rem;
   font-weight: 600;
@@ -4140,7 +4149,7 @@ span.sm-info {
 
 .wsmenu > .wsmenu-list > li > .wsmegamenu.w-75 ul.link-list > li > a,
 .wsmenu > .wsmenu-list > li > .wsmegamenu.halfmenu ul.link-list > li > a {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   background-color: rgba(244, 244, 249, 0);
   color: #353f4f;
   font-size: 1rem;
@@ -4189,7 +4198,7 @@ span.sm-info {
 .wsmenu > .wsmenu-list > li > .wsmegamenu .title,
 .wsmenu > .wsmenu-list > li > .wsmegamenu.halfmenu .title {
   color: #929394;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 0.875rem;
   line-height: 1;
   font-weight: 600;
@@ -7086,7 +7095,7 @@ h5.h5-title {
 .txt-block .accordion-1 .accordion-item.is-active .accordion-thumb:before,
 .txt-block .accordion-2 .accordion-item.is-active .accordion-thumb:after {
   color: #6c757d;
-  font-family: Flaticon;
+  font-family: "Averta"; /* Flaticon;*/
   position: absolute;
   color: #353f4f;
   font-weight: 400;
@@ -8649,7 +8658,7 @@ p.rbox-2-txt span {
 /*------------------------------------------*/
 
 .price span {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 3rem;
   line-height: 1;
   font-weight: 600;
@@ -8674,7 +8683,7 @@ p.rbox-2-txt span {
 /*------------------------------------------*/
 
 .price sup {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 2.05rem;
   font-weight: 600;
   top: -5px;
@@ -8699,7 +8708,7 @@ p.rbox-2-txt span {
 /*------------------------------------------*/
 
 .pricing-3-table .price sup.coins {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 2.35rem;
   font-weight: 600;
   top: -29px;
@@ -8712,7 +8721,7 @@ p.rbox-2-txt span {
 /*------------------------------------------*/
 
 .price sup.validity {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 1.4rem;
   font-weight: 400;
   top: -2px;
@@ -9167,13 +9176,13 @@ p.rbox-2-txt span {
 
 .comp-table .table-responsive thead th {
   font-size: 1.15rem;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   font-weight: 600;
 }
 
 .comp-table .table-responsive tbody th {
   font-size: 1rem;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   font-weight: 600;
 }
 
@@ -9303,7 +9312,7 @@ p.rbox-2-txt span {
 }
 
 .team-member-data p {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   line-height: 1;
   font-weight: 400;
   letter-spacing: 0;
@@ -9381,7 +9390,7 @@ ul.tm-social li {
 /*------------------------------------------*/
 
 .role-box span {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   display: block;
   font-size: 0.8rem;
   line-height: 1;
@@ -9409,7 +9418,7 @@ ul.tm-social li {
 }
 
 #role-page .inner-page-title span {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   display: block;
   font-size: 0.9rem;
   line-height: 1;
@@ -9757,7 +9766,7 @@ span.release-date span {
 
 .faqs-section .accordion-item .accordion-thumb:after,
 .faqs-section .accordion-item.is-active .accordion-thumb:after {
-  font-family: Flaticon;
+  font-family: "Averta"; /*Flaticon;*/
   font-weight: 300;
   content: "\f11a";
   position: absolute;
@@ -10155,7 +10164,7 @@ span.release-date span {
 
 .post-tag {
   display: block;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0;
@@ -10949,6 +10958,7 @@ img.footer-logo-dark {
 }
 
 .footer .foo-links li p {
+  font-size: large;
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -11668,7 +11678,7 @@ img.footer-logo-dark {
   -webkit-box-align: center;
   align-items: center;
   text-align: center;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 0.9rem;
   font-weight: 500;
   margin: 25px 0px 30px;
@@ -13428,7 +13438,7 @@ body.theme--dark {
 
 #stlChanger p {
   font-size: 18px;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
   font-weight: 600;
   letter-spacing: 0;
   margin-bottom: 20px;
@@ -13635,12 +13645,11 @@ html {
   justify-content: center;
   align-items: center;
   gap: 30px;
- 
 }
 .search-input {
   width: 40vw;
   padding-top: 8px;
-  padding-bottom:8px;
+  padding-bottom: 8px;
   border-radius: 30px;
   padding-left: 12px;
   border-color: black;
@@ -13679,11 +13688,11 @@ html {
 .individual-item.active {
   color: #b476e5;
 }
-.template-not-found{
-  color:red;
+.template-not-found {
+  color: red;
   text-align: center;
 }
 
-.page-header{
+.page-header {
   margin-top: 60px;
 }

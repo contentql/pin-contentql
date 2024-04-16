@@ -1,16 +1,15 @@
+import { Header, Media } from "@/payload-types";
 import Image from "next/image";
 import Link from "next/link";
 import Menu from "../Menu";
 import MobileMenu from "../MobileMenu";
-import logoPinkWhite from "/public/images/logo-pink-white.png";
-import logoPink from "/public/images/logo-pink.png";
-import logoWhite from "/public/images/logo-white.png";
 
 interface Props {
   scroll: boolean;
   isMobileMenu: boolean;
   handleMobileMenu: () => void;
   headerCls?: string;
+  headerData?: Header;
 }
 
 export default function Header1({
@@ -18,6 +17,7 @@ export default function Header1({
   isMobileMenu,
   handleMobileMenu,
   headerCls,
+  headerData,
 }: Props) {
   return (
     <>
@@ -29,7 +29,12 @@ export default function Header1({
           {/* MOBILE HEADER */}
           <div className="wsmobileheader clearfix">
             <span className="smllogo">
-              <Image src={logoPink} alt="mobile-logo" />
+              <Image
+                src={(headerData?.logo_pink as Media)?.url || ""}
+                alt={(headerData?.logo_pink as Media)?.alt || ""}
+                height={500}
+                width={500}
+              />
             </span>
             <a
               id="wsnavtoggle"
@@ -46,21 +51,30 @@ export default function Header1({
               <div className="desktoplogo">
                 <Link href="/" className="logo-black">
                   <Image
+                    src={(headerData?.logo_pink as Media)?.url || ""}
                     className="light-theme-img"
-                    src={logoPink}
-                    alt="logo"
+                    alt={(headerData?.logo_pink as Media)?.alt || ""}
+                    height={500}
+                    width={500}
                   />
                   <Image
+                    src={(headerData?.logo_pink_white as Media)?.url || ""}
                     className="dark-theme-img"
-                    src={logoPinkWhite}
-                    alt="logo"
+                    alt={(headerData?.logo_pink_white as Media)?.alt || ""}
+                    height={500}
+                    width={500}
                   />
                 </Link>
               </div>
               {/* HEADER WHITE LOGO */}
               <div className="desktoplogo">
                 <Link href="#hero-1" className="logo-white">
-                  <Image src={logoWhite} alt="logo" />
+                  <Image
+                    src={(headerData?.logo_white as Media)?.url || ""}
+                    alt={(headerData?.logo_white as Media)?.alt || ""}
+                    height={500}
+                    width={500}
+                  />
                 </Link>
               </div>
               {/* MAIN MENU */}
@@ -68,7 +82,11 @@ export default function Header1({
                 className="wsmenu clearfix"
                 style={{ height: `${isMobileMenu ? "100vh" : ""}` }}
               >
-                {isMobileMenu ? <MobileMenu /> : <Menu />}
+                {isMobileMenu ? (
+                  <MobileMenu />
+                ) : (
+                  <Menu headerData={headerData} />
+                )}
               </nav>{" "}
               {/* END MAIN MENU */}
             </div>

@@ -1,8 +1,16 @@
+import { Media } from "@/payload-types";
 import Image from "next/image";
 import Link from "next/link";
-import img04 from "/public/images/img-04.png";
 
-export default function Banner13_9() {
+export default function Banner13_9({
+  title,
+  sub_title,
+  background_image,
+}: {
+  title?: string;
+  sub_title?: string;
+  background_image?: Media;
+}) {
   return (
     <>
       <section id="banner-13" className="pt-100 banner-section">
@@ -15,14 +23,9 @@ export default function Banner13_9() {
                 <div className="col-md-7">
                   <div className="banner-13-txt color--white">
                     {/* Title */}
-                    <h2 className="s-46 w-700">
-                      Getting started with Martex today!
-                    </h2>
+                    <h2 className="s-46 w-700">{title}</h2>
                     {/* Text */}
-                    <p className="p-lg">
-                      Congue laoreet turpis neque auctor turpis vitae dolor a
-                      luctus placerat and magna ligula cursus
-                    </p>
+                    <p className="p-lg">{sub_title}</p>
                     {/* Button */}
                     <Link
                       href="/download"
@@ -38,8 +41,10 @@ export default function Banner13_9() {
                   <div className="banner-13-img text-center">
                     <Image
                       className="img-fluid"
-                      src={img04}
-                      alt="banner-image"
+                      src={background_image?.url || ""}
+                      alt={background_image?.alt || ""}
+                      height={1000}
+                      width={1000}
                     />
                   </div>
                 </div>
