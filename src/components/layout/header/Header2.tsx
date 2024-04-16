@@ -1,8 +1,8 @@
 interface Props {
-  scroll?: boolean;
-  isMobileMenu?: boolean;
-  handleMobileMenu?: Function;
-  headerCls?: string;
+  scroll?: boolean
+  isMobileMenu?: boolean
+  handleMobileMenu?: Function
+  headerCls?: string
 }
 
 export default function Header2({
@@ -11,5 +11,5 @@ export default function Header2({
   handleMobileMenu,
   headerCls,
 }: Props) {
-  return <>Header2</>;
+  return <>Header2</>
 }

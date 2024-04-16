@@ -10,11 +10,11 @@
 --------------------------------------------*/
 
 @font-face {
-  font-family: "Averta";
-  src: url("/fonts/Averta.woff2") format("woff2");
-  src: url("/fonts/Averta.woff") format("woff");
-  src: url("/fonts/Averta.ttf") format("truetype");
-  src: url("/fonts/Averta.otf") format("otf");
+  font-family: 'Averta';
+  src: url('/fonts/Averta.woff2') format('woff2');
+  src: url('/fonts/Averta.woff') format('woff');
+  src: url('/fonts/Averta.ttf') format('truetype');
+  src: url('/fonts/Averta.otf') format('otf');
   /* Add other font weights/styles as needed */
 }
 
@@ -52,7 +52,7 @@
 
 .wsmenu:before,
 .wsmenu:after {
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -199,7 +199,7 @@
   border-left: 4px solid rgba(0, 0, 0, 0);
   border-right: 4px solid rgba(0, 0, 0, 0);
   border-top: 4px solid;
-  content: "";
+  content: '';
   float: right;
   right: 15px;
   height: 0;
@@ -230,7 +230,7 @@
 
 .wsmenu > .wsmenu-list > li.rightmenu:before,
 .wsmenu-list > li.rightmenu:after {
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -527,7 +527,7 @@
   text-transform: none;
   color: #888;
   font-size: 16px;
-  font-family: "Averta"; /*'Roboto', sans-serif; */
+  font-family: 'Averta'; /*'Roboto', sans-serif; */
   line-height: 22px;
   font-weight: 400;
   letter-spacing: normal;
@@ -688,7 +688,7 @@
   display: block;
 }
 
-.wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type="text"] {
+.wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type='text'] {
   width: 100%;
   border: 1px solid #e2e2e2;
   color: #000;
@@ -707,7 +707,7 @@
   min-height: 122px;
 }
 
-.wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type="submit"] {
+.wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type='submit'] {
   width: 25%;
   display: block;
   height: 32px;
@@ -721,7 +721,7 @@
   border-radius: 2px;
 }
 
-.wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type="button"] {
+.wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type='button'] {
   width: 25%;
   display: block;
   height: 32px;
@@ -1216,11 +1216,11 @@
     margin: 0px;
   }
 
-  .wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type="button"] {
+  .wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type='button'] {
     width: 46%;
   }
 
-  .wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type="submit"] {
+  .wsmenu > .wsmenu-list > li > .wsmegamenu .menu_form input[type='submit'] {
     width: 46%;
   }
 
@@ -1326,7 +1326,7 @@
     background: #a9a9a9;
     position: absolute;
     display: block;
-    content: "";
+    content: '';
   }
 
   .wsanimated-arrow span:before {
@@ -1461,7 +1461,7 @@
   }
 
   .wsmenu > .wsmenu-list > li > .wsmenu-click > i:before {
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     border-width: 1.5px 1.5px 0 0;
@@ -1492,7 +1492,7 @@
   }
 
   .wsmenu > .wsmenu-list > li > ul.sub-menu > li .wsmenu-click02 > i:before {
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     border-width: 1.5px 1.5px 0 0;

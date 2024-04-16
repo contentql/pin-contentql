@@ -10,11 +10,11 @@
 */
 
 @font-face {
-  font-family: "Averta";
-  src: url("/fonts/Averta.woff2") format("woff2");
-  src: url("/fonts/Averta.woff") format("woff");
-  src: url("/fonts/Averta.ttf") format("truetype");
-  src: url("/fonts/Averta.otf") format("otf");
+  font-family: 'Averta';
+  src: url('/fonts/Averta.woff2') format('woff2');
+  src: url('/fonts/Averta.woff') format('woff');
+  src: url('/fonts/Averta.ttf') format('truetype');
+  src: url('/fonts/Averta.otf') format('otf');
   /* Add other font weights/styles as needed */
 }
 
@@ -25,7 +25,7 @@ html {
 
 body {
   background-color: #f4f4f9;
-  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Rubik', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #6c757d;
   line-height: 1.6;
   font-weight: 400;
@@ -66,7 +66,7 @@ h4,
 h5,
 h6 {
   color: #353f4f;
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   line-height: 1.35;
   font-weight: 700;
   letter-spacing: 0;
@@ -314,7 +314,7 @@ hr.divider {
 }
 
 .loader::after {
-  content: "";
+  content: '';
   box-sizing: border-box;
   position: absolute;
   left: 50%;
@@ -1500,7 +1500,7 @@ nav a#pull {
 }
 
 .hover-overlay::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -1581,7 +1581,7 @@ nav a#pull {
 }
 
 .hover-overlay1::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;

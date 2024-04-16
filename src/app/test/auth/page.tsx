@@ -1,14 +1,14 @@
-'use client';
+'use client'
 
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { ZodError } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+import { ZodError } from 'zod'
 
-import { trpc } from '@/trpc/client';
 import {
   AuthCredentialsValidator,
   TAuthCredentialsValidator,
-} from '@/lib/validators/auth-router/account-credentials-validator';
+} from '@/lib/validators/auth-router/account-credentials-validator'
+import { trpc } from '@/trpc/client'
 
 export default function Auth() {
   const {
@@ -17,25 +17,25 @@ export default function Auth() {
     formState: { errors },
   } = useForm<TAuthCredentialsValidator>({
     resolver: zodResolver(AuthCredentialsValidator),
-  });
+  })
 
   const { mutate: addUser } = trpc.auth.createUser.useMutation({
-    onError: (err) => {
+    onError: err => {
       if (err.data?.code === 'CONFLICT') {
         // in toast
-        console.error('This email is already in use. Sign in instead?');
+        console.error('This email is already in use. Sign in instead?')
 
-        return;
+        return
       }
 
       if (err instanceof ZodError) {
         // in toast
-        console.error(err.issues[0].message);
+        console.error(err.issues[0].message)
 
-        return;
+        return
       }
 
-      console.error('Something went wrong. Please try again.');
+      console.error('Something went wrong. Please try again.')
     },
     onSuccess: ({ sentEmailTo }) => {
       // clear the form
@@ -44,13 +44,13 @@ export default function Auth() {
       console.log(
         'you will redirect to a page, where we ask the user to verify their email at' +
           ` ${sentEmailTo}`,
-      );
+      )
     },
-  });
+  })
 
   const onSubmit = ({ email, password }: TAuthCredentialsValidator) => {
-    addUser({ email, password });
-  };
+    addUser({ email, password })
+  }
 
   return (
     <>
@@ -76,5 +76,5 @@ export default function Auth() {
         </div>
       </form>
     </>
-  );
+  )
 }

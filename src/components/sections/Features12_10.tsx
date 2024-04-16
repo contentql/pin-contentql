@@ -5,153 +5,153 @@ export default function Features12_10({
   points,
   features,
 }: {
-  caption?: string;
-  title?: string;
-  subtitle?: string;
+  caption?: string
+  title?: string
+  subtitle?: string
   points?: {
-    point: string;
-    id?: string | null;
-  }[];
+    point: string
+    id?: string | null
+  }[]
   features?: {
-    title: string;
-    description: string;
-    id?: string | null;
-  }[];
+    title: string
+    description: string
+    id?: string | null
+  }[]
 }) {
   const arrayOfSvgs = [
     {
       svg: (
-        <div className="fbox-ico ico-50">
-          <div className="shape-ico color--theme">
+        <div className='fbox-ico ico-50'>
+          <div className='shape-ico color--theme'>
             {/* Vector Icon */}
-            <span className="flaticon-layers-1" />
+            <span className='flaticon-layers-1' />
             {/* Shape */}
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
               <path
-                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                transform="translate(100 100)"
+                d='M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z'
+                transform='translate(100 100)'
               />
             </svg>
           </div>
         </div>
       ),
-      key: "layers",
+      key: 'layers',
     },
     {
       svg: (
-        <div className="fbox-ico ico-50">
-          <div className="shape-ico color--theme">
+        <div className='fbox-ico ico-50'>
+          <div className='shape-ico color--theme'>
             {/* Vector Icon */}
-            <span className="flaticon-click-1" />
+            <span className='flaticon-click-1' />
             {/* Shape */}
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
               <path
-                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                transform="translate(100 100)"
+                d='M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z'
+                transform='translate(100 100)'
               />
             </svg>
           </div>
         </div>
       ),
-      key: "click",
+      key: 'click',
     },
     {
       svg: (
-        <div className="fbox-ico ico-50">
-          <div className="shape-ico color--theme">
+        <div className='fbox-ico ico-50'>
+          <div className='shape-ico color--theme'>
             {/* Vector Icon */}
-            <span className="flaticon-prioritize" />
+            <span className='flaticon-prioritize' />
             {/* Shape */}
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
               <path
-                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                transform="translate(100 100)"
+                d='M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z'
+                transform='translate(100 100)'
               />
             </svg>
           </div>
         </div>
       ),
-      key: "prioritize",
+      key: 'prioritize',
     },
     {
       svg: (
-        <div className="fbox-ico ico-50">
-          <div className="shape-ico color--theme">
+        <div className='fbox-ico ico-50'>
+          <div className='shape-ico color--theme'>
             {/* Vector Icon */}
-            <span className="flaticon-analytics" />
+            <span className='flaticon-analytics' />
             {/* Shape */}
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
               <path
-                d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
-                transform="translate(100 100)"
+                d='M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z'
+                transform='translate(100 100)'
               />
             </svg>
           </div>
         </div>
       ),
-      key: "analytics",
+      key: 'analytics',
     },
-  ];
+  ]
 
   return (
     <>
       <section
-        id="features-12"
-        className="shape--bg shape--white-400 pt-100 features-section division"
+        id='features-12'
+        className='shape--bg shape--white-400 pt-100 features-section division'
       >
-        <div className="container">
-          <div className="row d-flex align-items-center">
+        <div className='container'>
+          <div className='row d-flex align-items-center'>
             {/* TEXT BLOCK */}
-            <div className="col-md-5">
-              <div className="txt-block left-column wow fadeInRight">
+            <div className='col-md-5'>
+              <div className='txt-block left-column wow fadeInRight'>
                 {/* Section ID */}
-                <span className="section-id">{caption}</span>
+                <span className='section-id'>{caption}</span>
                 {/* Title */}
-                <h2 className="s-46 w-700">{title}</h2>
+                <h2 className='s-46 w-700'>{title}</h2>
                 {/* Text */}
                 <p>{subtitle}</p>
                 {/* List */}
-                <ul className="simple-list">
+                <ul className='simple-list'>
                   {points?.map((point, index) => (
-                    <li key={point?.id} className="list-item">
+                    <li key={point?.id} className='list-item'>
                       <p>{point?.point}</p>
                     </li>
                   ))}
                 </ul>
               </div>
-            </div>{" "}
+            </div>{' '}
             {/* END TEXT BLOCK */}
             {/* FEATURES-12 WRAPPER */}
-            <div className="col-md-7">
-              <div className="fbox-12-wrapper wow fadeInLeft">
-                <div className="row">
+            <div className='col-md-7'>
+              <div className='fbox-12-wrapper wow fadeInLeft'>
+                <div className='row'>
                   {features?.map((feature, index) => (
-                    <div key={feature?.id} className="col-md-6">
+                    <div key={feature?.id} className='col-md-6'>
                       {/* FEATURE BOX #1 */}
                       <div
-                        id="fb-12-1"
-                        className="fbox-12 bg--white-100 block-shadow r-12 mb-30"
+                        id='fb-12-1'
+                        className='fbox-12 bg--white-100 block-shadow r-12 mb-30'
                       >
                         {/* Icon */}
                         {arrayOfSvgs[index]?.svg} {/* End Icon */}
                         {/* Text */}
-                        <div className="fbox-txt">
-                          <h5 className="s-20 w-700">{feature?.title}</h5>
+                        <div className='fbox-txt'>
+                          <h5 className='s-20 w-700'>{feature?.title}</h5>
                           <p>{feature?.description}</p>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>{" "}
+              </div>{' '}
               {/* End row */}
-            </div>{" "}
+            </div>{' '}
             {/* END FEATURES-12 WRAPPER */}
-          </div>{" "}
+          </div>{' '}
           {/* End row */}
-        </div>{" "}
+        </div>{' '}
         {/* End container */}
       </section>
     </>
-  );
+  )
 }

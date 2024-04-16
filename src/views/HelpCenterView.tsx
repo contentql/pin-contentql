@@ -1,69 +1,70 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import Layout from "../components/layout/Layout";
-import help from "/public/images/help.png";
+'use client'
+
+import Layout from '../components/layout/Layout'
+import help from '/public/images/help.png'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
 
 export default function HelpCenterView() {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(1)
   const handleOnClick = (index: number) => {
-    setActiveIndex(index);
-  };
+    setActiveIndex(index)
+  }
   const [isActive, setIsActive] = useState<{ status: boolean; key?: number }>({
     status: false,
     key: 1,
-  });
+  })
 
   const handleToggle = (key: number) => {
     if (isActive.key === key) {
       setIsActive({
         status: false,
-      });
+      })
     } else {
       setIsActive({
         status: true,
         key,
-      });
+      })
     }
-  };
+  }
   return (
     <>
       <Layout
         headerStyle={1}
         footerStyle={3}
-        headerCls="navbar-dark inner-page-header"
+        headerCls='navbar-dark inner-page-header'
       >
         <div>
           <section
-            id="faqs-4"
-            className="gr--whitesmoke inner-page-hero pb-100 faqs-section division"
+            id='faqs-4'
+            className='gr--whitesmoke inner-page-hero pb-100 faqs-section division'
           >
-            <div className="container">
+            <div className='container'>
               {/* SECTION TITLE */}
-              <div className="row justify-content-center">
-                <div className="col-lg-11 col-xl-10">
-                  <div className="inner-page-title">
-                    <h2 className="s-52 w-700">How Can We Help?</h2>
+              <div className='row justify-content-center'>
+                <div className='col-lg-11 col-xl-10'>
+                  <div className='inner-page-title'>
+                    <h2 className='s-52 w-700'>How Can We Help?</h2>
                   </div>
                 </div>
               </div>
               {/* TABS NAVIGATION */}
-              <div className="row">
-                <div className="col">
-                  <div className="tabs-nav tabs--theme clearfix">
-                    <ul className="tabs-1">
+              <div className='row'>
+                <div className='col'>
+                  <div className='tabs-nav tabs--theme clearfix'>
+                    <ul className='tabs-1'>
                       {/* TAB-1 LINK */}
                       <li
                         className={
                           activeIndex === 1
-                            ? "tab-link ico-45 r-16 current"
-                            : "tab-link ico-45 r-16"
+                            ? 'tab-link ico-45 r-16 current'
+                            : 'tab-link ico-45 r-16'
                         }
                         onClick={() => handleOnClick(1)}
                       >
-                        <div className="tab-link-ico">
-                          <span className="flaticon-mechanics" />
+                        <div className='tab-link-ico'>
+                          <span className='flaticon-mechanics' />
                         </div>
                         <p>Getting Started</p>
                       </li>
@@ -71,13 +72,13 @@ export default function HelpCenterView() {
                       <li
                         className={
                           activeIndex === 2
-                            ? "tab-link ico-45 r-16 current"
-                            : "tab-link ico-45 r-16"
+                            ? 'tab-link ico-45 r-16 current'
+                            : 'tab-link ico-45 r-16'
                         }
                         onClick={() => handleOnClick(2)}
                       >
-                        <div className="tab-link-ico">
-                          <span className="flaticon-suit" />
+                        <div className='tab-link-ico'>
+                          <span className='flaticon-suit' />
                         </div>
                         <p>My Account</p>
                       </li>
@@ -85,13 +86,13 @@ export default function HelpCenterView() {
                       <li
                         className={
                           activeIndex === 3
-                            ? "tab-link ico-45 r-16 current"
-                            : "tab-link ico-45 r-16"
+                            ? 'tab-link ico-45 r-16 current'
+                            : 'tab-link ico-45 r-16'
                         }
                         onClick={() => handleOnClick(3)}
                       >
-                        <div className="tab-link-ico">
-                          <span className="flaticon-price-label" />
+                        <div className='tab-link-ico'>
+                          <span className='flaticon-price-label' />
                         </div>
                         <p>Pricing Plans</p>
                       </li>
@@ -99,57 +100,57 @@ export default function HelpCenterView() {
                       <li
                         className={
                           activeIndex === 4
-                            ? "tab-link ico-45 r-16 current"
-                            : "tab-link ico-45 r-16"
+                            ? 'tab-link ico-45 r-16 current'
+                            : 'tab-link ico-45 r-16'
                         }
                         onClick={() => handleOnClick(4)}
                       >
-                        <div className="tab-link-ico">
-                          <span className="flaticon-screenplay" />
+                        <div className='tab-link-ico'>
+                          <span className='flaticon-screenplay' />
                         </div>
                         <p>Other Questions</p>
                       </li>
                     </ul>
                   </div>
                 </div>
-              </div>{" "}
+              </div>{' '}
               {/* END TABS NAVIGATION */}
               {/* TABS CONTENT */}
-              <div className="tabs-content">
-                <div className="row justify-content-center">
-                  <div className="col-xl-10">
+              <div className='tabs-content'>
+                <div className='row justify-content-center'>
+                  <div className='col-xl-10'>
                     {/* TAB-1 CONTENT */}
                     <div
-                      id="tab-1"
+                      id='tab-1'
                       className={
                         activeIndex === 1
-                          ? "tab-content current"
-                          : "tab-content "
+                          ? 'tab-content current'
+                          : 'tab-content '
                       }
                     >
-                      <div className="accordion-wrapper">
-                        <ul className="accordion">
+                      <div className='accordion-wrapper'>
+                        <ul className='accordion'>
                           {/* QUESTION #1 */}
                           <li
                             className={
                               isActive.key == 1
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(1)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 What is ContentQL and how does it work?
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 1 ? "block" : "none"
+                                  isActive.key == 1 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -162,29 +163,29 @@ export default function HelpCenterView() {
                                 dapibus
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #1 */}
                           {/* QUESTION #2 */}
                           <li
                             className={
                               isActive.key == 2
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(2)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 What&apos;s inside the package?
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 2 ? "block" : "none"
+                                  isActive.key == 2 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -209,27 +210,27 @@ export default function HelpCenterView() {
                                 nibh, imperdiet varius viverra
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #2 */}
                           {/* QUESTION #3 */}
                           <li
                             className={
                               isActive.key == 3
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(3)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">General settings</h5>
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>General settings</h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 3 ? "block" : "none"
+                                  isActive.key == 3 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -255,29 +256,29 @@ export default function HelpCenterView() {
                                 curabitur
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #3 */}
                           {/* QUESTION #4 */}
                           <li
                             className={
                               isActive.key == 4
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(4)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 Which languages does ContentQL support?
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 4 ? "block" : "none"
+                                  isActive.key == 4 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -299,35 +300,35 @@ export default function HelpCenterView() {
                                 integer congue a lectus porta phasellus neque
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #4 */}
                           {/* QUESTION #5 */}
                           <li
                             className={
                               isActive.key == 5
-                                ? "accordion-item acc-last-item is-active"
-                                : "accordion-item acc-last-item"
+                                ? 'accordion-item acc-last-item is-active'
+                                : 'accordion-item acc-last-item'
                             }
                             onClick={() => handleToggle(5)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 Automate testing with API
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 5 ? "block" : "none"
+                                  isActive.key == 5 ? 'block' : 'none'
                                 }`,
                               }}
                             >
                               {/* Text */}
-                              <ul className="simple-list">
-                                <li className="list-item">
+                              <ul className='simple-list'>
+                                <li className='list-item'>
                                   <p>
                                     Curabitur ac dapibus libero quisque eu
                                     congue tristique egestas phasellus blandit
@@ -338,14 +339,14 @@ export default function HelpCenterView() {
                                     suscipit tincidunt tincidunt massa
                                   </p>
                                 </li>
-                                <li className="list-item">
+                                <li className='list-item'>
                                   <p>
                                     Aliquam vitae molestie nunc. Quisque sapien
                                     justo, aliquet non molestie sed purus,
                                     venenatis
                                   </p>
                                 </li>
-                                <li className="list-item">
+                                <li className='list-item'>
                                   <p>
                                     Sagittis congue augue egestas volutpat
                                     egestas magna suscipit egestas magna ipsum
@@ -356,92 +357,92 @@ export default function HelpCenterView() {
                                 </li>
                               </ul>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #5 */}
                         </ul>
                       </div>
-                    </div>{" "}
+                    </div>{' '}
                     {/* END TAB-1 CONTENT */}
                     {/* TAB-2 CONTENT */}
                     <div
-                      id="tab-2"
+                      id='tab-2'
                       className={
                         activeIndex === 2
-                          ? "tab-content current"
-                          : "tab-content "
+                          ? 'tab-content current'
+                          : 'tab-content '
                       }
                     >
-                      <div className="accordion-wrapper">
-                        <ul className="accordion">
+                      <div className='accordion-wrapper'>
+                        <ul className='accordion'>
                           {/* QUESTION #1 */}
                           <li
                             className={
                               isActive.key == 6
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(6)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 Sign up and manage your account
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 6 ? "block" : "none"
+                                  isActive.key == 6 ? 'block' : 'none'
                                 }`,
                               }}
                             >
                               {/* Text */}
-                              <ol className="digit-list">
-                                <li className="list-item">
+                              <ol className='digit-list'>
+                                <li className='list-item'>
                                   <p>
                                     Curabitur ac dapibus libero eu congue
                                     tristique neque
                                   </p>
                                 </li>
-                                <li className="list-item">
+                                <li className='list-item'>
                                   <p>
                                     Sagittis congue augue egestas volutpat
                                     egestas
                                   </p>
                                 </li>
-                                <li className="list-item">
+                                <li className='list-item'>
                                   <p>An aliquam justo suscipit congue augue</p>
                                 </li>
-                                <li className="list-item">
+                                <li className='list-item'>
                                   <p>Gestas integer congue a lectus porta</p>
                                 </li>
                               </ol>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #1 */}
                           {/* QUESTION #2 */}
                           <li
                             className={
                               isActive.key == 7
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(7)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 Manage account settings
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 7 ? "block" : "none"
+                                  isActive.key == 7 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -458,29 +459,29 @@ export default function HelpCenterView() {
                                 nibh, imperdiet varius viverra
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #2 */}
                           {/* QUESTION #3 */}
                           <li
                             className={
                               isActive.key == 8
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(8)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 Change language or location settings
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 8 ? "block" : "none"
+                                  isActive.key == 8 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -497,29 +498,29 @@ export default function HelpCenterView() {
                                 nibh, imperdiet varius viverra
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #3 */}
                           {/* QUESTION #4 */}
                           <li
                             className={
                               isActive.key == 9
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(9)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 Troubleshoot account issues
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 9 ? "block" : "none"
+                                  isActive.key == 9 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -541,29 +542,29 @@ export default function HelpCenterView() {
                                 integer congue a lectus porta phasellus neque
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #4 */}
                           {/* QUESTION #5 */}
                           <li
                             className={
                               isActive.key == 10
-                                ? "accordion-item acc-last-item is-active"
-                                : "accordion-item acc-last-item"
+                                ? 'accordion-item acc-last-item is-active'
+                                : 'accordion-item acc-last-item'
                             }
                             onClick={() => handleToggle(10)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 Manage accessibility settings
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 10 ? "block" : "none"
+                                  isActive.key == 10 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -587,44 +588,44 @@ export default function HelpCenterView() {
                                 laoreet tempor gravida
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #5 */}
                         </ul>
                       </div>
-                    </div>{" "}
+                    </div>{' '}
                     {/* END TAB-2 CONTENT */}
                     {/* TAB-3 CONTENT */}
                     <div
-                      id="tab-3"
+                      id='tab-3'
                       className={
                         activeIndex === 3
-                          ? "tab-content current"
-                          : "tab-content "
+                          ? 'tab-content current'
+                          : 'tab-content '
                       }
                     >
-                      <div className="accordion-wrapper">
-                        <ul className="accordion">
+                      <div className='accordion-wrapper'>
+                        <ul className='accordion'>
                           {/* QUESTION #1 */}
                           <li
                             className={
                               isActive.key == 11
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(11)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 How much does ContentQL cost?
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 11 ? "block" : "none"
+                                  isActive.key == 11 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -637,36 +638,36 @@ export default function HelpCenterView() {
                                 blandit tristique
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #1 */}
                           {/* QUESTION #2 */}
                           <li
                             className={
                               isActive.key == 12
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(12)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 I didn&apos;t receive the license key after
                                 purchased
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 12 ? "block" : "none"
+                                  isActive.key == 12 ? 'block' : 'none'
                                 }`,
                               }}
                             >
                               {/* Text */}
-                              <ul className="simple-list">
-                                <li className="list-item">
+                              <ul className='simple-list'>
+                                <li className='list-item'>
                                   <p>
                                     Curabitur ac dapibus libero. Quisque eu
                                     congue tristique neque. Phasellus blandit
@@ -675,7 +676,7 @@ export default function HelpCenterView() {
                                     non molestie purus tempor
                                   </p>
                                 </li>
-                                <li className="list-item">
+                                <li className='list-item'>
                                   <p>
                                     Sagittis congue augue egestas volutpat
                                     egestas magna suscipit egestas magna ipsum
@@ -686,35 +687,35 @@ export default function HelpCenterView() {
                                 </li>
                               </ul>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #2 */}
                           {/* QUESTION #3 */}
                           <li
                             className={
                               isActive.key == 13
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(13)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 Do you offer discounts for annual plans?
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 13 ? "block" : "none"
+                                  isActive.key == 13 ? 'block' : 'none'
                                 }`,
                               }}
                             >
                               {/* Text */}
-                              <ul className="simple-list">
-                                <li className="list-item">
+                              <ul className='simple-list'>
+                                <li className='list-item'>
                                   <p>
                                     Curabitur ac dapibus libero. Quisque eu
                                     congue justo undo tristique neque phasellus
@@ -723,7 +724,7 @@ export default function HelpCenterView() {
                                     non molestie purus tempor
                                   </p>
                                 </li>
-                                <li className="list-item">
+                                <li className='list-item'>
                                   <p>
                                     Sagittis congue augue egestas volutpat
                                     egestas magna suscipit egestas magna ipsum
@@ -734,29 +735,29 @@ export default function HelpCenterView() {
                                 </li>
                               </ul>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #3 */}
                           {/* QUESTION #4 */}
                           <li
                             className={
                               isActive.key == 14
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(14)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 How safe is my data?
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 14 ? "block" : "none"
+                                  isActive.key == 14 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -778,41 +779,41 @@ export default function HelpCenterView() {
                                 integer congue a lectus porta phasellus neque
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #4 */}
                           {/* QUESTION #5 */}
                           <li
                             className={
                               isActive.key == 15
-                                ? "accordion-item acc-last-item is-active"
-                                : "accordion-item acc-last-item"
+                                ? 'accordion-item acc-last-item is-active'
+                                : 'accordion-item acc-last-item'
                             }
                             onClick={() => handleToggle(15)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 How to request a refund?
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 15 ? "block" : "none"
+                                  isActive.key == 15 ? 'block' : 'none'
                                 }`,
                               }}
                             >
                               {/* Text */}
-                              <ul className="simple-list">
-                                <li className="list-item">
+                              <ul className='simple-list'>
+                                <li className='list-item'>
                                   <p>
                                     Curabitur ac dapibus libero. Quisque eu
                                     congue tristique
                                   </p>
                                 </li>
-                                <li className="list-item">
+                                <li className='list-item'>
                                   <p>
                                     Congue tristique neque phasellus blandit
                                     tristique justo undo aliquam. Aliquam vitae
@@ -820,7 +821,7 @@ export default function HelpCenterView() {
                                     molestie purus tempor
                                   </p>
                                 </li>
-                                <li className="list-item">
+                                <li className='list-item'>
                                   <p>
                                     Sagittis congue augue egestas volutpat
                                     egestas magna suscipit egestas magna ipsum
@@ -828,44 +829,44 @@ export default function HelpCenterView() {
                                 </li>
                               </ul>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #5 */}
                         </ul>
                       </div>
-                    </div>{" "}
+                    </div>{' '}
                     {/* END TAB-3 CONTENT */}
                     {/* TAB-4 CONTENT */}
                     <div
-                      id="tab-4"
+                      id='tab-4'
                       className={
                         activeIndex === 4
-                          ? "tab-content current"
-                          : "tab-content "
+                          ? 'tab-content current'
+                          : 'tab-content '
                       }
                     >
-                      <div className="accordion-wrapper">
-                        <ul className="accordion">
+                      <div className='accordion-wrapper'>
+                        <ul className='accordion'>
                           {/* QUESTION #1 */}
                           <li
                             className={
                               isActive.key == 16
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(16)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 How do I get the error log?
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 16 ? "block" : "none"
+                                  isActive.key == 16 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -883,29 +884,29 @@ export default function HelpCenterView() {
                                 dapibus
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #1 */}
                           {/* QUESTION #2 */}
                           <li
                             className={
                               isActive.key == 17
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(17)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 I forgot my folder password, what should I do?
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 17 ? "block" : "none"
+                                  isActive.key == 17 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -917,14 +918,14 @@ export default function HelpCenterView() {
                                 augue egestas luctus donec and curabitur dapibus
                               </p>
                               {/* Text */}
-                              <ol className="digit-list">
-                                <li className="list-item">
+                              <ol className='digit-list'>
+                                <li className='list-item'>
                                   <p>Gestas integer congue a lectus porta</p>
                                 </li>
-                                <li className="list-item">
+                                <li className='list-item'>
                                   <p>An aliquam justo suscipit congue augue</p>
                                 </li>
-                                <li className="list-item">
+                                <li className='list-item'>
                                   <p>
                                     Sagittis congue augue egestas volutpat
                                     egestas
@@ -932,29 +933,29 @@ export default function HelpCenterView() {
                                 </li>
                               </ol>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #2 */}
                           {/* QUESTION #3 */}
                           <li
                             className={
                               isActive.key == 18
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(18)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 Limitations of folder password protection
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 18 ? "block" : "none"
+                                  isActive.key == 18 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -971,29 +972,29 @@ export default function HelpCenterView() {
                                 nibh, imperdiet varius viverra
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #3 */}
                           {/* QUESTION #4 */}
                           <li
                             className={
                               isActive.key == 19
-                                ? "accordion-item is-active"
-                                : "accordion-item"
+                                ? 'accordion-item is-active'
+                                : 'accordion-item'
                             }
                             onClick={() => handleToggle(19)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 Import existing library
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 19 ? "block" : "none"
+                                  isActive.key == 19 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -1017,29 +1018,29 @@ export default function HelpCenterView() {
                                 laoreet tempor gravida
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #4 */}
                           {/* QUESTION #5 */}
                           <li
                             className={
                               isActive.key == 20
-                                ? "accordion-item acc-last-item is-active"
-                                : "accordion-item acc-last-item"
+                                ? 'accordion-item acc-last-item is-active'
+                                : 'accordion-item acc-last-item'
                             }
                             onClick={() => handleToggle(20)}
                           >
                             {/* Question */}
-                            <div className="accordion-thumb">
-                              <h5 className="s-22 w-700">
+                            <div className='accordion-thumb'>
+                              <h5 className='s-22 w-700'>
                                 I lost my license. Can you send it to me?
                               </h5>
                             </div>
                             {/* Answer */}
                             <div
-                              className="accordion-panel color--grey"
+                              className='accordion-panel color--grey'
                               style={{
                                 display: `${
-                                  isActive.key == 20 ? "block" : "none"
+                                  isActive.key == 20 ? 'block' : 'none'
                                 }`,
                               }}
                             >
@@ -1057,69 +1058,69 @@ export default function HelpCenterView() {
                                 magna suscipit egestas and magna ipsum vitae
                               </p>
                             </div>
-                          </li>{" "}
+                          </li>{' '}
                           {/* END QUESTION #5 */}
                         </ul>
                       </div>
-                    </div>{" "}
+                    </div>{' '}
                     {/* END TAB-4 CONTENT */}
                   </div>
-                </div>{" "}
+                </div>{' '}
                 {/* End row */}
-              </div>{" "}
+              </div>{' '}
               {/* END TABS CONTENT */}
-            </div>{" "}
+            </div>{' '}
             {/* End container */}
-          </section>{" "}
+          </section>{' '}
           {/* END  FAQs-4 */}
           {/* BANNER-9
 			============================================= */}
           <section
-            id="banner-9"
-            className="bg--02 py-70 x-border banner-section"
+            id='banner-9'
+            className='bg--02 py-70 x-border banner-section'
           >
-            <div className="container">
+            <div className='container'>
               {/* BANNER-9 WRAPPER */}
-              <div className="banner-7-wrapper">
-                <div className="row justify-content-center d-flex align-items-center">
+              <div className='banner-7-wrapper'>
+                <div className='row justify-content-center d-flex align-items-center'>
                   {/* BANNER-9 TEXT */}
-                  <div className="col-md-7 col-xl-5">
-                    <div className="banner-9-txt">
+                  <div className='col-md-7 col-xl-5'>
+                    <div className='banner-9-txt'>
                       {/* Title */}
-                      <h3 className="s-40 w-700">Still need help?</h3>
+                      <h3 className='s-40 w-700'>Still need help?</h3>
                       {/* Text */}
-                      <p className="p-lg">
+                      <p className='p-lg'>
                         Don&apos;t hesitate to contact us about any question you
                         might be interested in
                       </p>
                       {/* Button */}
                       <Link
-                        href="/contacts"
-                        className="btn r-04 btn--theme hover--theme"
+                        href='/contacts'
+                        className='btn r-04 btn--theme hover--theme'
                       >
                         Ask your question here
                       </Link>
                     </div>
                   </div>
                   {/* BANNER-9 IMAGE */}
-                  <div className="col-md-5 col-xl-5">
-                    <div className="banner-9-img text-end">
+                  <div className='col-md-5 col-xl-5'>
+                    <div className='banner-9-img text-end'>
                       <Image
-                        className="img-fluid"
+                        className='img-fluid'
                         src={help}
-                        alt="banner-image"
+                        alt='banner-image'
                       />
                     </div>
                   </div>
-                </div>{" "}
+                </div>{' '}
                 {/* End row */}
-              </div>{" "}
+              </div>{' '}
               {/* END BANNER-9 WRAPPER */}
-            </div>{" "}
+            </div>{' '}
             {/* End container */}
           </section>
         </div>
       </Layout>
     </>
-  );
+  )
 }

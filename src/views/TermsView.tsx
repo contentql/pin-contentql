@@ -1,32 +1,34 @@
-"use client";
-import Link from "next/link";
-import Layout from "../components/layout/Layout";
+'use client'
+
+import Layout from '../components/layout/Layout'
+import Link from 'next/link'
+
 export default function TermsView() {
   return (
     <>
       <Layout
         headerStyle={1}
         footerStyle={3}
-        headerCls="navbar-dark inner-page-header"
+        headerCls='navbar-dark inner-page-header'
       >
         <section
-          id="terms-page"
-          className="gr--whitesmoke pb-80 inner-page-hero division"
+          id='terms-page'
+          className='gr--whitesmoke pb-80 inner-page-hero division'
         >
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-xl-10">
+          <div className='container'>
+            <div className='row justify-content-center'>
+              <div className='col-xl-10'>
                 {/* INNER PAGE TITLE */}
-                <div className="inner-page-title">
-                  <h2 className="s-52 w-700">Terms of Service</h2>
-                  <p className="p-lg">
+                <div className='inner-page-title'>
+                  <h2 className='s-52 w-700'>Terms of Service</h2>
+                  <p className='p-lg'>
                     This policy is effective as of 23th October 2022
                   </p>
                 </div>
                 {/* TEXT BLOCK */}
-                <div className="txt-block legal-info">
+                <div className='txt-block legal-info'>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>1.</span> Ownership
                   </h4>
                   {/* Text */}
@@ -50,7 +52,7 @@ export default function TermsView() {
                     lacinia
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>2.</span> Acceptance of Terms
                   </h4>
                   {/* Text */}
@@ -80,7 +82,7 @@ export default function TermsView() {
                     molestie diam egestas
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>3.</span> Service Description
                   </h4>
                   {/* Text */}
@@ -93,8 +95,8 @@ export default function TermsView() {
                     blandit fusce aliquam
                   </p>
                   {/* List */}
-                  <ul className="simple-list">
-                    <li className="list-item">
+                  <ul className='simple-list'>
+                    <li className='list-item'>
                       <p>
                         Quaerat sodales sapien undo velna purus euismod purus
                         velna blandit vitae auctor and congue magna tempor
@@ -102,7 +104,7 @@ export default function TermsView() {
                         augue eget diam pulvinar
                       </p>
                     </li>
-                    <li className="list-item">
+                    <li className='list-item'>
                       <p>
                         Nemo ipsam egestas volute turpis dolores ut aliquam
                         quaerat sodales sapien congue and augue egestas
@@ -110,7 +112,7 @@ export default function TermsView() {
                     </li>
                   </ul>
                   {/* Small Title */}
-                  <h5 className="s-24 w-700">
+                  <h5 className='s-24 w-700'>
                     <span>3.1.</span> Subscription
                   </h5>
                   {/* Text */}
@@ -130,7 +132,7 @@ export default function TermsView() {
                     porta.
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>4.</span> Account Information
                   </h4>
                   {/* Text */}
@@ -147,7 +149,7 @@ export default function TermsView() {
                     lorem.
                   </p>
                   {/* Small Title */}
-                  <h5 className="s-24 w-700">
+                  <h5 className='s-24 w-700'>
                     <span>4.1.</span> Registering for an account
                   </h5>
                   {/* Text */}
@@ -171,7 +173,7 @@ export default function TermsView() {
                     aliquam fusce blandit
                   </p>
                   {/* Small Title */}
-                  <h5 className="s-24 w-700">
+                  <h5 className='s-24 w-700'>
                     <span>4.2.</span> Your responsibility for your account
                   </h5>
                   {/* Text */}
@@ -184,12 +186,12 @@ export default function TermsView() {
                     augue fusce sapien
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>5.</span> Price and Taxes
                   </h4>
                   {/* List */}
-                  <ul className="simple-list">
-                    <li className="list-item">
+                  <ul className='simple-list'>
+                    <li className='list-item'>
                       <p>
                         Quaerat sodales sapien undo velna purus euismod purus
                         velna blandit vitae auctor and congue magna tempor
@@ -197,7 +199,7 @@ export default function TermsView() {
                         augue eget tempor diam
                       </p>
                     </li>
-                    <li className="list-item">
+                    <li className='list-item'>
                       <p>
                         Nemo ipsam egestas volute turpis dolores ut aliquam
                         quaerat sodales sapien congue and augue egestas
@@ -216,7 +218,7 @@ export default function TermsView() {
                     egestas
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>6.</span> Method of Payment
                   </h4>
                   {/* Text */}
@@ -236,7 +238,7 @@ export default function TermsView() {
                     augue luctus congue
                   </p>
                   {/* Small Title */}
-                  <h5 className="s-24 w-700">
+                  <h5 className='s-24 w-700'>
                     <span>6.1.</span> Refunds
                   </h5>
                   {/* Text */}
@@ -256,7 +258,7 @@ export default function TermsView() {
                     porta.
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>7.</span> Security
                   </h4>
                   {/* Text */}
@@ -275,7 +277,7 @@ export default function TermsView() {
                     purus undo vitae aliquam auris dapibus libero fusce blandit.
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>8.</span> Changes to This Terms of Service
                   </h4>
                   {/* Text */}
@@ -299,29 +301,29 @@ export default function TermsView() {
                     aliquam fusce blandit
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>9.</span> How to Contact Us
                   </h4>
                   {/* Text */}
                   <p>
                     If you have any questions or suggestions about this Terms of
-                    Service, do not hesitate to contact us at{" "}
+                    Service, do not hesitate to contact us at{' '}
                     <Link
-                      href="mailto:yourdomain@mail.com"
-                      className="color--theme"
+                      href='mailto:yourdomain@mail.com'
+                      className='color--theme'
                     >
                       hello@yourdomain.com
                     </Link>
                   </p>
-                </div>{" "}
+                </div>{' '}
                 {/* END TEXT BLOCK */}
               </div>
-            </div>{" "}
+            </div>{' '}
             {/* End row */}
-          </div>{" "}
+          </div>{' '}
           {/* End container */}
         </section>
       </Layout>
     </>
-  );
+  )
 }

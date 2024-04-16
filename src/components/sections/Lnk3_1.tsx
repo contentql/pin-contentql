@@ -1,48 +1,48 @@
-import Image from "next/image";
-import VideoPopup from "../elements/VidepPopup";
-import hero1_3 from "/public/images/hero-1.3.png";
+import VideoPopup from '../elements/VidepPopup'
+import hero1_3 from '/public/images/hero-1.3.png'
+import Image from 'next/image'
 
 export default function Lnk3_1() {
   return (
     <>
-      <section id="lnk-3" className="bg--04 ct-10 content-section division">
-        <div className="section-overlay pt-100">
-          <div className="container">
+      <section id='lnk-3' className='bg--04 ct-10 content-section division'>
+        <div className='section-overlay pt-100'>
+          <div className='container'>
             {/* SECTION TITLE */}
-            <div className="row justify-content-center">
-              <div className="col-md-10 col-lg-9">
-                <div className="section-title mb-70">
+            <div className='row justify-content-center'>
+              <div className='col-md-10 col-lg-9'>
+                <div className='section-title mb-70'>
                   {/* Title */}
-                  <h2 className="s-50 w-700">
+                  <h2 className='s-50 w-700'>
                     Track the progress towards objectives with key results
                   </h2>
                   {/* Text */}
-                  <p className="s-21">
+                  <p className='s-21'>
                     Ligula risus auctor tempus magna feugiat lacinia.
                   </p>
                 </div>
               </div>
             </div>
             {/* IMAGE BLOCK */}
-            <div className="row">
-              <div className="col">
-                <div className="img-block video-preview wow fadeInUp">
+            <div className='row'>
+              <div className='col'>
+                <div className='img-block video-preview wow fadeInUp'>
                   {/* Play Icon */}
                   <VideoPopup style={2} />
                   {/* Preview Image */}
                   <Image
-                    className="img-fluid"
+                    className='img-fluid'
                     src={hero1_3}
-                    alt="video-preview"
+                    alt='video-preview'
                   />
                 </div>
               </div>
             </div>
-          </div>{" "}
+          </div>{' '}
           {/* End container */}
-        </div>{" "}
+        </div>{' '}
         {/* End section overlay */}
       </section>
     </>
-  );
+  )
 }

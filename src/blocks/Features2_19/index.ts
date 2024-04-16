@@ -1,63 +1,63 @@
-import { Block } from "payload/types";
+import { Block } from 'payload/types'
 
 export const Features2_19: Block = {
-  slug: "features2_19",
+  slug: 'features2_19',
   labels: {
-    singular: "Features2_19 Block",
-    plural: "Features2_19 Blocks",
+    singular: 'Features2_19 Block',
+    plural: 'Features2_19 Blocks',
   },
   fields: [
     {
-      name: "title",
-      label: "Title",
-      type: "text",
+      name: 'title',
+      label: 'Title',
+      type: 'text',
       required: true,
     },
     {
-      name: "sub_title",
-      label: "Sub Title",
-      type: "text",
+      name: 'sub_title',
+      label: 'Sub Title',
+      type: 'text',
       required: true,
     },
     {
-      name: "features",
-      label: "Features",
+      name: 'features',
+      label: 'Features',
       required: true,
-      type: "array",
+      type: 'array',
       fields: [
         {
-          name: "title",
-          label: "Title",
-          type: "text",
+          name: 'title',
+          label: 'Title',
+          type: 'text',
           required: true,
         },
         {
-          name: "description",
-          label: "Description",
-          type: "textarea",
+          name: 'description',
+          label: 'Description',
+          type: 'textarea',
           required: true,
         },
         {
-          name: "feature_image_light",
-          label: "Feature Image",
-          type: "upload",
-          relationTo: "media",
+          name: 'feature_image_light',
+          label: 'Feature Image',
+          type: 'upload',
+          relationTo: 'media',
           required: true,
           admin: {
-            description: "feature image light",
+            description: 'feature image light',
           },
         },
         {
-          name: "feature_image_dark",
-          label: "Feature Image",
-          type: "upload",
-          relationTo: "media",
+          name: 'feature_image_dark',
+          label: 'Feature Image',
+          type: 'upload',
+          relationTo: 'media',
           required: true,
           admin: {
-            description: "feature image dark",
+            description: 'feature image dark',
           },
         },
       ],
     },
   ],
-};
+}

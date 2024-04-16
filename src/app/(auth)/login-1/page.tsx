@@ -1,14 +1,14 @@
-import { Metadata } from "next";
+import { Metadata } from 'next'
 
-import LoginView1 from "@/views/LoginView1";
+import LoginView1 from '@/views/LoginView1'
 
 export const metadata: Metadata = {
-  title: "contentQL",
-  description: "This is a login-1 page",
-};
+  title: 'contentQL',
+  description: 'This is a login-1 page',
+}
 
 const Home = () => {
-  return <LoginView1 />;
-};
+  return <LoginView1 />
+}
 
-export default Home;
+export default Home
