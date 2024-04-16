@@ -21,8 +21,6 @@ export default function Menu({ headerData }: Props) {
   const router = useRouter();
   // const parser = new DOMParser();
 
-  console.log("hedaerlinks", headerData?.resources1_links);
-
   const products = [
     { icon: <SiSpringCreators size={26} />, key: "springCreators" },
     { icon: <MdOutlinePublish size={26} />, key: "publish" },
