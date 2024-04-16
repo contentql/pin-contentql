@@ -1,4 +1,4 @@
-import { CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'payload/types'
 
 const Users: CollectionConfig = {
   slug: 'users',
@@ -11,8 +11,8 @@ const Users: CollectionConfig = {
     verify: {
       generateEmailHTML: ({ token }) => {
         //TODO: Should replace the frontendURL
-        const frontendUrl = `${process.env.NEXT_PUBLIC_SERVER_URL}/test/auth/verify-email`;
-        return `<p>click on the <a href=${frontendUrl}?token=${token}>link</a> to verify</p>`;
+        const frontendUrl = `${process.env.NEXT_PUBLIC_SERVER_URL}/test/auth/verify-email`
+        return `<p>click on the <a href=${frontendUrl}?token=${token}>link</a> to verify</p>`
       },
     },
   },
@@ -38,6 +38,6 @@ const Users: CollectionConfig = {
       saveToJWT: true,
     },
   ],
-};
+}
 
-export default Users;
+export default Users

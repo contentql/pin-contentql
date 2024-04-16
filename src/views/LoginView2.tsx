@@ -1,97 +1,98 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import logoWhite from "/public/images/logo-white.png";
-import google from "/public/images/png_icons/google.png";
+'use client'
+
+import logoWhite from '/public/images/logo-white.png'
+import google from '/public/images/png_icons/google.png'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function LoginView2() {
   return (
     <>
-      <div id="page" className="page font--jakarta ">
+      <div id='page' className='page font--jakarta '>
         {/* LOGIN PAGE
 ============================================= */}
-        <div id="login" className="bg--scroll login-section division">
-          <div className="container">
-            <div className="row justify-content-center">
+        <div id='login' className='bg--scroll login-section division'>
+          <div className='container'>
+            <div className='row justify-content-center'>
               {/* REGISTER PAGE WRAPPER */}
-              <div className="col-lg-11">
-                <div className="register-page-wrapper r-16 bg--fixed">
-                  <div className="row">
+              <div className='col-lg-11'>
+                <div className='register-page-wrapper r-16 bg--fixed'>
+                  <div className='row'>
                     {/* LOGIN PAGE TEXT */}
-                    <div className="col-md-6">
-                      <div className="register-page-txt color--white">
+                    <div className='col-md-6'>
+                      <div className='register-page-txt color--white'>
                         {/* Logo */}
                         <Image
-                          className="img-fluid"
+                          className='img-fluid'
                           src={logoWhite}
-                          alt="logo-image"
+                          alt='logo-image'
                         />
                         {/* Title */}
-                        <h2 className="s-42 w-700">Welcome</h2>
-                        <h2 className="s-42 w-700">back to ContentQL</h2>
+                        <h2 className='s-42 w-700'>Welcome</h2>
+                        <h2 className='s-42 w-700'>back to ContentQL</h2>
                         {/* Text */}
-                        <p className="p-md mt-25">
+                        <p className='p-md mt-25'>
                           Please enter your credentials to access your ContentQL
                           account
                         </p>
                         {/* Copyright */}
-                        <div className="register-page-copyright">
-                          <p className="p-sm">
+                        <div className='register-page-copyright'>
+                          <p className='p-sm'>
                             © 2024 ContentQL. <span>All Rights Reserved</span>
                           </p>
                         </div>
                       </div>
-                    </div>{" "}
+                    </div>{' '}
                     {/* END LOGIN PAGE TEXT */}
                     {/* LOGIN FORM */}
-                    <div className="col-md-6">
-                      <div className="register-page-form">
-                        <form name="signinform" className="row sign-in-form">
+                    <div className='col-md-6'>
+                      <div className='register-page-form'>
+                        <form name='signinform' className='row sign-in-form'>
                           {/* Google Button */}
-                          <div className="col-md-12">
-                            <Link href="#" className="btn btn-google ico-left">
-                              <Image src={google} alt="google-icon" /> Sign in
+                          <div className='col-md-12'>
+                            <Link href='#' className='btn btn-google ico-left'>
+                              <Image src={google} alt='google-icon' /> Sign in
                               with Google
                             </Link>
                           </div>
                           {/* Login Separator */}
-                          <div className="col-md-12 text-center">
-                            <div className="separator-line">
+                          <div className='col-md-12 text-center'>
+                            <div className='separator-line'>
                               Or, sign in with your email
                             </div>
                           </div>
                           {/* Form Input */}
-                          <div className="col-md-12">
-                            <p className="p-sm input-header">Email address</p>
+                          <div className='col-md-12'>
+                            <p className='p-sm input-header'>Email address</p>
                             <input
-                              className="form-control email"
-                              type="email"
-                              name="email"
-                              placeholder="example@example.com"
+                              className='form-control email'
+                              type='email'
+                              name='email'
+                              placeholder='example@example.com'
                             />
                           </div>
                           {/* Form Input */}
-                          <div className="col-md-12">
-                            <p className="p-sm input-header">Password</p>
-                            <div className="wrap-input">
-                              <span className="btn-show-pass ico-20">
-                                <span className="flaticon-visibility eye-pass" />
+                          <div className='col-md-12'>
+                            <p className='p-sm input-header'>Password</p>
+                            <div className='wrap-input'>
+                              <span className='btn-show-pass ico-20'>
+                                <span className='flaticon-visibility eye-pass' />
                               </span>
                               <input
-                                className="form-control password"
-                                type="password"
-                                name="password"
-                                placeholder="* * * * * * * * *"
+                                className='form-control password'
+                                type='password'
+                                name='password'
+                                placeholder='* * * * * * * * *'
                               />
                             </div>
                           </div>
                           {/* Reset Password Link */}
-                          <div className="col-md-12">
-                            <div className="reset-password-link">
-                              <p className="p-sm">
+                          <div className='col-md-12'>
+                            <div className='reset-password-link'>
+                              <p className='p-sm'>
                                 <Link
-                                  href="/reset-password"
-                                  className="color--theme"
+                                  href='/reset-password'
+                                  className='color--theme'
                                 >
                                   Forgot your password?
                                 </Link>
@@ -99,40 +100,40 @@ export default function LoginView2() {
                             </div>
                           </div>
                           {/* Form Submit Button */}
-                          <div className="col-md-12">
+                          <div className='col-md-12'>
                             <button
-                              type="submit"
-                              className="btn btn--theme hover--theme submit"
+                              type='submit'
+                              className='btn btn--theme hover--theme submit'
                             >
                               Log In
                             </button>
                           </div>
                           {/* Sign Up Link */}
-                          <div className="col-md-12">
-                            <p className="create-account text-center">
-                              Don&apos;t have an account?{" "}
-                              <Link href="/signup-2" className="color--theme">
+                          <div className='col-md-12'>
+                            <p className='create-account text-center'>
+                              Don&apos;t have an account?{' '}
+                              <Link href='/signup-2' className='color--theme'>
                                 Sign up
                               </Link>
                             </p>
                           </div>
                         </form>
                       </div>
-                    </div>{" "}
+                    </div>{' '}
                     {/* END LOGIN FORM */}
-                  </div>{" "}
+                  </div>{' '}
                   {/* End row */}
-                </div>{" "}
+                </div>{' '}
                 {/* End register-page-wrapper */}
-              </div>{" "}
+              </div>{' '}
               {/* END REGISTER PAGE WRAPPER */}
-            </div>{" "}
+            </div>{' '}
             {/* End row */}
-          </div>{" "}
+          </div>{' '}
           {/* End container */}
-        </div>{" "}
+        </div>{' '}
         {/* END LOGIN PAGE */}
       </div>
     </>
-  );
+  )
 }

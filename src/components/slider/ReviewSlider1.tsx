@@ -1,7 +1,8 @@
-import { Media } from "@/payload-types";
-import Image from "next/image";
-import { Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Image from 'next/image'
+import { Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+import { Media } from '@/payload-types'
 
 const swiperOptions = {
   modules: [Autoplay],
@@ -39,18 +40,18 @@ const swiperOptions = {
       // spaceBetween: 30,
     },
   },
-};
+}
 
 export default function ReviewSlider1({
   reviews,
 }: {
   reviews?: {
-    review: string;
-    name: string;
-    designation: string;
-    reviewer_image: string | Media;
-    id?: string | null;
-  }[];
+    review: string
+    name: string
+    designation: string
+    reviewer_image: string | Media
+    id?: string | null
+  }[]
 }) {
   return (
     <>
@@ -59,45 +60,45 @@ export default function ReviewSlider1({
 
                 </SwiperSlide>
             </Swiper> */}
-      <Swiper {...swiperOptions} className="reviews-1-wrapper">
+      <Swiper {...swiperOptions} className='reviews-1-wrapper'>
         {/* TESTIMONIAL #1 */}
         {reviews?.map((review, index) => (
           <SwiperSlide
             key={review?.id}
-            className="review-1 bg--white-100 block-shadow r-08"
+            className='review-1 bg--white-100 block-shadow r-08'
           >
             {/* Quote Icon */}
-            <div className="review-ico ico-65">
-              <span className="flaticon-quote" />
+            <div className='review-ico ico-65'>
+              <span className='flaticon-quote' />
             </div>
             {/* Text */}
-            <div className="review-txt">
+            <div className='review-txt'>
               {/* Text */}
               <p>{review?.review}</p>
               {/* Author */}
-              <div className="author-data clearfix">
+              <div className='author-data clearfix'>
                 {/* Avatar */}
-                <div className="review-avatar">
+                <div className='review-avatar'>
                   <Image
-                    src={(review?.reviewer_image as Media)?.url || ""}
-                    alt={(review?.reviewer_image as Media)?.alt || ""}
+                    src={(review?.reviewer_image as Media)?.url || ''}
+                    alt={(review?.reviewer_image as Media)?.alt || ''}
                     height={500}
                     width={500}
                   />
                 </div>
                 {/* Data */}
-                <div className="review-author">
-                  <h6 className="s-18 w-700">{review?.name}</h6>
-                  <p className="p-sm">{review?.designation}</p>
+                <div className='review-author'>
+                  <h6 className='s-18 w-700'>{review?.name}</h6>
+                  <p className='p-sm'>{review?.designation}</p>
                 </div>
-              </div>{" "}
+              </div>{' '}
               {/* End Author */}
-            </div>{" "}
+            </div>{' '}
             {/* End Text */}
           </SwiperSlide>
         ))}
         {/* END TESTIMONIAL #1 */}
       </Swiper>
     </>
-  );
+  )
 }

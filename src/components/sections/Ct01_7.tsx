@@ -1,32 +1,32 @@
-import Image from "next/image";
-import img06 from "/public/images/img-06.png";
+import img06 from '/public/images/img-06.png'
+import Image from 'next/image'
 
 export default function Ct01_7() {
   return (
     <>
-      <section className="py-100 ct-01 content-section division">
-        <div className="container">
+      <section className='py-100 ct-01 content-section division'>
+        <div className='container'>
           {/* SECTION CONTENT (ROW) */}
-          <div className="row d-flex align-items-center">
+          <div className='row d-flex align-items-center'>
             {/* TEXT BLOCK */}
-            <div className="col-md-6 order-last order-md-2">
-              <div className="txt-block left-column wow fadeInRight">
+            <div className='col-md-6 order-last order-md-2'>
+              <div className='txt-block left-column wow fadeInRight'>
                 {/* TEXT BOX */}
-                <div className="txt-box">
+                <div className='txt-box'>
                   {/* Title */}
-                  <h5 className="s-24 w-700">Solution that grows with you</h5>
+                  <h5 className='s-24 w-700'>Solution that grows with you</h5>
                   {/* Text */}
                   <p>
                     Sodales tempor sapien quaerat ipsum undo congue laoreet
                     turpis neque auctor turpis vitae dolor luctus placerat magna
                     and ligula cursus purus vitae purus an ipsum suscipit
                   </p>
-                </div>{" "}
+                </div>{' '}
                 {/* END TEXT BOX */}
                 {/* TEXT BOX */}
-                <div className="txt-box mb-0">
+                <div className='txt-box mb-0'>
                   {/* Title */}
-                  <h5 className="s-24 w-700">Connect your data sources</h5>
+                  <h5 className='s-24 w-700'>Connect your data sources</h5>
                   {/* Text */}
                   <p>
                     Tempor sapien sodales quaerat ipsum undo congue laoreet
@@ -34,37 +34,37 @@ export default function Ct01_7() {
                     and ligula cursus purus an ipsum vitae suscipit purus
                   </p>
                   {/* List */}
-                  <ul className="simple-list">
-                    <li className="list-item">
+                  <ul className='simple-list'>
+                    <li className='list-item'>
                       <p>
                         Tempor sapien quaerat an ipsum laoreet purus and sapien
                         dolor an ultrice ipsum aliquam undo congue dolor cursus
                       </p>
                     </li>
-                    <li className="list-item">
-                      <p className="mb-0">
+                    <li className='list-item'>
+                      <p className='mb-0'>
                         Cursus purus suscipit vitae cubilia magnis volute
                         egestas vitae sapien turpis ultrice auctor congue magna
                         placerat
                       </p>
                     </li>
                   </ul>
-                </div>{" "}
+                </div>{' '}
                 {/* END TEXT BOX */}
               </div>
-            </div>{" "}
+            </div>{' '}
             {/* END TEXT BLOCK */}
             {/* IMAGE BLOCK */}
-            <div className="col-md-6 order-first order-md-2">
-              <div className="img-block right-column wow fadeInLeft">
-                <Image className="img-fluid" src={img06} alt="content-image" />
+            <div className='col-md-6 order-first order-md-2'>
+              <div className='img-block right-column wow fadeInLeft'>
+                <Image className='img-fluid' src={img06} alt='content-image' />
               </div>
             </div>
-          </div>{" "}
+          </div>{' '}
           {/* END SECTION CONTENT (ROW) */}
-        </div>{" "}
+        </div>{' '}
         {/* End container */}
       </section>
     </>
-  );
+  )
 }

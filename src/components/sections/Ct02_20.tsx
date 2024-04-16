@@ -1,27 +1,27 @@
-import Image from "next/image";
-import Link from "next/link";
-import img05 from "/public/images/img-05.png";
+import img05 from '/public/images/img-05.png'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Ct02_20() {
   return (
     <>
-      <section className="pt-100 ct-02 content-section division">
-        <div className="container">
+      <section className='pt-100 ct-02 content-section division'>
+        <div className='container'>
           {/* SECTION CONTENT (ROW) */}
-          <div className="row d-flex align-items-center">
+          <div className='row d-flex align-items-center'>
             {/* IMAGE BLOCK */}
-            <div className="col-md-6">
-              <div className="img-block left-column wow fadeInRight">
-                <Image className="img-fluid" src={img05} alt="content-image" />
+            <div className='col-md-6'>
+              <div className='img-block left-column wow fadeInRight'>
+                <Image className='img-fluid' src={img05} alt='content-image' />
               </div>
             </div>
             {/* TEXT BLOCK */}
-            <div className="col-md-6">
-              <div className="txt-block right-column wow fadeInLeft">
+            <div className='col-md-6'>
+              <div className='txt-block right-column wow fadeInLeft'>
                 {/* Section ID */}
-                <span className="section-id">Productivity Focused</span>
+                <span className='section-id'>Productivity Focused</span>
                 {/* Title */}
-                <h2 className="s-44 w-700">
+                <h2 className='s-44 w-700'>
                   Work smarter with powerful features
                 </h2>
                 {/* Text */}
@@ -31,29 +31,29 @@ export default function Ct02_20() {
                   ligula cursus purus vitae purus an ipsum suscipit
                 </p>
                 {/* Text */}
-                <p className="mb-0">
+                <p className='mb-0'>
                   Nemo ipsam egestas volute turpis egestas ipsum and purus
                   sapien ultrice an aliquam quaerat ipsum augue turpis sapien
                   cursus congue magna purus quaerat at ligula purus egestas
                   magna cursus undo varius purus magnis sapien quaerat
                 </p>
                 {/* Link */}
-                <div className="txt-block-tra-link mt-25">
+                <div className='txt-block-tra-link mt-25'>
                   <Link
-                    href="#features-12"
-                    className="tra-link ico-20 color--theme"
+                    href='#features-12'
+                    className='tra-link ico-20 color--theme'
                   >
-                    All-in-one platform <span className="flaticon-next" />
+                    All-in-one platform <span className='flaticon-next' />
                   </Link>
                 </div>
               </div>
-            </div>{" "}
+            </div>{' '}
             {/* END TEXT BLOCK */}
-          </div>{" "}
+          </div>{' '}
           {/* END SECTION CONTENT (ROW) */}
-        </div>{" "}
+        </div>{' '}
         {/* End container */}
       </section>
     </>
-  );
+  )
 }

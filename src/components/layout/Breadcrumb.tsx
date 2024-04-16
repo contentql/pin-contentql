@@ -1,7 +1,7 @@
 export default function Breadcrumb({
   breadcrumbTitle,
 }: {
-  breadcrumbTitle: string;
+  breadcrumbTitle: string
 }) {
-  return <></>;
+  return <></>
 }

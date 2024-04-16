@@ -1,24 +1,24 @@
-import Image from "next/image";
-import img11 from "/public/images/img-11.png";
+import img11 from '/public/images/img-11.png'
+import Image from 'next/image'
 
 export default function Ct02_34() {
   return (
     <>
-      <section className="py-100 ct-02 content-section division">
-        <div className="container">
+      <section className='py-100 ct-02 content-section division'>
+        <div className='container'>
           {/* SECTION CONTENT (ROW) */}
-          <div className="row d-flex align-items-center">
+          <div className='row d-flex align-items-center'>
             {/* IMAGE BLOCK */}
-            <div className="col-md-6">
-              <div className="img-block left-column wow fadeInRight">
-                <Image className="img-fluid" src={img11} alt="content-image" />
+            <div className='col-md-6'>
+              <div className='img-block left-column wow fadeInRight'>
+                <Image className='img-fluid' src={img11} alt='content-image' />
               </div>
             </div>
             {/* TEXT BLOCK */}
-            <div className="col-md-6">
-              <div className="txt-block right-column wow fadeInLeft">
+            <div className='col-md-6'>
+              <div className='txt-block right-column wow fadeInLeft'>
                 {/* Title */}
-                <h2 className="s-46 w-700">
+                <h2 className='s-46 w-700'>
                   Bring your ideas to life with ContentQL
                 </h2>
                 {/* Text */}
@@ -28,30 +28,30 @@ export default function Ct02_34() {
                   ligula cursus purus vitae purus an ipsum suscipit
                 </p>
                 {/* Small Title */}
-                <h5 className="s-24 w-700">Enhance your personality</h5>
+                <h5 className='s-24 w-700'>Enhance your personality</h5>
                 {/* List */}
-                <ul className="simple-list">
-                  <li className="list-item">
+                <ul className='simple-list'>
+                  <li className='list-item'>
                     <p>
                       Sapien quaerat tempor an ipsum laoreet purus and sapien
                       dolor an ultrice ipsum aliquam undo congue cursus dolor
                     </p>
                   </li>
-                  <li className="list-item">
-                    <p className="mb-0">
+                  <li className='list-item'>
+                    <p className='mb-0'>
                       Purus suscipit cursus vitae cubilia magnis volute egestas
                       vitae sapien turpis ultrice auctor congue magna placerat
                     </p>
                   </li>
                 </ul>
               </div>
-            </div>{" "}
+            </div>{' '}
             {/* END TEXT BLOCK */}
-          </div>{" "}
+          </div>{' '}
           {/* END SECTION CONTENT (ROW) */}
-        </div>{" "}
+        </div>{' '}
         {/* End container */}
       </section>
     </>
-  );
+  )
 }

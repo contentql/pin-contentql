@@ -1,50 +1,50 @@
-import Image from "next/image";
-import img09 from "/public/images/img-09.png";
+import img09 from '/public/images/img-09.png'
+import Image from 'next/image'
 
 export default function Ct02_2() {
   return (
     <>
-      <section className="pt-100 ct-02 content-section division">
-        <div className="container">
+      <section className='pt-100 ct-02 content-section division'>
+        <div className='container'>
           {/* SECTION CONTENT (ROW) */}
-          <div className="row d-flex align-items-center">
+          <div className='row d-flex align-items-center'>
             {/* IMAGE BLOCK */}
-            <div className="col-md-6">
-              <div className="img-block left-column wow fadeInRight">
-                <Image className="img-fluid" src={img09} alt="content-image" />
+            <div className='col-md-6'>
+              <div className='img-block left-column wow fadeInRight'>
+                <Image className='img-fluid' src={img09} alt='content-image' />
               </div>
             </div>
             {/* TEXT BLOCK */}
-            <div className="col-md-6">
-              <div className="txt-block right-column wow fadeInLeft">
+            <div className='col-md-6'>
+              <div className='txt-block right-column wow fadeInLeft'>
                 {/* CONTENT BOX #1 */}
-                <div className="cbox-2 process-step">
+                <div className='cbox-2 process-step'>
                   {/* Icon */}
-                  <div className="ico-wrap">
-                    <div className="cbox-2-ico bg--theme color--white">1</div>
-                    <span className="cbox-2-line" />
+                  <div className='ico-wrap'>
+                    <div className='cbox-2-ico bg--theme color--white'>1</div>
+                    <span className='cbox-2-line' />
                   </div>
                   {/* Text */}
-                  <div className="cbox-2-txt">
-                    <h5 className="s-22 w-700">Register in 30 seconds</h5>
+                  <div className='cbox-2-txt'>
+                    <h5 className='s-22 w-700'>Register in 30 seconds</h5>
                     <p>
                       Register swiftly with ContentQL, initiating your journey
                       to website creation in just 30 seconds. Seamlessly unlock
                       the power of intuitive design tools
                     </p>
                   </div>
-                </div>{" "}
+                </div>{' '}
                 {/* END CONTENT BOX #1 */}
                 {/* CONTENT BOX #2 */}
-                <div className="cbox-2 process-step">
+                <div className='cbox-2 process-step'>
                   {/* Icon */}
-                  <div className="ico-wrap">
-                    <div className="cbox-2-ico bg--theme color--white">2</div>
-                    <span className="cbox-2-line" />
+                  <div className='ico-wrap'>
+                    <div className='cbox-2-ico bg--theme color--white'>2</div>
+                    <span className='cbox-2-line' />
                   </div>
                   {/* Text */}
-                  <div className="cbox-2-txt">
-                    <h5 className="s-22 w-700">Choose Your Preference</h5>
+                  <div className='cbox-2-txt'>
+                    <h5 className='s-22 w-700'>Choose Your Preference</h5>
                     <p>
                       In a world of diverse digital possibilities, your journey
                       begins with a simple decision. Whether crafting an
@@ -52,36 +52,36 @@ export default function Ct02_2() {
                       captivating stories.
                     </p>
                   </div>
-                </div>{" "}
+                </div>{' '}
                 {/* END CONTENT BOX #2 */}
                 {/* CONTENT BOX #3 */}
-                <div className="cbox-2 process-step">
+                <div className='cbox-2 process-step'>
                   {/* Icon */}
-                  <div className="ico-wrap">
-                    <div className="cbox-2-ico bg--theme color--white">3</div>
+                  <div className='ico-wrap'>
+                    <div className='cbox-2-ico bg--theme color--white'>3</div>
                   </div>
                   {/* Text */}
-                  <div className="cbox-2-txt">
-                    <h5 className="s-22 w-700">
+                  <div className='cbox-2-txt'>
+                    <h5 className='s-22 w-700'>
                       Design Your Masterpiece: Begin or Personalize
                     </h5>
-                    <p className="mb-0">
+                    <p className='mb-0'>
                       Your digital canvas awaits your touch. Whether you&apos;re
                       an artist starting with a blank slate or a curator
                       enhancing existing beauty, our platform empowers you to
                       shape your vision.
                     </p>
                   </div>
-                </div>{" "}
+                </div>{' '}
                 {/* END CONTENT BOX #3 */}
               </div>
-            </div>{" "}
+            </div>{' '}
             {/* END TEXT BLOCK */}
-          </div>{" "}
+          </div>{' '}
           {/* END SECTION CONTENT (ROW) */}
-        </div>{" "}
+        </div>{' '}
         {/* End container */}
       </section>
     </>
-  );
+  )
 }

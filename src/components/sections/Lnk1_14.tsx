@@ -1,21 +1,21 @@
-import Image from "next/image";
-import img09 from "/public/images/img-09.png";
+import img09 from '/public/images/img-09.png'
+import Image from 'next/image'
 
 export default function Lnk1_14() {
   return (
     <>
-      <section id="lnk-1" className="pt-100 ws-wrapper content-section">
-        <div className="container">
-          <div className="bc-1-wrapper bg--02 bg--fixed r-16">
-            <div className="section-overlay">
-              <div className="row d-flex align-items-center">
+      <section id='lnk-1' className='pt-100 ws-wrapper content-section'>
+        <div className='container'>
+          <div className='bc-1-wrapper bg--02 bg--fixed r-16'>
+            <div className='section-overlay'>
+              <div className='row d-flex align-items-center'>
                 {/* TEXT BLOCK */}
-                <div className="col-md-6 order-last order-md-2">
-                  <div className="txt-block left-column wow fadeInRight">
+                <div className='col-md-6 order-last order-md-2'>
+                  <div className='txt-block left-column wow fadeInRight'>
                     {/* Section ID */}
-                    <span className="section-id">One-Stop Solution</span>
+                    <span className='section-id'>One-Stop Solution</span>
                     {/* Title */}
-                    <h2 className="s-46 w-700">
+                    <h2 className='s-46 w-700'>
                       Smart solutions, real-time results
                     </h2>
                     {/* Text */}
@@ -25,42 +25,42 @@ export default function Lnk1_14() {
                       ligula cursus and purus pretium
                     </p>
                     {/* List */}
-                    <ul className="simple-list">
-                      <li className="list-item">
+                    <ul className='simple-list'>
+                      <li className='list-item'>
                         <p>
                           Cursus purus suscipit vitae cubilia magnis volute
                           egestas vitae sapien turpis sodales magna
                         </p>
                       </li>
-                      <li className="list-item">
-                        <p className="mb-0">
+                      <li className='list-item'>
+                        <p className='mb-0'>
                           Tempor sapien quaerat an ipsum laoreet purus and
                           sapien dolor an ultrice ipsum aliquam congue
                         </p>
                       </li>
                     </ul>
                   </div>
-                </div>{" "}
+                </div>{' '}
                 {/* END TEXT BLOCK */}
                 {/* IMAGE BLOCK */}
-                <div className="col-md-6 order-first order-md-2">
-                  <div className="img-block right-column wow fadeInLeft">
+                <div className='col-md-6 order-first order-md-2'>
+                  <div className='img-block right-column wow fadeInLeft'>
                     <Image
-                      className="img-fluid"
+                      className='img-fluid'
                       src={img09}
-                      alt="content-image"
+                      alt='content-image'
                     />
                   </div>
                 </div>
-              </div>{" "}
+              </div>{' '}
               {/* End row */}
-            </div>{" "}
+            </div>{' '}
             {/* End section overlay */}
-          </div>{" "}
+          </div>{' '}
           {/* End content wrapper */}
-        </div>{" "}
+        </div>{' '}
         {/* End container */}
       </section>
     </>
-  );
+  )
 }

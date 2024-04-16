@@ -1,8 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { storyTemplates } from "../../mockdata/storyTemplates";
+import { storyTemplates } from '../../mockdata/storyTemplates'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 const swiperOptions = {
   modules: [Navigation],
   slidesPerView: 4,
@@ -14,8 +15,8 @@ const swiperOptions = {
   },
   loop: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 
   breakpoints: {
@@ -44,39 +45,39 @@ const swiperOptions = {
       // spaceBetween: 30,
     },
   },
-};
+}
 
 export default function StorySlider() {
   return (
     <>
-      <Swiper {...swiperOptions} className="reviews-1-wrapper">
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
+      <Swiper {...swiperOptions} className='reviews-1-wrapper'>
+        <div className='swiper-button-prev'></div>
+        <div className='swiper-button-next'></div>
         {/* TESTIMONIAL #1 */}
-        {storyTemplates.map((template) => (
-          <SwiperSlide key={template.id} className="review-card ">
-            <div key={template.id} id="l-1">
-              <div className="hover-overlay1 card-view">
+        {storyTemplates.map(template => (
+          <SwiperSlide key={template.id} className='review-card '>
+            <div key={template.id} id='l-1'>
+              <div className='hover-overlay1 card-view'>
                 <Image
-                  className="img-fluid"
+                  className='img-fluid'
                   src={template.backgroundImage}
-                  alt="layout-preview"
+                  alt='layout-preview'
                   height={1000}
                   width={1000}
                 />
-                <div className="text-container">
-                  <div className="text-wow">
-                    <Link href={template.design} target="_blank">
+                <div className='text-container'>
+                  <div className='text-wow'>
+                    <Link href={template.design} target='_blank'>
                       Go with this design
-                    </Link>{" "}
+                    </Link>{' '}
                   </div>
-                  <div className="text-wow">
-                    <Link href={template.preview} target="_blank">
+                  <div className='text-wow'>
+                    <Link href={template.preview} target='_blank'>
                       preview Design
                     </Link>
                   </div>
                 </div>
-                <p className="payment-type">{template.type}</p>
+                <p className='payment-type'>{template.type}</p>
               </div>
               <h4> {template.name}</h4>
             </div>
@@ -84,5 +85,5 @@ export default function StorySlider() {
         ))}
       </Swiper>
     </>
-  );
+  )
 }

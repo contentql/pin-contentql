@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from 'next/head'
 
 const PageHead = ({ headTitle }: { headTitle?: string }) => {
   return (
@@ -7,11 +7,11 @@ const PageHead = ({ headTitle }: { headTitle?: string }) => {
         <>
           {headTitle
             ? headTitle
-            : "ContentQL - Software, App, SaaS & Startup Nextjs Landing Pages Pack"}
+            : 'ContentQL - Software, App, SaaS & Startup Nextjs Landing Pages Pack'}
         </>
       </Head>
     </>
-  );
-};
+  )
+}
 
-export default PageHead;
+export default PageHead

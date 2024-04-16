@@ -1,32 +1,34 @@
-"use client";
-import Link from "next/link";
-import Layout from "../components/layout/Layout";
+'use client'
+
+import Layout from '../components/layout/Layout'
+import Link from 'next/link'
+
 export default function PrivacyView() {
   return (
     <>
       <Layout
         headerStyle={1}
         footerStyle={3}
-        headerCls="navbar-dark inner-page-header"
+        headerCls='navbar-dark inner-page-header'
       >
         <section
-          id="privacy-page"
-          className="gr--whitesmoke pb-80 inner-page-hero division"
+          id='privacy-page'
+          className='gr--whitesmoke pb-80 inner-page-hero division'
         >
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-xl-10">
+          <div className='container'>
+            <div className='row justify-content-center'>
+              <div className='col-xl-10'>
                 {/* INNER PAGE TITLE */}
-                <div className="inner-page-title">
-                  <h2 className="s-52 w-700">Privacy Policy</h2>
-                  <p className="p-lg">
+                <div className='inner-page-title'>
+                  <h2 className='s-52 w-700'>Privacy Policy</h2>
+                  <p className='p-lg'>
                     This policy is effective as of 11th November 2022
                   </p>
                 </div>
                 {/* TEXT BLOCK */}
-                <div className="txt-block legal-info">
+                <div className='txt-block legal-info'>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>1.</span> Introduction
                   </h4>
                   {/* Text */}
@@ -54,11 +56,11 @@ export default function PrivacyView() {
                     lacinia
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>2.</span> Personal Information We Collect
                   </h4>
                   {/* Small Title */}
-                  <h5 className="s-24 w-700">
+                  <h5 className='s-24 w-700'>
                     <span>2.1.</span> Information you provide to us
                   </h5>
                   {/* Text */}
@@ -73,8 +75,8 @@ export default function PrivacyView() {
                     molestie diam egestas
                   </p>
                   {/* List */}
-                  <ul className="simple-list">
-                    <li className="list-item">
+                  <ul className='simple-list'>
+                    <li className='list-item'>
                       <p>
                         Quaerat sodales sapien undo velna purus euismod purus
                         velna blandit vitae auctor and congue magna tempor
@@ -82,13 +84,13 @@ export default function PrivacyView() {
                         augue eget dictum tempor
                       </p>
                     </li>
-                    <li className="list-item">
+                    <li className='list-item'>
                       <p>
                         Nemo ipsam egestas volute turpis dolores ut aliquam
                         quaerat sodales sapien congue and augue egestas
                       </p>
                     </li>
-                    <li className="list-item">
+                    <li className='list-item'>
                       <p>
                         Nemo ipsam egestas volute turpis dolores ut aliquam
                         quaerat sodales sapien congue augue egestas sagittis
@@ -96,7 +98,7 @@ export default function PrivacyView() {
                         placerat vulputate purus
                       </p>
                     </li>
-                    <li className="list-item">
+                    <li className='list-item'>
                       <p>
                         Sapien sodales quaerat undo velna purus euismod purus
                         velna blandit vitae auctor and congue magna tempor
@@ -106,7 +108,7 @@ export default function PrivacyView() {
                     </li>
                   </ul>
                   {/* Small Title */}
-                  <h5 className="s-24 w-700">
+                  <h5 className='s-24 w-700'>
                     <span>2.2.</span> Automatic data collection
                   </h5>
                   {/* Text */}
@@ -130,7 +132,7 @@ export default function PrivacyView() {
                     lacinia
                   </p>
                   {/* Small Title */}
-                  <h5 className="s-24 w-700">
+                  <h5 className='s-24 w-700'>
                     <span>2.3.</span> User comments and content
                   </h5>
                   {/* Text */}
@@ -145,8 +147,8 @@ export default function PrivacyView() {
                     quaerat sodales
                   </p>
                   {/* List */}
-                  <ul className="simple-list">
-                    <li className="list-item">
+                  <ul className='simple-list'>
+                    <li className='list-item'>
                       <p>
                         Quaerat sodales sapien undo velna purus euismod purus
                         velna blandit vitae auctor and congue magna tempor
@@ -154,7 +156,7 @@ export default function PrivacyView() {
                         augue eget dictum tempor
                       </p>
                     </li>
-                    <li className="list-item">
+                    <li className='list-item'>
                       <p>
                         Nemo ipsam egestas volute turpis dolores ut aliquam
                         quaerat sodales sapien congue and augue egestas
@@ -162,7 +164,7 @@ export default function PrivacyView() {
                     </li>
                   </ul>
                   {/* Small Title */}
-                  <h5 className="s-24 w-700">
+                  <h5 className='s-24 w-700'>
                     <span>2.4.</span> Information from other sources
                   </h5>
                   {/* Text */}
@@ -179,7 +181,7 @@ export default function PrivacyView() {
                     lorem.
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>3.</span> Types of Information
                   </h4>
                   {/* Text */}
@@ -212,7 +214,7 @@ export default function PrivacyView() {
                     lorem.
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>4.</span> How We Use Personal Information
                   </h4>
                   {/* Text */}
@@ -236,7 +238,7 @@ export default function PrivacyView() {
                     aliquam fusce blandit
                   </p>
                   {/* Small Title */}
-                  <h5 className="s-24 w-700">
+                  <h5 className='s-24 w-700'>
                     <span>4.1.</span> In mails and contact forms
                   </h5>
                   {/* Text */}
@@ -249,12 +251,12 @@ export default function PrivacyView() {
                     augue fusce sapien
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>5.</span> Price and Taxes
                   </h4>
                   {/* List */}
-                  <ul className="simple-list">
-                    <li className="list-item">
+                  <ul className='simple-list'>
+                    <li className='list-item'>
                       <p>
                         Quaerat sodales sapien undo velna purus euismod purus
                         velna blandit vitae auctor and congue magna tempor
@@ -262,7 +264,7 @@ export default function PrivacyView() {
                         augue eget tempor pulvinar
                       </p>
                     </li>
-                    <li className="list-item">
+                    <li className='list-item'>
                       <p>
                         Nemo ipsam egestas volute turpis dolores ut aliquam
                         quaerat sodales sapien congue and augue egestas
@@ -281,7 +283,7 @@ export default function PrivacyView() {
                     egestas
                   </p>
                   {/* Small Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>5.</span> Children&apos;s Privacy
                   </h4>
                   {/* Text */}
@@ -301,7 +303,7 @@ export default function PrivacyView() {
                     augue luctus congue
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>6.</span> Data Shared with Third Parties
                   </h4>
                   {/* Text */}
@@ -334,7 +336,7 @@ export default function PrivacyView() {
                     lorem.
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>7.</span> Security Measures
                   </h4>
                   {/* Text */}
@@ -353,7 +355,7 @@ export default function PrivacyView() {
                     purus undo vitae aliquam auris dapibus libero fusce blandit.
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>8.</span> Changes in the Privacy Policy
                   </h4>
                   {/* Text */}
@@ -382,29 +384,29 @@ export default function PrivacyView() {
                     aliquam fusce blandit
                   </p>
                   {/* Title */}
-                  <h4 className="s-30 w-700">
+                  <h4 className='s-30 w-700'>
                     <span>9.</span> How to Contact Us
                   </h4>
                   {/* Text */}
                   <p>
                     If you have any questions or suggestions about this Terms of
-                    Service, do not hesitate to contact us at{" "}
+                    Service, do not hesitate to contact us at{' '}
                     <Link
-                      href="mailto:yourdomain@mail.com"
-                      className="color--theme"
+                      href='mailto:yourdomain@mail.com'
+                      className='color--theme'
                     >
                       hello@yourdomain.com
                     </Link>
                   </p>
-                </div>{" "}
+                </div>{' '}
                 {/* END TEXT BLOCK */}
               </div>
-            </div>{" "}
+            </div>{' '}
             {/* End row */}
-          </div>{" "}
+          </div>{' '}
           {/* End container */}
         </section>
       </Layout>
     </>
-  );
+  )
 }

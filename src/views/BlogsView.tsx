@@ -1,20 +1,20 @@
-"use client";
-import Link from "next/link";
-import VideoPopup from "../components/elements/VidepPopup";
-import Layout from "../components/layout/Layout";
-import post1Img from "/public/images/blog/post-1-img.jpg";
-import post10Img from "/public/images/blog/post-10-img.jpg";
-import post11Img from "/public/images/blog/post-11-img.jpg";
-import post2Img from "/public/images/blog/post-2-img.jpg";
-import post3Img from "/public/images/blog/post-3-img.jpg";
-import post4Img from "/public/images/blog/post-4-img.jpg";
-import post5Img from "/public/images/blog/post-5-img.jpg";
-import post6Img from "/public/images/blog/post-6-img.jpg";
-import post7Img from "/public/images/blog/post-7-img.jpg";
-import post8Img from "/public/images/blog/post-8-img.jpg";
-import post9Img from "/public/images/blog/post-9-img.jpg";
+'use client'
 
-import Image from "next/image";
+import VideoPopup from '../components/elements/VidepPopup'
+import Layout from '../components/layout/Layout'
+import post1Img from '/public/images/blog/post-1-img.jpg'
+import post2Img from '/public/images/blog/post-2-img.jpg'
+import post3Img from '/public/images/blog/post-3-img.jpg'
+import post4Img from '/public/images/blog/post-4-img.jpg'
+import post5Img from '/public/images/blog/post-5-img.jpg'
+import post6Img from '/public/images/blog/post-6-img.jpg'
+import post7Img from '/public/images/blog/post-7-img.jpg'
+import post8Img from '/public/images/blog/post-8-img.jpg'
+import post9Img from '/public/images/blog/post-9-img.jpg'
+import post10Img from '/public/images/blog/post-10-img.jpg'
+import post11Img from '/public/images/blog/post-11-img.jpg'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function BlogsView() {
   return (
@@ -22,37 +22,37 @@ export default function BlogsView() {
       <Layout
         headerStyle={1}
         footerStyle={3}
-        headerCls="navbar-dark inner-page-header"
+        headerCls='navbar-dark inner-page-header'
       >
         <div>
           <section
-            id="blog-page"
-            className="pb-60 inner-page-hero blog-page-section"
+            id='blog-page'
+            className='pb-60 inner-page-hero blog-page-section'
           >
-            <div className="container">
+            <div className='container'>
               {/* WIDE BLOG POST */}
-              <div className="blog-post wide-post wow fadeInUp">
-                <div className="row d-flex align-items-center">
+              <div className='blog-post wide-post wow fadeInUp'>
+                <div className='row d-flex align-items-center'>
                   {/* BLOG POST IMAGE */}
-                  <div className="col-md-6">
-                    <div className="blog-post-img">
+                  <div className='col-md-6'>
+                    <div className='blog-post-img'>
                       <Image
-                        className="img-fluid r-16"
+                        className='img-fluid r-16'
                         src={post11Img}
-                        alt="blog-post-image"
+                        alt='blog-post-image'
                       />
                     </div>
                   </div>
                   {/* BLOG POST TEXT */}
-                  <div className="col-md-6">
-                    <div className="blog-post-txt">
+                  <div className='col-md-6'>
+                    <div className='blog-post-txt'>
                       {/* Post Tag */}
-                      <span className="post-tag color--blue-400">
+                      <span className='post-tag color--blue-400'>
                         Social Media Marketing
                       </span>
                       {/* Post Link */}
-                      <h3 className="s-38 w-700">
-                        <Link href="/single-post">
+                      <h3 className='s-38 w-700'>
+                        <Link href='/single-post'>
                           Congue magna tempor and ipsum Martex sapien turpis
                           laoreet augue
                         </Link>
@@ -65,14 +65,14 @@ export default function BlogsView() {
                         dolor
                       </p>
                       {/* Post Meta */}
-                      <div className="blog-post-meta mt-30">
-                        <ul className="post-meta-list ico-10">
+                      <div className='blog-post-meta mt-30'>
+                        <ul className='post-meta-list ico-10'>
                           <li>
-                            <p className="w-500">By Martex Team</p>
+                            <p className='w-500'>By Martex Team</p>
                           </li>
-                          <li className="meta-list-divider">
+                          <li className='meta-list-divider'>
                             <p>
-                              <span className="flaticon-minus" />
+                              <span className='flaticon-minus' />
                             </p>
                           </li>
                           <li>
@@ -81,35 +81,35 @@ export default function BlogsView() {
                         </ul>
                       </div>
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   {/* END BLOG POST TEXT */}
-                </div>{" "}
+                </div>{' '}
                 {/* End row */}
-              </div>{" "}
+              </div>{' '}
               {/* END WIDE BLOG POST */}
               {/* POSTS WRAPPER */}
-              <div className="posts-wrapper">
-                <div className="row">
+              <div className='posts-wrapper'>
+                <div className='row'>
                   {/* BLOG POST #1 */}
-                  <div className="col-md-6 col-lg-4">
-                    <div className="blog-post mb-40 wow fadeInUp clearfix">
+                  <div className='col-md-6 col-lg-4'>
+                    <div className='blog-post mb-40 wow fadeInUp clearfix'>
                       {/* BLOG POST IMAGE */}
-                      <div className="blog-post-img mb-35">
+                      <div className='blog-post-img mb-35'>
                         <Image
-                          className="img-fluid r-16"
+                          className='img-fluid r-16'
                           src={post1Img}
-                          alt="blog-post-image"
+                          alt='blog-post-image'
                         />
                       </div>
                       {/* BLOG POST TEXT */}
-                      <div className="blog-post-txt">
+                      <div className='blog-post-txt'>
                         {/* Post Tag */}
-                        <span className="post-tag color--red-400">
+                        <span className='post-tag color--red-400'>
                           Product News
                         </span>
                         {/* Post Link */}
-                        <h6 className="s-20 w-700">
-                          <Link href="/single-post">
+                        <h6 className='s-20 w-700'>
+                          <Link href='/single-post'>
                             Aliqum mullam porta blandit: lacus and sapien
                             gravida
                           </Link>
@@ -121,46 +121,46 @@ export default function BlogsView() {
                           sagittis
                         </p>
                         {/* Post Meta */}
-                        <div className="blog-post-meta mt-20">
-                          <ul className="post-meta-list ico-10">
+                        <div className='blog-post-meta mt-20'>
+                          <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className="p-sm w-500">By Martex Team</p>
+                              <p className='p-sm w-500'>By Martex Team</p>
                             </li>
-                            <li className="meta-list-divider">
+                            <li className='meta-list-divider'>
                               <p>
-                                <span className="flaticon-minus" />
+                                <span className='flaticon-minus' />
                               </p>
                             </li>
                             <li>
-                              <p className="p-sm">Apr 23, 2023</p>
+                              <p className='p-sm'>Apr 23, 2023</p>
                             </li>
                           </ul>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* END BLOG POST TEXT */}
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   {/* END BLOG POST #1 */}
                   {/* BLOG POST #2 */}
-                  <div className="col-md-6 col-lg-4">
-                    <div className="blog-post mb-40 wow fadeInUp clearfix">
+                  <div className='col-md-6 col-lg-4'>
+                    <div className='blog-post mb-40 wow fadeInUp clearfix'>
                       {/* BLOG POST IMAGE */}
-                      <div className="blog-post-img mb-35">
+                      <div className='blog-post-img mb-35'>
                         <Image
-                          className="img-fluid r-16"
+                          className='img-fluid r-16'
                           src={post2Img}
-                          alt="blog-post-image"
+                          alt='blog-post-image'
                         />
                       </div>
                       {/* BLOG POST TEXT */}
-                      <div className="blog-post-txt">
+                      <div className='blog-post-txt'>
                         {/* Post Tag */}
-                        <span className="post-tag color--green-400">
+                        <span className='post-tag color--green-400'>
                           Community
                         </span>
                         {/* Post Link */}
-                        <h6 className="s-20 w-700">
-                          <Link href="/single-post">
+                        <h6 className='s-20 w-700'>
+                          <Link href='/single-post'>
                             Porttitor cursus fusce neque CEO egestas cursus
                             magna sapien and suscipit ipsum
                           </Link>
@@ -171,46 +171,46 @@ export default function BlogsView() {
                           sapien and donec lipsum
                         </p>
                         {/* Post Meta */}
-                        <div className="blog-post-meta mt-20">
-                          <ul className="post-meta-list ico-10">
+                        <div className='blog-post-meta mt-20'>
+                          <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className="p-sm w-500">By Miranda Green</p>
+                              <p className='p-sm w-500'>By Miranda Green</p>
                             </li>
-                            <li className="meta-list-divider">
+                            <li className='meta-list-divider'>
                               <p>
-                                <span className="flaticon-minus" />
+                                <span className='flaticon-minus' />
                               </p>
                             </li>
                             <li>
-                              <p className="p-sm">Apr 09, 2023</p>
+                              <p className='p-sm'>Apr 09, 2023</p>
                             </li>
                           </ul>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* END BLOG POST TEXT */}
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   {/* END BLOG POST #2 */}
                   {/* BLOG POST #3 */}
-                  <div className="col-md-12 col-lg-4">
-                    <div className="blog-post mb-40 wow fadeInUp clearfix">
+                  <div className='col-md-12 col-lg-4'>
+                    <div className='blog-post mb-40 wow fadeInUp clearfix'>
                       {/* BLOG POST IMAGE */}
-                      <div className="blog-post-img mb-35">
+                      <div className='blog-post-img mb-35'>
                         <Image
-                          className="img-fluid r-16"
+                          className='img-fluid r-16'
                           src={post3Img}
-                          alt="blog-post-image"
+                          alt='blog-post-image'
                         />
                       </div>
                       {/* BLOG POST TEXT */}
-                      <div className="blog-post-txt">
+                      <div className='blog-post-txt'>
                         {/* Post Tag */}
-                        <span className="post-tag color--violet-400">
+                        <span className='post-tag color--violet-400'>
                           Freelancer Tips
                         </span>
                         {/* Post Link */}
-                        <h6 className="s-20 w-700">
-                          <Link href="/single-post">
+                        <h6 className='s-20 w-700'>
+                          <Link href='/single-post'>
                             Cubilia laoreet ipsum augue eget egestas Martex
                             magna
                           </Link>
@@ -222,62 +222,62 @@ export default function BlogsView() {
                           laoreet
                         </p>
                         {/* Post Meta */}
-                        <div className="blog-post-meta mt-20">
-                          <ul className="post-meta-list ico-10">
+                        <div className='blog-post-meta mt-20'>
+                          <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className="p-sm w-500">By Helen J.</p>
+                              <p className='p-sm w-500'>By Helen J.</p>
                             </li>
-                            <li className="meta-list-divider">
+                            <li className='meta-list-divider'>
                               <p>
-                                <span className="flaticon-minus" />
+                                <span className='flaticon-minus' />
                               </p>
                             </li>
                             <li>
-                              <p className="p-sm">Apr 01, 2023</p>
+                              <p className='p-sm'>Apr 01, 2023</p>
                             </li>
                           </ul>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* END BLOG POST TEXT */}
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   {/* END BLOG POST #3 */}
                 </div>
-              </div>{" "}
+              </div>{' '}
               {/* END POSTS WRAPPER */}
               {/* BLOG POSTS CATEGORY */}
-              <div className="row">
-                <div className="col">
-                  <div className="posts-category ico-20 wow fadeInUp">
-                    <h4 className="s-34 w-700">
-                      Latest News <span className="flaticon-next" />
+              <div className='row'>
+                <div className='col'>
+                  <div className='posts-category ico-20 wow fadeInUp'>
+                    <h4 className='s-34 w-700'>
+                      Latest News <span className='flaticon-next' />
                     </h4>
                   </div>
                 </div>
               </div>
               {/* POSTS WRAPPER */}
-              <div className="posts-wrapper">
-                <div className="row">
+              <div className='posts-wrapper'>
+                <div className='row'>
                   {/* BLOG POST #4 */}
-                  <div className="col-md-6 col-lg-4">
-                    <div className="blog-post mb-40 wow fadeInUp clearfix">
+                  <div className='col-md-6 col-lg-4'>
+                    <div className='blog-post mb-40 wow fadeInUp clearfix'>
                       {/* BLOG POST IMAGE */}
-                      <div className="blog-post-img mb-35">
+                      <div className='blog-post-img mb-35'>
                         <Image
-                          className="img-fluid r-16"
+                          className='img-fluid r-16'
                           src={post4Img}
-                          alt="blog-post-image"
+                          alt='blog-post-image'
                         />
                       </div>
                       {/* BLOG POST TEXT */}
-                      <div className="blog-post-txt">
+                      <div className='blog-post-txt'>
                         {/* Post Tag */}
-                        <span className="post-tag color--pink-400">
+                        <span className='post-tag color--pink-400'>
                           Tutorials
                         </span>
                         {/* Post Link */}
-                        <h6 className="s-20 w-700">
-                          <Link href="/single-post">
+                        <h6 className='s-20 w-700'>
+                          <Link href='/single-post'>
                             Phasellus blandit justo undo aliquam vitae molestie
                             nunc sapien augue justo aliquet
                           </Link>
@@ -288,46 +288,46 @@ export default function BlogsView() {
                           sapien and donec lipsum
                         </p>
                         {/* Post Meta */}
-                        <div className="blog-post-meta mt-20">
-                          <ul className="post-meta-list ico-10">
+                        <div className='blog-post-meta mt-20'>
+                          <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className="p-sm w-500">By Miranda Green</p>
+                              <p className='p-sm w-500'>By Miranda Green</p>
                             </li>
-                            <li className="meta-list-divider">
+                            <li className='meta-list-divider'>
                               <p>
-                                <span className="flaticon-minus" />
+                                <span className='flaticon-minus' />
                               </p>
                             </li>
                             <li>
-                              <p className="p-sm">Mar 20, 2023</p>
+                              <p className='p-sm'>Mar 20, 2023</p>
                             </li>
                           </ul>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* END BLOG POST TEXT */}
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   {/* END BLOG POST #4 */}
                   {/* BLOG POST #5 */}
-                  <div className="col-md-6 col-lg-4">
-                    <div className="blog-post mb-40 wow fadeInUp clearfix">
+                  <div className='col-md-6 col-lg-4'>
+                    <div className='blog-post mb-40 wow fadeInUp clearfix'>
                       {/* BLOG POST IMAGE */}
-                      <div className="blog-post-img mb-35">
+                      <div className='blog-post-img mb-35'>
                         <Image
-                          className="img-fluid r-16"
+                          className='img-fluid r-16'
                           src={post5Img}
-                          alt="blog-post-image"
+                          alt='blog-post-image'
                         />
                       </div>
                       {/* BLOG POST TEXT */}
-                      <div className="blog-post-txt">
+                      <div className='blog-post-txt'>
                         {/* Post Tag */}
-                        <span className="post-tag color--violet-400">
+                        <span className='post-tag color--violet-400'>
                           Freelancer Tips
                         </span>
                         {/* Post Link */}
-                        <h6 className="s-20 w-700">
-                          <Link href="/single-post">
+                        <h6 className='s-20 w-700'>
+                          <Link href='/single-post'>
                             Blandit justo phasellus undo aliquam diam molestie
                             vitae
                           </Link>
@@ -339,46 +339,46 @@ export default function BlogsView() {
                           laoreet
                         </p>
                         {/* Post Meta */}
-                        <div className="blog-post-meta mt-20">
-                          <ul className="post-meta-list ico-10">
+                        <div className='blog-post-meta mt-20'>
+                          <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className="p-sm w-500">By Martex Team</p>
+                              <p className='p-sm w-500'>By Martex Team</p>
                             </li>
-                            <li className="meta-list-divider">
+                            <li className='meta-list-divider'>
                               <p>
-                                <span className="flaticon-minus" />
+                                <span className='flaticon-minus' />
                               </p>
                             </li>
                             <li>
-                              <p className="p-sm">Mar 13, 2023</p>
+                              <p className='p-sm'>Mar 13, 2023</p>
                             </li>
                           </ul>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* END BLOG POST TEXT */}
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   {/* END BLOG POST #5 */}
                   {/* BLOG POST #6 */}
-                  <div className="col-md-12 col-lg-4">
-                    <div className="blog-post mb-40 wow fadeInUp clearfix">
+                  <div className='col-md-12 col-lg-4'>
+                    <div className='blog-post mb-40 wow fadeInUp clearfix'>
                       {/* BLOG POST IMAGE */}
-                      <div className="blog-post-img mb-35">
+                      <div className='blog-post-img mb-35'>
                         <Image
-                          className="img-fluid r-16"
+                          className='img-fluid r-16'
                           src={post6Img}
-                          alt="blog-post-image"
+                          alt='blog-post-image'
                         />
                       </div>
                       {/* BLOG POST TEXT */}
-                      <div className="blog-post-txt">
+                      <div className='blog-post-txt'>
                         {/* Post Tag */}
-                        <span className="post-tag color--blue-400">
+                        <span className='post-tag color--blue-400'>
                           Extensions
                         </span>
                         {/* Post Link */}
-                        <h6 className="s-20 w-700">
-                          <Link href="/single-post">
+                        <h6 className='s-20 w-700'>
+                          <Link href='/single-post'>
                             Cursus porttitor fusce neque CEO egestas cursus
                             magna sapien and ipsum suscipit
                           </Link>
@@ -389,47 +389,47 @@ export default function BlogsView() {
                           sapien and lipsum donec
                         </p>
                         {/* Post Meta */}
-                        <div className="blog-post-meta mt-20">
-                          <ul className="post-meta-list ico-10">
+                        <div className='blog-post-meta mt-20'>
+                          <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className="p-sm w-500">By Martex Team</p>
+                              <p className='p-sm w-500'>By Martex Team</p>
                             </li>
-                            <li className="meta-list-divider">
+                            <li className='meta-list-divider'>
                               <p>
-                                <span className="flaticon-minus" />
+                                <span className='flaticon-minus' />
                               </p>
                             </li>
                             <li>
-                              <p className="p-sm">Feb 23, 2023</p>
+                              <p className='p-sm'>Feb 23, 2023</p>
                             </li>
                           </ul>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* END BLOG POST TEXT */}
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   {/* END BLOG POST #6 */}
-                </div>{" "}
+                </div>{' '}
                 {/* End row */}
-              </div>{" "}
+              </div>{' '}
               {/* END POSTS WRAPPER */}
               {/* SQUARE BLOG POST */}
-              <div className="blog-post square-post">
-                <div className="row">
-                  <div className="col">
+              <div className='blog-post square-post'>
+                <div className='row'>
+                  <div className='col'>
                     {/* SQUARE BLOG POST WRAPPER */}
-                    <div className="square-post-wrapper bg--black-400 block-shadow r-16 wow fadeInUp">
-                      <div className="row d-flex align-items-center">
+                    <div className='square-post-wrapper bg--black-400 block-shadow r-16 wow fadeInUp'>
+                      <div className='row d-flex align-items-center'>
                         {/* BLOG POST TEXT */}
-                        <div className="col-md-6 order-last order-md-2">
-                          <div className="blog-post-txt color--white">
+                        <div className='col-md-6 order-last order-md-2'>
+                          <div className='blog-post-txt color--white'>
                             {/* Post Tag */}
-                            <span className="post-tag color--pink-400">
+                            <span className='post-tag color--pink-400'>
                               Video Tutorials
                             </span>
                             {/* Post Link */}
-                            <h4 className="s-34 w-700 mb-20">
-                              <Link href="/single-post">
+                            <h4 className='s-34 w-700 mb-20'>
+                              <Link href='/single-post'>
                                 Lipsum sodales sapien Martex aliquet blandit
                                 augue gravida posuere
                               </Link>
@@ -441,14 +441,14 @@ export default function BlogsView() {
                               risus aliquet tempus posuere vitae tempor
                             </p>
                             {/* Post Meta */}
-                            <div className="blog-post-meta mt-30">
-                              <ul className="post-meta-list ico-10">
+                            <div className='blog-post-meta mt-30'>
+                              <ul className='post-meta-list ico-10'>
                                 <li>
-                                  <p className="w-500">By Martex Team</p>
+                                  <p className='w-500'>By Martex Team</p>
                                 </li>
-                                <li className="meta-list-divider">
+                                <li className='meta-list-divider'>
                                   <p>
-                                    <span className="flaticon-minus" />
+                                    <span className='flaticon-minus' />
                                   </p>
                                 </li>
                                 <li>
@@ -459,60 +459,60 @@ export default function BlogsView() {
                           </div>
                         </div>
                         {/* BLOG POST IMAGE */}
-                        <div className="col-md-6 order-first order-md-2">
-                          <div className="blog-post-img video-preview">
+                        <div className='col-md-6 order-first order-md-2'>
+                          <div className='blog-post-img video-preview'>
                             {/* Play Icon */}
                             <VideoPopup style={1} />
                             {/* Preview Image */}
                             <Image
-                              className="img-fluid"
+                              className='img-fluid'
                               src={post10Img}
-                              alt="video-preview"
+                              alt='video-preview'
                             />
                           </div>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* End row */}
-                    </div>{" "}
+                    </div>{' '}
                     {/* END SQUARE BLOG POST WRAPPER */}
                   </div>
-                </div>{" "}
+                </div>{' '}
                 {/* End row */}
-              </div>{" "}
+              </div>{' '}
               {/* END SQUARE BLOG POST */}
               {/* BLOG POSTS CATEGORY */}
-              <div className="row">
-                <div className="col">
-                  <div className="posts-category ico-20 wow fadeInUp">
-                    <h4 className="s-34 w-700">
-                      All Stories <span className="flaticon-next" />
+              <div className='row'>
+                <div className='col'>
+                  <div className='posts-category ico-20 wow fadeInUp'>
+                    <h4 className='s-34 w-700'>
+                      All Stories <span className='flaticon-next' />
                     </h4>
                   </div>
                 </div>
               </div>
               {/* POSTS WRAPPER */}
-              <div className="posts-wrapper">
-                <div className="row">
+              <div className='posts-wrapper'>
+                <div className='row'>
                   {/* BLOG POST #7 */}
-                  <div className="col-md-6 col-lg-4">
-                    <div className="blog-post mb-40 wow fadeInUp clearfix">
+                  <div className='col-md-6 col-lg-4'>
+                    <div className='blog-post mb-40 wow fadeInUp clearfix'>
                       {/* BLOG POST IMAGE */}
-                      <div className="blog-post-img mb-35">
+                      <div className='blog-post-img mb-35'>
                         <Image
-                          className="img-fluid r-16"
+                          className='img-fluid r-16'
                           src={post7Img}
-                          alt="blog-post-image"
+                          alt='blog-post-image'
                         />
                       </div>
                       {/* BLOG POST TEXT */}
-                      <div className="blog-post-txt">
+                      <div className='blog-post-txt'>
                         {/* Post Tag */}
-                        <span className="post-tag color--red-400">
+                        <span className='post-tag color--red-400'>
                           Product News
                         </span>
                         {/* Post Link */}
-                        <h6 className="s-20 w-700">
-                          <Link href="/single-post">
+                        <h6 className='s-20 w-700'>
+                          <Link href='/single-post'>
                             Phasellus blandit justo undo aliquam diam vitae
                             molestie
                           </Link>
@@ -524,46 +524,46 @@ export default function BlogsView() {
                           sagittis
                         </p>
                         {/* Post Meta */}
-                        <div className="blog-post-meta mt-20">
-                          <ul className="post-meta-list ico-10">
+                        <div className='blog-post-meta mt-20'>
+                          <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className="p-sm w-500">By Martex Team</p>
+                              <p className='p-sm w-500'>By Martex Team</p>
                             </li>
-                            <li className="meta-list-divider">
+                            <li className='meta-list-divider'>
                               <p>
-                                <span className="flaticon-minus" />
+                                <span className='flaticon-minus' />
                               </p>
                             </li>
                             <li>
-                              <p className="p-sm">Feb 02, 2023</p>
+                              <p className='p-sm'>Feb 02, 2023</p>
                             </li>
                           </ul>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* END BLOG POST TEXT */}
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   {/* END BLOG POST #7 */}
                   {/* BLOG POST #8 */}
-                  <div className="col-md-6 col-lg-4">
-                    <div className="blog-post mb-40 wow fadeInUp clearfix">
+                  <div className='col-md-6 col-lg-4'>
+                    <div className='blog-post mb-40 wow fadeInUp clearfix'>
                       {/* BLOG POST IMAGE */}
-                      <div className="blog-post-img mb-35">
+                      <div className='blog-post-img mb-35'>
                         <Image
-                          className="img-fluid r-16"
+                          className='img-fluid r-16'
                           src={post8Img}
-                          alt="blog-post-image"
+                          alt='blog-post-image'
                         />
                       </div>
                       {/* BLOG POST TEXT */}
-                      <div className="blog-post-txt">
+                      <div className='blog-post-txt'>
                         {/* Post Tag */}
-                        <span className="post-tag color--violet-400">
+                        <span className='post-tag color--violet-400'>
                           Freelancer Tips
                         </span>
                         {/* Post Link */}
-                        <h6 className="s-20 w-700">
-                          <Link href="/single-post">
+                        <h6 className='s-20 w-700'>
+                          <Link href='/single-post'>
                             Porttitor cursus fusce neque CEO egestas cursus
                             magna sapien and suscipit ipsum
                           </Link>
@@ -574,46 +574,46 @@ export default function BlogsView() {
                           sapien and donec lipsum
                         </p>
                         {/* Post Meta */}
-                        <div className="blog-post-meta mt-20">
-                          <ul className="post-meta-list ico-10">
+                        <div className='blog-post-meta mt-20'>
+                          <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className="p-sm w-500">By Miranda Green</p>
+                              <p className='p-sm w-500'>By Miranda Green</p>
                             </li>
-                            <li className="meta-list-divider">
+                            <li className='meta-list-divider'>
                               <p>
-                                <span className="flaticon-minus" />
+                                <span className='flaticon-minus' />
                               </p>
                             </li>
                             <li>
-                              <p className="p-sm">Jan 26, 2023</p>
+                              <p className='p-sm'>Jan 26, 2023</p>
                             </li>
                           </ul>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* END BLOG POST TEXT */}
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   {/* END BLOG POST #8 */}
                   {/* BLOG POST #9 */}
-                  <div className="col-md-12 col-lg-4">
-                    <div className="blog-post mb-40 wow fadeInUp clearfix">
+                  <div className='col-md-12 col-lg-4'>
+                    <div className='blog-post mb-40 wow fadeInUp clearfix'>
                       {/* BLOG POST IMAGE */}
-                      <div className="blog-post-img mb-35">
+                      <div className='blog-post-img mb-35'>
                         <Image
-                          className="img-fluid r-16"
+                          className='img-fluid r-16'
                           src={post9Img}
-                          alt="blog-post-image"
+                          alt='blog-post-image'
                         />
                       </div>
                       {/* BLOG POST TEXT */}
-                      <div className="blog-post-txt">
+                      <div className='blog-post-txt'>
                         {/* Post Tag */}
-                        <span className="post-tag color--green-400">
+                        <span className='post-tag color--green-400'>
                           Community
                         </span>
                         {/* Post Link */}
-                        <h6 className="s-20 w-700">
-                          <Link href="/single-post">
+                        <h6 className='s-20 w-700'>
+                          <Link href='/single-post'>
                             Aliqum mullam porta blandit: lacus and sapien
                             gravida
                           </Link>
@@ -625,130 +625,130 @@ export default function BlogsView() {
                           laoreet
                         </p>
                         {/* Post Meta */}
-                        <div className="blog-post-meta mt-20">
-                          <ul className="post-meta-list ico-10">
+                        <div className='blog-post-meta mt-20'>
+                          <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className="p-sm w-500">By Miranda Green</p>
+                              <p className='p-sm w-500'>By Miranda Green</p>
                             </li>
-                            <li className="meta-list-divider">
+                            <li className='meta-list-divider'>
                               <p>
-                                <span className="flaticon-minus" />
+                                <span className='flaticon-minus' />
                               </p>
                             </li>
                             <li>
-                              <p className="p-sm">Jan 12, 2023</p>
+                              <p className='p-sm'>Jan 12, 2023</p>
                             </li>
                           </ul>
                         </div>
-                      </div>{" "}
+                      </div>{' '}
                       {/* END BLOG POST TEXT */}
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   {/* END BLOG POST #9 */}
-                </div>{" "}
+                </div>{' '}
                 {/* End row */}
-              </div>{" "}
+              </div>{' '}
               {/* END POSTS WRAPPER */}
-            </div>{" "}
+            </div>{' '}
             {/* End container */}
-          </section>{" "}
+          </section>{' '}
           {/* END BLOG POSTS LISTING */}
           {/* PAGE PAGINATION
 			============================================= */}
-          <div className="pb-100 page-pagination theme-pagination">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12">
-                  <nav aria-label="Page navigation">
-                    <ul className="pagination ico-20 justify-content-center">
-                      <li className="page-item disabled">
-                        <Link className="page-link" href="#" tabIndex={-1}>
-                          <span className="flaticon-back" />
+          <div className='pb-100 page-pagination theme-pagination'>
+            <div className='container'>
+              <div className='row'>
+                <div className='col-md-12'>
+                  <nav aria-label='Page navigation'>
+                    <ul className='pagination ico-20 justify-content-center'>
+                      <li className='page-item disabled'>
+                        <Link className='page-link' href='#' tabIndex={-1}>
+                          <span className='flaticon-back' />
                         </Link>
                       </li>
-                      <li className="page-item active" aria-current="page">
-                        <Link className="page-link" href="#">
+                      <li className='page-item active' aria-current='page'>
+                        <Link className='page-link' href='#'>
                           1
                         </Link>
                       </li>
-                      <li className="page-item">
-                        <Link className="page-link" href="#">
+                      <li className='page-item'>
+                        <Link className='page-link' href='#'>
                           2
                         </Link>
                       </li>
-                      <li className="page-item">
-                        <Link className="page-link" href="#">
+                      <li className='page-item'>
+                        <Link className='page-link' href='#'>
                           3
                         </Link>
                       </li>
-                      <li className="page-item">
-                        <Link className="page-link" href="#" aria-label="Next">
-                          <span className="flaticon-next" />
+                      <li className='page-item'>
+                        <Link className='page-link' href='#' aria-label='Next'>
+                          <span className='flaticon-next' />
                         </Link>
                       </li>
                     </ul>
                   </nav>
                 </div>
-              </div>{" "}
+              </div>{' '}
               {/* End row */}
-            </div>{" "}
+            </div>{' '}
             {/* End container */}
-          </div>{" "}
+          </div>{' '}
           {/* END PAGE PAGINATION */}
           {/* DIVIDER LINE */}
-          <hr className="divider" />
+          <hr className='divider' />
           {/* NEWSLETTER-1
 			============================================= */}
-          <section id="newsletter-1" className="newsletter-section">
-            <div className="newsletter-overlay">
-              <div className="container">
-                <div className="row d-flex align-items-center row-cols-1 row-cols-lg-2">
+          <section id='newsletter-1' className='newsletter-section'>
+            <div className='newsletter-overlay'>
+              <div className='container'>
+                <div className='row d-flex align-items-center row-cols-1 row-cols-lg-2'>
                   {/* NEWSLETTER TEXT */}
-                  <div className="col">
-                    <div className="newsletter-txt">
-                      <h4 className="s-34 w-700">
+                  <div className='col'>
+                    <div className='newsletter-txt'>
+                      <h4 className='s-34 w-700'>
                         Stay up to date with our news, ideas and updates
                       </h4>
                     </div>
                   </div>
                   {/* NEWSLETTER FORM */}
-                  <div className="col">
-                    <form className="newsletter-form">
-                      <div className="input-group">
+                  <div className='col'>
+                    <form className='newsletter-form'>
+                      <div className='input-group'>
                         <input
-                          type="email"
-                          autoComplete="off"
-                          className="form-control"
-                          placeholder="Your email address"
+                          type='email'
+                          autoComplete='off'
+                          className='form-control'
+                          placeholder='Your email address'
                           required
-                          id="s-email"
+                          id='s-email'
                         />
-                        <span className="input-group-btn">
+                        <span className='input-group-btn'>
                           <button
-                            type="submit"
-                            className="btn btn--theme hover--theme"
+                            type='submit'
+                            className='btn btn--theme hover--theme'
                           >
                             Subscribe Now
                           </button>
                         </span>
                       </div>
                       {/* Newsletter Form Notification */}
-                      <label htmlFor="s-email" className="form-notification" />
+                      <label htmlFor='s-email' className='form-notification' />
                     </form>
-                  </div>{" "}
+                  </div>{' '}
                   {/* END NEWSLETTER FORM */}
-                </div>{" "}
+                </div>{' '}
                 {/* End row */}
-              </div>{" "}
+              </div>{' '}
               {/* End container */}
-            </div>{" "}
+            </div>{' '}
             {/* End newsletter-overlay */}
-          </section>{" "}
+          </section>{' '}
           {/* END NEWSLETTER-1 */}
           {/* DIVIDER LINE */}
-          <hr className="divider" />
+          <hr className='divider' />
         </div>
       </Layout>
     </>
-  );
+  )
 }

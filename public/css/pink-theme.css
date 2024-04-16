@@ -14,11 +14,11 @@
   =========================================================================== */
 
 @font-face {
-  font-family: "Averta";
-  src: url("/fonts/Averta.woff2") format("woff2");
-  src: url("/fonts/Averta.woff") format("woff");
-  src: url("/fonts/Averta.ttf") format("truetype");
-  src: url("/fonts/Averta.otf") format("otf");
+  font-family: 'Averta';
+  src: url('/fonts/Averta.woff2') format('woff2');
+  src: url('/fonts/Averta.woff') format('woff');
+  src: url('/fonts/Averta.ttf') format('truetype');
+  src: url('/fonts/Averta.otf') format('otf');
   /* Add other font weights/styles as needed */
 }
 
@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  font-family: "Averta"; /*"Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Averta'; /*"Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   color: #6c757d;
   line-height: 1.6666;
   font-weight: 400;
@@ -934,7 +934,7 @@ section,
 .shape--06:after,
 .shape--07:after {
   position: absolute;
-  content: "";
+  content: '';
   z-index: -1;
 }
 
@@ -1304,7 +1304,7 @@ h6 {
 .font--jakarta h4,
 .font--jakarta h5,
 .font--jakarta h6 {
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   line-height: 1.35;
 }
 
@@ -1319,7 +1319,7 @@ h6 {
 .font--inter h4,
 .font--inter h5,
 .font--inter h6 {
-  font-family: "Averta"; /*"Inter", sans-serif;*/
+  font-family: 'Averta'; /*"Inter", sans-serif;*/
   letter-spacing: -0.5px;
 }
 
@@ -1641,8 +1641,8 @@ a.tra-link span {
   transition: all 400ms ease-in-out;
 }
 
-.tra-link.ico-20 [class*="flaticon-"]:before,
-.tra-link.ico-20 [class*="flaticon-"]:after {
+.tra-link.ico-20 [class*='flaticon-']:before,
+.tra-link.ico-20 [class*='flaticon-']:after {
   position: relative;
   font-size: 0.75rem;
   line-height: 0.7rem !important;
@@ -1742,8 +1742,8 @@ ol.digit-list p {
 /*  Button Icon
 /*------------------------------------------*/
 
-.btn.ico-20 [class*="flaticon-"]:before,
-.btn.ico-20 [class*="flaticon-"]:after {
+.btn.ico-20 [class*='flaticon-']:before,
+.btn.ico-20 [class*='flaticon-']:after {
   position: relative;
   font-size: 1rem;
   line-height: 0.7rem !important;
@@ -1845,15 +1845,15 @@ p.btns-group-txt span.txt-data a:hover {
   color: #fff !important;
 }
 
-.btn-txt.ico-15 [class*="flaticon-"]:before,
-.btn-txt.ico-15 [class*="flaticon-"]:after,
-.btns-group-txt.ico-15 [class*="flaticon-"]:before,
-.btns-group-txt.ico-15 [class*="flaticon-"]:after {
+.btn-txt.ico-15 [class*='flaticon-']:before,
+.btn-txt.ico-15 [class*='flaticon-']:after,
+.btns-group-txt.ico-15 [class*='flaticon-']:before,
+.btns-group-txt.ico-15 [class*='flaticon-']:after {
   font-size: 0.75rem;
 }
 
-.star-rating.ico-15 [class*="flaticon-"]:before,
-.star-rating.ico-15 [class*="flaticon-"]:after {
+.star-rating.ico-15 [class*='flaticon-']:before,
+.star-rating.ico-15 [class*='flaticon-']:after {
   position: relative;
   font-size: 1rem;
   top: 3px;
@@ -2473,7 +2473,7 @@ p.btns-group-txt span.txt-data a:hover {
 }
 
 .watch-video-link:before {
-  content: "";
+  content: '';
   position: absolute;
   left: -3px;
   right: -3px;
@@ -2499,8 +2499,8 @@ p.btns-group-txt span.txt-data a:hover {
   bottom: -8px;
 }
 
-.watch-video-link span[class^="flaticon-"]:before,
-.watch-video-link span[class^="flaticon-"]:after {
+.watch-video-link span[class^='flaticon-']:before,
+.watch-video-link span[class^='flaticon-']:after {
   font-size: 2rem;
   line-height: 2.85rem !important;
   margin-left: 5px;
@@ -2587,29 +2587,29 @@ p.video-txt-sm {
   transition: all 400ms ease-in-out;
 }
 
-.video-btn.video-btn-xl [class^="flaticon-"]:before,
-.video-btn.video-btn-xl [class^="flaticon-"]:after {
+.video-btn.video-btn-xl [class^='flaticon-']:before,
+.video-btn.video-btn-xl [class^='flaticon-']:after {
   font-size: 5rem;
   line-height: 6.25rem !important;
   margin-left: 10px;
 }
 
-.video-btn.video-btn-lg [class^="flaticon-"]:before,
-.video-btn.video-btn-lg [class^="flaticon-"]:after {
+.video-btn.video-btn-lg [class^='flaticon-']:before,
+.video-btn.video-btn-lg [class^='flaticon-']:after {
   font-size: 4.5rem;
   line-height: 5.625rem !important;
   margin-left: 8px;
 }
 
-.video-btn.video-btn-md [class^="flaticon-"]:before,
-.video-btn.video-btn-md [class^="flaticon-"]:after {
+.video-btn.video-btn-md [class^='flaticon-']:before,
+.video-btn.video-btn-md [class^='flaticon-']:after {
   font-size: 4.35rem;
   line-height: 5rem !important;
   margin-left: 8px;
 }
 
-.video-btn.video-btn-sm [class^="flaticon-"]:before,
-.video-btn.video-btn-sm [class^="flaticon-"]:after {
+.video-btn.video-btn-sm [class^='flaticon-']:before,
+.video-btn.video-btn-sm [class^='flaticon-']:after {
   font-size: 3.5rem;
   line-height: 4.375rem !important;
   margin-left: 5px;
@@ -2624,7 +2624,7 @@ p.video-txt-sm {
 }
 
 .video-btn:before {
-  content: "";
+  content: '';
   position: absolute;
   left: -5px;
   right: -5px;
@@ -2678,146 +2678,146 @@ p.video-txt-sm {
 /*  VECTOR ICONS
 /*------------------------------------------*/
 
-.ico-10 [class*="flaticon-"]:before,
-.ico-10 [class*="flaticon-"]:after {
+.ico-10 [class*='flaticon-']:before,
+.ico-10 [class*='flaticon-']:after {
   font-size: 0.75rem;
 }
 
 /* 15px */
-.ico-15 [class*="flaticon-"]:before,
-.ico-15 [class*="flaticon-"]:after {
+.ico-15 [class*='flaticon-']:before,
+.ico-15 [class*='flaticon-']:after {
   font-size: 0.9375rem;
 }
 
 /* 15px */
-.ico-20 [class*="flaticon-"]:before,
-.ico-20 [class*="flaticon-"]:after {
+.ico-20 [class*='flaticon-']:before,
+.ico-20 [class*='flaticon-']:after {
   font-size: 1.25rem;
 }
 
 /* 20px */
-.ico-25 [class*="flaticon-"]:before,
-.ico-25 [class*="flaticon-"]:after {
+.ico-25 [class*='flaticon-']:before,
+.ico-25 [class*='flaticon-']:after {
   font-size: 1.5625rem;
 }
 
 /* 25px */
-.ico-30 [class*="flaticon-"]:before,
-.ico-30 [class*="flaticon-"]:after {
+.ico-30 [class*='flaticon-']:before,
+.ico-30 [class*='flaticon-']:after {
   font-size: 1.875rem;
 }
 
 /* 30px */
-.ico-35 [class*="flaticon-"]:before,
-.ico-35 [class*="flaticon-"]:after {
+.ico-35 [class*='flaticon-']:before,
+.ico-35 [class*='flaticon-']:after {
   font-size: 2.1875rem;
 }
 
 /* 35px */
-.ico-40 [class*="flaticon-"]:before,
-.ico-40 [class*="flaticon-"]:after {
+.ico-40 [class*='flaticon-']:before,
+.ico-40 [class*='flaticon-']:after {
   font-size: 2.5rem;
 }
 
 /* 40px */
-.ico-45 [class*="flaticon-"]:before,
-.ico-45 [class*="flaticon-"]:after {
+.ico-45 [class*='flaticon-']:before,
+.ico-45 [class*='flaticon-']:after {
   font-size: 2.8125rem;
 }
 
 /* 45px */
-.ico-50 [class*="flaticon-"]:before,
-.ico-50 [class*="flaticon-"]:after {
+.ico-50 [class*='flaticon-']:before,
+.ico-50 [class*='flaticon-']:after {
   font-size: 3.125rem;
 }
 
 /* 50px */
-.ico-55 [class*="flaticon-"]:before,
-.ico-55 [class*="flaticon-"]:after {
+.ico-55 [class*='flaticon-']:before,
+.ico-55 [class*='flaticon-']:after {
   font-size: 3.4375rem;
 }
 
 /* 55px */
-.ico-60 [class*="flaticon-"]:before,
-.ico-60 [class*="flaticon-"]:after {
+.ico-60 [class*='flaticon-']:before,
+.ico-60 [class*='flaticon-']:after {
   font-size: 3.75rem;
 }
 
 /* 60px */
-.ico-65 [class*="flaticon-"]:before,
-.ico-65 [class*="flaticon-"]:after {
+.ico-65 [class*='flaticon-']:before,
+.ico-65 [class*='flaticon-']:after {
   font-size: 4.0625rem;
 }
 
 /* 65px */
-.ico-70 [class*="flaticon-"]:before,
-.ico-70 [class*="flaticon-"]:after {
+.ico-70 [class*='flaticon-']:before,
+.ico-70 [class*='flaticon-']:after {
   font-size: 4.375rem;
 }
 
 /* 70px */
-.ico-75 [class*="flaticon-"]:before,
-.ico-75 [class*="flaticon-"]:after {
+.ico-75 [class*='flaticon-']:before,
+.ico-75 [class*='flaticon-']:after {
   font-size: 4.6875rem;
 }
 
 /* 75px */
-.ico-80 [class*="flaticon-"]:before,
-.ico-80 [class*="flaticon-"]:after {
+.ico-80 [class*='flaticon-']:before,
+.ico-80 [class*='flaticon-']:after {
   font-size: 5rem;
 }
 
 /* 80px */
-.ico-85 [class*="flaticon-"]:before,
-.ico-85 [class*="flaticon-"]:after {
+.ico-85 [class*='flaticon-']:before,
+.ico-85 [class*='flaticon-']:after {
   font-size: 5.3125rem;
 }
 
 /* 85px */
-.ico-90 [class*="flaticon-"]:before,
-.ico-90 [class*="flaticon-"]:after {
+.ico-90 [class*='flaticon-']:before,
+.ico-90 [class*='flaticon-']:after {
   font-size: 5.625rem;
 }
 
 /* 90px */
-.ico-95 [class*="flaticon-"]:before,
-.ico-95 [class*="flaticon-"]:after {
+.ico-95 [class*='flaticon-']:before,
+.ico-95 [class*='flaticon-']:after {
   font-size: 5.9375rem;
 }
 
 /* 95px */
-.ico-100 [class*="flaticon-"]:before,
-.ico-100 [class*="flaticon-"]:after {
+.ico-100 [class*='flaticon-']:before,
+.ico-100 [class*='flaticon-']:after {
   font-size: 6.25rem;
 }
 
 /* 100px */
-.ico-105 [class*="flaticon-"]:before,
-.ico-105 [class*="flaticon-"]:after {
+.ico-105 [class*='flaticon-']:before,
+.ico-105 [class*='flaticon-']:after {
   font-size: 6.5625rem;
 }
 
 /* 105px */
-.ico-110 [class*="flaticon-"]:before,
-.ico-110 [class*="flaticon-"]:after {
+.ico-110 [class*='flaticon-']:before,
+.ico-110 [class*='flaticon-']:after {
   font-size: 6.875rem;
 }
 
 /* 110px */
-.ico-115 [class*="flaticon-"]:before,
-.ico-115 [class*="flaticon-"]:after {
+.ico-115 [class*='flaticon-']:before,
+.ico-115 [class*='flaticon-']:after {
   font-size: 7.1875rem;
 }
 
 /* 115px */
-.ico-120 [class*="flaticon-"]:before,
-.ico-120 [class*="flaticon-"]:after {
+.ico-120 [class*='flaticon-']:before,
+.ico-120 [class*='flaticon-']:after {
   font-size: 7.5rem;
 }
 
 /* 120px */
-.ico-125 [class*="flaticon-"]:before,
-.ico-125 [class*="flaticon-"]:after {
+.ico-125 [class*='flaticon-']:before,
+.ico-125 [class*='flaticon-']:after {
   font-size: 7.8125rem;
 }
 
@@ -2935,20 +2935,20 @@ p.video-txt-sm {
   height: 100px;
 }
 
-.ico-rounded [class*="flaticon-"]:before,
-.ico-rounded [class*="flaticon-"]:after {
+.ico-rounded [class*='flaticon-']:before,
+.ico-rounded [class*='flaticon-']:after {
   font-size: 2.15rem;
   line-height: 80px !important;
 }
 
-.ico-rounded-md [class*="flaticon-"]:before,
-.ico-rounded-md [class*="flaticon-"]:after {
+.ico-rounded-md [class*='flaticon-']:before,
+.ico-rounded-md [class*='flaticon-']:after {
   font-size: 2.4rem;
   line-height: 90px !important;
 }
 
-.ico-rounded-lg [class*="flaticon-"]:before,
-.ico-rounded-lg [class*="flaticon-"]:after {
+.ico-rounded-lg [class*='flaticon-']:before,
+.ico-rounded-lg [class*='flaticon-']:after {
   font-size: 2.65rem;
   line-height: 100px !important;
 }
@@ -2968,8 +2968,8 @@ p.video-txt-sm {
   border-radius: 12px;
 }
 
-.ico-square [class*="flaticon-"]:before,
-.ico-square [class*="flaticon-"]:after {
+.ico-square [class*='flaticon-']:before,
+.ico-square [class*='flaticon-']:after {
   font-size: 2.4rem;
   line-height: 80px !important;
 }
@@ -3147,11 +3147,11 @@ p.video-txt-sm {
 }
 
 .font--jakarta .section-id {
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
 }
 
 .font--inter .section-id {
-  font-family: "Averta"; /*"Inter", sans-serif;*/
+  font-family: 'Averta'; /*"Inter", sans-serif;*/
 }
 
 /*------------------------------------------*/
@@ -3697,7 +3697,7 @@ p.video-txt-sm {
 }
 
 .loader::after {
-  content: "";
+  content: '';
   box-sizing: border-box;
   position: absolute;
   left: 50%;
@@ -3848,7 +3848,7 @@ p.video-txt-sm {
 /*------------------------------------------*/
 
 .wsmenu > .wsmenu-list > li > a {
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   display: block;
   font-size: 1rem;
   line-height: 50px;
@@ -3876,7 +3876,7 @@ p.video-txt-sm {
   border-left: 4px solid rgba(0, 0, 0, 0);
   border-right: 4px solid rgba(0, 0, 0, 0);
   border-top: 4px solid;
-  content: "";
+  content: '';
   float: right;
   right: 0;
   height: 0;
@@ -4078,8 +4078,8 @@ span.sm-info {
   color: #ccc !important;
 }
 
-.header-socials.ico-20 [class*="flaticon-"]:before,
-.header-socials.ico-20 [class*="flaticon-"]:after {
+.header-socials.ico-20 [class*='flaticon-']:before,
+.header-socials.ico-20 [class*='flaticon-']:after {
   line-height: 70px !important;
 }
 
@@ -4102,7 +4102,7 @@ span.sm-info {
 
 .wsmenu > .wsmenu-list > li > ul.sub-menu > li > a {
   background-color: rgba(244, 244, 249, 0);
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   color: #353f4f;
   font-size: 1rem;
   font-weight: 600;
@@ -4149,7 +4149,7 @@ span.sm-info {
 
 .wsmenu > .wsmenu-list > li > .wsmegamenu.w-75 ul.link-list > li > a,
 .wsmenu > .wsmenu-list > li > .wsmegamenu.halfmenu ul.link-list > li > a {
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   background-color: rgba(244, 244, 249, 0);
   color: #353f4f;
   font-size: 1rem;
@@ -4198,7 +4198,7 @@ span.sm-info {
 .wsmenu > .wsmenu-list > li > .wsmegamenu .title,
 .wsmenu > .wsmenu-list > li > .wsmegamenu.halfmenu .title {
   color: #929394;
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 0.875rem;
   line-height: 1;
   font-weight: 600;
@@ -4843,7 +4843,7 @@ span.sm-info {
 
 .hero-section.blur--purple:after {
   position: absolute;
-  content: "";
+  content: '';
   z-index: -1;
   width: 100%;
   height: 100%;
@@ -5043,7 +5043,7 @@ span.sm-info {
 
 #hero-3:after {
   position: absolute;
-  content: "";
+  content: '';
   z-index: -1;
   width: 100%;
   height: 5%;
@@ -5078,7 +5078,7 @@ span.sm-info {
 
 #hero-4:after {
   position: absolute;
-  content: "";
+  content: '';
   z-index: -1;
   width: 100%;
   height: 10%;
@@ -5352,7 +5352,7 @@ span.sm-info {
 
 #hero-13:after {
   position: absolute;
-  content: "";
+  content: '';
   z-index: -1;
   width: 43%;
   height: 100%;
@@ -5485,7 +5485,7 @@ span.sm-info {
 
 #hero-18:after {
   position: absolute;
-  content: "";
+  content: '';
   z-index: -1;
   width: 74%;
   height: 100%;
@@ -5535,7 +5535,7 @@ span.sm-info {
 
 #hero-20:after {
   position: absolute;
-  content: "";
+  content: '';
   z-index: -1;
   width: 51%;
   height: 100%;
@@ -5956,8 +5956,8 @@ span.sm-info {
   margin-bottom: -45px;
 }
 
-.a2-txt-quote.ico-40 [class*="flaticon-"]:before,
-.a2-txt-quote.ico-40 [class*="flaticon-"]:after {
+.a2-txt-quote.ico-40 [class*='flaticon-']:before,
+.a2-txt-quote.ico-40 [class*='flaticon-']:after {
   font-size: 4.25rem;
 }
 
@@ -6046,7 +6046,7 @@ span.sm-info {
 #features-13.py-100.shape--bg:after,
 #features-13.pt-100.shape--bg:after {
   position: absolute;
-  content: "";
+  content: '';
   z-index: -1;
 }
 
@@ -6468,7 +6468,7 @@ span.sm-info {
 
 .ct-11:after {
   position: absolute;
-  content: "";
+  content: '';
   z-index: -1;
   width: 50%;
   height: 100%;
@@ -6479,7 +6479,7 @@ span.sm-info {
 
 .ct-12:after {
   position: absolute;
-  content: "";
+  content: '';
   z-index: -1;
   width: 50%;
   height: 100%;
@@ -6651,8 +6651,8 @@ h5.h5-title {
   margin-right: 10px;
 }
 
-.box-title span[class*="flaticon-"]:before,
-.box-title span[class*="flaticon-"]:after {
+.box-title span[class*='flaticon-']:before,
+.box-title span[class*='flaticon-']:after {
   font-size: 2.35rem;
 }
 
@@ -6669,8 +6669,8 @@ h5.h5-title {
   right: 6px;
 }
 
-.cbox-5-title .ico-15 [class*="flaticon-"]:before,
-.cbox-5-title .ico-15 [class*="flaticon-"]:after {
+.cbox-5-title .ico-15 [class*='flaticon-']:before,
+.cbox-5-title .ico-15 [class*='flaticon-']:after {
   font-size: 0.875rem;
   line-height: 1 !important;
 }
@@ -6699,13 +6699,13 @@ h5.h5-title {
   right: 8px;
 }
 
-.cbox-1.ico-10 [class*="flaticon-"]:before,
-.cbox-1.ico-10 [class*="flaticon-"]:after {
+.cbox-1.ico-10 [class*='flaticon-']:before,
+.cbox-1.ico-10 [class*='flaticon-']:after {
   font-size: 0.6rem;
 }
 
-.cbox-1.ico-15 [class*="flaticon-"]:before,
-.cbox-1.ico-15 [class*="flaticon-"]:after {
+.cbox-1.ico-15 [class*='flaticon-']:before,
+.cbox-1.ico-15 [class*='flaticon-']:after {
   font-size: 0.75rem;
 }
 
@@ -6884,8 +6884,8 @@ h5.h5-title {
   top: 3px;
 }
 
-.cbox-3-ico span[class*="flaticon-"]:before,
-.cbox-3-ico span[class*="flaticon-"]:after {
+.cbox-3-ico span[class*='flaticon-']:before,
+.cbox-3-ico span[class*='flaticon-']:after {
   font-size: 2.85rem;
 }
 
@@ -7095,14 +7095,14 @@ h5.h5-title {
 .txt-block .accordion-1 .accordion-item.is-active .accordion-thumb:before,
 .txt-block .accordion-2 .accordion-item.is-active .accordion-thumb:after {
   color: #6c757d;
-  font-family: "Averta"; /* Flaticon;*/
+  font-family: 'Averta'; /* Flaticon;*/
   position: absolute;
   color: #353f4f;
   font-weight: 400;
 }
 
 .txt-block .accordion-1 .accordion-item .accordion-thumb:before {
-  content: "\f11a";
+  content: '\f11a';
   font-size: 0.95rem;
   top: 1px;
   left: 0;
@@ -7110,7 +7110,7 @@ h5.h5-title {
 
 .txt-block .accordion-2 .accordion-item .accordion-thumb:after,
 .txt-block .accordion-2 .accordion-item.is-active .accordion-thumb:after {
-  content: "\f110";
+  content: '\f110';
   font-size: 0.95rem;
   top: 12px;
   right: 0;
@@ -7130,11 +7130,11 @@ h5.h5-title {
 }
 
 .txt-block .accordion-1 .accordion-item.is-active .accordion-thumb:before {
-  content: "\f11b";
+  content: '\f11b';
 }
 
 .txt-block .accordion-2 .accordion-item.is-active .accordion-thumb:after {
-  content: "\f111";
+  content: '\f111';
 }
 
 .txt-block .accordion-1 .accordion-panel {
@@ -7169,8 +7169,8 @@ h5.h5-title {
   margin-bottom: 20px;
 }
 
-.accordion-2 .accordion-thumb span[class*="flaticon-"]:before,
-.accordion-2 .accordion-thumb span[class*="flaticon-"]:after {
+.accordion-2 .accordion-thumb span[class*='flaticon-']:before,
+.accordion-2 .accordion-thumb span[class*='flaticon-']:after {
   color: #6c757d;
   position: relative;
   font-size: 2.1875rem;
@@ -7403,8 +7403,8 @@ h5.h5-title {
   right: -1px;
 }
 
-.advantages.ico-15 [class*="flaticon-"]:before,
-.advantages.ico-15 [class*="flaticon-"]:after {
+.advantages.ico-15 [class*='flaticon-']:before,
+.advantages.ico-15 [class*='flaticon-']:after {
   font-size: 0.75rem;
 }
 
@@ -7438,8 +7438,8 @@ h5.h5-title {
   right: 2px;
 }
 
-.compatibility.ico-10 [class*="flaticon-"]:before,
-.compatibility.ico-10 [class*="flaticon-"]:after {
+.compatibility.ico-10 [class*='flaticon-']:before,
+.compatibility.ico-10 [class*='flaticon-']:after {
   font-size: 0.5rem;
 }
 
@@ -7458,8 +7458,8 @@ h5.h5-title {
   margin-bottom: 12px;
 }
 
-.tools-list.ico-35 [class*="flaticon-"]:before,
-.tools-list.ico-35 [class*="flaticon-"]:after {
+.tools-list.ico-35 [class*='flaticon-']:before,
+.tools-list.ico-35 [class*='flaticon-']:after {
   line-height: 2.1875rem !important;
   margin-right: 6px;
 }
@@ -7849,8 +7849,8 @@ h2.statistic-number {
   margin-bottom: -3px;
 }
 
-.txt-block-stat .ico-15 [class*="flaticon-"]:before,
-.txt-block-stat .ico-15 [class*="flaticon-"]:after {
+.txt-block-stat .ico-15 [class*='flaticon-']:before,
+.txt-block-stat .ico-15 [class*='flaticon-']:after {
   font-size: 0.8125rem;
 }
 
@@ -8376,8 +8376,8 @@ p.rbox-2-txt span {
   opacity: 0.6;
 }
 
-.press-txt.ico-20 [class^="flaticon-"]:before,
-.press-txt.ico-20 [class^="flaticon-"]:after {
+.press-txt.ico-20 [class^='flaticon-']:before,
+.press-txt.ico-20 [class^='flaticon-']:after {
   font-size: 1.375rem;
 }
 
@@ -8391,7 +8391,7 @@ p.rbox-2-txt span {
 
 #brands-3:after {
   position: absolute;
-  content: "";
+  content: '';
   width: 100%;
   height: 80%;
   top: 0;
@@ -8658,7 +8658,7 @@ p.rbox-2-txt span {
 /*------------------------------------------*/
 
 .price span {
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 3rem;
   line-height: 1;
   font-weight: 600;
@@ -8683,7 +8683,7 @@ p.rbox-2-txt span {
 /*------------------------------------------*/
 
 .price sup {
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 2.05rem;
   font-weight: 600;
   top: -5px;
@@ -8708,7 +8708,7 @@ p.rbox-2-txt span {
 /*------------------------------------------*/
 
 .pricing-3-table .price sup.coins {
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 2.35rem;
   font-weight: 600;
   top: -29px;
@@ -8721,7 +8721,7 @@ p.rbox-2-txt span {
 /*------------------------------------------*/
 
 .price sup.validity {
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 1.4rem;
   font-weight: 400;
   top: -2px;
@@ -8800,8 +8800,8 @@ p.rbox-2-txt span {
   right: 4px;
 }
 
-.pricing-features.ico-5 [class*="flaticon-"]:before,
-.pricing-features.ico-5 [class*="flaticon-"]:after {
+.pricing-features.ico-5 [class*='flaticon-']:before,
+.pricing-features.ico-5 [class*='flaticon-']:after {
   font-size: 0.5rem;
 }
 
@@ -8957,7 +8957,7 @@ p.rbox-2-txt span {
   position: absolute;
   left: 4px;
   bottom: 4px;
-  content: " ";
+  content: ' ';
   background-color: #fff;
   width: 24px;
   height: 24px;
@@ -9176,13 +9176,13 @@ p.rbox-2-txt span {
 
 .comp-table .table-responsive thead th {
   font-size: 1.15rem;
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   font-weight: 600;
 }
 
 .comp-table .table-responsive tbody th {
   font-size: 1rem;
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   font-weight: 600;
 }
 
@@ -9198,13 +9198,13 @@ p.rbox-2-txt span {
   top: 1px;
 }
 
-.table-responsive .ico-15 [class*="flaticon-"]:before,
-.table-responsive .ico-15 [class*="flaticon-"]:after {
+.table-responsive .ico-15 [class*='flaticon-']:before,
+.table-responsive .ico-15 [class*='flaticon-']:after {
   font-size: 0.75rem;
 }
 
-.table-responsive .ico-20 [class*="flaticon-"]:before,
-.table-responsive .ico-20 [class*="flaticon-"]:after {
+.table-responsive .ico-20 [class*='flaticon-']:before,
+.table-responsive .ico-20 [class*='flaticon-']:after {
   font-size: 0.95rem;
 }
 
@@ -9312,7 +9312,7 @@ p.rbox-2-txt span {
 }
 
 .team-member-data p {
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   line-height: 1;
   font-weight: 400;
   letter-spacing: 0;
@@ -9349,8 +9349,8 @@ ul.tm-social li {
   transition: all 0.5s ease-out;
 }
 
-.tm-social.ico-20 [class*="flaticon-"]:before,
-.tm-social.ico-20 [class*="flaticon-"]:after {
+.tm-social.ico-20 [class*='flaticon-']:before,
+.tm-social.ico-20 [class*='flaticon-']:after {
   font-size: 1.15rem;
 }
 
@@ -9390,7 +9390,7 @@ ul.tm-social li {
 /*------------------------------------------*/
 
 .role-box span {
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   display: block;
   font-size: 0.8rem;
   line-height: 1;
@@ -9418,7 +9418,7 @@ ul.tm-social li {
 }
 
 #role-page .inner-page-title span {
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   display: block;
   font-size: 0.9rem;
   line-height: 1;
@@ -9766,9 +9766,9 @@ span.release-date span {
 
 .faqs-section .accordion-item .accordion-thumb:after,
 .faqs-section .accordion-item.is-active .accordion-thumb:after {
-  font-family: "Averta"; /*Flaticon;*/
+  font-family: 'Averta'; /*Flaticon;*/
   font-weight: 300;
-  content: "\f11a";
+  content: '\f11a';
   position: absolute;
   font-size: 1rem;
   top: 22px;
@@ -9783,7 +9783,7 @@ span.release-date span {
 }
 
 .faqs-section .accordion-item.is-active .accordion-thumb:after {
-  content: "\f11b";
+  content: '\f11b';
 }
 
 #faqs-2.faqs-section .accordion-item.is-active .accordion-thumb {
@@ -10164,7 +10164,7 @@ span.release-date span {
 
 .post-tag {
   display: block;
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0;
@@ -10537,8 +10537,8 @@ span.release-date span {
   left: 3px;
 }
 
-.btn-reply.ico-20 [class*="flaticon-"]:before,
-.btn-reply.ico-20 [class*="flaticon-"]:after {
+.btn-reply.ico-20 [class*='flaticon-']:before,
+.btn-reply.ico-20 [class*='flaticon-']:after {
   font-size: 0.975rem;
 }
 
@@ -10873,8 +10873,8 @@ img.footer-logo-dark {
   padding: 0 2px;
 }
 
-.footer-info-copyright.ico-15 [class*="flaticon-"]:before,
-.footer-info-copyright.ico-15 [class*="flaticon-"]:after {
+.footer-info-copyright.ico-15 [class*='flaticon-']:before,
+.footer-info-copyright.ico-15 [class*='flaticon-']:after {
   font-size: 0.85rem;
 }
 
@@ -10907,8 +10907,8 @@ img.footer-logo-dark {
   right: 3px;
 }
 
-.footer-mail-link.ico-20 [class*="flaticon-"]:before,
-.footer-mail-link.ico-20 [class*="flaticon-"]:after {
+.footer-mail-link.ico-20 [class*='flaticon-']:before,
+.footer-mail-link.ico-20 [class*='flaticon-']:after {
   font-size: 1.125rem;
 }
 
@@ -10975,8 +10975,8 @@ img.footer-logo-dark {
   transform: rotate(-60deg);
 }
 
-.foo-links.ico-15 [class*="flaticon-"]:before,
-.foo-links.ico-15 [class*="flaticon-"]:after {
+.foo-links.ico-15 [class*='flaticon-']:before,
+.foo-links.ico-15 [class*='flaticon-']:after {
   font-size: 0.75rem;
 }
 
@@ -11016,8 +11016,8 @@ img.footer-logo-dark {
   margin-right: 16px;
 }
 
-.footer-socials.ico-25 [class*="flaticon-"]:before,
-.footer-socials.ico-25 [class*="flaticon-"]:after {
+.footer-socials.ico-25 [class*='flaticon-']:before,
+.footer-socials.ico-25 [class*='flaticon-']:after {
   font-size: 1.325rem;
 }
 
@@ -11104,8 +11104,8 @@ img.footer-logo-dark {
   padding: 0 10px;
 }
 
-.footer-form .ico-15 [class*="flaticon-"]:before,
-.footer-form .ico-15 [class*="flaticon-"]:after {
+.footer-form .ico-15 [class*='flaticon-']:before,
+.footer-form .ico-15 [class*='flaticon-']:after {
   line-height: 28px !important;
 }
 
@@ -11171,8 +11171,8 @@ img.footer-logo-dark {
   padding: 0 2px;
 }
 
-.bottom-secondary-link.ico-15 [class*="flaticon-"]:before,
-.bottom-secondary-link.ico-15 [class*="flaticon-"]:after {
+.bottom-secondary-link.ico-15 [class*='flaticon-']:before,
+.bottom-secondary-link.ico-15 [class*='flaticon-']:after {
   font-size: 0.75rem;
 }
 
@@ -11214,8 +11214,8 @@ img.footer-logo-dark {
   margin-left: 4px;
 }
 
-.bottom-footer-list.ico-15 [class*="flaticon-"]:before,
-.bottom-footer-list.ico-15 [class*="flaticon-"]:after {
+.bottom-footer-list.ico-15 [class*='flaticon-']:before,
+.bottom-footer-list.ico-15 [class*='flaticon-']:after {
   font-size: 0.8rem;
 }
 
@@ -11244,13 +11244,13 @@ img.footer-logo-dark {
   margin-right: 2px;
 }
 
-.bottom-footer-socials.ico-20 [class*="flaticon-"]:before,
-.bottom-footer-socials.ico-20 [class*="flaticon-"]:after {
+.bottom-footer-socials.ico-20 [class*='flaticon-']:before,
+.bottom-footer-socials.ico-20 [class*='flaticon-']:after {
   font-size: 1.115rem;
 }
 
-.bottom-footer-socials.ico-25 [class*="flaticon-"]:before,
-.bottom-footer-socials.ico-25 [class*="flaticon-"]:after {
+.bottom-footer-socials.ico-25 [class*='flaticon-']:before,
+.bottom-footer-socials.ico-25 [class*='flaticon-']:after {
   font-size: 1.25rem;
 }
 
@@ -11332,8 +11332,8 @@ img.footer-logo-dark {
   transition: all 400ms ease-in-out;
 }
 
-.pagination.ico-20 [class*="flaticon-"]:before,
-.pagination.ico-20 [class*="flaticon-"]:after {
+.pagination.ico-20 [class*='flaticon-']:before,
+.pagination.ico-20 [class*='flaticon-']:after {
   font-size: 0.9rem;
 }
 
@@ -11485,7 +11485,7 @@ img.footer-logo-dark {
 #login .register-page-wrapper:after,
 #signup .register-page-wrapper:after {
   position: absolute;
-  content: "";
+  content: '';
   z-index: -1;
   width: 50%;
   height: 100%;
@@ -11678,7 +11678,7 @@ img.footer-logo-dark {
   -webkit-box-align: center;
   align-items: center;
   text-align: center;
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   font-size: 0.9rem;
   font-weight: 500;
   margin: 25px 0px 30px;
@@ -11686,7 +11686,7 @@ img.footer-logo-dark {
 
 .separator-line::before,
 .separator-line::after {
-  content: "";
+  content: '';
   border-top: 2px solid rgba(0, 0, 0, 0.1);
   margin: 0 15px 0 0;
   flex: 1 0 20px;
@@ -11842,8 +11842,8 @@ img.footer-logo-dark {
   transition: all 0.4s;
 }
 
-.btn-show-pass.ico-20 [class^="flaticon-"]:before,
-.btn-show-pass.ico-20 [class^="flaticon-"]:after {
+.btn-show-pass.ico-20 [class^='flaticon-']:before,
+.btn-show-pass.ico-20 [class^='flaticon-']:after {
   font-size: 1.125rem;
 }
 
@@ -11950,8 +11950,8 @@ img.footer-logo-dark {
   top: -2px;
 }
 
-.modal .btn-close.ico-10 [class^="flaticon-"]:before,
-.modal .btn-close.ico-10 [class^="flaticon-"]:after {
+.modal .btn-close.ico-10 [class^='flaticon-']:before,
+.modal .btn-close.ico-10 [class^='flaticon-']:after {
   font-size: 0.6rem;
 }
 
@@ -13429,8 +13429,8 @@ body.theme--dark {
   box-shadow: 0 0 2px rgba(50, 50, 50, 0.4);
 }
 
-#stlChanger .chBut.icon-xs [class*="flaticon-"]:before,
-#stlChanger .chBut.icon-xs [class*="flaticon-"]:after {
+#stlChanger .chBut.icon-xs [class*='flaticon-']:before,
+#stlChanger .chBut.icon-xs [class*='flaticon-']:after {
   color: #fff;
   font-size: 2.15rem;
   line-height: 48px !important;
@@ -13438,7 +13438,7 @@ body.theme--dark {
 
 #stlChanger p {
   font-size: 18px;
-  font-family: "Averta"; /*"Plus Jakarta Sans", sans-serif;*/
+  font-family: 'Averta'; /*"Plus Jakarta Sans", sans-serif;*/
   font-weight: 600;
   letter-spacing: 0;
   margin-bottom: 20px;

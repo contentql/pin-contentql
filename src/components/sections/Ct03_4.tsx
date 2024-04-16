@@ -1,49 +1,49 @@
-import Image from "next/image";
-import img14 from "/public/images/img-14.png";
+import img14 from '/public/images/img-14.png'
+import Image from 'next/image'
 
 export default function Ct03_4() {
   return (
     <>
-      <section className="py-100 ct-03 content-section division">
-        <div className="container">
-          <div className="row d-flex align-items-center">
+      <section className='py-100 ct-03 content-section division'>
+        <div className='container'>
+          <div className='row d-flex align-items-center'>
             {/* IMAGE BLOCK */}
-            <div className="col-md-6 col-lg-7">
-              <div className="img-block left-column wow fadeInRight">
-                <Image className="img-fluid" src={img14} alt="content-image" />
+            <div className='col-md-6 col-lg-7'>
+              <div className='img-block left-column wow fadeInRight'>
+                <Image className='img-fluid' src={img14} alt='content-image' />
               </div>
             </div>
             {/* TEXT BLOCK */}
-            <div className="col-md-6 col-lg-5">
-              <div className="txt-block right-column wow fadeInLeft">
+            <div className='col-md-6 col-lg-5'>
+              <div className='txt-block right-column wow fadeInLeft'>
                 {/* Section ID */}
-                <span className="section-id">One-Stop Solution</span>
+                <span className='section-id'>One-Stop Solution</span>
                 {/* Title */}
-                <h2 className="s-44 w-700">A single tool for all your needs</h2>
+                <h2 className='s-44 w-700'>A single tool for all your needs</h2>
                 {/* List */}
-                <ul className="simple-list">
-                  <li className="list-item">
+                <ul className='simple-list'>
+                  <li className='list-item'>
                     <p>
                       Tempor sapien quaerat undo ipsum laoreet purus and sapien
                       dolor ociis ultrice ipsum aliquam undo congue dolor cursus
                       congue varius magnis
                     </p>
                   </li>
-                  <li className="list-item">
-                    <p className="mb-0">
+                  <li className='list-item'>
+                    <p className='mb-0'>
                       Cursus purus suscipit vitae cubilia magnis diam volute
                       egestas sapien ultrice auctor
                     </p>
                   </li>
                 </ul>
               </div>
-            </div>{" "}
+            </div>{' '}
             {/* END TEXT BLOCK */}
-          </div>{" "}
+          </div>{' '}
           {/* End row */}
-        </div>{" "}
+        </div>{' '}
         {/* End container */}
       </section>
     </>
-  );
+  )
 }
