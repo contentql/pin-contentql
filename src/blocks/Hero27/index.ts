@@ -33,8 +33,20 @@ export const Hero27: Block = {
       required: true,
     },
     {
-      name: 'description',
-      label: 'Description',
+      name: 'description1',
+      label: 'Description1',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'description2',
+      label: 'Description2',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'description3',
+      label: 'Description3',
       type: 'text',
       required: true,
     },

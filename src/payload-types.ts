@@ -502,6 +502,7 @@ export interface Page {
               point: string;
               id?: string | null;
             }[];
+            background_image: string | Media;
             id?: string | null;
             blockName?: string | null;
             blockType: 'ct02_1';
@@ -570,9 +571,12 @@ export interface Page {
           }
         | {
             title: string;
-            background_image: string | Media;
-            rating: number;
-            rating_out_of: number;
+            ratings: {
+              background_image: string | Media;
+              rating: number;
+              rating_out_of: number;
+              id?: string | null;
+            }[];
             id?: string | null;
             blockName?: string | null;
             blockType: 'rating1_1';
@@ -580,7 +584,6 @@ export interface Page {
         | {
             title: string;
             subtitle: string;
-            heading: string;
             integrations: {
               title: string;
               integration_image: string | Media;
@@ -612,6 +615,163 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'banner13_1';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            button1_text: string;
+            button2_text: string;
+            description1: string;
+            description2: string;
+            description3: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero27';
+          }
+        | {
+            title: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            link_text: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk1_27';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            heading1: string;
+            description1: string;
+            heading2: string;
+            description2: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk1_25';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            heading: string;
+            paragraph: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct01_36';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            features?:
+              | {
+                  title: string;
+                  sub_title: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features7_5';
+          }
+        | {
+            title: string;
+            paragraphs: {
+              paragraph: string;
+              id?: string | null;
+            }[];
+            link_text: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct02_51';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk2_26';
+          }
+        | {
+            title: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'brands1_22';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            link_text: string;
+            features: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features12_11';
+          }
+        | {
+            features: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct01_37';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            reviews: {
+              review: string;
+              name: string;
+              designation: string;
+              reviewer_image: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'reviews1_13';
+          }
+        | {
+            title: string;
+            ratings: {
+              background_image: string | Media;
+              rating: number;
+              rating_out_of: number;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'rating1_11';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            button_text: string;
+            description: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'banner3_6';
           }
       )[]
     | null;

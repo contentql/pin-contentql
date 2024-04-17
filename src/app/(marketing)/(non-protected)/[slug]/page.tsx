@@ -19,7 +19,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <div>
-      <RendorBlocks layout={pageData[0].layout} />
+      <RendorBlocks layout={pageData[0]?.layout} />
     </div>
   )
 }

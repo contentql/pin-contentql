@@ -1,9 +1,13 @@
+import Banner3_6 from '@/components/sections/Banner3_6'
 import Banner7_7 from '@/components/sections/Banner7_7'
 import Banner13_1 from '@/components/sections/Banner13_1'
 import Banner13_9 from '@/components/sections/Banner13_9'
 import Brands1_1 from '@/components/sections/Brands1_1'
 import Brands1_17 from '@/components/sections/Brands1_17'
+import Brands1_22 from '@/components/sections/Brands1_22'
 import Ct01_28 from '@/components/sections/Ct01_28'
+import Ct01_36 from '@/components/sections/Ct01_36'
+import Ct01_37 from '@/components/sections/Ct01_37'
 import Ct02_1 from '@/components/sections/Ct02_1'
 import Ct02_2 from '@/components/sections/Ct02_2'
 import Ct02_38 from '@/components/sections/Ct02_38'
@@ -11,6 +15,7 @@ import Ct02_39 from '@/components/sections/Ct02_39'
 import Ct02_40 from '@/components/sections/Ct02_40'
 import Ct02_44 from '@/components/sections/Ct02_44'
 import Ct02_45 from '@/components/sections/Ct02_45'
+import Ct02_51 from '@/components/sections/Ct02_51'
 import Ct04_15 from '@/components/sections/Ct04_15'
 import Ct04_16 from '@/components/sections/Ct04_16'
 import Faqs3_1 from '@/components/sections/Faqs3_1'
@@ -20,23 +25,31 @@ import Features2_19 from '@/components/sections/Features2_19'
 import Features2_21 from '@/components/sections/Features2_21'
 import Features5_1 from '@/components/sections/Features5_1'
 import Features6_1 from '@/components/sections/Features6_1'
+import Features7_5 from '@/components/sections/Features7_5'
 import Features11_8 from '@/components/sections/Features11_8'
 import Features11_10 from '@/components/sections/Features11_10'
 import Features12_1 from '@/components/sections/Features12_1'
 import Features12_8 from '@/components/sections/Features12_8'
 import Features12_10 from '@/components/sections/Features12_10'
+import Features12_11 from '@/components/sections/Features12_11'
 import Hero5 from '@/components/sections/Hero5'
 import Hero15 from '@/components/sections/Hero15'
 import Hero21 from '@/components/sections/Hero21'
+import Hero27 from '@/components/sections/Hero27'
 import Integrations2_1 from '@/components/sections/Integrations2_1'
 import Lnk1_21 from '@/components/sections/Lnk1_21'
 import Lnk1_23 from '@/components/sections/Lnk1_23'
+import Lnk1_25 from '@/components/sections/Lnk1_25'
+import Lnk1_27 from '@/components/sections/Lnk1_27'
 import Lnk2_1 from '@/components/sections/Lnk2_1'
 import Lnk2_22 from '@/components/sections/Lnk2_22'
+import Lnk2_26 from '@/components/sections/Lnk2_26'
 import Lnk3_1 from '@/components/sections/Lnk3_1'
 import Rating1_1 from '@/components/sections/Rating1_1'
+import Rating1_11 from '@/components/sections/Rating1_11'
 import Reviews1_1 from '@/components/sections/Reviews1_1'
 import Reviews1_11 from '@/components/sections/Reviews1_11'
+import Reviews1_13 from '@/components/sections/Reviews1_13'
 import Reviews2_8 from '@/components/sections/Reviews2_8'
 import Statistic1_1 from '@/components/sections/Statistic1_1'
 import Statistic1_17 from '@/components/sections/Statistic1_17'
@@ -90,4 +103,17 @@ export const blocks: any = {
   integrations2_1: Integrations2_1,
   faqs3_1: Faqs3_1,
   banner13_1: Banner13_1,
+  hero27: Hero27,
+  lnk1_27: Lnk1_27,
+  lnk1_25: Lnk1_25,
+  ct01_36: Ct01_36,
+  features7_5: Features7_5,
+  ct02_51: Ct02_51,
+  lnk2_26: Lnk2_26,
+  brands1_22: Brands1_22,
+  features12_11: Features12_11,
+  ct01_37: Ct01_37,
+  reviews1_13: Reviews1_13,
+  rating1_11: Rating1_11,
+  banner3_6: Banner3_6,
 }
