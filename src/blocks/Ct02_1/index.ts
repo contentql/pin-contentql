@@ -33,5 +33,15 @@ export const Ct02_1: Block = {
         },
       ],
     },
+    {
+      name: 'background_image',
+      label: 'Background Image',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+      admin: {
+        description: 'background image',
+      },
+    },
   ],
 }

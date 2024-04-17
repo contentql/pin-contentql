@@ -14,26 +14,34 @@ export const Rating1_1: Block = {
       required: true,
     },
     {
-      name: 'background_image',
-      label: 'Background Image',
-      type: 'upload',
-      relationTo: 'media',
+      name: 'ratings',
+      label: 'Ratings',
+      type: 'array',
       required: true,
-      admin: {
-        description: 'rating image',
-      },
-    },
-    {
-      name: 'rating',
-      label: 'Rating',
-      type: 'number',
-      required: true,
-    },
-    {
-      name: 'rating_out_of',
-      label: 'Rating Out Of',
-      type: 'number',
-      required: true,
+      fields: [
+        {
+          name: 'background_image',
+          label: 'Background Image',
+          type: 'upload',
+          relationTo: 'media',
+          required: true,
+          admin: {
+            description: 'rating image',
+          },
+        },
+        {
+          name: 'rating',
+          label: 'Rating',
+          type: 'number',
+          required: true,
+        },
+        {
+          name: 'rating_out_of',
+          label: 'Rating Out Of',
+          type: 'number',
+          required: true,
+        },
+      ],
     },
   ],
 }

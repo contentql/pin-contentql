@@ -20,12 +20,6 @@ export const Integrations2_1: Block = {
       required: true,
     },
     {
-      name: 'heading',
-      label: 'Heading',
-      type: 'text',
-      required: true,
-    },
-    {
       name: 'integrations',
       label: 'Integrations',
       required: true,

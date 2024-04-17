@@ -4,13 +4,15 @@ import RendorBlocks from '@/utils/RendorBlocks'
 const Page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params
 
+  console.log('parmas: ' + slug)
+
   const payload = await getPayloadClient()
 
   const { docs: pageData } = await payload.find({
     collection: 'pages',
     where: {
       slug: {
-        equals: slug,
+        equals: slug || '/',
       },
     },
   })
