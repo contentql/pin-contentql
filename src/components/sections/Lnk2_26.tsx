@@ -1,14 +1,22 @@
 import VideoPopup from '../elements/VidepPopup'
-import dashboard06 from '/public/images/dashboard-06.png'
 import Image from 'next/image'
 
-export default function Lnk2_26() {
+import { Media } from '@/payload-types'
+
+export default function Lnk2_26({
+  title,
+  sub_title,
+  background_image,
+}: {
+  title?: string
+  sub_title?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section
         id='lnk-2'
-        className='bg--05 bg--scroll ct-10 content-section division'
-      >
+        className='bg--05 bg--scroll ct-10 content-section division'>
         <div className='section-overlay pt-100'>
           <div className='container'>
             {/* SECTION TITLE */}
@@ -16,13 +24,9 @@ export default function Lnk2_26() {
               <div className='col-md-10 col-lg-9'>
                 <div className='section-title color--white mb-70'>
                   {/* Title */}
-                  <h2 className='s-50 w-700'>
-                    Track the progress towards objectives with key results
-                  </h2>
+                  <h2 className='s-50 w-700'>{title}</h2>
                   {/* Text */}
-                  <p className='s-21'>
-                    Ligula risus auctor tempus magna feugiat lacinia.
-                  </p>
+                  <p className='s-21'>{sub_title}</p>
                 </div>
               </div>
             </div>
@@ -35,8 +39,10 @@ export default function Lnk2_26() {
                   {/* Preview Image */}
                   <Image
                     className='img-fluid'
-                    src={dashboard06}
-                    alt='video-preview'
+                    src={background_image?.url || ''}
+                    alt={background_image?.alt || ''}
+                    height={1500}
+                    width={1500}
                   />
                 </div>
               </div>

@@ -755,7 +755,8 @@ export interface Page {
         | {
             title: string;
             ratings: {
-              background_image: string | Media;
+              light_theme_image: string | Media;
+              dark_theme_image: string | Media;
               rating: number;
               rating_out_of: number;
               id?: string | null;
