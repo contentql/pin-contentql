@@ -72,6 +72,7 @@ import { Statistic1_19 } from '../../blocks/Statistic1_19'
 import { TemplateDesigns } from '../../blocks/TemplateDesigns'
 import { TemplatePlain } from '../../blocks/TemplatePlain'
 import { TemplateSearch } from '../../blocks/TemplateSearch'
+import { Templates } from '../../blocks/Templates'
 import { Wswrapper_10 } from '../../blocks/Wswrapper_10'
 import { CollectionConfig } from 'payload/types'
 
@@ -180,6 +181,7 @@ export const Pages: CollectionConfig = {
         Hero25,
         TemplateSearch,
         TemplatePlain,
+        Templates,
       ],
     },
   ],

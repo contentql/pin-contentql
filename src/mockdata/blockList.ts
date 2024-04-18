@@ -71,6 +71,7 @@ import Statistic1_17 from '@/components/sections/Statistic1_17'
 import Statistic1_19 from '@/components/sections/Statistic1_19'
 import TemplatePlain from '@/components/sections/TemplatePlain'
 import TemplateSearch from '@/components/sections/TemplateSearch'
+import Templates from '@/components/sections/Templates'
 import Wswrapper_10 from '@/components/sections/Wswrapper_10'
 import TemplateDesigns from '@/components/sections/templae-designs'
 
@@ -150,4 +151,5 @@ export const blocks: any = {
   hero25: Hero25,
   templateSearch: TemplateSearch,
   templatePlain: TemplatePlain,
+  templates: Templates,
 }

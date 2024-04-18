@@ -979,6 +979,14 @@ export interface Page {
             blockName?: string | null;
             blockType: 'templatePlain';
           }
+        | {
+            template_title: string;
+            link1_text: string;
+            link2_text: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'templates';
+          }
       )[]
     | null;
   updatedAt: string;
