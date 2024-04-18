@@ -5,7 +5,15 @@ import { LiaPlusCircleSolid } from 'react-icons/lia'
 
 import { websiteTemplates } from '@/mockdata/websiteTemplates'
 
-const Templates = () => {
+const Templates = ({
+  template_title,
+  link1_text,
+  link2_text,
+}: {
+  template_title?: string
+  link1_text?: string
+  link2_text?: string
+}) => {
   const [currentPage, setCurrentPage] = useState(1)
   const templatesPerPage = 14
 
@@ -37,12 +45,12 @@ const Templates = () => {
                     <Link
                       href='https://cloud.contentql.io/projects/create'
                       target='_blank'>
-                      Go with this design
+                      {link1_text}
                     </Link>{' '}
                   </div>
                 </div>
               </div>
-              <h4> Start from Scratch</h4>
+              <h4> {template_title}</h4>
             </div>
             {currentTemplates.map(template => (
               <div
@@ -61,12 +69,12 @@ const Templates = () => {
                   <div className='text-container'>
                     <div className='text-wow'>
                       <Link href={template.design} target='_blank'>
-                        Go with this design
+                        {link1_text}
                       </Link>{' '}
                     </div>
                     <div className='text-wow'>
                       <Link href={template.preview} target='_blank'>
-                        preview Design
+                        {link2_text}
                       </Link>
                     </div>
                   </div>

@@ -10,7 +10,7 @@ export const Templates: Block = {
   fields: [
     {
       name: 'template_title',
-      label: 'Title',
+      label: 'Template Title',
       type: 'text',
       required: true,
     },
