@@ -823,7 +823,7 @@ export interface Page {
             background_image: string | Media;
             id?: string | null;
             blockName?: string | null;
-            blockType: 'Ct02_19';
+            blockType: 'ct02_19';
           }
         | {
             statistics: {
@@ -834,7 +834,7 @@ export interface Page {
             }[];
             id?: string | null;
             blockName?: string | null;
-            blockType: 'Statistic1_10';
+            blockType: 'statistic1_10';
           }
         | {
             title: string;

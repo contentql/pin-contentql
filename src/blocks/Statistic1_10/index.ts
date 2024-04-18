@@ -1,7 +1,7 @@
 import { Block } from 'payload/types'
 
 export const Statistic1_10: Block = {
-  slug: 'Statistic1_10',
+  slug: 'statistic1_10',
   imageURL: '/images/blocks/Statistic1_10.jpg',
   labels: {
     singular: 'Statistic1_10 Block',

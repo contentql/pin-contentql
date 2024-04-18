@@ -32,8 +32,8 @@ export default function Lnk1_27({
                     {/* List */}
                     <ul className='simple-list'>
                       {points?.map((point, index) => (
-                        <li className='list-item'>
-                          <p key={point?.id}>{point?.point}</p>
+                        <li key={point?.id} className='list-item'>
+                          <p>{point?.point}</p>
                         </li>
                       ))}
                     </ul>

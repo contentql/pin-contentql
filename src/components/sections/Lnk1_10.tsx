@@ -1,8 +1,21 @@
-import dashboard05 from '/public/images/dashboard-05.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Lnk1_10() {
+import { Media } from '@/payload-types'
+
+export default function Lnk1_10({
+  caption,
+  title,
+  subtitle,
+  link_text,
+  background_image,
+}: {
+  caption?: string
+  title?: string
+  subtitle?: string
+  link_text?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section id='lnk-1' className='pt-100 ws-wrapper content-section'>
@@ -14,25 +27,17 @@ export default function Lnk1_10() {
                 <div className='col-md-6 col-lg-5 order-last order-md-2'>
                   <div className='bc-3-txt wow fadeInRight'>
                     {/* Section ID */}
-                    <span className='section-id'>Advanced Security</span>
+                    <span className='section-id'>{caption}</span>
                     {/* Title */}
-                    <h2 className='s-44 w-700'>
-                      Secure access to all your files
-                    </h2>
+                    <h2 className='s-44 w-700'>{title}</h2>
                     {/* Text */}
-                    <p className='mb-0'>
-                      Risus auctor ligula tempus feugiat and dolor lacinia purus
-                      in congue lipsum purus sapien quaerat vitae primis tellus
-                      viverra vitae
-                    </p>
+                    <p className='mb-0'>{subtitle}</p>
                     {/* Link */}
                     <div className='txt-block-tra-link mt-25'>
                       <Link
                         href='#features-2'
-                        className='tra-link ico-20 color--theme'
-                      >
-                        The smarter way to work{' '}
-                        <span className='flaticon-next' />
+                        className='tra-link ico-20 color--theme'>
+                        {link_text} <span className='flaticon-next' />
                       </Link>
                     </div>
                   </div>
@@ -43,8 +48,10 @@ export default function Lnk1_10() {
                   <div className='bc-3-img wow fadeInLeft'>
                     <Image
                       className='img-fluid'
-                      src={dashboard05}
-                      alt='content-image'
+                      src={background_image?.url || ''}
+                      alt={background_image?.alt || ''}
+                      height={1500}
+                      width={1500}
                     />
                   </div>
                 </div>
