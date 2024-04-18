@@ -968,6 +968,17 @@ export interface Page {
             blockName?: string | null;
             blockType: 'templateSearch';
           }
+        | {
+            link1_text: string;
+            link2_text: string;
+            link3_text: string;
+            title1: string;
+            title2: string;
+            title3: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'templatePlain';
+          }
       )[]
     | null;
   updatedAt: string;

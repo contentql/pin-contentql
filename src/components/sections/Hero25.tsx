@@ -1,8 +1,21 @@
-import hero25Img from '/public/images/hero-25-img.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Hero25() {
+import { Media } from '@/payload-types'
+
+export default function Hero25({
+  caption,
+  title,
+  sub_title,
+  button_text,
+  background_image,
+}: {
+  caption?: string
+  title?: string
+  sub_title?: string
+  button_text?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section id='hero-25' className='1gr--whitesmoke bg--fixed hero-section'>
@@ -12,23 +25,17 @@ export default function Hero25() {
             <div className='col-md-6'>
               <div className='hero-25-txt wow fadeInRight'>
                 {/* Section ID */}
-                <span className='section-id'>Built-In Automation</span>
+                <span className='section-id'>{caption}</span>
                 {/* Title */}
-                <h2 className='s-52 w-700'>
-                  Connect your brand with your customers
-                </h2>
+                <h2 className='s-52 w-700'>{title}</h2>
                 {/* Text */}
-                <p className='p-lg'>
-                  Mauris donec turpis suscipit sapien ociis sagittis sapien
-                  tempor a volute ligula and aliquet tortor
-                </p>
+                <p className='p-lg'>{sub_title}</p>
                 {/* Button */}
                 <Link
                   href='https://cloud.contentql.io/guest'
                   target='_blank'
-                  className='btn r-04 btn--theme hover--theme'
-                >
-                  Go to dashboard
+                  className='btn r-04 btn--theme hover--theme'>
+                  {button_text}
                 </Link>
               </div>
             </div>{' '}
@@ -36,7 +43,13 @@ export default function Hero25() {
             {/* HERO IMAGE */}
             <div className='col-md-6'>
               <div className='hero-25-img wow fadeInLeft'>
-                <Image className='img-fluid' src={hero25Img} alt='hero-image' />
+                <Image
+                  className='img-fluid'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
           </div>{' '}

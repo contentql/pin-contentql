@@ -16,7 +16,21 @@ interface Template {
   category: string
 }
 
-function TemplateSearch() {
+function TemplateSearch({
+  title,
+  link1_text,
+  link2_text,
+  heading1,
+  heading2,
+  not_found_text,
+}: {
+  title?: string
+  link1_text?: string
+  link2_text?: string
+  heading1?: string
+  heading2?: string
+  not_found_text?: string
+}) {
   const [searchInput, setSearchInput] = useState('')
 
   const templates = [
@@ -265,7 +279,7 @@ function TemplateSearch() {
         <div className='container'>
           <div className='template-wow '>
             <div className='template-heading'>
-              <h2>Explore creations in ContentQL</h2>
+              <h2>{title}</h2>
               <input
                 type='text'
                 placeholder='Search for your template'
@@ -301,12 +315,12 @@ function TemplateSearch() {
                               <div className='text-container'>
                                 <div className='text-wow'>
                                   <Link href={template.design} target='_blank'>
-                                    Go with this design
+                                    {link1_text}
                                   </Link>{' '}
                                 </div>
                                 <div className='text-wow'>
                                   <Link href={template.preview} target='_blank'>
-                                    preview Design
+                                    {link2_text}
                                   </Link>
                                 </div>
                               </div>
@@ -317,11 +331,7 @@ function TemplateSearch() {
                         ))
                       ) : (
                         <div className='template-not-found'>
-                          <p>
-                            &ldquo;We couldn&apos;t find what you&apos;re
-                            looking for, but don&apos;t worry you can begin anew
-                            with the options available below.&rdquo;
-                          </p>
+                          <p>{not_found_text}</p>
                         </div>
                       )}
                     </div>
@@ -332,12 +342,12 @@ function TemplateSearch() {
             {searchInput.length === 0 && (
               <div className='template-group'>
                 <div className='template-scroll'>
-                  <h6>Website Template</h6>
+                  <h6>{heading1}</h6>
                   <CardSlider />
                 </div>
 
                 <div className='template-scroll'>
-                  <h6>Story Templates</h6>
+                  <h6>{heading2}</h6>
                   <StorySlider />
                 </div>
               </div>

@@ -2,7 +2,21 @@ import Link from 'next/link'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import { LiaPlusCircleSolid } from 'react-icons/lia'
 
-const TemplatePlain = () => {
+const TemplatePlain = ({
+  link1_text,
+  link2_text,
+  link3_text,
+  title1,
+  title2,
+  title3,
+}: {
+  link1_text?: string
+  link2_text?: string
+  link3_text?: string
+  title1?: string
+  title2?: string
+  title3?: string
+}) => {
   return (
     <div id='page' className='page-wrapper'>
       <section id='select' className='bg-fixed select-section template-select'>
@@ -22,12 +36,12 @@ const TemplatePlain = () => {
                     <Link
                       href='https://cloud.contentql.io/projects/create'
                       target='_blank'>
-                      Create Website <FaArrowRightLong />
+                      {link1_text} <FaArrowRightLong />
                     </Link>{' '}
                   </div>
                 </div>
               </div>
-              <h4> Create website from scratch</h4>
+              <h4> {title1}</h4>
             </div>
             <div
               id='l-0'
@@ -42,12 +56,12 @@ const TemplatePlain = () => {
                     <Link
                       href='https://cloud.contentql.io/projects/20162550/editor/external_popup/4841408'
                       target='_blank'>
-                      Create Popup & alert <FaArrowRightLong />
+                      {link2_text} <FaArrowRightLong />
                     </Link>{' '}
                   </div>
                 </div>
               </div>
-              <h4> Create popup & alert from scratch</h4>
+              <h4> {title2}</h4>
             </div>
             <div
               id='l-0'
@@ -62,12 +76,12 @@ const TemplatePlain = () => {
                     <Link
                       href='https://cloud.contentql.io/share/gwR37FyhRoaqoQN'
                       target='_blank'>
-                      Create Story <FaArrowRightLong />
+                      {link3_text} <FaArrowRightLong />
                     </Link>{' '}
                   </div>
                 </div>
               </div>
-              <h4> Create story from scratch</h4>
+              <h4> {title3}</h4>
             </div>
           </div>{' '}
         </div>{' '}
