@@ -70,6 +70,7 @@ import { Statistic1_10 } from '../../blocks/Statistic1_10'
 import { Statistic1_17 } from '../../blocks/Statistic1_17'
 import { Statistic1_19 } from '../../blocks/Statistic1_19'
 import { TemplateDesigns } from '../../blocks/TemplateDesigns'
+import { TemplatePlain } from '../../blocks/TemplatePlain'
 import { TemplateSearch } from '../../blocks/TemplateSearch'
 import { Wswrapper_10 } from '../../blocks/Wswrapper_10'
 import { CollectionConfig } from 'payload/types'
@@ -178,6 +179,7 @@ export const Pages: CollectionConfig = {
         Newsletter1_2,
         Hero25,
         TemplateSearch,
+        TemplatePlain,
       ],
     },
   ],
