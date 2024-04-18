@@ -45,6 +45,7 @@ import { Hero5 } from '../../blocks/Hero5'
 import { Hero10 } from '../../blocks/Hero10'
 import { Hero15 } from '../../blocks/Hero15'
 import { Hero21 } from '../../blocks/Hero21'
+import { Hero25 } from '../../blocks/Hero25'
 import { Hero27 } from '../../blocks/Hero27'
 import { Integrations2_1 } from '../../blocks/Integrations2_1'
 import { Lnk1_10 } from '../../blocks/Lnk1_10'
@@ -69,6 +70,7 @@ import { Statistic1_10 } from '../../blocks/Statistic1_10'
 import { Statistic1_17 } from '../../blocks/Statistic1_17'
 import { Statistic1_19 } from '../../blocks/Statistic1_19'
 import { TemplateDesigns } from '../../blocks/TemplateDesigns'
+import { TemplateSearch } from '../../blocks/TemplateSearch'
 import { Wswrapper_10 } from '../../blocks/Wswrapper_10'
 import { CollectionConfig } from 'payload/types'
 
@@ -174,6 +176,8 @@ export const Pages: CollectionConfig = {
         Reviews1_6,
         Banner13_3,
         Newsletter1_2,
+        Hero25,
+        TemplateSearch,
       ],
     },
   ],

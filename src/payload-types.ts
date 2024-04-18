@@ -947,6 +947,27 @@ export interface Page {
             blockName?: string | null;
             blockType: 'newsletter1_2';
           }
+        | {
+            caption: string;
+            title: string;
+            sub_title: string;
+            button_text: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero25';
+          }
+        | {
+            title: string;
+            link1_text: string;
+            link2_text: string;
+            heading1: string;
+            heading2: string;
+            not_found_text: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'templateSearch';
+          }
       )[]
     | null;
   updatedAt: string;

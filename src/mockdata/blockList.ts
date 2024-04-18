@@ -45,6 +45,7 @@ import Hero5 from '@/components/sections/Hero5'
 import Hero10 from '@/components/sections/Hero10'
 import Hero15 from '@/components/sections/Hero15'
 import Hero21 from '@/components/sections/Hero21'
+import Hero25 from '@/components/sections/Hero25'
 import Hero27 from '@/components/sections/Hero27'
 import Integrations2_1 from '@/components/sections/Integrations2_1'
 import Lnk1_10 from '@/components/sections/Lnk1_10'
@@ -68,6 +69,7 @@ import Statistic1_1 from '@/components/sections/Statistic1_1'
 import Statistic1_10 from '@/components/sections/Statistic1_10'
 import Statistic1_17 from '@/components/sections/Statistic1_17'
 import Statistic1_19 from '@/components/sections/Statistic1_19'
+import TemplateSearch from '@/components/sections/TemplateSearch'
 import Wswrapper_10 from '@/components/sections/Wswrapper_10'
 import TemplateDesigns from '@/components/sections/templae-designs'
 
@@ -144,4 +146,6 @@ export const blocks: any = {
   reviews1_6: Reviews1_6,
   banner13_3: Banner13_3,
   newsletter1_2: Newsletter1_2,
+  hero25: Hero25,
+  templateSearch: TemplateSearch,
 }
