@@ -987,6 +987,79 @@ export interface Page {
             blockName?: string | null;
             blockType: 'templates';
           }
+        | {
+            title: string;
+            plan1_text: string;
+            plan2_text: string;
+            description: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingTitle';
+          }
+        | {
+            plans: {
+              title: string;
+              currency: string;
+              price: number;
+              plan_text: string;
+              description1: string;
+              button_text: string;
+              description2: string;
+              points: {
+                point: string;
+                id?: string | null;
+              }[];
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingTables';
+          }
+        | {
+            title: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingBrands';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            heading: string;
+            payment_cards: {
+              card_image?: string | Media | null;
+              id?: string | null;
+            }[];
+            details: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingPlans';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            questions: {
+              question_number: number;
+              question: string;
+              answer: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingFaqs';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            button_text: string;
+            description: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingBanner';
+          }
       )[]
     | null;
   updatedAt: string;

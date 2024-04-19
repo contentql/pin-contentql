@@ -58,6 +58,12 @@ import { Lnk2_22 } from '../../blocks/Lnk2_22'
 import { Lnk2_26 } from '../../blocks/Lnk2_26'
 import { Lnk3_1 } from '../../blocks/Lnk3_1'
 import { Newsletter1_2 } from '../../blocks/Newsletter1_2'
+import { PricingBanner } from '../../blocks/PricingBanner'
+import { PricingBrands } from '../../blocks/PricingBrands'
+import { PricingFaqs } from '../../blocks/PricingFaqs'
+import { PricingPlans } from '../../blocks/PricingPlans'
+import { PricingTables } from '../../blocks/PricingTables'
+import { PricingTitle } from '../../blocks/PricingTitle'
 import { Rating1_1 } from '../../blocks/Rating1_1'
 import { Rating1_11 } from '../../blocks/Rating1_11'
 import { Reviews1_1 } from '../../blocks/Reviews1_1'
@@ -182,6 +188,12 @@ export const Pages: CollectionConfig = {
         TemplateSearch,
         TemplatePlain,
         Templates,
+        PricingTitle,
+        PricingTables,
+        PricingBrands,
+        PricingPlans,
+        PricingFaqs,
+        PricingBanner,
       ],
     },
   ],

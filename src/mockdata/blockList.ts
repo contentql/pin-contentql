@@ -58,6 +58,12 @@ import Lnk2_22 from '@/components/sections/Lnk2_22'
 import Lnk2_26 from '@/components/sections/Lnk2_26'
 import Lnk3_1 from '@/components/sections/Lnk3_1'
 import Newsletter1_2 from '@/components/sections/Newsletter1_2'
+import PricingBanner from '@/components/sections/PricingBanner'
+import PricingBrands from '@/components/sections/PricingBrands'
+import PricingFaqs from '@/components/sections/PricingFaqs'
+import PricingPlans from '@/components/sections/PricingPlans'
+import PricingTables from '@/components/sections/PricingTables'
+import PricingTitle from '@/components/sections/PricingTitle'
 import Rating1_1 from '@/components/sections/Rating1_1'
 import Rating1_11 from '@/components/sections/Rating1_11'
 import Reviews1_1 from '@/components/sections/Reviews1_1'
@@ -152,4 +158,10 @@ export const blocks: any = {
   templateSearch: TemplateSearch,
   templatePlain: TemplatePlain,
   templates: Templates,
+  pricingTitle: PricingTitle,
+  pricingTables: PricingTables,
+  pricingBrands: PricingBrands,
+  pricingPlans: PricingPlans,
+  pricingFaqs: PricingFaqs,
+  pricingBanner: PricingBanner,
 }
