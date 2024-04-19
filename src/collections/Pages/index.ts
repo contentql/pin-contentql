@@ -6,6 +6,8 @@ import { Banner13_9 } from '../../blocks/Banner13_9'
 import { Brands1_1 } from '../../blocks/Brands1_1'
 import { Brands1_17 } from '../../blocks/Brands1_17'
 import { Brands1_22 } from '../../blocks/Brands1_22'
+import { Ct01_7 } from '../../blocks/Ct01_7'
+import { Ct01_8 } from '../../blocks/Ct01_8'
 import { Ct01_12 } from '../../blocks/Ct01_12'
 import { Ct01_28 } from '../../blocks/Ct01_28'
 import { Ct01_36 } from '../../blocks/Ct01_36'
@@ -27,33 +29,40 @@ import { Ct04_16 } from '../../blocks/Ct04_16'
 import { Faqs3_1 } from '../../blocks/Faqs3_1'
 import { Faqs3_13 } from '../../blocks/Faqs3_13'
 import { Features2_1 } from '../../blocks/Features2_1'
+import { Features2_5 } from '../../blocks/Features2_5'
 import { Features2_9 } from '../../blocks/Features2_9'
 import { Features2_19 } from '../../blocks/Features2_19'
 import { Features2_21 } from '../../blocks/Features2_21'
 import { Features5_1 } from '../../blocks/Features5_1'
+import { Features5_4 } from '../../blocks/Features5_4'
 import { Features6_1 } from '../../blocks/Features6_1'
 import { Features7_5 } from '../../blocks/Features7_5'
 import { Features11_8 } from '../../blocks/Features11_8'
 import { Features11_10 } from '../../blocks/Features11_10'
+import { Features11_14 } from '../../blocks/Features11_14'
 import { Features11_15 } from '../../blocks/Features11_15'
 import { Features12_1 } from '../../blocks/Features12_1'
 import { Features12_5 } from '../../blocks/Features12_5'
 import { Features12_8 } from '../../blocks/Features12_8'
 import { Features12_10 } from '../../blocks/Features12_10'
 import { Features12_11 } from '../../blocks/Features12_11'
+import { Features13_1 } from '../../blocks/Features13_1'
 import { Hero5 } from '../../blocks/Hero5'
 import { Hero10 } from '../../blocks/Hero10'
 import { Hero15 } from '../../blocks/Hero15'
 import { Hero21 } from '../../blocks/Hero21'
+import { Hero23 } from '../../blocks/Hero23'
 import { Hero25 } from '../../blocks/Hero25'
 import { Hero27 } from '../../blocks/Hero27'
 import { Integrations2_1 } from '../../blocks/Integrations2_1'
+import { Lnk1_5 } from '../../blocks/Lnk1_5'
 import { Lnk1_10 } from '../../blocks/Lnk1_10'
 import { Lnk1_21 } from '../../blocks/Lnk1_21'
 import { Lnk1_23 } from '../../blocks/Lnk1_23'
 import { Lnk1_25 } from '../../blocks/Lnk1_25'
 import { Lnk1_27 } from '../../blocks/Lnk1_27'
 import { Lnk2_1 } from '../../blocks/Lnk2_1'
+import { Lnk2_5 } from '../../blocks/Lnk2_5'
 import { Lnk2_22 } from '../../blocks/Lnk2_22'
 import { Lnk2_26 } from '../../blocks/Lnk2_26'
 import { Lnk3_1 } from '../../blocks/Lnk3_1'
@@ -72,6 +81,7 @@ import { Reviews1_11 } from '../../blocks/Reviews1_11'
 import { Reviews1_13 } from '../../blocks/Reviews1_13'
 import { Reviews2_8 } from '../../blocks/Reviews2_8'
 import { Statistic1_1 } from '../../blocks/Statistic1_1'
+import { Statistic1_5 } from '../../blocks/Statistic1_5'
 import { Statistic1_10 } from '../../blocks/Statistic1_10'
 import { Statistic1_17 } from '../../blocks/Statistic1_17'
 import { Statistic1_19 } from '../../blocks/Statistic1_19'
@@ -194,6 +204,16 @@ export const Pages: CollectionConfig = {
         PricingPlans,
         PricingFaqs,
         PricingBanner,
+        Hero23,
+        Statistic1_5,
+        Features11_14,
+        Lnk1_5,
+        Features2_5,
+        Lnk2_5,
+        Ct01_7,
+        Ct01_8,
+        Features13_1,
+        Features5_4,
       ],
     },
   ],

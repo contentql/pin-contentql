@@ -1060,6 +1060,133 @@ export interface Page {
             blockName?: string | null;
             blockType: 'pricingBanner';
           }
+        | {
+            image: string | Media;
+            title: string;
+            sub_title: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero23';
+          }
+        | {
+            statistics: {
+              integer: number;
+              character: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'statistic1_5';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            features: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features11_14';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk1_5';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            features: {
+              title: string;
+              description: string;
+              feature_image_light: string | Media;
+              feature_image_dark: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features2_5';
+          }
+        | {
+            caption: string;
+            title: string;
+            paragraphs: {
+              paragraph: string;
+              id?: string | null;
+            }[];
+            link_text: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk2_5';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            heading: string;
+            paragraph: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct01_7';
+          }
+        | {
+            caption: string;
+            title: string;
+            paragraph: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            link_text: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct01_8';
+          }
+        | {
+            caption: string;
+            title: string;
+            paragraph: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            features: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features13_1';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            feature1_title: string;
+            feature1_description: string;
+            feature1_image_light: string | Media;
+            feature1_image_dark: string | Media;
+            feature2_title: string;
+            feature2_description: string;
+            feature2_image_light: string | Media;
+            feature2_image_dark: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features5_4';
+          }
       )[]
     | null;
   updatedAt: string;

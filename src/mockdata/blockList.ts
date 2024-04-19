@@ -6,6 +6,8 @@ import Banner13_9 from '@/components/sections/Banner13_9'
 import Brands1_1 from '@/components/sections/Brands1_1'
 import Brands1_17 from '@/components/sections/Brands1_17'
 import Brands1_22 from '@/components/sections/Brands1_22'
+import Ct01_7 from '@/components/sections/Ct01_7'
+import Ct01_8 from '@/components/sections/Ct01_8'
 import Ct01_12 from '@/components/sections/Ct01_12'
 import Ct01_28 from '@/components/sections/Ct01_28'
 import Ct01_36 from '@/components/sections/Ct01_36'
@@ -27,33 +29,40 @@ import Ct04_16 from '@/components/sections/Ct04_16'
 import Faqs3_1 from '@/components/sections/Faqs3_1'
 import Faqs3_13 from '@/components/sections/Faqs3_13'
 import Features2_1 from '@/components/sections/Features2_1'
+import Features2_5 from '@/components/sections/Features2_5'
 import Features2_9 from '@/components/sections/Features2_9'
 import Features2_19 from '@/components/sections/Features2_19'
 import Features2_21 from '@/components/sections/Features2_21'
 import Features5_1 from '@/components/sections/Features5_1'
+import Features5_4 from '@/components/sections/Features5_4'
 import Features6_1 from '@/components/sections/Features6_1'
 import Features7_5 from '@/components/sections/Features7_5'
 import Features11_8 from '@/components/sections/Features11_8'
 import Features11_10 from '@/components/sections/Features11_10'
+import Features11_14 from '@/components/sections/Features11_14'
 import Features11_15 from '@/components/sections/Features11_15'
 import Features12_1 from '@/components/sections/Features12_1'
 import Features12_5 from '@/components/sections/Features12_5'
 import Features12_8 from '@/components/sections/Features12_8'
 import Features12_10 from '@/components/sections/Features12_10'
 import Features12_11 from '@/components/sections/Features12_11'
+import Features13_1 from '@/components/sections/Features13_1'
 import Hero5 from '@/components/sections/Hero5'
 import Hero10 from '@/components/sections/Hero10'
 import Hero15 from '@/components/sections/Hero15'
 import Hero21 from '@/components/sections/Hero21'
+import Hero23 from '@/components/sections/Hero23'
 import Hero25 from '@/components/sections/Hero25'
 import Hero27 from '@/components/sections/Hero27'
 import Integrations2_1 from '@/components/sections/Integrations2_1'
+import Lnk1_5 from '@/components/sections/Lnk1_5'
 import Lnk1_10 from '@/components/sections/Lnk1_10'
 import Lnk1_21 from '@/components/sections/Lnk1_21'
 import Lnk1_23 from '@/components/sections/Lnk1_23'
 import Lnk1_25 from '@/components/sections/Lnk1_25'
 import Lnk1_27 from '@/components/sections/Lnk1_27'
 import Lnk2_1 from '@/components/sections/Lnk2_1'
+import Lnk2_5 from '@/components/sections/Lnk2_5'
 import Lnk2_22 from '@/components/sections/Lnk2_22'
 import Lnk2_26 from '@/components/sections/Lnk2_26'
 import Lnk3_1 from '@/components/sections/Lnk3_1'
@@ -72,6 +81,7 @@ import Reviews1_11 from '@/components/sections/Reviews1_11'
 import Reviews1_13 from '@/components/sections/Reviews1_13'
 import Reviews2_8 from '@/components/sections/Reviews2_8'
 import Statistic1_1 from '@/components/sections/Statistic1_1'
+import Statistic1_5 from '@/components/sections/Statistic1_5'
 import Statistic1_10 from '@/components/sections/Statistic1_10'
 import Statistic1_17 from '@/components/sections/Statistic1_17'
 import Statistic1_19 from '@/components/sections/Statistic1_19'
@@ -164,4 +174,14 @@ export const blocks: any = {
   pricingPlans: PricingPlans,
   pricingFaqs: PricingFaqs,
   pricingBanner: PricingBanner,
+  hero23: Hero23,
+  statistic1_5: Statistic1_5,
+  features11_14: Features11_14,
+  lnk1_5: Lnk1_5,
+  features2_5: Features2_5,
+  lnk2_5: Lnk2_5,
+  ct01_7: Ct01_7,
+  ct01_8: Ct01_8,
+  features13_1: Features13_1,
+  features5_4: Features5_4,
 }
