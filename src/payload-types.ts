@@ -987,6 +987,381 @@ export interface Page {
             blockName?: string | null;
             blockType: 'templates';
           }
+        | {
+            title: string;
+            plan1_text: string;
+            plan2_text: string;
+            description: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingTitle';
+          }
+        | {
+            plans: {
+              title: string;
+              currency: string;
+              price: number;
+              plan_text: string;
+              description1: string;
+              button_text: string;
+              description2: string;
+              points: {
+                point: string;
+                id?: string | null;
+              }[];
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingTables';
+          }
+        | {
+            title: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingBrands';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            heading: string;
+            payment_cards: {
+              card_image?: string | Media | null;
+              id?: string | null;
+            }[];
+            details: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingPlans';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            questions: {
+              question_number: number;
+              question: string;
+              answer: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingFaqs';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            button_text: string;
+            description: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingBanner';
+          }
+        | {
+            image: string | Media;
+            title: string;
+            sub_title: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero23';
+          }
+        | {
+            statistics: {
+              integer: number;
+              character: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'statistic1_5';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            features: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features11_14';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk1_5';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            features: {
+              title: string;
+              description: string;
+              feature_image_light: string | Media;
+              feature_image_dark: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features2_5';
+          }
+        | {
+            caption: string;
+            title: string;
+            paragraphs: {
+              paragraph: string;
+              id?: string | null;
+            }[];
+            link_text: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk2_5';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            heading: string;
+            paragraph: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct01_7';
+          }
+        | {
+            caption: string;
+            title: string;
+            paragraph: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            link_text: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct01_8';
+          }
+        | {
+            caption: string;
+            title: string;
+            paragraph: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            features: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features13_1';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            feature1_title: string;
+            feature1_description: string;
+            feature1_image_light: string | Media;
+            feature1_image_dark: string | Media;
+            feature2_title: string;
+            feature2_description: string;
+            feature2_image_light: string | Media;
+            feature2_image_dark: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features5_4';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            button_text: string;
+            description: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero11';
+          }
+        | {
+            features: {
+              title: string;
+              description: string;
+              feature_image_light: string | Media;
+              feature_image_dark: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features2_15';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk1_17';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            features: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features11_5';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            heading: string;
+            paragraph: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk2_17';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            heading: string;
+            paragraph: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct01_20';
+          }
+        | {
+            statistics: {
+              number: number;
+              fraction_number: number;
+              character: string;
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'statistic5_4';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            heading: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct02_34';
+          }
+        | {
+            title: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct03_7';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            card: {
+              heading: string;
+              background_image: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'projects1_3';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            reviews: {
+              title: string;
+              review: string;
+              name: string;
+              designation: string;
+              reviewer_image: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'reviews2_7';
+          }
+        | {
+            title: string;
+            ratings: {
+              light_theme_image: string | Media;
+              dark_theme_image: string | Media;
+              rating: number;
+              rating_out_of: number;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'rating1_6';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            button_text: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'banner13_7';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            blogs: {
+              blog_image: string | Media;
+              caption: string;
+              title: string;
+              description: string;
+              bloger_name: string;
+              date: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'blog1_6';
+          }
+        | {
+            title: string;
+            button_text: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'newsletter1_6';
+          }
       )[]
     | null;
   updatedAt: string;
