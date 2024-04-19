@@ -1,8 +1,26 @@
-import img05 from '/public/images/img-05.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Ct01_8() {
+import { Media } from '@/payload-types'
+
+export default function Ct01_8({
+  caption,
+  title,
+  paragraph,
+  points,
+  link_text,
+  background_image,
+}: {
+  caption?: string
+  title?: string
+  paragraph?: string
+  points?: {
+    point: string
+    id?: string | null
+  }[]
+  link_text?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section className='pt-100 ct-01 content-section division'>
@@ -13,41 +31,25 @@ export default function Ct01_8() {
             <div className='col-md-6 order-last order-md-2'>
               <div className='txt-block left-column wow fadeInRight'>
                 {/* Section ID */}
-                <span className='section-id color--grey'>
-                  Productivity Focused
-                </span>
+                <span className='section-id color--grey'>{caption}</span>
                 {/* Title */}
-                <h2 className='s-46 w-700'>
-                  Achieve more with better workflows
-                </h2>
+                <h2 className='s-46 w-700'>{title}</h2>
                 {/* Text */}
-                <p>
-                  Sodales tempor sapien quaerat ipsum undo congue laoreet turpis
-                  neque auctor turpis vitae dolor luctus placerat magna and
-                  ligula cursus purus vitae purus an ipsum suscipit
-                </p>
+                <p>{paragraph}</p>
                 {/* List */}
                 <ul className='simple-list'>
-                  <li className='list-item'>
-                    <p>
-                      Sapien quaerat tempor an ipsum laoreet purus and sapien
-                      dolor an ultrice ipsum aliquam undo congue cursus dolor
-                    </p>
-                  </li>
-                  <li className='list-item'>
-                    <p className='mb-0'>
-                      Purus suscipit cursus vitae cubilia magnis volute egestas
-                      vitae sapien turpis ultrice auctor congue magna placerat
-                    </p>
-                  </li>
+                  {points?.map((point, index) => (
+                    <li key={point?.id} className='list-item'>
+                      <p>{point?.point}</p>
+                    </li>
+                  ))}
                 </ul>
                 {/* Link */}
                 <div className='txt-block-tra-link mt-25'>
                   <Link
                     href='#features-5'
-                    className='tra-link ico-20 color--theme'
-                  >
-                    All-in-one platform <span className='flaticon-next' />
+                    className='tra-link ico-20 color--theme'>
+                    {link_text} <span className='flaticon-next' />
                   </Link>
                 </div>
               </div>
@@ -56,7 +58,13 @@ export default function Ct01_8() {
             {/* IMAGE BLOCK */}
             <div className='col-md-6 order-first order-md-2'>
               <div className='img-block right-column wow fadeInLeft'>
-                <Image className='img-fluid' src={img05} alt='content-image' />
+                <Image
+                  className='img-fluid'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
           </div>{' '}

@@ -1,8 +1,17 @@
 import VideoPopup from '../elements/VidepPopup'
-import tablet01 from '/public/images/tablet-01.png'
 import Image from 'next/image'
 
-export default function Lnk1_5() {
+import { Media } from '@/payload-types'
+
+export default function Lnk1_5({
+  title,
+  sub_title,
+  background_image,
+}: {
+  title?: string
+  sub_title?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section id='lnk-1' className='pt-100 ws-wrapper content-section'>
@@ -14,15 +23,9 @@ export default function Lnk1_5() {
                 <div className='col-md-11 col-lg-9'>
                   <div className='section-title wow fadeInUp mb-60'>
                     {/* Title */}
-                    <h2 className='s-50 w-700'>
-                      Build a customer-centric marketing strategy
-                    </h2>
+                    <h2 className='s-50 w-700'>{title}</h2>
                     {/* Text */}
-                    <p className='p-xl'>
-                      Aliquam a augue suscipit luctus neque purus ipsum neque
-                      diam dolor primis libero tempus, blandit and cursus varius
-                      and magnis sodales
-                    </p>
+                    <p className='p-xl'>{sub_title}</p>
                   </div>
                 </div>
               </div>
@@ -35,8 +38,10 @@ export default function Lnk1_5() {
                     {/* Preview Image */}
                     <Image
                       className='img-fluid'
-                      src={tablet01}
-                      alt='content-image'
+                      src={background_image?.url || ''}
+                      alt={background_image?.alt || ''}
+                      height={1500}
+                      width={1500}
                     />
                   </div>
                 </div>
