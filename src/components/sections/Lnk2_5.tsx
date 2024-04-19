@@ -1,8 +1,24 @@
-import img07 from '/public/images/img-07.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Lnk2_5() {
+import { Media } from '@/payload-types'
+
+export default function Lnk2_5({
+  caption,
+  title,
+  paragraphs,
+  link_text,
+  background_image,
+}: {
+  caption?: string
+  title?: string
+  paragraphs?: {
+    paragraph: string
+    id?: string | null
+  }[]
+  link_text?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section id='lnk-2' className='pt-100 ct-02 content-section division'>
@@ -12,38 +28,34 @@ export default function Lnk2_5() {
             {/* IMAGE BLOCK */}
             <div className='col-md-6'>
               <div className='img-block left-column wow fadeInRight'>
-                <Image className='img-fluid' src={img07} alt='content-image' />
+                <Image
+                  className='img-fluid'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
             {/* TEXT BLOCK */}
             <div className='col-md-6'>
               <div className='txt-block right-column wow fadeInLeft'>
                 {/* Section ID */}
-                <span className='section-id'>Strategies That Work</span>
+                <span className='section-id'>{caption}</span>
                 {/* Title */}
-                <h2 className='s-46 w-700'>
-                  Right strategies &amp; implementations
-                </h2>
+                <h2 className='s-46 w-700'>{title}</h2>
                 {/* Text */}
-                <p>
-                  Sodales tempor sapien quaerat ipsum undo congue laoreet turpis
-                  neque auctor turpis vitae dolor luctus placerat magna and
-                  ligula cursus purus vitae purus an ipsum suscipit
-                </p>
+                {paragraphs?.map((paragraph, index) => (
+                  <p key={paragraph?.id}>{paragraph?.paragraph}</p>
+                ))}
                 {/* Text */}
-                <p className='mb-0'>
-                  Nemo ipsam egestas volute turpis egestas ipsum and purus
-                  sapien ultrice an aliquam quaerat ipsum augue turpis sapien
-                  cursus congue magna purus quaerat at ligula purus egestas
-                  magna cursus undo varius purus magnis sapien quaerat
-                </p>
+
                 {/* Link */}
                 <div className='txt-block-tra-link mt-25'>
                   <Link
                     href='#integrations-1'
-                    className='tra-link ico-20 color--theme'
-                  >
-                    Friendly with others <span className='flaticon-next' />
+                    className='tra-link ico-20 color--theme'>
+                    {link_text} <span className='flaticon-next' />
                   </Link>
                 </div>
               </div>

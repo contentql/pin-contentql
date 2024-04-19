@@ -1,9 +1,19 @@
 import VideoPopup from '../elements/VidepPopup'
-import dashboard03 from '/public/images/dashboard-03.png'
-import squareLogo from '/public/images/square-logo.png'
 import Image from 'next/image'
 
-export default function Hero23() {
+import { Media } from '@/payload-types'
+
+export default function Hero23({
+  image,
+  title,
+  sub_title,
+  background_image,
+}: {
+  image?: Media
+  title?: string
+  sub_title?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section id='hero-23' className='bg--scroll hero-section'>
@@ -16,24 +26,16 @@ export default function Hero23() {
                 <div className='hero-square-logo'>
                   <Image
                     className='img-fluid'
-                    src={squareLogo}
-                    alt='hero-logo'
+                    src={image?.url || ''}
+                    alt={image?.alt || ''}
+                    height={500}
+                    width={500}
                   />
                 </div>
                 {/* Title */}
-                <h2 className='s-58 w-700'>
-                  Generate <span className='color--theme'>more leads</span> with
-                  social media marketing
-                </h2>
+                <h2 className='s-58 w-700'>{title}</h2>
                 {/* Text */}
-                <p className='p-xl'>
-                  Mauris donec ociis diam magnis sapien sagittis sapien tempor
-                  volute gravida{' '}
-                  <span className='color--black'>
-                    aliquet tortor undo aliquet an egestas
-                  </span>
-                  in magna egestas sapien quaerat
-                </p>
+                <p className='p-xl'>{sub_title}</p>
               </div>
             </div>
           </div>{' '}
@@ -47,8 +49,10 @@ export default function Hero23() {
                 {/* Preview Image */}
                 <Image
                   className='img-fluid'
-                  src={dashboard03}
-                  alt='video-preview'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={2000}
+                  width={2000}
                 />
               </div>
             </div>
