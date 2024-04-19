@@ -1,7 +1,24 @@
-import img05 from '/public/images/img-05.png'
 import Image from 'next/image'
 
-export default function Ct01_37() {
+import { Media } from '@/payload-types'
+
+const listOfIcons = [
+  { icon: 'flaticon-paper-sizes', key: 'paper-sizes' },
+  { icon: 'flaticon-layers-1', key: 'layers-1' },
+  { icon: 'flaticon-pie-chart', key: 'pie-chart' },
+]
+
+export default function Ct01_37({
+  features,
+  background_image,
+}: {
+  features?: {
+    title: string
+    description: string
+    id?: string | null
+  }[]
+  background_image?: Media
+}) {
   return (
     <>
       <section className='pt-100 ct-01 content-section division'>
@@ -12,66 +29,34 @@ export default function Ct01_37() {
             <div className='col-md-6 order-last order-md-2'>
               <div className='txt-block left-column wow fadeInRight'>
                 {/* CONTENT BOX #1 */}
-                <div className='cbox-4'>
-                  {/* Icon & Title */}
-                  <div className='box-title'>
-                    <span className='flaticon-paper-sizes color--theme' />
-                    <h5 className='s-24 w-700'>Built-in automation</h5>
+                {features?.map((feature, index) => (
+                  <div key={feature?.id} className='cbox-4'>
+                    {/* Icon & Title */}
+                    <div className='box-title'>
+                      <span
+                        className={`${listOfIcons[index]?.icon} color--theme`}
+                      />
+                      <h5 className='s-24 w-700'>{feature?.title}</h5>
+                    </div>
+                    {/* Text */}
+                    <div className='cbox-4-txt'>
+                      <p>{feature?.description}</p>
+                    </div>
                   </div>
-                  {/* Text */}
-                  <div className='cbox-4-txt'>
-                    <p>
-                      Quaerat sodales sapien blandit purus primis purus ipsum
-                      cubilia laoreet augue luctus and magna dolor luctus
-                      egestas an ipsum sapien primis vitae volute and magna
-                      turpis
-                    </p>
-                  </div>
-                </div>{' '}
-                {/* END CONTENT BOX #1 */}
-                {/* CONTENT BOX #2 */}
-                <div className='cbox-4'>
-                  {/* Icon & Title */}
-                  <div className='box-title'>
-                    <span className='flaticon-layers-1 color--theme' />
-                    <h5 className='s-24 w-700'>Automatic workflows</h5>
-                  </div>
-                  {/* Text */}
-                  <div className='cbox-4-txt'>
-                    <p>
-                      Quaerat sodales sapien blandit purus primis purus ipsum
-                      cubilia laoreet augue luctus and magna dolor luctus
-                      egestas an ipsum sapien primis vitae volute and magna
-                      turpis
-                    </p>
-                  </div>
-                </div>{' '}
-                {/* END CONTENT BOX #2 */}
-                {/* CONTENT BOX #3 */}
-                <div className='cbox-4'>
-                  {/* Icon & Title */}
-                  <div className='box-title'>
-                    <span className='flaticon-pie-chart color--theme' />
-                    <h5 className='s-24 w-700'>Real-time analytics</h5>
-                  </div>
-                  {/* Text */}
-                  <div className='cbox-4-txt'>
-                    <p className='mb-0'>
-                      Quaerat sodales sapien blandit purus primis purus ipsum
-                      cubilia laoreet augue luctus and magna dolor luctus
-                      egestas an ipsum sapien primis vitae volute and magna
-                      turpis
-                    </p>
-                  </div>
-                </div>{' '}
-                {/* END CONTENT BOX #3 */}
+                ))}
               </div>
             </div>{' '}
             {/* END TEXT BLOCK */}
             {/* IMAGE BLOCK */}
             <div className='col-md-6 order-first order-md-2'>
               <div className='img-block right-column wow fadeInLeft'>
-                <Image className='img-fluid' src={img05} alt='content-image' />
+                <Image
+                  className='img-fluid'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
           </div>{' '}

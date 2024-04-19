@@ -2,6 +2,7 @@ import { Block } from 'payload/types'
 
 export const Wswrapper_10: Block = {
   slug: 'wswrapper_10',
+  imageURL: '/images/blocks/Wswrapper_10.jpg',
   labels: {
     singular: 'Wswrapper_10 Block',
     plural: 'Wswrapper_10 Blocks',

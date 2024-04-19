@@ -1,9 +1,28 @@
 import VideoPopup from '../elements/VidepPopup'
-import dashboard04 from '/public/images/dashboard-04.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Hero10() {
+import { Media } from '@/payload-types'
+
+export default function Hero10({
+  title,
+  sub_title,
+  button1_text,
+  button2_text,
+  description1,
+  description2,
+  link_text,
+  background_image,
+}: {
+  title?: string
+  sub_title?: string
+  button1_text?: string
+  button2_text?: string
+  description1?: string
+  description2?: string
+  link_text?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section id='hero-10' className='bg--scroll hero-section'>
@@ -13,29 +32,23 @@ export default function Hero10() {
             <div className='col-md-6'>
               <div className='hero-10-txt wow fadeInRight'>
                 {/* Title */}
-                <h2 className='s-52 w-700'>
-                  Keep your files safe with ContentQL
-                </h2>
+                <h2 className='s-52 w-700'>{title}</h2>
                 {/* Text */}
-                <h4 className='s-28 color--grey'>
-                  Your content is secure and stays private anywhere, anytime
-                </h4>
+                <h4 className='s-28 color--grey'>{sub_title}</h4>
                 {/* Buttons */}
                 <div className='btns-group'>
                   <Link
                     href='#banner-13'
-                    className='btn r-04 btn--theme hover--black'
-                  >
-                    Get started
+                    className='btn r-04 btn--theme hover--black'>
+                    {button1_text}
                   </Link>
-                  <VideoPopup style={3} />
+                  <VideoPopup buttonText={button2_text} style={3} />
                 </div>
                 {/* Buttons Text */}
                 <p className='p-sm btns-group-txt'>
-                  Requires macOS 10.13+ or Windows 10+ 64bit.
+                  {description1}
                   <span className='txt-data'>
-                    Current version 2.18.03{' '}
-                    <Link href='/download'>What&apos;s New?</Link>
+                    {description2} <Link href='/download'>{link_text}</Link>
                   </span>
                 </p>
               </div>
@@ -46,8 +59,10 @@ export default function Hero10() {
               <div className='hero-10-img wow fadeInLeft'>
                 <Image
                   className='img-fluid'
-                  src={dashboard04}
-                  alt='hero-image'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1500}
+                  width={1500}
                 />
               </div>
             </div>

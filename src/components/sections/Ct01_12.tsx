@@ -1,7 +1,23 @@
-import img03 from '/public/images/img-03.png'
 import Image from 'next/image'
 
-export default function Ct01_12() {
+import { Media } from '@/payload-types'
+
+export default function Ct01_12({
+  caption,
+  title,
+  sub_title,
+  points,
+  background_image,
+}: {
+  caption?: string
+  title?: string
+  sub_title?: string
+  points?: {
+    point: string
+    id?: string | null
+  }[]
+  background_image?: Media
+}) {
   return (
     <>
       <section className='pt-100 ct-01 content-section division'>
@@ -12,32 +28,18 @@ export default function Ct01_12() {
             <div className='col-md-6 order-last order-md-2'>
               <div className='txt-block left-column wow fadeInRight'>
                 {/* Section ID */}
-                <span className='section-id'>Built for Speed</span>
+                <span className='section-id'>{caption}</span>
                 {/* Title */}
-                <h2 className='s-44 w-700'>
-                  Achieve more with better workflows
-                </h2>
+                <h2 className='s-44 w-700'>{title}</h2>
                 {/* Text */}
-                <p>
-                  Sodales tempor sapien quaerat ipsum undo congue laoreet turpis
-                  neque auctor turpis vitae dolor luctus placerat magna and
-                  ligula cursus purus vitae purus an ipsum suscipit
-                </p>
+                <p>{sub_title}</p>
                 {/* List */}
                 <ul className='simple-list'>
-                  <li className='list-item'>
-                    <p>
-                      Cursus purus suscipit vitae cubilia magnis volute egestas
-                      vitae sapien turpis sodales magna undo aoreet primis
-                    </p>
-                  </li>
-                  <li className='list-item'>
-                    <p className='mb-0'>
-                      Tempor sapien quaerat an ipsum laoreet purus and sapien
-                      dolor an ultrice ipsum aliquam undo congue dolor cursus
-                      purus congue and ipsum purus sapien a blandit
-                    </p>
-                  </li>
+                  {points?.map((point, index) => (
+                    <li key={point?.id} className='list-item'>
+                      <p>{point?.point}</p>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>{' '}
@@ -45,7 +47,13 @@ export default function Ct01_12() {
             {/* IMAGE BLOCK */}
             <div className='col-md-6 order-first order-md-2'>
               <div className='img-block right-column wow fadeInLeft'>
-                <Image className='img-fluid' src={img03} alt='content-image' />
+                <Image
+                  className='img-fluid'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
           </div>{' '}

@@ -22,13 +22,11 @@ export default function BlogsView() {
       <Layout
         headerStyle={1}
         footerStyle={3}
-        headerCls='navbar-dark inner-page-header'
-      >
+        headerCls='navbar-dark inner-page-header'>
         <div>
           <section
             id='blog-page'
-            className='pb-60 inner-page-hero blog-page-section'
-          >
+            className='pb-60 inner-page-hero blog-page-section'>
             <div className='container'>
               {/* WIDE BLOG POST */}
               <div className='blog-post wide-post wow fadeInUp'>
@@ -53,7 +51,7 @@ export default function BlogsView() {
                       {/* Post Link */}
                       <h3 className='s-38 w-700'>
                         <Link href='/single-post'>
-                          Congue magna tempor and ipsum Martex sapien turpis
+                          Congue magna tempor and ipsum ContentQL sapien turpis
                           laoreet augue
                         </Link>
                       </h3>
@@ -68,7 +66,7 @@ export default function BlogsView() {
                       <div className='blog-post-meta mt-30'>
                         <ul className='post-meta-list ico-10'>
                           <li>
-                            <p className='w-500'>By Martex Team</p>
+                            <p className='w-500'>By ContentQL Team</p>
                           </li>
                           <li className='meta-list-divider'>
                             <p>
@@ -124,7 +122,7 @@ export default function BlogsView() {
                         <div className='blog-post-meta mt-20'>
                           <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className='p-sm w-500'>By Martex Team</p>
+                              <p className='p-sm w-500'>By ContentQL Team</p>
                             </li>
                             <li className='meta-list-divider'>
                               <p>
@@ -211,7 +209,7 @@ export default function BlogsView() {
                         {/* Post Link */}
                         <h6 className='s-20 w-700'>
                           <Link href='/single-post'>
-                            Cubilia laoreet ipsum augue eget egestas Martex
+                            Cubilia laoreet ipsum augue eget egestas ContentQL
                             magna
                           </Link>
                         </h6>
@@ -342,7 +340,7 @@ export default function BlogsView() {
                         <div className='blog-post-meta mt-20'>
                           <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className='p-sm w-500'>By Martex Team</p>
+                              <p className='p-sm w-500'>By ContentQL Team</p>
                             </li>
                             <li className='meta-list-divider'>
                               <p>
@@ -392,7 +390,7 @@ export default function BlogsView() {
                         <div className='blog-post-meta mt-20'>
                           <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className='p-sm w-500'>By Martex Team</p>
+                              <p className='p-sm w-500'>By ContentQL Team</p>
                             </li>
                             <li className='meta-list-divider'>
                               <p>
@@ -430,7 +428,7 @@ export default function BlogsView() {
                             {/* Post Link */}
                             <h4 className='s-34 w-700 mb-20'>
                               <Link href='/single-post'>
-                                Lipsum sodales sapien Martex aliquet blandit
+                                Lipsum sodales sapien ContentQL aliquet blandit
                                 augue gravida posuere
                               </Link>
                             </h4>
@@ -444,7 +442,7 @@ export default function BlogsView() {
                             <div className='blog-post-meta mt-30'>
                               <ul className='post-meta-list ico-10'>
                                 <li>
-                                  <p className='w-500'>By Martex Team</p>
+                                  <p className='w-500'>By ContentQL Team</p>
                                 </li>
                                 <li className='meta-list-divider'>
                                   <p>
@@ -527,7 +525,7 @@ export default function BlogsView() {
                         <div className='blog-post-meta mt-20'>
                           <ul className='post-meta-list ico-10'>
                             <li>
-                              <p className='p-sm w-500'>By Martex Team</p>
+                              <p className='p-sm w-500'>By ContentQL Team</p>
                             </li>
                             <li className='meta-list-divider'>
                               <p>
@@ -726,8 +724,7 @@ export default function BlogsView() {
                         <span className='input-group-btn'>
                           <button
                             type='submit'
-                            className='btn btn--theme hover--theme'
-                          >
+                            className='btn btn--theme hover--theme'>
                             Subscribe Now
                           </button>
                         </span>

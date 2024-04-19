@@ -1,6 +1,22 @@
 import ReviewSlider1 from '../slider/ReviewSlider1'
 
-export default function Reviews1_6() {
+import { Media } from '@/payload-types'
+
+export default function Reviews1_6({
+  title,
+  sub_title,
+  reviews,
+}: {
+  title?: string
+  sub_title?: string
+  reviews?: {
+    review: string
+    name: string
+    designation: string
+    reviewer_image: string | Media
+    id?: string | null
+  }[]
+}) {
   return (
     <>
       <section id='reviews-1' className='gr--whitesmoke pt-100 reviews-section'>
@@ -10,20 +26,16 @@ export default function Reviews1_6() {
             <div className='col-md-8'>
               <div className='section-title mb-70'>
                 {/* Title */}
-                <h2 className='s-48 w-700'>
-                  Read what our users have to say about us
-                </h2>
+                <h2 className='s-48 w-700'>{title}</h2>
                 {/* Text */}
-                <p className='s-21 color--grey'>
-                  Ligula risus auctor tempus magna feugiat lacinia.
-                </p>
+                <p className='s-21 color--grey'>{sub_title}</p>
               </div>
             </div>
           </div>
           {/* TESTIMONIALS CONTENT */}
           <div className='row'>
             <div className='col'>
-              <ReviewSlider1 />
+              <ReviewSlider1 reviews={reviews} />
             </div>
           </div>{' '}
           {/* END TESTIMONIALS CONTENT */}
