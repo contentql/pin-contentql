@@ -1187,6 +1187,181 @@ export interface Page {
             blockName?: string | null;
             blockType: 'features5_4';
           }
+        | {
+            title: string;
+            sub_title: string;
+            button_text: string;
+            description: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero11';
+          }
+        | {
+            features: {
+              title: string;
+              description: string;
+              feature_image_light: string | Media;
+              feature_image_dark: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features2_15';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk1_17';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            features: {
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'features11_5';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            heading: string;
+            paragraph: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'lnk2_17';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            heading: string;
+            paragraph: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct01_20';
+          }
+        | {
+            statistics: {
+              number: number;
+              fraction_number: number;
+              character: string;
+              title: string;
+              description: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'statistic5_4';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            heading: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct02_34';
+          }
+        | {
+            title: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct03_7';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            card: {
+              heading: string;
+              background_image: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'projects1_3';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            reviews: {
+              title: string;
+              review: string;
+              name: string;
+              designation: string;
+              reviewer_image: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'reviews2_7';
+          }
+        | {
+            title: string;
+            ratings: {
+              light_theme_image: string | Media;
+              dark_theme_image: string | Media;
+              rating: number;
+              rating_out_of: number;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'rating1_6';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            button_text: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'banner13_7';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            blogs: {
+              blog_image: string | Media;
+              caption: string;
+              title: string;
+              description: string;
+              bloger_name: string;
+              date: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'blog1_6';
+          }
+        | {
+            title: string;
+            button_text: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'newsletter1_6';
+          }
       )[]
     | null;
   updatedAt: string;
