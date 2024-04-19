@@ -1,12 +1,27 @@
-import am from '/public/images/png_icons/am.png'
-import discover from '/public/images/png_icons/discover.png'
-import jcb from '/public/images/png_icons/jcb.png'
-import paypal from '/public/images/png_icons/paypal.png'
-import shopify from '/public/images/png_icons/shopify.png'
-import visa from '/public/images/png_icons/visa.png'
 import Image from 'next/image'
 
-const PricingPlans = () => {
+import { Media } from '@/payload-types'
+
+const PricingPlans = ({
+  title,
+  sub_title,
+  heading,
+  payment_cards,
+  details,
+}: {
+  title?: string
+  sub_title?: string
+  heading?: string
+  payment_cards?: {
+    card_image?: string | Media | null
+    id?: string | null
+  }[]
+  details?: {
+    title: string
+    description: string
+    id?: string | null
+  }[]
+}) => {
   return (
     <section id='comp-table' className='pt-100 pb-60 pricing-section division'>
       <div className='container'>
@@ -15,11 +30,9 @@ const PricingPlans = () => {
           <div className='col-md-10 col-lg-9'>
             <div className='section-title mb-70'>
               {/* Title */}
-              <h2 className='s-52 w-700'>Compare Our Plans</h2>
+              <h2 className='s-52 w-700'>{title}</h2>
               {/* Text */}
-              <p className='p-xl'>
-                Complete list of features available in our pricing plans
-              </p>
+              <p className='p-xl'>{sub_title}</p>
             </div>
           </div>
         </div>
@@ -198,51 +211,35 @@ const PricingPlans = () => {
             <div className='col col-lg-5'>
               <div id='pbox-1' className='pbox mb-40 wow fadeInUp'>
                 {/* Title */}
-                <h6 className='s-18 w-700'>Accepted Payment Methods</h6>
+                <h6 className='s-18 w-700'>{heading}</h6>
                 {/* Payment Icons */}
                 <ul className='payment-icons ico-45 mt-25'>
-                  <li>
-                    <Image src={visa} alt='payment-icon' />
-                  </li>
-                  <li>
-                    <Image src={am} alt='payment-icon' />
-                  </li>
-                  <li>
-                    <Image src={discover} alt='payment-icon' />
-                  </li>
-                  <li>
-                    <Image src={paypal} alt='payment-icon' />
-                  </li>
-                  <li>
-                    <Image src={jcb} alt='payment-icon' />
-                  </li>
-                  <li>
-                    <Image src={shopify} alt='payment-icon' />
-                  </li>
+                  {payment_cards?.map((card, index) => (
+                    <li key={card?.id}>
+                      <Image
+                        src={(card?.card_image as Media)?.url || ''}
+                        alt={(card?.card_image as Media)?.alt || ''}
+                        height={500}
+                        width={500}
+                      />
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
             {/* Payment Guarantee */}
-            <div className='col col-lg-4'>
-              <div id='pbox-2' className='pbox mb-40 wow fadeInUp'>
-                {/* Title */}
-                <h6 className='s-18 w-700'>Money Back Guarantee</h6>
-                {/* Text */}
-                <p>
-                  Explore ContentQL Premium for 14 days. If it’s not a perfect
-                  fit, receive a full refund.
-                </p>
+            {details?.map((detail, index) => (
+              <div key={detail?.id} className={`col col-lg-${4 - index}`}>
+                <div
+                  id={`pbox-${2 + index}`}
+                  className='pbox mb-40 wow fadeInUp'>
+                  {/* Title */}
+                  <h6 className='s-18 w-700'>{detail?.title}</h6>
+                  {/* Text */}
+                  <p>{detail?.description}</p>
+                </div>
               </div>
-            </div>
-            {/* Payment Encrypted */}
-            <div className='col col-lg-3'>
-              <div id='pbox-3' className='pbox mb-40 wow fadeInUp'>
-                {/* Title */}
-                <h6 className='s-18 w-700'>SSL Encrypted Payment</h6>
-                {/* Text */}
-                <p>Your information is protected by 256-bit SSL encryption.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>{' '}
         {/* END PRICING COMPARE PAYMENT */}

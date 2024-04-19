@@ -1,6 +1,16 @@
 import Link from 'next/link'
 
-const PricingBanner = () => {
+const PricingBanner = ({
+  title,
+  sub_title,
+  button_text,
+  description,
+}: {
+  title?: string
+  sub_title?: string
+  button_text?: string
+  description?: string
+}) => {
   return (
     <section id='banner-1' className='pt-100 banner-section'>
       <div className='container'>
@@ -12,21 +22,18 @@ const PricingBanner = () => {
               <div className='col'>
                 <div className='banner-1-txt color--white'>
                   {/* Title */}
-                  <h2 className='s-45 w-700'>Give it a try, it&apos;s free!</h2>
+                  <h2 className='s-45 w-700'>{title}</h2>
                   {/* Text */}
-                  <p className='p-xl'>
-                    It only takes a few clicks to get started
-                  </p>
+                  <p className='p-xl'>{sub_title}</p>
                   {/* Button */}
                   <Link
                     href='/signup-1'
                     className='btn r-04 btn--theme hover--tra-white'>
-                    Get srarted - it&apos;s free
+                    {button_text}
                   </Link>
                   {/* Button Text */}
                   <p className='p-sm btn-txt ico-15 o-85'>
-                    <span className='flaticon-check' /> Free for 14 days, no
-                    credit card required.
+                    <span className='flaticon-check' /> {description}
                   </p>
                 </div>
               </div>{' '}
