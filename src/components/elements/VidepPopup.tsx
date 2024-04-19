@@ -4,9 +4,10 @@ import ModalVideo from 'react-modal-video'
 // import "../../node_modules/react-modal-video/css/modal-video.css";
 
 interface Props {
-  style: number
+  style?: number
+  buttonText?: string
 }
-export default function VideoPopup({ style }: Props) {
+export default function VideoPopup({ style, buttonText }: Props) {
   const [isOpen, setOpen] = useState(false)
   return (
     <>
@@ -38,25 +39,22 @@ export default function VideoPopup({ style }: Props) {
       {style === 3 && (
         <a
           onClick={() => setOpen(true)}
-          className='video-popup2 btn r-04 btn--tra-black hover--violet-100'
-        >
+          className='video-popup2 btn r-04 btn--tra-black hover--violet-100'>
           See how it works
         </a>
       )}
       {style === 4 && (
         <a
           onClick={() => setOpen(true)}
-          className='video-popup2 btn r-04 btn--theme hover--tra-black ico-20 ico-right'
-        >
+          className='video-popup2 btn r-04 btn--theme hover--tra-black ico-20 ico-right'>
           See how it works <span className='flaticon-play' />
         </a>
       )}
       {style === 5 && (
         <a
           onClick={() => setOpen(true)}
-          className='video-popup2 btn r-04 btn--tra-black hover--theme ico-20 ico-right'
-        >
-          See how it works <span className='flaticon-play' />
+          className='video-popup2 btn r-04 btn--tra-black hover--theme ico-20 ico-right'>
+          {buttonText} <span className='flaticon-play' />
         </a>
       )}
 

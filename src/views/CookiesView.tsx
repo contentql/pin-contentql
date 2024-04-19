@@ -9,12 +9,10 @@ export default function CookiesView() {
       <Layout
         headerStyle={1}
         footerStyle={3}
-        headerCls='navbar-dark inner-page-header'
-      >
+        headerCls='navbar-dark inner-page-header'>
         <section
           id='cookies-page'
-          className='gr--whitesmoke pb-80 inner-page-hero division'
-        >
+          className='gr--whitesmoke pb-80 inner-page-hero division'>
           <div className='container'>
             <div className='row justify-content-center'>
               <div className='col-xl-10'>
@@ -50,7 +48,7 @@ export default function CookiesView() {
                     purus justo lacus ligula ipsum primis cubilia donec undo
                     augue luctus vitae egestas a molestie donec{' '}
                     <Link href='#' className='color--theme'>
-                      https://martex.com/software
+                      https://ContentQL.com/software
                     </Link>{' '}
                     undo quisque fusce cursus neque blandit fusce an aliquam
                     nulla lacinia justo molestie blandit justo diam aliquet
@@ -341,8 +339,7 @@ export default function CookiesView() {
                     Service, do not hesitate to contact us at{' '}
                     <Link
                       href='mailto:yourdomain@mail.com'
-                      className='color--theme'
-                    >
+                      className='color--theme'>
                       hello@yourdomain.com
                     </Link>
                   </p>

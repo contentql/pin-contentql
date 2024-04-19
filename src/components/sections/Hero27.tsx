@@ -1,7 +1,23 @@
 import VideoPopup from '../elements/VidepPopup'
 import Link from 'next/link'
 
-export default function Hero27() {
+export default function Hero27({
+  title,
+  sub_title,
+  button1_text,
+  button2_text,
+  description1,
+  description2,
+  description3,
+}: {
+  title?: string
+  sub_title?: string
+  button1_text?: string
+  button2_text?: string
+  description1?: string
+  description2?: string
+  description3?: string
+}) {
   return (
     <>
       <section id='hero-27' className='gr--whitesmoke hero-section'>
@@ -12,28 +28,22 @@ export default function Hero27() {
               <div className='col-md-10 col-lg-9'>
                 <div className='hero-27-txt wow fadeInUp'>
                   {/* Title */}
-                  <h2 className='s-60 w-700'>
-                    The complete toolkit to engage your business
-                  </h2>
+                  <h2 className='s-60 w-700'>{title}</h2>
                   {/* Text */}
-                  <p className='s-20'>
-                    Mauris donec ociis diam magnis sapien sagittis sapien tempor
-                    volute gravida and aliquet tortor aliquet egestas magna
-                  </p>
+                  <p className='s-20'>{sub_title}</p>
                   {/* Buttons */}
                   <div className='btns-group'>
                     <Link
                       href='#banner-3'
-                      className='btn r-04 btn--theme hover--theme'
-                    >
-                      Get started for free
+                      className='btn r-04 btn--theme hover--theme'>
+                      {button1_text}
                     </Link>
-                    <VideoPopup style={5} />
+                    <VideoPopup buttonText={button2_text} style={5} />
                   </div>
                   {/* Advantages List */}
                   <ul className='advantages ico-15 mt-25 clearfix'>
                     <li>
-                      <p>No credit card required</p>
+                      <p>{description1}</p>
                     </li>
                     <li className='advantages-links-divider'>
                       <p>
@@ -41,7 +51,7 @@ export default function Hero27() {
                       </p>
                     </li>
                     <li>
-                      <p>Cancel at anytime</p>
+                      <p>{description2}</p>
                     </li>
                     <li className='advantages-links-divider'>
                       <p>
@@ -49,7 +59,7 @@ export default function Hero27() {
                       </p>
                     </li>
                     <li>
-                      <p>Free 14 days trial</p>
+                      <p>{description3}</p>
                     </li>
                   </ul>
                 </div>

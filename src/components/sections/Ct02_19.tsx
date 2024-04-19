@@ -1,7 +1,29 @@
-import img11 from '/public/images/img-11.png'
 import Image from 'next/image'
 
-export default function Ct02_19() {
+import { Media } from '@/payload-types'
+
+export default function Ct02_19({
+  title,
+  sub_title,
+  heading1,
+  paragraph1,
+  heading2,
+  paragraph2,
+  points,
+  background_image,
+}: {
+  title?: string
+  sub_title?: string
+  heading1?: string
+  paragraph1?: string
+  heading2?: string
+  paragraph2?: string
+  points?: {
+    point: string
+    id?: string | null
+  }[]
+  background_image?: Media
+}) {
   return (
     <>
       <section className='pt-100 ct-02 content-section division'>
@@ -11,13 +33,9 @@ export default function Ct02_19() {
             <div className='col-md-8'>
               <div className='section-title mb-80'>
                 {/* Title */}
-                <h2 className='s-48 w-700'>
-                  Efficiently create, manage and publish your content
-                </h2>
+                <h2 className='s-48 w-700'>{title}</h2>
                 {/* Text */}
-                <p className='s-21 color--grey'>
-                  Ligula risus auctor tempus magna feugiat lacinia.
-                </p>
+                <p className='s-21 color--grey'>{sub_title}</p>
               </div>
             </div>
           </div>
@@ -26,7 +44,13 @@ export default function Ct02_19() {
             {/* IMAGE BLOCK */}
             <div className='col-md-6'>
               <div className='img-block left-column wow fadeInRight'>
-                <Image className='img-fluid' src={img11} alt='content-image' />
+                <Image
+                  className='img-fluid'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
             {/* TEXT BLOCK */}
@@ -35,40 +59,24 @@ export default function Ct02_19() {
                 {/* TEXT BOX */}
                 <div className='txt-box'>
                   {/* Title */}
-                  <h5 className='s-24 w-700'>Easy, 2-click integration</h5>
+                  <h5 className='s-24 w-700'>{heading1}</h5>
                   {/* Text */}
-                  <p>
-                    Sodales tempor sapien quaerat ipsum undo congue laoreet
-                    turpis neque auctor turpis vitae dolor luctus placerat magna
-                    and ligula cursus purus vitae purus an ipsum suscipit
-                  </p>
+                  <p>{paragraph1}</p>
                 </div>{' '}
                 {/* END TEXT BOX */}
                 {/* TEXT BOX */}
                 <div className='txt-box mb-0'>
                   {/* Title */}
-                  <h5 className='s-24 w-700'>Full access to all features</h5>
+                  <h5 className='s-24 w-700'>{heading2}</h5>
                   {/* Text */}
-                  <p>
-                    Tempor sapien sodales quaerat ipsum undo congue laoreet
-                    turpis neque auctor turpis vitae dolor luctus placerat magna
-                    and ligula cursus purus an ipsum vitae suscipit purus
-                  </p>
+                  <p>{paragraph2}</p>
                   {/* List */}
                   <ul className='simple-list'>
-                    <li className='list-item'>
-                      <p>
-                        Tempor sapien quaerat an ipsum laoreet purus and sapien
-                        dolor an ultrice ipsum aliquam undo congue dolor cursus
-                      </p>
-                    </li>
-                    <li className='list-item'>
-                      <p className='mb-0'>
-                        Cursus purus suscipit vitae cubilia magnis volute
-                        egestas vitae sapien turpis ultrice auctor congue magna
-                        placerat
-                      </p>
-                    </li>
+                    {points?.map((point, index) => (
+                      <li key={point?.id} className='list-item'>
+                        <p>{point?.point}</p>
+                      </li>
+                    ))}
                   </ul>
                 </div>{' '}
                 {/* END TEXT BOX */}
