@@ -1,8 +1,19 @@
-import img04 from '/public/images/img-04.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Banner13_7() {
+import { Media } from '@/payload-types'
+
+export default function Banner13_7({
+  title,
+  sub_title,
+  button_text,
+  background_image,
+}: {
+  title?: string
+  sub_title?: string
+  button_text?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section id='banner-13' className='pt-100 banner-section'>
@@ -15,20 +26,14 @@ export default function Banner13_7() {
                 <div className='col-md-7'>
                   <div className='banner-13-txt color--white'>
                     {/* Title */}
-                    <h2 className='s-46 w-700'>
-                      Getting started with ContentQL today!
-                    </h2>
+                    <h2 className='s-46 w-700'>{title}</h2>
                     {/* Text */}
-                    <p className='p-lg'>
-                      Congue laoreet turpis neque auctor turpis vitae dolor a
-                      luctus placerat and magna ligula cursus
-                    </p>
+                    <p className='p-lg'>{sub_title}</p>
                     {/* Button */}
                     <Link
                       href='#hero-17'
-                      className='btn r-04 btn--theme hover--tra-white'
-                    >
-                      Get srarted - it&apos;s free
+                      className='btn r-04 btn--theme hover--tra-white'>
+                      {button_text}
                     </Link>
                   </div>
                 </div>{' '}
@@ -38,8 +43,10 @@ export default function Banner13_7() {
                   <div className='banner-13-img text-center'>
                     <Image
                       className='img-fluid'
-                      src={img04}
-                      alt='banner-image'
+                      src={background_image?.url || ''}
+                      alt={background_image?.alt || ''}
+                      height={1000}
+                      width={1000}
                     />
                   </div>
                 </div>

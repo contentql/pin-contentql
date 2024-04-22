@@ -1,4 +1,10 @@
-export default function Newsletter1_6() {
+export default function Newsletter1_6({
+  title,
+  button_text,
+}: {
+  title?: string
+  button_text?: string
+}) {
   return (
     <>
       <section id='newsletter-1' className='newsletter-section'>
@@ -8,9 +14,7 @@ export default function Newsletter1_6() {
               {/* NEWSLETTER TEXT */}
               <div className='col'>
                 <div className='newsletter-txt'>
-                  <h4 className='s-34 w-700'>
-                    Stay up to date with our news, ideas and updates
-                  </h4>
+                  <h4 className='s-34 w-700'>{title}</h4>
                 </div>
               </div>
               {/* NEWSLETTER FORM */}
@@ -28,9 +32,8 @@ export default function Newsletter1_6() {
                     <span className='input-group-btn'>
                       <button
                         type='submit'
-                        className='btn btn--theme hover--theme'
-                      >
-                        Subscribe Now
+                        className='btn btn--theme hover--theme'>
+                        {button_text}
                       </button>
                     </span>
                   </div>

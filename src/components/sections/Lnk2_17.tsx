@@ -1,7 +1,20 @@
-import img10 from '/public/images/img-10.png'
 import Image from 'next/image'
 
-export default function Lnk2_17() {
+import { Media } from '@/payload-types'
+
+export default function Lnk2_17({
+  title,
+  sub_title,
+  heading,
+  paragraph,
+  background_image,
+}: {
+  title?: string
+  sub_title?: string
+  heading?: string
+  paragraph?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section id='lnk-2' className='pt-100 ws-wrapper content-section'>
@@ -14,8 +27,10 @@ export default function Lnk2_17() {
                   <div className='img-block left-column wow fadeInRight'>
                     <Image
                       className='img-fluid'
-                      src={img10}
-                      alt='content-image'
+                      src={background_image?.url || ''}
+                      alt={background_image?.alt || ''}
+                      height={1000}
+                      width={1000}
                     />
                   </div>
                 </div>
@@ -23,23 +38,13 @@ export default function Lnk2_17() {
                 <div className='col-md-6'>
                   <div className='txt-block right-column wow fadeInLeft'>
                     {/* Title */}
-                    <h2 className='s-46 w-700'>
-                      Scale your unique design process
-                    </h2>
+                    <h2 className='s-46 w-700'>{title}</h2>
                     {/* Text */}
-                    <p>
-                      Sodales tempor sapien quaerat congue eget ipsum laoreet
-                      turpis neque auctor vitae eros dolor luctus placerat magna
-                      ligula cursus and purus pretium
-                    </p>
+                    <p>{sub_title}</p>
                     {/* Small Title */}
-                    <h5 className='s-24 w-700 h5-title'>Every pixel counts</h5>
+                    <h5 className='s-24 w-700 h5-title'>{heading}</h5>
                     {/* Text */}
-                    <p className='mb-0'>
-                      Sapien tempor sodales quaerat ipsum undo congue laoreet
-                      turpis neque auctor turpis vitae dolor luctus placerat
-                      magna and ligula cursus purus vitae
-                    </p>
+                    <p className='mb-0'>{paragraph}</p>
                   </div>
                 </div>{' '}
                 {/* END TEXT BLOCK */}
