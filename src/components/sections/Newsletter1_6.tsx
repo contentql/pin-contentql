@@ -49,6 +49,7 @@ export default function Newsletter1_6({
         </div>{' '}
         {/* End newsletter-overlay */}
       </section>
+      <hr className='divider' />
     </>
   )
 }
