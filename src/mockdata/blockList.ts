@@ -1,3 +1,5 @@
+import About_2 from '@/components/sections/About_2'
+import About_3 from '@/components/sections/About_3'
 import Banner3_6 from '@/components/sections/Banner3_6'
 import Banner7_4 from '@/components/sections/Banner7_4'
 import Banner7_7 from '@/components/sections/Banner7_7'
@@ -7,6 +9,7 @@ import Banner13_5 from '@/components/sections/Banner13_5'
 import Banner13_7 from '@/components/sections/Banner13_7'
 import Banner13_9 from '@/components/sections/Banner13_9'
 import Blog1_6 from '@/components/sections/Blog1_6'
+import BoxContent from '@/components/sections/BoxContent'
 import Brands1_1 from '@/components/sections/Brands1_1'
 import Brands1_11 from '@/components/sections/Brands1_11'
 import Brands1_12 from '@/components/sections/Brands1_12'
@@ -126,9 +129,12 @@ import Statistic1_17 from '@/components/sections/Statistic1_17'
 import Statistic1_19 from '@/components/sections/Statistic1_19'
 import Statistic5_3 from '@/components/sections/Statistic5_3'
 import Statistic5_4 from '@/components/sections/Statistic5_4'
+import Team_1 from '@/components/sections/Team_1'
 import TemplatePlain from '@/components/sections/TemplatePlain'
 import TemplateSearch from '@/components/sections/TemplateSearch'
 import Templates from '@/components/sections/Templates'
+import TextContent_1 from '@/components/sections/TextContent_1'
+import TextContent_2 from '@/components/sections/TextContent_2'
 import Wswrapper_10 from '@/components/sections/Wswrapper_10'
 import TemplateDesigns from '@/components/sections/templae-designs'
 
@@ -266,4 +272,10 @@ export const blocks: any = {
   brands1_11: Brands1_11,
   ct04_7: Ct04_7,
   banner13_5: Banner13_5,
+  about_2: About_2,
+  about_3: About_3,
+  textContent_1: TextContent_1,
+  team_1: Team_1,
+  boxContent: BoxContent,
+  textContent_2: TextContent_2,
 }

@@ -1672,6 +1672,82 @@ export interface Page {
             blockName?: string | null;
             blockType: 'banner13_5';
           }
+        | {
+            title: string;
+            sub_title: string;
+            image_1: string | Media;
+            image_2: string | Media;
+            image_3: string | Media;
+            image_4: string | Media;
+            text: string;
+            name: string;
+            designation: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'about_2';
+          }
+        | {
+            heading_1: string;
+            paragraph: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            heading_2: string;
+            paragraphs: {
+              paragraph: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'about_3';
+          }
+        | {
+            caption: string;
+            title: string;
+            paragraph: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'textContent_1';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            cards: {
+              name: string;
+              designation: string;
+              image: string | Media;
+              id?: string | null;
+            }[];
+            button_text: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'team_1';
+          }
+        | {
+            caption: string;
+            title: string;
+            subtitle: string;
+            heading: string;
+            description: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'boxContent';
+          }
+        | {
+            caption: string;
+            title: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'textContent_2';
+          }
       )[]
     | null;
   updatedAt: string;

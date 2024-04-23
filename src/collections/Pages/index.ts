@@ -1,3 +1,5 @@
+import { About_2 } from '../../blocks/About_2'
+import { About_3 } from '../../blocks/About_3'
 import { Banner3_6 } from '../../blocks/Banner3_6'
 import { Banner7_4 } from '../../blocks/Banner7_4'
 import { Banner7_7 } from '../../blocks/Banner7_7'
@@ -7,6 +9,7 @@ import { Banner13_5 } from '../../blocks/Banner13_5'
 import { Banner13_7 } from '../../blocks/Banner13_7'
 import { Banner13_9 } from '../../blocks/Banner13_9'
 import { Blog1_6 } from '../../blocks/Blog1_6'
+import { BoxContent } from '../../blocks/BoxContent'
 import { Brands1_1 } from '../../blocks/Brands1_1'
 import { Brands1_11 } from '../../blocks/Brands1_11'
 import { Brands1_12 } from '../../blocks/Brands1_12'
@@ -126,10 +129,13 @@ import { Statistic1_17 } from '../../blocks/Statistic1_17'
 import { Statistic1_19 } from '../../blocks/Statistic1_19'
 import { Statistic5_3 } from '../../blocks/Statistic5_3'
 import { Statistic5_4 } from '../../blocks/Statistic5_4'
+import { Team_1 } from '../../blocks/Team_1'
 import { TemplateDesigns } from '../../blocks/TemplateDesigns'
 import { TemplatePlain } from '../../blocks/TemplatePlain'
 import { TemplateSearch } from '../../blocks/TemplateSearch'
 import { Templates } from '../../blocks/Templates'
+import { TextContent_1 } from '../../blocks/TextContent_1'
+import { TextContent_2 } from '../../blocks/TextContent_2'
 import { Wswrapper_10 } from '../../blocks/Wswrapper_10'
 import { CollectionConfig } from 'payload/types'
 
@@ -296,6 +302,12 @@ export const Pages: CollectionConfig = {
         Brands1_11,
         Ct04_7,
         Banner13_5,
+        About_2,
+        About_3,
+        TextContent_1,
+        Team_1,
+        BoxContent,
+        TextContent_2,
       ],
     },
   ],
