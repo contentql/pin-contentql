@@ -1,8 +1,19 @@
 import VideoPopup from '../elements/VidepPopup'
-import img17 from '/public/images/img-17.jpg'
 import Image from 'next/image'
 
-const TextContent_1 = () => {
+import { Media } from '@/payload-types'
+
+const TextContent_1 = ({
+  caption,
+  title,
+  paragraph,
+  background_image,
+}: {
+  caption?: string
+  title?: string
+  paragraph?: string
+  background_image?: Media
+}) => {
   return (
     <section className='bg--04 bg--fixed py-100 ct-01 content-section division'>
       <div className='container'>
@@ -11,19 +22,11 @@ const TextContent_1 = () => {
           <div className='col-md-6 order-last order-md-2'>
             <div className='txt-block left-column wow fadeInRight'>
               {/* Section ID */}
-              <span className='section-id'>Co-founder at ContentQL</span>
+              <span className='section-id'>{caption}</span>
               {/* Title */}
-              <h2 className='s-50 w-700'>Henry Adams</h2>
+              <h2 className='s-50 w-700'>{title}</h2>
               {/* Text */}
-              <p className='p-lg'>
-                &ldquo;Sodales tempor sapien diam purus ipsum quaerat and volute
-                fusce a congue laoreet turpis neque diam auctor turpis vitae
-                dolor magna luctus placerat neque ipsum fusce cursus ligula
-                cursus purus vitae purus and ipsum suscipit. Nemo ipsam cubilia
-                donec turpis undo egestas ipsum a purus sapien ultrice aliquam
-                lacus and quaerat an ipsum augue turpis sapien cursus congue
-                augue&rdquo;
-              </p>
+              <p className='p-lg'>{paragraph}</p>
             </div>
           </div>{' '}
           {/* END TEXT BLOCK */}
@@ -35,8 +38,10 @@ const TextContent_1 = () => {
               {/* Preview Image */}
               <Image
                 className='img-fluid r-20'
-                src={img17}
-                alt='video-preview'
+                src={background_image?.url || ''}
+                alt={background_image?.url || ''}
+                height={1000}
+                width={1000}
               />
             </div>
           </div>

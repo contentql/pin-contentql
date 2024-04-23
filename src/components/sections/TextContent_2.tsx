@@ -1,7 +1,21 @@
-import img14 from '/public/images/img-14.png'
 import Image from 'next/image'
 
-const TextContent_2 = () => {
+import { Media } from '@/payload-types'
+
+const TextContent_2 = ({
+  caption,
+  title,
+  points,
+  background_image,
+}: {
+  caption?: string
+  title?: string
+  points?: {
+    point: string
+    id?: string | null
+  }[]
+  background_image?: Media
+}) => {
   return (
     <section className='bg--white-400 py-100 ct-03 content-section division'>
       <div className='container'>
@@ -10,24 +24,16 @@ const TextContent_2 = () => {
           <div className='col-md-6 col-lg-5 order-last order-md-2'>
             <div className='txt-block left-column wow fadeInRight'>
               {/* Section ID */}
-              <span className='section-id'>One-Stop Solution</span>
+              <span className='section-id'>{caption}</span>
               {/* Title */}
-              <h2 className='s-46 w-700'>Data-driven digital marketing</h2>
+              <h2 className='s-46 w-700'>{title}</h2>
               {/* List */}
               <ul className='simple-list'>
-                <li className='list-item'>
-                  <p>
-                    Tempor sapien quaerat undo ipsum laoreet purus and sapien
-                    dolor ociis ultrice ipsum aliquam undo congue dolor cursus
-                    congue varius magnis
-                  </p>
-                </li>
-                <li className='list-item'>
-                  <p className='mb-0'>
-                    Cursus purus suscipit vitae cubilia magnis diam volute
-                    egestas sapien ultrice auctor
-                  </p>
-                </li>
+                {points?.map((point, index) => (
+                  <li key={point?.id} className='list-item'>
+                    <p>{point?.point}</p>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>{' '}
@@ -35,7 +41,13 @@ const TextContent_2 = () => {
           {/* IMAGE BLOCK */}
           <div className='col-md-6 col-lg-7 order-first order-md-2'>
             <div className='img-block right-column wow fadeInLeft'>
-              <Image className='img-fluid' src={img14} alt='content-image' />
+              <Image
+                className='img-fluid'
+                src={background_image?.url || ''}
+                alt={background_image?.alt || ''}
+                height={1000}
+                width={1000}
+              />
             </div>
           </div>
         </div>{' '}

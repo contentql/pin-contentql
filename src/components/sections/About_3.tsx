@@ -1,4 +1,22 @@
-const About_3 = () => {
+const About_3 = ({
+  heading_1,
+  paragraph,
+  points,
+  heading_2,
+  paragraphs,
+}: {
+  heading_1?: string
+  paragraph?: string
+  points?: {
+    point: string
+    id?: string | null
+  }[]
+  heading_2?: string
+  paragraphs?: {
+    paragraph: string
+    id?: string | null
+  }[]
+}) => {
   return (
     <div id='about-3' className='pt-100 about-section division'>
       <div className='container'>
@@ -7,27 +25,16 @@ const About_3 = () => {
           <div className='col-md-6'>
             <div id='a3-1' className='txt-block'>
               {/* Title */}
-              <h5 className='s-24 w-700 mb-20'>Mission and impact</h5>
+              <h5 className='s-24 w-700 mb-20'>{heading_1}</h5>
               {/* Text */}
-              <p>
-                Sodales tempor sapien quaerat ipsum undo congue laoreet turpis
-                neque auctor turpis vitae dolor luctus placerat magna and ligula
-                cursus purus vitae purus an ipsum suscipit
-              </p>
+              <p>{paragraph}</p>
               {/* List */}
               <ul className='simple-list'>
-                <li className='list-item'>
-                  <p>
-                    Tempor sapien quaerat an ipsum laoreet purus and sapien
-                    dolor an ultrice ipsum aliquam undo congue dolor cursus
-                  </p>
-                </li>
-                <li className='list-item'>
-                  <p className='mb-0'>
-                    Cursus purus suscipit vitae cubilia magnis volute egestas
-                    vitae sapien turpis ultrice auctor congue magna placerat
-                  </p>
-                </li>
+                {points?.map((point, index) => (
+                  <li key={point?.id} className='list-item'>
+                    <p>{point?.point}</p>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>{' '}
@@ -36,21 +43,12 @@ const About_3 = () => {
           <div className='col-md-6'>
             <div id='a3-2' className='txt-block'>
               {/* Title */}
-              <h5 className='s-24 w-700 mb-20'>We deliver results</h5>
+              <h5 className='s-24 w-700 mb-20'>{heading_2}</h5>
               {/* Text */}
-              <p>
-                Nemo ipsam egestas volute turpis egestas ipsum and purus sapien
-                ultrice an aliquam quaerat ipsum augue turpis sapien cursus
-                congue magna purus quaerat at ligula purus egestas magna cursus
-                undo varius purus magnis sapien quaerat
-              </p>
+              {paragraphs?.map((paragraph, index) => (
+                <p key={paragraph?.id}>{paragraph?.paragraph}</p>
+              ))}
               {/* Text */}
-              <p className='mb-0'>
-                Egestas volute nemo ipsam turpis egestas ipsum and purus sapien
-                ultrice an aliquam quaerat ipsum augue turpis sapien cursus
-                congue magna purus quaerat at ligula purus egestas magna cursus
-                undo varius purus quaerat sapien magnis
-              </p>
             </div>
           </div>{' '}
           {/* END ABOUT-3 TEXT */}
