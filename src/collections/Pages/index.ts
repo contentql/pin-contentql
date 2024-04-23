@@ -103,6 +103,9 @@ import { Lnk3_1 } from '../../blocks/Lnk3_1'
 import { Lnk3_10 } from '../../blocks/Lnk3_10'
 import { Newsletter1_2 } from '../../blocks/Newsletter1_2'
 import { Newsletter1_6 } from '../../blocks/Newsletter1_6'
+import { Pagination } from '../../blocks/Pagination'
+import { PostsWrapper_1 } from '../../blocks/PostsWrapper_1'
+import { PostsWrapper_2 } from '../../blocks/PostsWrapper_2'
 import { PricingBanner } from '../../blocks/PricingBanner'
 import { PricingBrands } from '../../blocks/PricingBrands'
 import { PricingFaqs } from '../../blocks/PricingFaqs'
@@ -121,6 +124,7 @@ import { Reviews2_3 } from '../../blocks/Reviews2_3'
 import { Reviews2_4 } from '../../blocks/Reviews2_4'
 import { Reviews2_7 } from '../../blocks/Reviews2_7'
 import { Reviews2_8 } from '../../blocks/Reviews2_8'
+import { SquareBlogPost } from '../../blocks/SquareBlogPost'
 import { Statistic1_1 } from '../../blocks/Statistic1_1'
 import { Statistic1_5 } from '../../blocks/Statistic1_5'
 import { Statistic1_10 } from '../../blocks/Statistic1_10'
@@ -136,6 +140,7 @@ import { TemplateSearch } from '../../blocks/TemplateSearch'
 import { Templates } from '../../blocks/Templates'
 import { TextContent_1 } from '../../blocks/TextContent_1'
 import { TextContent_2 } from '../../blocks/TextContent_2'
+import { WideBlogPost } from '../../blocks/WideBlogPost'
 import { Wswrapper_10 } from '../../blocks/Wswrapper_10'
 import { CollectionConfig } from 'payload/types'
 
@@ -308,6 +313,11 @@ export const Pages: CollectionConfig = {
         Team_1,
         BoxContent,
         TextContent_2,
+        WideBlogPost,
+        PostsWrapper_1,
+        PostsWrapper_2,
+        SquareBlogPost,
+        Pagination,
       ],
     },
   ],

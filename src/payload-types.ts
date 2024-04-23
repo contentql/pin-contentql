@@ -1748,6 +1748,62 @@ export interface Page {
             blockName?: string | null;
             blockType: 'textContent_2';
           }
+        | {
+            caption: string;
+            title: string;
+            sub_title: string;
+            name: string;
+            date: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'wideBlogPost';
+          }
+        | {
+            blogs: {
+              blog_image: string | Media;
+              caption: string;
+              title: string;
+              description: string;
+              bloger_name: string;
+              date: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'postsWrapper_1';
+          }
+        | {
+            title: string;
+            blogs: {
+              blog_image: string | Media;
+              caption: string;
+              title: string;
+              description: string;
+              bloger_name: string;
+              date: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'postsWrapper_2';
+          }
+        | {
+            caption: string;
+            title: string;
+            sub_title: string;
+            name: string;
+            date: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'squareBlogPost';
+          }
+        | {
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pagination';
+          }
       )[]
     | null;
   updatedAt: string;

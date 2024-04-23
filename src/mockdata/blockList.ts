@@ -103,6 +103,9 @@ import Lnk3_1 from '@/components/sections/Lnk3_1'
 import Lnk3_10 from '@/components/sections/Lnk3_10'
 import Newsletter1_2 from '@/components/sections/Newsletter1_2'
 import Newsletter1_6 from '@/components/sections/Newsletter1_6'
+import Pagination from '@/components/sections/Pagination'
+import PostsWrapper_1 from '@/components/sections/PostsWrapper_1'
+import PostsWrapper_2 from '@/components/sections/PostsWrapper_2'
 import PricingBanner from '@/components/sections/PricingBanner'
 import PricingBrands from '@/components/sections/PricingBrands'
 import PricingFaqs from '@/components/sections/PricingFaqs'
@@ -121,6 +124,7 @@ import Reviews2_3 from '@/components/sections/Reviews2_3'
 import Reviews2_4 from '@/components/sections/Reviews2_4'
 import Reviews2_7 from '@/components/sections/Reviews2_7'
 import Reviews2_8 from '@/components/sections/Reviews2_8'
+import SquareBlogPost from '@/components/sections/SquareBlogPost'
 import Statistic1_1 from '@/components/sections/Statistic1_1'
 import Statistic1_5 from '@/components/sections/Statistic1_5'
 import Statistic1_10 from '@/components/sections/Statistic1_10'
@@ -135,6 +139,7 @@ import TemplateSearch from '@/components/sections/TemplateSearch'
 import Templates from '@/components/sections/Templates'
 import TextContent_1 from '@/components/sections/TextContent_1'
 import TextContent_2 from '@/components/sections/TextContent_2'
+import WideBlogPost from '@/components/sections/WideBlogPost'
 import Wswrapper_10 from '@/components/sections/Wswrapper_10'
 import TemplateDesigns from '@/components/sections/templae-designs'
 
@@ -278,4 +283,9 @@ export const blocks: any = {
   team_1: Team_1,
   boxContent: BoxContent,
   textContent_2: TextContent_2,
+  wideBlogPost: WideBlogPost,
+  postsWrapper_1: PostsWrapper_1,
+  postsWrapper_2: PostsWrapper_2,
+  squareBlogPost: SquareBlogPost,
+  pagination: Pagination,
 }
