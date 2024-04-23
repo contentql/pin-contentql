@@ -1,6 +1,12 @@
 import Link from 'next/link'
 
-const Banner_4 = () => {
+const Banner_4 = ({
+  title,
+  button_text,
+}: {
+  title?: string
+  button_text?: string
+}) => {
   return (
     <>
       <section id='banner-4' className='banner-section'>
@@ -13,14 +19,12 @@ const Banner_4 = () => {
                 <div className='col-md-9'>
                   <div className='banner-4-txt text-center'>
                     {/* Title */}
-                    <h2 className='s-46 w-700'>
-                      We can&apos;t wait to meet you
-                    </h2>
+                    <h2 className='s-46 w-700'>{title}</h2>
                     {/* Button */}
                     <Link
                       href='mailto:yourdomain@mail.com'
                       className='btn r-04 btn--theme hover--theme'>
-                      hello@yourdomain.com
+                      {button_text}
                     </Link>
                   </div>
                 </div>

@@ -1,8 +1,19 @@
-import img16 from '/public/images/img-16.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Banner_12 = () => {
+import { Media } from '@/payload-types'
+
+const Banner_12 = ({
+  title,
+  sub_title,
+  button_text,
+  background_image,
+}: {
+  title?: string
+  sub_title?: string
+  button_text?: string
+  background_image?: Media
+}) => {
   return (
     <section id='banner-12' className='banner-section'>
       <div className='container'>
@@ -14,19 +25,14 @@ const Banner_12 = () => {
               <div className='col-md-7'>
                 <div className='banner-12-txt color--white'>
                   {/* Title */}
-                  <h2 className='s-45 w-700'>
-                    We are looking for talented individuals
-                  </h2>
+                  <h2 className='s-45 w-700'>{title}</h2>
                   {/* Text */}
-                  <p className='p-lg'>
-                    We&apos;re constantly looking for talented people to join
-                    our team. Don&apos;t hesitate to get in touch with us
-                  </p>
+                  <p className='p-lg'>{sub_title}</p>
                   {/* Button */}
                   <Link
                     href='#careers-1'
                     className='btn r-04 btn--theme hover--tra-white'>
-                    See open roles
+                    {button_text}
                   </Link>
                 </div>
               </div>{' '}
@@ -34,7 +40,13 @@ const Banner_12 = () => {
               {/* BANNER-12 IMAGE */}
               <div className='col-md-5'>
                 <div className='banner-12-img text-center'>
-                  <Image className='img-fluid' src={img16} alt='banner-image' />
+                  <Image
+                    className='img-fluid'
+                    src={background_image?.url || ''}
+                    alt={background_image?.url || ''}
+                    height={1000}
+                    width={1000}
+                  />
                 </div>
               </div>
             </div>{' '}
