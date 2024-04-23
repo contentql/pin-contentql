@@ -1,9 +1,24 @@
 import VideoPopup from '../elements/VidepPopup'
-import post10Img from '/public/images/blog/post-10-img.jpg'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const SquareBlogPost = () => {
+import { Media } from '@/payload-types'
+
+const SquareBlogPost = ({
+  caption,
+  title,
+  sub_title,
+  name,
+  date,
+  background_image,
+}: {
+  caption?: string
+  title?: string
+  sub_title?: string
+  name?: string
+  date?: string
+  background_image?: Media
+}) => {
   return (
     <div className='container'>
       <div className='blog-post square-post'>
@@ -16,27 +31,18 @@ const SquareBlogPost = () => {
                 <div className='col-md-6 order-last order-md-2'>
                   <div className='blog-post-txt color--white'>
                     {/* Post Tag */}
-                    <span className='post-tag color--pink-400'>
-                      Video Tutorials
-                    </span>
+                    <span className='post-tag color--pink-400'>{caption}</span>
                     {/* Post Link */}
                     <h4 className='s-34 w-700 mb-20'>
-                      <Link href='/single-post'>
-                        Lipsum sodales sapien ContentQL aliquet blandit augue
-                        gravida posuere
-                      </Link>
+                      <Link href='/single-post'>{title}</Link>
                     </h4>
                     {/* Text */}
-                    <p>
-                      Aliqum mullam blandit vitae and tempor sapien and donec
-                      lipsum gravida porta undo velna dolor libero risus aliquet
-                      tempus posuere vitae tempor
-                    </p>
+                    <p>{sub_title}</p>
                     {/* Post Meta */}
                     <div className='blog-post-meta mt-30'>
                       <ul className='post-meta-list ico-10'>
                         <li>
-                          <p className='w-500'>By ContentQL Team</p>
+                          <p className='w-500'>By {name}</p>
                         </li>
                         <li className='meta-list-divider'>
                           <p>
@@ -44,7 +50,7 @@ const SquareBlogPost = () => {
                           </p>
                         </li>
                         <li>
-                          <p>Feb 12, 2023</p>
+                          <p>{date}</p>
                         </li>
                       </ul>
                     </div>
@@ -58,8 +64,10 @@ const SquareBlogPost = () => {
                     {/* Preview Image */}
                     <Image
                       className='img-fluid'
-                      src={post10Img}
-                      alt='video-preview'
+                      src={background_image?.url || ''}
+                      alt={background_image?.alt || ''}
+                      height={1000}
+                      width={1000}
                     />
                   </div>
                 </div>

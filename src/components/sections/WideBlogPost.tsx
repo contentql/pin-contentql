@@ -1,8 +1,23 @@
-import post11Img from '/public/images/blog/post-11-img.jpg'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const WideBlogPost = () => {
+import { Media } from '@/payload-types'
+
+const WideBlogPost = ({
+  caption,
+  title,
+  sub_title,
+  name,
+  date,
+  background_image,
+}: {
+  caption?: string
+  title?: string
+  sub_title?: string
+  name?: string
+  date?: string
+  background_image?: Media
+}) => {
   return (
     <section id='blog-page' className='inner-page-hero blog-page-section'>
       <div className='container'>
@@ -13,8 +28,10 @@ const WideBlogPost = () => {
               <div className='blog-post-img'>
                 <Image
                   className='img-fluid r-16'
-                  src={post11Img}
-                  alt='blog-post-image'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1000}
+                  width={1000}
                 />
               </div>
             </div>
@@ -22,27 +39,18 @@ const WideBlogPost = () => {
             <div className='col-md-6'>
               <div className='blog-post-txt'>
                 {/* Post Tag */}
-                <span className='post-tag color--blue-400'>
-                  Social Media Marketing
-                </span>
+                <span className='post-tag color--blue-400'>{caption}</span>
                 {/* Post Link */}
                 <h3 className='s-38 w-700'>
-                  <Link href='/single-post'>
-                    Congue magna tempor and ipsum ContentQL sapien turpis
-                    laoreet augue
-                  </Link>
+                  <Link href='/single-post'>{title}</Link>
                 </h3>
                 {/* Text */}
-                <p>
-                  Aliqum mullam blandit vitae and tempor sapien and donec lipsum
-                  gravida porta undo velna dolor libero a risus aliquet tempus
-                  posuere a tempor velna tempus posuere dolor
-                </p>
+                <p>{sub_title}</p>
                 {/* Post Meta */}
                 <div className='blog-post-meta mt-30'>
                   <ul className='post-meta-list ico-10'>
                     <li>
-                      <p className='w-500'>By ContentQL Team</p>
+                      <p className='w-500'>By {name}</p>
                     </li>
                     <li className='meta-list-divider'>
                       <p>
@@ -50,7 +58,7 @@ const WideBlogPost = () => {
                       </p>
                     </li>
                     <li>
-                      <p>Apr 28, 2023</p>
+                      <p>{date}</p>
                     </li>
                   </ul>
                 </div>
