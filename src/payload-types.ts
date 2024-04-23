@@ -1804,6 +1804,48 @@ export interface Page {
             blockName?: string | null;
             blockType: 'pagination';
           }
+        | {
+            title: string;
+            team_cards: {
+              image: string | Media;
+              name: string;
+              designation: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'expertsTeam';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            button_text: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'banner_12';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            details: {
+              department: string;
+              designation: string;
+              location: string;
+              working: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'careers_1';
+          }
+        | {
+            title: string;
+            button_text: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'banner_4';
+          }
       )[]
     | null;
   updatedAt: string;

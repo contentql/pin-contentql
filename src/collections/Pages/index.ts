@@ -8,6 +8,8 @@ import { Banner13_3 } from '../../blocks/Banner13_3'
 import { Banner13_5 } from '../../blocks/Banner13_5'
 import { Banner13_7 } from '../../blocks/Banner13_7'
 import { Banner13_9 } from '../../blocks/Banner13_9'
+import { Banner_4 } from '../../blocks/Banner_4'
+import { Banner_12 } from '../../blocks/Banner_12'
 import { Blog1_6 } from '../../blocks/Blog1_6'
 import { BoxContent } from '../../blocks/BoxContent'
 import { Brands1_1 } from '../../blocks/Brands1_1'
@@ -15,6 +17,7 @@ import { Brands1_11 } from '../../blocks/Brands1_11'
 import { Brands1_12 } from '../../blocks/Brands1_12'
 import { Brands1_17 } from '../../blocks/Brands1_17'
 import { Brands1_22 } from '../../blocks/Brands1_22'
+import { Careers_1 } from '../../blocks/Careers_1'
 import { Ct01_7 } from '../../blocks/Ct01_7'
 import { Ct01_8 } from '../../blocks/Ct01_8'
 import { Ct01_12 } from '../../blocks/Ct01_12'
@@ -46,6 +49,7 @@ import { Ct04_7 } from '../../blocks/Ct04_7'
 import { Ct04_8 } from '../../blocks/Ct04_8'
 import { Ct04_15 } from '../../blocks/Ct04_15'
 import { Ct04_16 } from '../../blocks/Ct04_16'
+import { ExpertsTeam } from '../../blocks/ExpertsTeam'
 import { Faqs3_1 } from '../../blocks/Faqs3_1'
 import { Faqs3_13 } from '../../blocks/Faqs3_13'
 import { Features1_2 } from '../../blocks/Features1_2'
@@ -318,6 +322,10 @@ export const Pages: CollectionConfig = {
         PostsWrapper_2,
         SquareBlogPost,
         Pagination,
+        ExpertsTeam,
+        Banner_12,
+        Careers_1,
+        Banner_4,
       ],
     },
   ],
