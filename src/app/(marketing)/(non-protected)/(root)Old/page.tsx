@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: 'https://contentql.com',
     images: '/images/dashboard-09.png',
   },
-  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_SERVER_URL}`),
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SERVER_URL}`),
 }
 
 const Home = () => {
