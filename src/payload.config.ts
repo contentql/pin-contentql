@@ -27,6 +27,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),
+    css: path.resolve(__dirname, 'themes/cql/index.scss'),
     webpack: (config: any) => {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -38,6 +39,8 @@ export default buildConfig({
     },
     meta: {
       titleSuffix: '- ContentQL',
+      favicon: 'favicon.ico',
+      ogImage: 'favicon.ico',
     },
   },
   rateLimit: {
