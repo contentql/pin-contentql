@@ -1,8 +1,17 @@
 import VideoPopup from '../elements/VidepPopup'
-import dashboard06 from '/public/images/dashboard-06.png'
 import Image from 'next/image'
 
-const Hero28 = () => {
+import { Media } from '@/payload-types'
+
+const Hero28 = ({
+  title,
+  sub_title,
+  background_image,
+}: {
+  title?: string
+  sub_title?: string
+  background_image?: Media
+}) => {
   return (
     <section className='gr--whitesmoke ct-08 inner-page-hero content-section division'>
       <div className='container'>
@@ -11,13 +20,9 @@ const Hero28 = () => {
           <div className='col-md-10 col-lg-9'>
             <div className='section-title mb-70'>
               {/* Title */}
-              <h2 className='s-52 w-700'>
-                Integrate with your essential tools in few clicks
-              </h2>
+              <h2 className='s-52 w-700'>{title}</h2>
               {/* Text */}
-              <p className='s-21'>
-                Ligula risus auctor tempus magna feugiat lacinia.
-              </p>
+              <p className='s-21'>{sub_title}</p>
             </div>
           </div>
         </div>
@@ -30,8 +35,10 @@ const Hero28 = () => {
               {/* Preview Image */}
               <Image
                 className='img-fluid'
-                src={dashboard06}
-                alt='video-preview'
+                src={background_image?.url || ''}
+                alt={background_image?.alt || ''}
+                height={2000}
+                width={2000}
               />
             </div>
           </div>

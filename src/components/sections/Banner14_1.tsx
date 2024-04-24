@@ -1,6 +1,16 @@
 import Link from 'next/link'
 
-const Banner14_1 = () => {
+const Banner14_1 = ({
+  title,
+  sub_title,
+  button_text,
+  description,
+}: {
+  title?: string
+  sub_title?: string
+  button_text?: string
+  description?: string
+}) => {
   return (
     <section id='banner-3' className='pt-100 banner-section'>
       <div className='container'>
@@ -12,23 +22,18 @@ const Banner14_1 = () => {
               <div className='col'>
                 <div className='banner-3-txt color--white'>
                   {/* Title */}
-                  <h2 className='s-48 w-700'>
-                    Starting with ContentQL is easy, fast and free
-                  </h2>
+                  <h2 className='s-48 w-700'>{title}</h2>
                   {/* Text */}
-                  <p className='p-xl'>
-                    It only takes a few clicks to get started
-                  </p>
+                  <p className='p-xl'>{sub_title}</p>
                   {/* Button */}
                   <Link
                     href='/signup-1'
                     className='btn r-04 btn--theme hover--tra-white'>
-                    Get srarted - it&apos;s free
+                    {button_text}
                   </Link>
                   {/* Button Text */}
                   <p className='p-sm btn-txt ico-15'>
-                    <span className='flaticon-check' /> Free for 14 days, no
-                    credit card required.
+                    <span className='flaticon-check' /> {description}
                   </p>
                 </div>
               </div>{' '}
