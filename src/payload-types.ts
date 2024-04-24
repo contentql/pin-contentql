@@ -1852,10 +1852,13 @@ export interface Page {
               link_text: string;
               id?: string | null;
             }[];
-            questions: {
-              question: string;
-              answer: {
-                answer_paragraph: string;
+            list_of_questions: {
+              questions: {
+                question: string;
+                answer: {
+                  answer_paragraph: string;
+                  id?: string | null;
+                }[];
                 id?: string | null;
               }[];
               id?: string | null;

@@ -1,8 +1,19 @@
-import help from '/public/images/help.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const HelpCenterBanner = () => {
+import { Media } from '@/payload-types'
+
+const HelpCenterBanner = ({
+  title,
+  sub_title,
+  button_text,
+  background_image,
+}: {
+  title?: string
+  sub_title?: string
+  button_text?: string
+  background_image?: Media
+}) => {
   return (
     <section id='banner-9' className='bg--02 py-70 x-border banner-section'>
       <div className='container'>
@@ -13,24 +24,27 @@ const HelpCenterBanner = () => {
             <div className='col-md-7 col-xl-5'>
               <div className='banner-9-txt'>
                 {/* Title */}
-                <h3 className='s-40 w-700'>Still need help?</h3>
+                <h3 className='s-40 w-700'>{title}</h3>
                 {/* Text */}
-                <p className='p-lg'>
-                  Don&apos;t hesitate to contact us about any question you might
-                  be interested in
-                </p>
+                <p className='p-lg'>{sub_title}</p>
                 {/* Button */}
                 <Link
                   href='/contacts'
                   className='btn r-04 btn--theme hover--theme'>
-                  Ask your question here
+                  {button_text}
                 </Link>
               </div>
             </div>
             {/* BANNER-9 IMAGE */}
             <div className='col-md-5 col-xl-5'>
               <div className='banner-9-img text-end'>
-                <Image className='img-fluid' src={help} alt='banner-image' />
+                <Image
+                  className='img-fluid'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
           </div>{' '}
