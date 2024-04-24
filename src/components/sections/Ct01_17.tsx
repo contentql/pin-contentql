@@ -1,7 +1,25 @@
-import img06 from '/public/images/img-06.png'
 import Image from 'next/image'
 
-export default function Ct01_17() {
+import { Media } from '@/payload-types'
+
+export default function Ct01_17({
+  caption,
+  title,
+  paragraph,
+  heading,
+  points,
+  background_image,
+}: {
+  caption?: string
+  title?: string
+  paragraph?: string
+  heading?: string
+  points?: {
+    point: string
+    id?: string | null
+  }[]
+  background_image?: Media
+}) {
   return (
     <>
       <section className='pt-100 ct-01 content-section division'>
@@ -12,64 +30,39 @@ export default function Ct01_17() {
             <div className='col-md-6 order-last order-md-2'>
               <div className='txt-block left-column wow fadeInRight'>
                 {/* Section ID */}
-                <span className='section-id'>Strategies That Work</span>
+                <span className='section-id'>{caption}</span>
                 {/* Title */}
-                <h2 className='s-46 w-700'>
-                  Right strategies &amp; implementations
-                </h2>
+                <h2 className='s-46 w-700'>{title}</h2>
                 {/* Text */}
-                <p>
-                  Sodales tempor sapien quaerat ipsum undo congue laoreet turpis
-                  neque auctor turpis vitae dolor luctus placerat magna and
-                  ligula cursus purus vitae purus an ipsum suscipit
-                </p>
+                <p>{paragraph}</p>
                 {/* Small Title */}
-                <h5 className='s-24 w-700'>Optimize your presence</h5>
+                <h5 className='s-24 w-700'>{heading}</h5>
                 {/* CONTENT BOX #1 */}
-                <div className='cbox-1 ico-15'>
-                  <div className='ico-wrap color--theme'>
-                    <div className='cbox-1-ico'>
-                      <span className='flaticon-check' />
+                {points?.map((point, index) => (
+                  <div key={point?.id} className='cbox-1 ico-15'>
+                    <div className='ico-wrap color--theme'>
+                      <div className='cbox-1-ico'>
+                        <span className='flaticon-check' />
+                      </div>
+                    </div>
+                    <div className='cbox-1-txt'>
+                      <p>{point?.point}</p>
                     </div>
                   </div>
-                  <div className='cbox-1-txt'>
-                    <p>Magna dolor luctus at egestas sapien</p>
-                  </div>
-                </div>
-                {/* CONTENT BOX #2 */}
-                <div className='cbox-1 ico-15'>
-                  <div className='ico-wrap color--theme'>
-                    <div className='cbox-1-ico'>
-                      <span className='flaticon-check' />
-                    </div>
-                  </div>
-                  <div className='cbox-1-txt'>
-                    <p>
-                      Cursus purus suscipit vitae cubilia magnis volute egestas
-                      vitae sapien turpis ultrice auctor congue varius magnis
-                    </p>
-                  </div>
-                </div>
-                {/* CONTENT BOX #3 */}
-                <div className='cbox-1 ico-15'>
-                  <div className='ico-wrap color--theme'>
-                    <div className='cbox-1-ico'>
-                      <span className='flaticon-check' />
-                    </div>
-                  </div>
-                  <div className='cbox-1-txt'>
-                    <p className='mb-0'>
-                      Volute turpis dolores and sagittis congue
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>{' '}
             {/* END TEXT BLOCK */}
             {/* IMAGE BLOCK */}
             <div className='col-md-6 order-first order-md-2'>
               <div className='img-block right-column wow fadeInLeft'>
-                <Image className='img-fluid' src={img06} alt='content-image' />
+                <Image
+                  className='img-fluid'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
           </div>{' '}

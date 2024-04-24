@@ -1,6 +1,6 @@
 import BrandSlider2 from '../slider/BrandSlider2'
 
-export default function Brands1_11() {
+export default function Brands1_11({ title }: { title?: string }) {
   return (
     <>
       <div id='brands-1' className='py-100 brands-section'>
@@ -9,9 +9,7 @@ export default function Brands1_11() {
           <div className='row justify-content-center'>
             <div className='col-md-10 col-lg-9'>
               <div className='brands-title mb-50'>
-                <h5 className='s-20 w-700'>
-                  Trusted and used by over 3,400 companies
-                </h5>
+                <h5 className='s-20 w-700'>{title}</h5>
               </div>
             </div>
           </div>
