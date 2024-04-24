@@ -1,6 +1,7 @@
 import { authRouter } from '../routers/auth-router'
+import { pageRouter } from '../routers/pages-router'
 
-import { publicProcedure, router, userProcedure } from './trpc'
+import { router, userProcedure } from './trpc'
 
 export const appRouter = router({
   anyApiRoute: userProcedure.query(() => {
@@ -8,6 +9,7 @@ export const appRouter = router({
   }),
 
   auth: authRouter,
+  pages: pageRouter,
 })
 
 export type AppRouter = typeof appRouter

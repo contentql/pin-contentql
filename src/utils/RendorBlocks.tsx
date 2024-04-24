@@ -10,7 +10,7 @@ interface RendorBlocksProps {
 }
 
 const RendorBlocks: React.FC<RendorBlocksProps> = ({ layout, slug }) => {
-  const { data: layoutData } = trpc.auth.getLayouts.useQuery(
+  const { data: layoutData } = trpc.pages.getLayouts.useQuery(
     { slug: slug },
     { initialData: layout },
   )

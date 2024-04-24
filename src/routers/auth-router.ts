@@ -3,7 +3,6 @@ import { AuthCredentialsValidator } from '../lib/validators/auth-router/account-
 import { TokenValidator } from '../lib/validators/auth-router/token-validator'
 import { publicProcedure, router } from '../trpc/trpc'
 import { TRPCError } from '@trpc/server'
-import { z } from 'zod'
 
 export const authRouter = router({
   createUser: publicProcedure
@@ -78,24 +77,5 @@ export const authRouter = router({
       } catch (err) {
         throw new TRPCError({ code: 'UNAUTHORIZED' })
       }
-    }),
-
-  getLayouts: publicProcedure
-    .input(z.object({ slug: z.string() }))
-    .query(async ({ input }) => {
-      const payload = await getPayloadClient()
-
-      try {
-        const { slug } = input
-        const details = await payload.find({
-          collection: 'pages',
-          where: {
-            slug: {
-              equals: slug,
-            },
-          },
-        })
-        return details.docs.at(0)?.layout
-      } catch (error) {}
     }),
 })
