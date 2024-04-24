@@ -9,6 +9,8 @@ import { buildConfig } from 'payload/config'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import Users from './collections/Users'
+import Icon from './components/payload-icons/Icon'
+import Logo from './components/payload-icons/Logo'
 import { Footer } from './globals/Footer'
 import { Header } from './globals/Header'
 import { s3StorageAdapter } from './plugins/s3'
@@ -39,8 +41,14 @@ export default buildConfig({
     },
     meta: {
       titleSuffix: '- ContentQL',
-      favicon: 'favicon.ico',
-      ogImage: 'favicon.ico',
+      favicon: '/images/favicon.ico',
+      ogImage: '/images/favicon.ico',
+    },
+    components: {
+      graphics: {
+        Logo,
+        Icon,
+      },
     },
   },
   rateLimit: {
