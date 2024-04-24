@@ -1,10 +1,11 @@
 import { getPayloadClient } from '@/get-payload'
 import RendorBlocks from '@/utils/RendorBlocks'
 
-const Page = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params
+const Page = async ({ params }: { params: { slug: any } }) => {
+  // const { slug } = params
 
-  console.log('parmas: ' + slug)
+  const slug = params.slug?.at(0) || 'index'
+
 
   const payload = await getPayloadClient()
 
@@ -29,9 +30,6 @@ export const generateStaticParams = async () => {
   const { docs: pageData } = await payload.find({ collection: 'pages' })
 
   const arrayOfPageSlugs = pageData?.map(page => {
-    if (page.slug === 'index') {
-      return '/'
-    }
     return page.slug
   })
 
