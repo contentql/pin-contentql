@@ -1876,6 +1876,49 @@ export interface Page {
             blockName?: string | null;
             blockType: 'helpCenterBanner';
           }
+        | {
+            title: string;
+            sub_title: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero28';
+          }
+        | {
+            caption: string;
+            title: string;
+            subtitle: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct05_1';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            integrations: {
+              title: string;
+              subtitle: string;
+              integration_image: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'integrations1_8';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            button_text: string;
+            description: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'banner14_1';
+          }
       )[]
     | null;
   updatedAt: string;
