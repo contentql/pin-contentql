@@ -1,7 +1,23 @@
-import img09 from '/public/images/img-09.png'
 import Image from 'next/image'
 
-export default function Lnk1_14() {
+import { Media } from '@/payload-types'
+
+export default function Lnk1_14({
+  caption,
+  title,
+  paragraph,
+  points,
+  background_image,
+}: {
+  caption?: string
+  title?: string
+  paragraph?: string
+  points?: {
+    point: string
+    id?: string | null
+  }[]
+  background_image?: Media
+}) {
   return (
     <>
       <section id='lnk-1' className='pt-100 ws-wrapper content-section'>
@@ -13,31 +29,18 @@ export default function Lnk1_14() {
                 <div className='col-md-6 order-last order-md-2'>
                   <div className='txt-block left-column wow fadeInRight'>
                     {/* Section ID */}
-                    <span className='section-id'>One-Stop Solution</span>
+                    <span className='section-id'>{caption}</span>
                     {/* Title */}
-                    <h2 className='s-46 w-700'>
-                      Smart solutions, real-time results
-                    </h2>
+                    <h2 className='s-46 w-700'>{title}</h2>
                     {/* Text */}
-                    <p>
-                      Sodales tempor sapien quaerat congue eget ipsum laoreet
-                      turpis neque auctor vitae eros dolor luctus placerat magna
-                      ligula cursus and purus pretium
-                    </p>
+                    <p>{paragraph}</p>
                     {/* List */}
                     <ul className='simple-list'>
-                      <li className='list-item'>
-                        <p>
-                          Cursus purus suscipit vitae cubilia magnis volute
-                          egestas vitae sapien turpis sodales magna
-                        </p>
-                      </li>
-                      <li className='list-item'>
-                        <p className='mb-0'>
-                          Tempor sapien quaerat an ipsum laoreet purus and
-                          sapien dolor an ultrice ipsum aliquam congue
-                        </p>
-                      </li>
+                      {points?.map((point, index) => (
+                        <li key={point?.id} className='list-item'>
+                          <p>{point?.point}</p>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>{' '}
@@ -47,8 +50,10 @@ export default function Lnk1_14() {
                   <div className='img-block right-column wow fadeInLeft'>
                     <Image
                       className='img-fluid'
-                      src={img09}
-                      alt='content-image'
+                      src={background_image?.url || ''}
+                      alt={background_image?.alt || ''}
+                      height={1000}
+                      width={1000}
                     />
                   </div>
                 </div>

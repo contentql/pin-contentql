@@ -1,16 +1,30 @@
+import About_2 from '@/components/sections/About_2'
+import About_3 from '@/components/sections/About_3'
 import Banner3_6 from '@/components/sections/Banner3_6'
+import Banner7_4 from '@/components/sections/Banner7_4'
 import Banner7_7 from '@/components/sections/Banner7_7'
 import Banner13_1 from '@/components/sections/Banner13_1'
 import Banner13_3 from '@/components/sections/Banner13_3'
+import Banner13_5 from '@/components/sections/Banner13_5'
 import Banner13_7 from '@/components/sections/Banner13_7'
 import Banner13_9 from '@/components/sections/Banner13_9'
+import Banner_4 from '@/components/sections/Banner_4'
+import Banner_12 from '@/components/sections/Banner_12'
 import Blog1_6 from '@/components/sections/Blog1_6'
+import BoxContent from '@/components/sections/BoxContent'
 import Brands1_1 from '@/components/sections/Brands1_1'
+import Brands1_11 from '@/components/sections/Brands1_11'
+import Brands1_12 from '@/components/sections/Brands1_12'
 import Brands1_17 from '@/components/sections/Brands1_17'
 import Brands1_22 from '@/components/sections/Brands1_22'
+import Careers_1 from '@/components/sections/Careers_1'
 import Ct01_7 from '@/components/sections/Ct01_7'
 import Ct01_8 from '@/components/sections/Ct01_8'
 import Ct01_12 from '@/components/sections/Ct01_12'
+import Ct01_15 from '@/components/sections/Ct01_15'
+import Ct01_16 from '@/components/sections/Ct01_16'
+import Ct01_17 from '@/components/sections/Ct01_17'
+import Ct01_18 from '@/components/sections/Ct01_18'
 import Ct01_20 from '@/components/sections/Ct01_20'
 import Ct01_28 from '@/components/sections/Ct01_28'
 import Ct01_36 from '@/components/sections/Ct01_36'
@@ -20,6 +34,7 @@ import Ct02_2 from '@/components/sections/Ct02_2'
 import Ct02_19 from '@/components/sections/Ct02_19'
 import Ct02_20 from '@/components/sections/Ct02_20'
 import Ct02_21 from '@/components/sections/Ct02_21'
+import Ct02_28 from '@/components/sections/Ct02_28'
 import Ct02_34 from '@/components/sections/Ct02_34'
 import Ct02_38 from '@/components/sections/Ct02_38'
 import Ct02_39 from '@/components/sections/Ct02_39'
@@ -28,14 +43,20 @@ import Ct02_44 from '@/components/sections/Ct02_44'
 import Ct02_45 from '@/components/sections/Ct02_45'
 import Ct02_51 from '@/components/sections/Ct02_51'
 import Ct03_4 from '@/components/sections/Ct03_4'
+import Ct03_6 from '@/components/sections/Ct03_6'
 import Ct03_7 from '@/components/sections/Ct03_7'
+import Ct04_7 from '@/components/sections/Ct04_7'
+import Ct04_8 from '@/components/sections/Ct04_8'
 import Ct04_15 from '@/components/sections/Ct04_15'
 import Ct04_16 from '@/components/sections/Ct04_16'
+import ExpertsTeam from '@/components/sections/ExpertsTeam'
 import Faqs3_1 from '@/components/sections/Faqs3_1'
 import Faqs3_13 from '@/components/sections/Faqs3_13'
+import Features1_2 from '@/components/sections/Features1_2'
 import Features2_1 from '@/components/sections/Features2_1'
 import Features2_5 from '@/components/sections/Features2_5'
 import Features2_9 from '@/components/sections/Features2_9'
+import Features2_12 from '@/components/sections/Features2_12'
 import Features2_15 from '@/components/sections/Features2_15'
 import Features2_19 from '@/components/sections/Features2_19'
 import Features2_21 from '@/components/sections/Features2_21'
@@ -43,6 +64,7 @@ import Features5_1 from '@/components/sections/Features5_1'
 import Features5_4 from '@/components/sections/Features5_4'
 import Features6_1 from '@/components/sections/Features6_1'
 import Features7_5 from '@/components/sections/Features7_5'
+import Features11_2 from '@/components/sections/Features11_2'
 import Features11_5 from '@/components/sections/Features11_5'
 import Features11_8 from '@/components/sections/Features11_8'
 import Features11_10 from '@/components/sections/Features11_10'
@@ -54,9 +76,12 @@ import Features12_8 from '@/components/sections/Features12_8'
 import Features12_10 from '@/components/sections/Features12_10'
 import Features12_11 from '@/components/sections/Features12_11'
 import Features13_1 from '@/components/sections/Features13_1'
+import Features13_6 from '@/components/sections/Features13_6'
 import Hero5 from '@/components/sections/Hero5'
 import Hero10 from '@/components/sections/Hero10'
 import Hero11 from '@/components/sections/Hero11'
+import Hero13 from '@/components/sections/Hero13'
+import Hero14 from '@/components/sections/Hero14'
 import Hero15 from '@/components/sections/Hero15'
 import Hero21 from '@/components/sections/Hero21'
 import Hero23 from '@/components/sections/Hero23'
@@ -65,6 +90,8 @@ import Hero27 from '@/components/sections/Hero27'
 import Integrations2_1 from '@/components/sections/Integrations2_1'
 import Lnk1_5 from '@/components/sections/Lnk1_5'
 import Lnk1_10 from '@/components/sections/Lnk1_10'
+import Lnk1_13 from '@/components/sections/Lnk1_13'
+import Lnk1_14 from '@/components/sections/Lnk1_14'
 import Lnk1_17 from '@/components/sections/Lnk1_17'
 import Lnk1_21 from '@/components/sections/Lnk1_21'
 import Lnk1_23 from '@/components/sections/Lnk1_23'
@@ -72,12 +99,17 @@ import Lnk1_25 from '@/components/sections/Lnk1_25'
 import Lnk1_27 from '@/components/sections/Lnk1_27'
 import Lnk2_1 from '@/components/sections/Lnk2_1'
 import Lnk2_5 from '@/components/sections/Lnk2_5'
+import Lnk2_14 from '@/components/sections/Lnk2_14'
 import Lnk2_17 from '@/components/sections/Lnk2_17'
 import Lnk2_22 from '@/components/sections/Lnk2_22'
 import Lnk2_26 from '@/components/sections/Lnk2_26'
 import Lnk3_1 from '@/components/sections/Lnk3_1'
+import Lnk3_10 from '@/components/sections/Lnk3_10'
 import Newsletter1_2 from '@/components/sections/Newsletter1_2'
 import Newsletter1_6 from '@/components/sections/Newsletter1_6'
+import Pagination from '@/components/sections/Pagination'
+import PostsWrapper_1 from '@/components/sections/PostsWrapper_1'
+import PostsWrapper_2 from '@/components/sections/PostsWrapper_2'
 import PricingBanner from '@/components/sections/PricingBanner'
 import PricingBrands from '@/components/sections/PricingBrands'
 import PricingFaqs from '@/components/sections/PricingFaqs'
@@ -92,17 +124,26 @@ import Reviews1_1 from '@/components/sections/Reviews1_1'
 import Reviews1_6 from '@/components/sections/Reviews1_6'
 import Reviews1_11 from '@/components/sections/Reviews1_11'
 import Reviews1_13 from '@/components/sections/Reviews1_13'
+import Reviews2_3 from '@/components/sections/Reviews2_3'
+import Reviews2_4 from '@/components/sections/Reviews2_4'
 import Reviews2_7 from '@/components/sections/Reviews2_7'
 import Reviews2_8 from '@/components/sections/Reviews2_8'
+import SquareBlogPost from '@/components/sections/SquareBlogPost'
 import Statistic1_1 from '@/components/sections/Statistic1_1'
 import Statistic1_5 from '@/components/sections/Statistic1_5'
 import Statistic1_10 from '@/components/sections/Statistic1_10'
+import Statistic1_11 from '@/components/sections/Statistic1_11'
 import Statistic1_17 from '@/components/sections/Statistic1_17'
 import Statistic1_19 from '@/components/sections/Statistic1_19'
+import Statistic5_3 from '@/components/sections/Statistic5_3'
 import Statistic5_4 from '@/components/sections/Statistic5_4'
+import Team_1 from '@/components/sections/Team_1'
 import TemplatePlain from '@/components/sections/TemplatePlain'
 import TemplateSearch from '@/components/sections/TemplateSearch'
 import Templates from '@/components/sections/Templates'
+import TextContent_1 from '@/components/sections/TextContent_1'
+import TextContent_2 from '@/components/sections/TextContent_2'
+import WideBlogPost from '@/components/sections/WideBlogPost'
 import Wswrapper_10 from '@/components/sections/Wswrapper_10'
 import TemplateDesigns from '@/components/sections/templae-designs'
 
@@ -214,4 +255,45 @@ export const blocks: any = {
   banner13_7: Banner13_7,
   blog1_6: Blog1_6,
   newsletter1_6: Newsletter1_6,
+  hero14: Hero14,
+  statistic1_11: Statistic1_11,
+  features11_2: Features11_2,
+  lnk1_14: Lnk1_14,
+  ct02_28: Ct02_28,
+  ct01_17: Ct01_17,
+  features2_12: Features2_12,
+  lnk2_14: Lnk2_14,
+  lnk3_10: Lnk3_10,
+  features13_6: Features13_6,
+  ct01_18: Ct01_18,
+  reviews2_4: Reviews2_4,
+  brands1_12: Brands1_12,
+  ct04_8: Ct04_8,
+  banner7_4: Banner7_4,
+  hero13: Hero13,
+  statistic5_3: Statistic5_3,
+  lnk1_13: Lnk1_13,
+  ct01_15: Ct01_15,
+  ct03_6: Ct03_6,
+  features1_2: Features1_2,
+  ct01_16: Ct01_16,
+  reviews2_3: Reviews2_3,
+  brands1_11: Brands1_11,
+  ct04_7: Ct04_7,
+  banner13_5: Banner13_5,
+  about_2: About_2,
+  about_3: About_3,
+  textContent_1: TextContent_1,
+  team_1: Team_1,
+  boxContent: BoxContent,
+  textContent_2: TextContent_2,
+  wideBlogPost: WideBlogPost,
+  postsWrapper_1: PostsWrapper_1,
+  postsWrapper_2: PostsWrapper_2,
+  squareBlogPost: SquareBlogPost,
+  pagination: Pagination,
+  expertsTeam: ExpertsTeam,
+  banner_12: Banner_12,
+  careers_1: Careers_1,
+  banner_4: Banner_4,
 }

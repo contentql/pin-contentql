@@ -1,10 +1,25 @@
-import post2Img from '/public/images/blog/post-2-img.jpg'
-import post5Img from '/public/images/blog/post-5-img.jpg'
-import post8Img from '/public/images/blog/post-8-img.jpg'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Blog1_6() {
+import { Media } from '@/payload-types'
+
+export default function Blog1_6({
+  title,
+  sub_title,
+  blogs,
+}: {
+  title?: string
+  sub_title?: string
+  blogs?: {
+    blog_image: string | Media
+    caption: string
+    title: string
+    description: string
+    bloger_name: string
+    date: string
+    id?: string | null
+  }[]
+}) {
   return (
     <>
       <section id='blog-1' className='py-100 blog-section division'>
@@ -14,159 +29,63 @@ export default function Blog1_6() {
             <div className='col-md-10 col-lg-9'>
               <div className='section-title mb-70'>
                 {/* Title */}
-                <h2 className='s-52 w-700'>Articles &amp; Resources</h2>
+                <h2 className='s-52 w-700'>{title}</h2>
                 {/* Text */}
-                <p className='s-21 color--grey'>
-                  Ligula risus auctor tempus magna feugiat lacinia.
-                </p>
+                <p className='s-21 color--grey'>{sub_title}</p>
               </div>
             </div>
           </div>
           <div className='row'>
             {/* BLOG POST #1 */}
-            <div className='col-md-6 col-lg-4'>
-              <div id='bp-1-1' className='blog-post wow fadeInUp'>
-                {/* BLOG POST IMAGE */}
-                <div className='blog-post-img mb-35'>
-                  <Image
-                    className='img-fluid r-16'
-                    src={post8Img}
-                    alt='blog-post-image'
-                  />
-                </div>
-                {/* BLOG POST TEXT */}
-                <div className='blog-post-txt'>
-                  {/* Post Tag */}
-                  <span className='post-tag color--pink-400'>Product News</span>
-                  {/* Post Link */}
-                  <h6 className='s-20 w-700'>
-                    <Link href='/single-post'>
-                      Aliqum mullam porta blandit: tempor sapien and gravida
-                    </Link>
-                  </h6>
-                  {/* Text */}
-                  <p>
-                    Egestas luctus vitae augue and ipsum ultrice quisque in
-                    cursus lacus feugiat congue diam ultrice laoreet sagittis
-                  </p>
-                  {/* Post Meta */}
-                  <div className='blog-post-meta mt-20'>
-                    <ul className='post-meta-list ico-10'>
-                      <li>
-                        <p className='p-sm w-500'>By Helen J.</p>
-                      </li>
-                      <li className='meta-list-divider'>
-                        <p>
-                          <span className='flaticon-minus' />
-                        </p>
-                      </li>
-                      <li>
-                        <p className='p-sm'>Apr 28, 2023</p>
-                      </li>
-                    </ul>
+            {blogs?.map((blog, index) => (
+              <div key={blog?.id} className='col-md-6 col-lg-4'>
+                <div
+                  id={`bp-1-${index + 1}`}
+                  className='blog-post wow fadeInUp'>
+                  {/* BLOG POST IMAGE */}
+                  <div className='blog-post-img mb-35'>
+                    <Image
+                      className='img-fluid r-16'
+                      src={(blog?.blog_image as Media)?.url || ''}
+                      alt={(blog?.blog_image as Media)?.alt || ''}
+                      height={500}
+                      width={500}
+                    />
                   </div>
-                </div>{' '}
-                {/* END BLOG POST TEXT */}
+                  {/* BLOG POST TEXT */}
+                  <div className='blog-post-txt'>
+                    {/* Post Tag */}
+                    <span className='post-tag color--pink-400'>
+                      {blog?.caption}
+                    </span>
+                    {/* Post Link */}
+                    <h6 className='s-20 w-700'>
+                      <Link href='/single-post'>{blog?.title}</Link>
+                    </h6>
+                    {/* Text */}
+                    <p>{blog?.description}</p>
+                    {/* Post Meta */}
+                    <div className='blog-post-meta mt-20'>
+                      <ul className='post-meta-list ico-10'>
+                        <li>
+                          <p className='p-sm w-500'>{blog?.bloger_name}</p>
+                        </li>
+                        <li className='meta-list-divider'>
+                          <p>
+                            <span className='flaticon-minus' />
+                          </p>
+                        </li>
+                        <li>
+                          <p className='p-sm'>{blog?.date}</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>{' '}
+                  {/* END BLOG POST TEXT */}
+                </div>
               </div>
-            </div>{' '}
+            ))}
             {/* END BLOG POST #1 */}
-            {/* BLOG POST #2 */}
-            <div className='col-md-6 col-lg-4'>
-              <div id='bp-1-2' className='blog-post wow fadeInUp'>
-                {/* BLOG POST IMAGE */}
-                <div className='blog-post-img mb-35'>
-                  <Image
-                    className='img-fluid r-16'
-                    src={post2Img}
-                    alt='blog-post-image'
-                  />
-                </div>
-                {/* BLOG POST TEXT */}
-                <div className='blog-post-txt'>
-                  {/* Post Tag */}
-                  <span className='post-tag color--green-400'>Community</span>
-                  {/* Post Link */}
-                  <h6 className='s-20 w-700'>
-                    <Link href='/single-post'>
-                      Porttitor cursus fusce egestas CEO cursus at magna sapien
-                      suscipit and egestas ipsum
-                    </Link>
-                  </h6>
-                  {/* Text */}
-                  <p>
-                    Aliqum mullam ipsum vitae and blandit vitae tempor sapien
-                    and donec lipsum
-                  </p>
-                  {/* Post Meta */}
-                  <div className='blog-post-meta mt-20'>
-                    <ul className='post-meta-list ico-10'>
-                      <li>
-                        <p className='p-sm w-500'>By ContentQL Team</p>
-                      </li>
-                      <li className='meta-list-divider'>
-                        <p>
-                          <span className='flaticon-minus' />
-                        </p>
-                      </li>
-                      <li>
-                        <p className='p-sm'>Apr 14, 2023</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>{' '}
-                {/* END BLOG POST TEXT */}
-              </div>
-            </div>{' '}
-            {/* END BLOG POST #2 */}
-            {/* BLOG POST #3 */}
-            <div className='col-md-12 col-lg-4'>
-              <div id='bp-1-3' className='blog-post wow fadeInUp'>
-                {/* BLOG POST IMAGE */}
-                <div className='blog-post-img mb-35'>
-                  <Image
-                    className='img-fluid r-16'
-                    src={post5Img}
-                    alt='blog-post-image'
-                  />
-                </div>
-                {/* BLOG POST TEXT */}
-                <div className='blog-post-txt'>
-                  {/* Post Tag */}
-                  <span className='post-tag color--purple-400'>
-                    Freelancer Tips
-                  </span>
-                  {/* Post Link */}
-                  <h6 className='s-20 w-700'>
-                    <Link href='/single-post'>
-                      Cubilia laoreet augue egestas and ContentQL magna impedit
-                    </Link>
-                  </h6>
-                  {/* Text */}
-                  <p>
-                    Luctus vitae egestas augue and ipsum ultrice quisque in
-                    cursus lacus feugiat egets congue ultrice sagittis laoreet
-                  </p>
-                  {/* Post Meta */}
-                  <div className='blog-post-meta mt-20'>
-                    <ul className='post-meta-list ico-10'>
-                      <li>
-                        <p className='p-sm w-500'>By Miranda Green</p>
-                      </li>
-                      <li className='meta-list-divider'>
-                        <p>
-                          <span className='flaticon-minus' />
-                        </p>
-                      </li>
-                      <li>
-                        <p className='p-sm'>Mar 27, 2023</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>{' '}
-                {/* END BLOG POST TEXT */}
-              </div>
-            </div>{' '}
-            {/* END BLOG POST #3 */}
           </div>{' '}
           {/* End row */}
         </div>{' '}
