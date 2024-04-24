@@ -1,7 +1,8 @@
-import { getPayloadClient } from '@/get-payload'
-import RendorBlocks from '@/utils/RendorBlocks'
+import { getPayloadClient } from '@/get-payload';
+import RendorBlocks from '@/utils/RendorBlocks';
 
-const Page = async ({ params }: { params: { slug: any } }) => {
+
+const Page = async ({ params }: { params: { slug: string[]} }) => {
   // const { slug } = params
 
   const slug = params.slug?.at(0) || 'index'
