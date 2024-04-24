@@ -12,7 +12,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     collection: 'pages',
     where: {
       slug: {
-        equals: slug || '/',
+        equals: slug,
       },
     },
   })
@@ -28,7 +28,12 @@ export const generateStaticParams = async () => {
   const payload = await getPayloadClient()
   const { docs: pageData } = await payload.find({ collection: 'pages' })
 
-  const arrayOfPageSlugs = pageData?.map(page => page.slug)
+  const arrayOfPageSlugs = pageData?.map(page => {
+    if (page.slug === 'index') {
+      return '/'
+    }
+    return page.slug
+  })
 
   return [...arrayOfPageSlugs]
 }
