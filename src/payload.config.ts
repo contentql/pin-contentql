@@ -13,6 +13,7 @@ import Icon from './components/payload-icons/Icon'
 import Logo from './components/payload-icons/Logo'
 import { Footer } from './globals/Footer'
 import { Header } from './globals/Header'
+import { mediaGridView } from './plugins/payload-media-grid-view'
 import { s3StorageAdapter } from './plugins/s3'
 
 dotenv.config({
@@ -66,6 +67,7 @@ export default buildConfig({
         },
       },
     }),
+    mediaGridView,
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
