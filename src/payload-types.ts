@@ -1846,6 +1846,33 @@ export interface Page {
             blockName?: string | null;
             blockType: 'banner_4';
           }
+        | {
+            title: string;
+            links: {
+              link_text: string;
+              id?: string | null;
+            }[];
+            questions: {
+              question: string;
+              answer: {
+                answer_paragraph: string;
+                id?: string | null;
+              }[];
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'helpCenterFaqs';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            button_text: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'helpCenterBanner';
+          }
       )[]
     | null;
   updatedAt: string;
