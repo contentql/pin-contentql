@@ -1,6 +1,30 @@
 import { useState } from 'react'
 
-const HelpCenterFaqs = () => {
+const listOfIcons = [
+  { icon: 'flaticon-mechanics', key: 'flaticon-mechanics' },
+  { icon: 'flaticon-suit', key: 'flaticon-suit' },
+  { icon: 'flaticon-price-label', key: 'flaticon-price-label' },
+  { icon: 'flaticon-screenplay', key: 'flaticon-screenplay' },
+]
+const HelpCenterFaqs = ({
+  title,
+  links,
+  questions,
+}: {
+  title?: string
+  links?: {
+    link_text: string
+    id?: string | null
+  }[]
+  questions?: {
+    question: string
+    answer: {
+      answer_paragraph: string
+      id?: string | null
+    }[]
+    id?: string | null
+  }[]
+}) => {
   const [activeIndex, setActiveIndex] = useState(1)
   const handleOnClick = (index: number) => {
     setActiveIndex(index)
@@ -35,7 +59,7 @@ const HelpCenterFaqs = () => {
         <div className='row justify-content-center'>
           <div className='col-lg-11 col-xl-10'>
             <div className='inner-page-title'>
-              <h2 className='s-52 w-700'>How Can We Help?</h2>
+              <h2 className='s-52 w-700'>{title}</h2>
             </div>
           </div>
         </div>
@@ -45,57 +69,21 @@ const HelpCenterFaqs = () => {
             <div className='tabs-nav tabs--theme clearfix'>
               <ul className='tabs-1'>
                 {/* TAB-1 LINK */}
-                <li
-                  className={
-                    activeIndex === 1
-                      ? 'tab-link ico-45 r-16 current'
-                      : 'tab-link ico-45 r-16'
-                  }
-                  onClick={() => handleOnClick(1)}>
-                  <div className='tab-link-ico'>
-                    <span className='flaticon-mechanics' />
-                  </div>
-                  <p>Getting Started</p>
-                </li>
-                {/* TAB-2 LINK */}
-                <li
-                  className={
-                    activeIndex === 2
-                      ? 'tab-link ico-45 r-16 current'
-                      : 'tab-link ico-45 r-16'
-                  }
-                  onClick={() => handleOnClick(2)}>
-                  <div className='tab-link-ico'>
-                    <span className='flaticon-suit' />
-                  </div>
-                  <p>My Account</p>
-                </li>
-                {/* TAB-3 LINK */}
-                <li
-                  className={
-                    activeIndex === 3
-                      ? 'tab-link ico-45 r-16 current'
-                      : 'tab-link ico-45 r-16'
-                  }
-                  onClick={() => handleOnClick(3)}>
-                  <div className='tab-link-ico'>
-                    <span className='flaticon-price-label' />
-                  </div>
-                  <p>Pricing Plans</p>
-                </li>
-                {/* TAB-4 LINK */}
-                <li
-                  className={
-                    activeIndex === 4
-                      ? 'tab-link ico-45 r-16 current'
-                      : 'tab-link ico-45 r-16'
-                  }
-                  onClick={() => handleOnClick(4)}>
-                  <div className='tab-link-ico'>
-                    <span className='flaticon-screenplay' />
-                  </div>
-                  <p>Other Questions</p>
-                </li>
+                {links?.map((link, index) => (
+                  <li
+                    key={link?.id}
+                    className={
+                      activeIndex === index + 1
+                        ? 'tab-link ico-45 r-16 current'
+                        : 'tab-link ico-45 r-16'
+                    }
+                    onClick={() => handleOnClick(index + 1)}>
+                    <div className='tab-link-ico'>
+                      <span className={listOfIcons[index]?.icon} />
+                    </div>
+                    <p>{link?.link_text}</p>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

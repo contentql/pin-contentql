@@ -77,6 +77,8 @@ import Features12_10 from '@/components/sections/Features12_10'
 import Features12_11 from '@/components/sections/Features12_11'
 import Features13_1 from '@/components/sections/Features13_1'
 import Features13_6 from '@/components/sections/Features13_6'
+import HelpCenterBanner from '@/components/sections/HelpCenterBanner'
+import HelpCenterFaqs from '@/components/sections/HelpCenterFaqs'
 import Hero5 from '@/components/sections/Hero5'
 import Hero10 from '@/components/sections/Hero10'
 import Hero11 from '@/components/sections/Hero11'
@@ -296,4 +298,6 @@ export const blocks: any = {
   banner_12: Banner_12,
   careers_1: Careers_1,
   banner_4: Banner_4,
+  helpCenterFaqs: HelpCenterFaqs,
+  helpCenterBanner: HelpCenterBanner,
 }

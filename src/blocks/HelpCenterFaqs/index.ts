@@ -9,55 +9,51 @@ export const HelpCenterFaqs: Block = {
   },
   fields: [
     {
-      name: 'caption',
-      label: 'Caption',
-      type: 'text',
-      required: true,
-    },
-    {
       name: 'title',
       label: 'Title',
       type: 'text',
       required: true,
     },
     {
-      name: 'paragraph',
-      label: 'Paragraph',
-      type: 'textarea',
-      required: true,
-    },
-    {
-      name: 'points',
-      label: 'Points',
+      name: 'links',
+      label: 'Links',
       required: true,
       type: 'array',
       fields: [
         {
-          name: 'point',
-          label: 'Point',
-          type: 'textarea',
+          name: 'link_text',
+          label: 'Link Text',
+          type: 'text',
           required: true,
         },
       ],
     },
 
     {
-      name: 'features',
-      label: 'Features',
+      name: 'questions',
+      label: 'Questions',
       required: true,
       type: 'array',
       fields: [
         {
-          name: 'title',
-          label: 'Title',
+          name: 'question',
+          label: 'Question',
           type: 'text',
           required: true,
         },
         {
-          name: 'description',
-          label: 'Description',
-          type: 'textarea',
+          name: 'answer',
+          label: 'Answer',
+          type: 'array',
           required: true,
+          fields: [
+            {
+              name: 'answer_paragraph',
+              label: 'Answer Paragraph',
+              type: 'textarea',
+              required: true,
+            },
+          ],
         },
       ],
     },

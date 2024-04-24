@@ -77,6 +77,8 @@ import { Features12_10 } from '../../blocks/Features12_10'
 import { Features12_11 } from '../../blocks/Features12_11'
 import { Features13_1 } from '../../blocks/Features13_1'
 import { Features13_6 } from '../../blocks/Features13_6'
+import { HelpCenterBanner } from '../../blocks/HelpCenterBanner'
+import { HelpCenterFaqs } from '../../blocks/HelpCenterFaqs'
 import { Hero5 } from '../../blocks/Hero5'
 import { Hero10 } from '../../blocks/Hero10'
 import { Hero11 } from '../../blocks/Hero11'
@@ -326,6 +328,8 @@ export const Pages: CollectionConfig = {
         Banner_12,
         Careers_1,
         Banner_4,
+        HelpCenterFaqs,
+        HelpCenterBanner,
       ],
     },
   ],
