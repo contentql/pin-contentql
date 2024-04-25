@@ -24,8 +24,7 @@ export default function Header1({
     <>
       <header
         id='header'
-        className={`tra-menu white-scroll ${headerCls ? headerCls : ''}`}
-      >
+        className={`tra-menu white-scroll ${headerCls ? headerCls : ''}`}>
         <div className='header-wrapper'>
           {/* MOBILE HEADER */}
           <div className='wsmobileheader clearfix'>
@@ -40,8 +39,7 @@ export default function Header1({
             <a
               id='wsnavtoggle'
               className='wsanimated-arrow'
-              onClick={handleMobileMenu}
-            >
+              onClick={handleMobileMenu}>
               <span />
             </a>
           </div>
@@ -81,10 +79,9 @@ export default function Header1({
               {/* MAIN MENU */}
               <nav
                 className='wsmenu clearfix'
-                style={{ height: `${isMobileMenu ? '100vh' : ''}` }}
-              >
+                style={{ height: `${isMobileMenu ? '100vh' : ''}` }}>
                 {isMobileMenu ? (
-                  <MobileMenu />
+                  <MobileMenu headerData={headerData} />
                 ) : (
                   <Menu headerData={headerData} />
                 )}
