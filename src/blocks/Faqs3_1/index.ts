@@ -27,12 +27,6 @@ export const Faqs3_1: Block = {
       required: true,
       fields: [
         {
-          name: 'question_number',
-          label: 'Question number',
-          type: 'number',
-          required: true,
-        },
-        {
           name: 'question',
           label: 'Question',
           type: 'text',

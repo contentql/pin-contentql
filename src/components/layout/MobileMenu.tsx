@@ -1,7 +1,12 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-export default function MobileMenu() {
+import { Header } from '@/payload-types'
+
+interface Props {
+  headerData?: Header
+}
+export default function MobileMenu({ headerData }: Props) {
   const [isActive, setIsActive] = useState<{ status: boolean; key?: number }>({
     status: false,
     key: 0,
@@ -66,61 +71,86 @@ export default function MobileMenu() {
         <li className='mg_link'>
           <span
             className={
-              isActive.key == 2 ? 'wsmenu-click ws-activearrow' : 'wsmenu-click'
+              isActive.key == 1 ? 'wsmenu-click ws-activearrow' : 'wsmenu-click'
             }
-            onClick={() => handleToggle(2)}
-          >
+            onClick={() => handleToggle(1)}>
             <i className='wsmenu-arrow' />
           </span>
           <Link href='#' className='h-link'>
-            Pages <span className='wsarrow' />
+            product <span className='wsarrow' />
           </Link>
           <div
             className='wsmegamenu w-75 clearfix'
-            style={{ display: `${isActive.key == 2 ? 'block' : 'none'}` }}
-          >
+            style={{ display: `${isActive.key == 1 ? 'block' : 'none'}` }}>
             <div className='container'>
               <div className='row'>
                 {/* MEGAMENU LINKS */}
                 <ul className='col-md-12 col-lg-3 link-list'>
-                  <li className='fst-li'>
-                    <Link href='/about'>About Us</Link>
-                  </li>
-                  <li>
-                    <Link href='/experts'>Our Team</Link>
-                  </li>
-                  <li>
-                    <Link href='/careers'>
-                      Careers <span className='sm-info'>4</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href='/career-role'>Career Details</Link>
-                  </li>
-                  <li>
-                    <Link href='/contacts'>Contact Us</Link>
-                  </li>
+                  {headerData?.product_links?.map((product_link, index) => (
+                    <li key={index} className='fst-li'>
+                      <Link href={product_link?.path}>
+                        {product_link?.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>{' '}
+              {/* End row */}
+            </div>{' '}
+            {/* End container */}
+          </div>{' '}
+          {/* End wsmegamenu */}
+        </li>{' '}
+        {/* END MEGAMENU */}
+        {/* SIMPLE NAVIGATION LINK */}
+        <li className='nl-simple'>
+          <Link href={headerData?.explore_path || ''} className='h-link'>
+            Explore
+          </Link>
+        </li>
+        {/* SIMPLE NAVIGATION LINK */}
+        <li className='mg_link'>
+          <span
+            className={
+              isActive.key == 2 ? 'wsmenu-click ws-activearrow' : 'wsmenu-click'
+            }
+            onClick={() => handleToggle(2)}>
+            <i className='wsmenu-arrow' />
+          </span>
+          <Link href='#' className='h-link'>
+            Resources <span className='wsarrow' />
+          </Link>
+          <div
+            className='wsmegamenu w-75 clearfix'
+            style={{ display: `${isActive.key == 2 ? 'block' : 'none'}` }}>
+            <div className='container'>
+              <div className='row'>
+                {/* MEGAMENU LINKS */}
+                <ul className='col-md-12 col-lg-3 link-list'>
+                  {headerData?.resources1_links?.map(
+                    (resources1_link, index) => (
+                      <li key={index} className='fst-li'>
+                        <Link href={resources1_link?.path}>
+                          {resources1_link?.title}
+                        </Link>
+                      </li>
+                    ),
+                  )}
                 </ul>
                 {/* MEGAMENU LINKS */}
                 <ul className='col-md-12 col-lg-3 link-list'>
-                  <li>
-                    <Link href='/features'>Core Features</Link>
-                  </li>
-                  <li className='fst-li'>
-                    <Link href='/projects'>Our Projects</Link>
-                  </li>
-                  <li>
-                    <Link href='/project-details'>Project Details</Link>
-                  </li>
-                  <li>
-                    <Link href='/reviews'>Testimonials</Link>
-                  </li>
-                  <li>
-                    <Link href='/download'>Download Page</Link>
-                  </li>
+                  {headerData?.resources2_links?.map(
+                    (resources2_link, index) => (
+                      <li key={index} className='fst-li'>
+                        <Link href={resources2_link?.path}>
+                          {resources2_link?.title}
+                        </Link>
+                      </li>
+                    ),
+                  )}
                 </ul>
                 {/* MEGAMENU LINKS */}
-                <ul className='col-md-12 col-lg-3 link-list'>
+                {/* <ul className='col-md-12 col-lg-3 link-list'>
                   <li className='fst-li'>
                     <Link href='/pricing'>Pricing Page #1</Link>
                   </li>
@@ -136,9 +166,9 @@ export default function MobileMenu() {
                   <li>
                     <Link href='/404'>404 Page</Link>
                   </li>
-                </ul>
+                </ul> */}
                 {/* MEGAMENU LINKS */}
-                <ul className='col-md-12 col-lg-3 link-list'>
+                {/* <ul className='col-md-12 col-lg-3 link-list'>
                   <li className='fst-li'>
                     <Link href='/blog-listing'>Blog Listing</Link>
                   </li>
@@ -154,7 +184,7 @@ export default function MobileMenu() {
                   <li>
                     <Link href='/reset-password'>Reset Password</Link>
                   </li>
-                </ul>
+                </ul> */}
               </div>{' '}
               {/* End row */}
             </div>{' '}
@@ -162,32 +192,18 @@ export default function MobileMenu() {
           </div>{' '}
           {/* End wsmegamenu */}
         </li>{' '}
-        {/* END MEGAMENU */}
-        {/* SIMPLE NAVIGATION LINK */}
-        <li className='nl-simple'>
-          <Link href='/pricing' className='h-link'>
-            Pricing
-          </Link>
-        </li>
-        {/* SIMPLE NAVIGATION LINK */}
-        <li className='nl-simple'>
-          <Link href='#faqs-3' className='h-link'>
-            FAQs
-          </Link>
-        </li>
         {/* SIGN IN LINK */}
-        <li className='nl-simple reg-fst-link mobile-last-link'>
-          <Link href='/login-2' className='h-link'>
-            Sign in
+        <li className='nl-simple'>
+          <Link href={headerData?.templates_path || ''} className='h-link'>
+            Templates
           </Link>
         </li>
         {/* SIGN UP BUTTON */}
         <li className='nl-simple'>
           <Link
-            href='/signup-2'
-            className='btn r-04 btn--theme hover--tra-white last-link'
-          >
-            Sign up
+            href='https://cloud.contentql.io/guest'
+            className='btn r-04 btn--theme hover--tra-white last-link'>
+            Sign in
           </Link>
         </li>
       </ul>

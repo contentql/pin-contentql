@@ -1,11 +1,11 @@
 import { Block } from 'payload/types'
 
-export const PricingFaqs: Block = {
-  slug: 'pricingFaqs',
-  imageURL: '/images/blocks/PricingFaqs.jpg',
+export const Terms: Block = {
+  slug: 'terms',
+  imageURL: '/images/blocks/Terms.jpg',
   labels: {
-    singular: 'PricingFaqs Block',
-    plural: 'PricingFaqs Blocks',
+    singular: 'Terms Block',
+    plural: 'Terms Blocks',
   },
   fields: [
     {
@@ -21,26 +21,32 @@ export const PricingFaqs: Block = {
       required: true,
     },
     {
-      name: 'questions',
-      label: 'Questions',
-      type: 'array',
+      name: 'terms',
+      label: 'Terms',
       required: true,
+      type: 'array',
       fields: [
         {
-          name: 'question',
-          label: 'Question',
+          name: 's_number',
+          label: 'S Number',
+          type: 'number',
+          required: true,
+        },
+        {
+          name: 'title',
+          label: 'Title',
           type: 'text',
           required: true,
         },
         {
-          name: 'answer_paragraphs',
-          label: 'Answer Paragraphs',
-          type: 'array',
+          name: 'descriptions',
+          label: 'descriptions',
           required: true,
+          type: 'array',
           fields: [
             {
-              name: 'answer',
-              label: 'Answer',
+              name: 'description',
+              label: 'Description',
               type: 'textarea',
               required: true,
             },
