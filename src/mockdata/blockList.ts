@@ -19,6 +19,7 @@ import Brands1_12 from '@/components/sections/Brands1_12'
 import Brands1_17 from '@/components/sections/Brands1_17'
 import Brands1_22 from '@/components/sections/Brands1_22'
 import Careers_1 from '@/components/sections/Careers_1'
+import Cookies from '@/components/sections/Cookies'
 import Ct01_7 from '@/components/sections/Ct01_7'
 import Ct01_8 from '@/components/sections/Ct01_8'
 import Ct01_12 from '@/components/sections/Ct01_12'
@@ -147,6 +148,7 @@ import Team_1 from '@/components/sections/Team_1'
 import TemplatePlain from '@/components/sections/TemplatePlain'
 import TemplateSearch from '@/components/sections/TemplateSearch'
 import Templates from '@/components/sections/Templates'
+import Terms from '@/components/sections/Terms'
 import TextContent_1 from '@/components/sections/TextContent_1'
 import TextContent_2 from '@/components/sections/TextContent_2'
 import WideBlogPost from '@/components/sections/WideBlogPost'
@@ -308,4 +310,6 @@ export const blocks: any = {
   ct05_1: Ct05_1,
   integrations1_8: Integrations1_8,
   banner14_1: Banner14_1,
+  terms: Terms,
+  cookies: Cookies,
 }

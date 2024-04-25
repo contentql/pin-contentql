@@ -399,9 +399,11 @@ export interface Page {
             title: string;
             sub_title: string;
             questions: {
-              question_number: number;
               question: string;
-              answer: string;
+              answer_paragraphs: {
+                answer: string;
+                id?: string | null;
+              }[];
               id?: string | null;
             }[];
             id?: string | null;
@@ -601,7 +603,6 @@ export interface Page {
             title: string;
             sub_title: string;
             questions: {
-              question_number: number;
               question: string;
               answer_paragraphs: {
                 answer: string;
@@ -1048,9 +1049,11 @@ export interface Page {
             title: string;
             sub_title: string;
             questions: {
-              question_number: number;
               question: string;
-              answer: string;
+              answer_paragraphs: {
+                answer: string;
+                id?: string | null;
+              }[];
               id?: string | null;
             }[];
             id?: string | null;
@@ -1924,6 +1927,42 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'banner14_1';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            terms: {
+              s_number: number;
+              title: string;
+              descriptions: {
+                description: string;
+                id?: string | null;
+              }[];
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'terms';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            descriptions: {
+              description: string;
+              id?: string | null;
+            }[];
+            terms: {
+              s_number: number;
+              title: string;
+              descriptions: {
+                description: string;
+                id?: string | null;
+              }[];
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'cookies';
           }
       )[]
     | null;

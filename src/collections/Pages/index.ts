@@ -19,6 +19,7 @@ import { Brands1_12 } from '../../blocks/Brands1_12'
 import { Brands1_17 } from '../../blocks/Brands1_17'
 import { Brands1_22 } from '../../blocks/Brands1_22'
 import { Careers_1 } from '../../blocks/Careers_1'
+import { Cookies } from '../../blocks/Cookies'
 import { Ct01_7 } from '../../blocks/Ct01_7'
 import { Ct01_8 } from '../../blocks/Ct01_8'
 import { Ct01_12 } from '../../blocks/Ct01_12'
@@ -148,6 +149,7 @@ import { TemplateDesigns } from '../../blocks/TemplateDesigns'
 import { TemplatePlain } from '../../blocks/TemplatePlain'
 import { TemplateSearch } from '../../blocks/TemplateSearch'
 import { Templates } from '../../blocks/Templates'
+import { Terms } from '../../blocks/Terms'
 import { TextContent_1 } from '../../blocks/TextContent_1'
 import { TextContent_2 } from '../../blocks/TextContent_2'
 import { WideBlogPost } from '../../blocks/WideBlogPost'
@@ -338,6 +340,8 @@ export const Pages: CollectionConfig = {
         Ct05_1,
         Integrations1_8,
         Banner14_1,
+        Terms,
+        Cookies,
       ],
     },
   ],
