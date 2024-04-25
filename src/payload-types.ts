@@ -1939,7 +1939,7 @@ export interface Page {
             }[];
             id?: string | null;
             blockName?: string | null;
-            blockType: 'Terms';
+            blockType: 'terms';
           }
       )[]
     | null;
