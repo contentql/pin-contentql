@@ -1925,6 +1925,22 @@ export interface Page {
             blockName?: string | null;
             blockType: 'banner14_1';
           }
+        | {
+            title: string;
+            sub_title: string;
+            terms: {
+              s_number: number;
+              title: string;
+              descriptions: {
+                description: string;
+                id?: string | null;
+              }[];
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Terms';
+          }
       )[]
     | null;
   updatedAt: string;

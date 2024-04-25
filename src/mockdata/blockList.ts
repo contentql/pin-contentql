@@ -147,6 +147,7 @@ import Team_1 from '@/components/sections/Team_1'
 import TemplatePlain from '@/components/sections/TemplatePlain'
 import TemplateSearch from '@/components/sections/TemplateSearch'
 import Templates from '@/components/sections/Templates'
+import Terms from '@/components/sections/Terms'
 import TextContent_1 from '@/components/sections/TextContent_1'
 import TextContent_2 from '@/components/sections/TextContent_2'
 import WideBlogPost from '@/components/sections/WideBlogPost'
@@ -308,4 +309,5 @@ export const blocks: any = {
   ct05_1: Ct05_1,
   integrations1_8: Integrations1_8,
   banner14_1: Banner14_1,
+  terms: Terms,
 }

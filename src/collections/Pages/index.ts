@@ -148,6 +148,7 @@ import { TemplateDesigns } from '../../blocks/TemplateDesigns'
 import { TemplatePlain } from '../../blocks/TemplatePlain'
 import { TemplateSearch } from '../../blocks/TemplateSearch'
 import { Templates } from '../../blocks/Templates'
+import { Terms } from '../../blocks/Terms'
 import { TextContent_1 } from '../../blocks/TextContent_1'
 import { TextContent_2 } from '../../blocks/TextContent_2'
 import { WideBlogPost } from '../../blocks/WideBlogPost'
@@ -338,6 +339,7 @@ export const Pages: CollectionConfig = {
         Ct05_1,
         Integrations1_8,
         Banner14_1,
+        Terms,
       ],
     },
   ],
