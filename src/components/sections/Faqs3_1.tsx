@@ -47,7 +47,7 @@ export default function Faqs3_1({
               {/* QUESTIONS HOLDER */}
               {modifiedQuestions.map((questions, index) => {
                 return (
-                  <div className='col-lg-6'>
+                  <div key={index} className='col-lg-6'>
                     <div className='questions-holder'>
                       {questions.map(
                         ({ id, question, answer_paragraphs }, q_index) => {

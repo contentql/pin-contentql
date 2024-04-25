@@ -45,7 +45,7 @@ export default function Faqs3_13({
             <div className='row'>
               {/* QUESTIONS HOLDER */}
               {modifiedQuestions?.map((questions, index) => (
-                <div className='col-lg-6'>
+                <div key={index} className='col-lg-6'>
                   <div className='questions-holder'>
                     {/* QUESTION #1 */}
                     {questions?.map((question, q_index) => (
