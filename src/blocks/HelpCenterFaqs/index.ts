@@ -28,30 +28,37 @@ export const HelpCenterFaqs: Block = {
         },
       ],
     },
-
     {
-      name: 'questions',
-      label: 'Questions',
-      required: true,
+      name: 'list_of_questions',
+      label: 'List of Questions',
       type: 'array',
+      required: true,
       fields: [
         {
-          name: 'question',
-          label: 'Question',
-          type: 'text',
+          name: 'questions',
+          label: 'Questions',
           required: true,
-        },
-        {
-          name: 'answer',
-          label: 'Answer',
           type: 'array',
-          required: true,
           fields: [
             {
-              name: 'answer_paragraph',
-              label: 'Answer Paragraph',
-              type: 'textarea',
+              name: 'question',
+              label: 'Question',
+              type: 'text',
               required: true,
+            },
+            {
+              name: 'answer',
+              label: 'Answer',
+              type: 'array',
+              required: true,
+              fields: [
+                {
+                  name: 'answer_paragraph',
+                  label: 'Answer Paragraph',
+                  type: 'textarea',
+                  required: true,
+                },
+              ],
             },
           ],
         },

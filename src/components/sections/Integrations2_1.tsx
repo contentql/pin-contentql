@@ -1,12 +1,23 @@
-import tool1 from '/public/images/png_icons/tool-1.png'
-import tool2 from '/public/images/png_icons/tool-2.png'
-import tool3 from '/public/images/png_icons/tool-3.png'
-import tool4 from '/public/images/png_icons/tool-4.png'
-import tool5 from '/public/images/png_icons/tool-5.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Integrations2_1() {
+import { Media } from '@/payload-types'
+
+export default function Integrations2_1({
+  title,
+  subtitle,
+  integrations,
+  button_text,
+}: {
+  title?: string
+  subtitle?: string
+  integrations?: {
+    title: string
+    integration_image: string | Media
+    id?: string | null
+  }[]
+  button_text?: string
+}) {
   return (
     <>
       <section id='integrations-2' className='pt-100 integrations-section'>
@@ -18,78 +29,40 @@ export default function Integrations2_1() {
               <div className='col-md-10 col-lg-9'>
                 <div className='section-title mb-50'>
                   {/* Title */}
-                  <h2 className='s-50 w-700'>
-                    Automate your workflow with our integrations
-                  </h2>
+                  <h2 className='s-50 w-700'>{title}</h2>
                   {/* Text */}
-                  <p className='s-21 color--grey'>
-                    Ligula risus auctor tempus magna feugiat lacinia.
-                  </p>
+                  <p className='s-21 color--grey'>{subtitle}</p>
                 </div>
               </div>
             </div>
             {/* TOOLS ROW */}
             <div className='row row-cols-1 row-cols-sm-3 row-cols-md-5'>
               {/* TOOL #1 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-1 r-12 wow fadeInUp'>
-                  {/* Logo */}
-                  <div className='in_tool_logo ico-65 bg--white-100 block-shadow r-12'>
-                    <Image className='img-fluid' src={tool1} alt='brand-logo' />
-                  </div>
-                  {/* Title */}
-                  <h6 className='s-17 w-700'>Zapier</h6>
-                </Link>
-              </div>{' '}
+              {integrations?.map((integration, index) => (
+                <div key={integration?.id} className='col'>
+                  <Link
+                    href='#'
+                    className={`in_tool it-${index + 1} r-12 wow fadeInUp`}>
+                    {/* Logo */}
+                    <div className='in_tool_logo ico-65 bg--white-100 block-shadow r-12'>
+                      <Image
+                        className='img-fluid'
+                        src={
+                          (integration?.integration_image as Media)?.url || ''
+                        }
+                        alt={
+                          (integration?.integration_image as Media)?.alt || ''
+                        }
+                        height={500}
+                        width={500}
+                      />
+                    </div>
+                    {/* Title */}
+                    <h6 className='s-17 w-700'>{integration?.title}</h6>
+                  </Link>
+                </div>
+              ))}
               {/* END TOOL #1 */}
-              {/* TOOL #2 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-2 r-12 wow fadeInUp'>
-                  {/* Logo */}
-                  <div className='in_tool_logo ico-65 bg--white-100 block-shadow r-12'>
-                    <Image className='img-fluid' src={tool2} alt='brand-logo' />
-                  </div>
-                  {/* Title */}
-                  <h6 className='s-17 w-700'>Google Analytics</h6>
-                </Link>
-              </div>{' '}
-              {/* END TOOL #2 */}
-              {/* TOOL #3 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-3 r-12 wow fadeInUp'>
-                  {/* Logo */}
-                  <div className='in_tool_logo ico-65 bg--white-100 block-shadow r-12'>
-                    <Image className='img-fluid' src={tool3} alt='brand-logo' />
-                  </div>
-                  {/* Title */}
-                  <h6 className='s-17 w-700'>Amplitude</h6>
-                </Link>
-              </div>{' '}
-              {/* END TOOL #3 */}
-              {/* TOOL #4 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-4 r-12 wow fadeInUp'>
-                  {/* Logo */}
-                  <div className='in_tool_logo ico-65 bg--white-100 block-shadow r-12'>
-                    <Image className='img-fluid' src={tool4} alt='brand-logo' />
-                  </div>
-                  {/* Title */}
-                  <h6 className='s-17 w-700'>Hubspot</h6>
-                </Link>
-              </div>{' '}
-              {/* END TOOL #4 */}
-              {/* TOOL #5 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-5 r-12 wow fadeInUp'>
-                  {/* Logo */}
-                  <div className='in_tool_logo ico-65 bg--white-100 block-shadow r-12'>
-                    <Image className='img-fluid' src={tool5} alt='brand-logo' />
-                  </div>
-                  {/* Title */}
-                  <h6 className='s-17 w-700'>MailChimp</h6>
-                </Link>
-              </div>{' '}
-              {/* END TOOL #5 */}
             </div>{' '}
             {/* END TOOLS ROW */}
             {/* MORE BUTTON */}
@@ -98,9 +71,8 @@ export default function Integrations2_1() {
                 <div className='more-btn text-center mt-60 wow fadeInUp'>
                   <Link
                     href='/integrations'
-                    className='btn btn--tra-black hover--theme'
-                  >
-                    View all integrations
+                    className='btn btn--tra-black hover--theme'>
+                    {button_text}
                   </Link>
                 </div>
               </div>

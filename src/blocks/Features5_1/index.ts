@@ -29,13 +29,23 @@ export const Features5_1: Block = {
       required: true,
     },
     {
-      name: 'image1',
-      label: 'Image 1',
+      name: 'light_theme_image1',
+      label: 'Light Theme Image 1',
       type: 'upload',
       relationTo: 'media',
       required: true,
       admin: {
-        description: 'left side Image',
+        description: 'Light Theme Image',
+      },
+    },
+    {
+      name: 'dark_theme_image1',
+      label: 'Dark Theme Image 1',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+      admin: {
+        description: 'Dark Theme Image',
       },
     },
     {
@@ -51,13 +61,23 @@ export const Features5_1: Block = {
       required: true,
     },
     {
-      name: 'image2',
-      label: 'Image 2',
+      name: 'light_theme_image2',
+      label: 'Light Theme Image 2',
       type: 'upload',
       relationTo: 'media',
       required: true,
       admin: {
-        description: 'right side Image',
+        description: 'Light Theme Image',
+      },
+    },
+    {
+      name: 'dark_theme_image2',
+      label: 'Dark Theme Image 2',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+      admin: {
+        description: 'Dark Theme Image',
       },
     },
   ],

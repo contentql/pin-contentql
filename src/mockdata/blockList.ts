@@ -8,6 +8,7 @@ import Banner13_3 from '@/components/sections/Banner13_3'
 import Banner13_5 from '@/components/sections/Banner13_5'
 import Banner13_7 from '@/components/sections/Banner13_7'
 import Banner13_9 from '@/components/sections/Banner13_9'
+import Banner14_1 from '@/components/sections/Banner14_1'
 import Banner_4 from '@/components/sections/Banner_4'
 import Banner_12 from '@/components/sections/Banner_12'
 import Blog1_6 from '@/components/sections/Blog1_6'
@@ -49,6 +50,7 @@ import Ct04_7 from '@/components/sections/Ct04_7'
 import Ct04_8 from '@/components/sections/Ct04_8'
 import Ct04_15 from '@/components/sections/Ct04_15'
 import Ct04_16 from '@/components/sections/Ct04_16'
+import Ct05_1 from '@/components/sections/Ct05_1'
 import ExpertsTeam from '@/components/sections/ExpertsTeam'
 import Faqs3_1 from '@/components/sections/Faqs3_1'
 import Faqs3_13 from '@/components/sections/Faqs3_13'
@@ -89,6 +91,8 @@ import Hero21 from '@/components/sections/Hero21'
 import Hero23 from '@/components/sections/Hero23'
 import Hero25 from '@/components/sections/Hero25'
 import Hero27 from '@/components/sections/Hero27'
+import Hero28 from '@/components/sections/Hero28'
+import Integrations1_8 from '@/components/sections/Integrations1_8'
 import Integrations2_1 from '@/components/sections/Integrations2_1'
 import Lnk1_5 from '@/components/sections/Lnk1_5'
 import Lnk1_10 from '@/components/sections/Lnk1_10'
@@ -300,4 +304,8 @@ export const blocks: any = {
   banner_4: Banner_4,
   helpCenterFaqs: HelpCenterFaqs,
   helpCenterBanner: HelpCenterBanner,
+  hero28: Hero28,
+  ct05_1: Ct05_1,
+  integrations1_8: Integrations1_8,
+  banner14_1: Banner14_1,
 }

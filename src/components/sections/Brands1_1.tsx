@@ -1,6 +1,6 @@
 import BrandSlider1 from '../slider/BrandSlider1'
 
-export default function Brands1_1() {
+export default function Brands1_1({ title }: { title?: string }) {
   return (
     <>
       <div id='brands-1' className='pt-80 pb-100 brands-section'>
@@ -9,9 +9,7 @@ export default function Brands1_1() {
           <div className='row justify-content-center'>
             <div className='col-md-10 col-lg-9'>
               <div className='brands-title mb-50'>
-                <h5 className='s-18'>
-                  ContentQL is loved and trusted by thousands:
-                </h5>
+                <h5 className='s-18'>{title}</h5>
               </div>
             </div>
           </div>

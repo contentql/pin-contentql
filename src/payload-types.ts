@@ -445,10 +445,12 @@ export interface Page {
             sub_title: string;
             heading1: string;
             description1: string;
-            image1: string | Media;
+            light_theme_image1: string | Media;
+            dark_theme_image1: string | Media;
             heading2: string;
             description2: string;
-            image2: string | Media;
+            light_theme_image2: string | Media;
+            dark_theme_image2: string | Media;
             id?: string | null;
             blockName?: string | null;
             blockType: 'features5_1';
@@ -572,7 +574,8 @@ export interface Page {
         | {
             title: string;
             ratings: {
-              background_image: string | Media;
+              light_theme_image: string | Media;
+              dark_theme_image: string | Media;
               rating: number;
               rating_out_of: number;
               id?: string | null;
@@ -600,7 +603,10 @@ export interface Page {
             questions: {
               question_number: number;
               question: string;
-              answer: string;
+              answer_paragraphs: {
+                answer: string;
+                id?: string | null;
+              }[];
               id?: string | null;
             }[];
             id?: string | null;
@@ -1852,10 +1858,13 @@ export interface Page {
               link_text: string;
               id?: string | null;
             }[];
-            questions: {
-              question: string;
-              answer: {
-                answer_paragraph: string;
+            list_of_questions: {
+              questions: {
+                question: string;
+                answer: {
+                  answer_paragraph: string;
+                  id?: string | null;
+                }[];
                 id?: string | null;
               }[];
               id?: string | null;
@@ -1872,6 +1881,49 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'helpCenterBanner';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero28';
+          }
+        | {
+            caption: string;
+            title: string;
+            subtitle: string;
+            points: {
+              point: string;
+              id?: string | null;
+            }[];
+            background_image: string | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ct05_1';
+          }
+        | {
+            title: string;
+            subtitle: string;
+            integrations: {
+              title: string;
+              subtitle: string;
+              integration_image: string | Media;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'integrations1_8';
+          }
+        | {
+            title: string;
+            sub_title: string;
+            button_text: string;
+            description: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'banner14_1';
           }
       )[]
     | null;
