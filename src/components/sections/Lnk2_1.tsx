@@ -1,8 +1,26 @@
-import img03 from '/public/images/img-03.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Lnk2_1() {
+import { Media } from '@/payload-types'
+
+export default function Lnk2_1({
+  title,
+  subtitle,
+  heading,
+  points,
+  button_text,
+  background_image,
+}: {
+  title?: string
+  subtitle?: string
+  heading?: string
+  points?: {
+    point: string
+    id?: string | null
+  }[]
+  button_text?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section id='lnk-2' className='pt-100 ct-02 content-section division'>
@@ -12,7 +30,13 @@ export default function Lnk2_1() {
             {/* IMAGE BLOCK */}
             <div className='col-md-6'>
               <div className='img-block left-column wow fadeInRight'>
-                <Image className='img-fluid' src={img03} alt='content-image' />
+                <Image
+                  className='img-fluid'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
             {/* TEXT BLOCK */}
@@ -21,42 +45,28 @@ export default function Lnk2_1() {
                 {/* TEXT BOX */}
                 <div className='txt-box'>
                   {/* Title */}
-                  <h5 className='s-24 w-700'>The smarter way to work</h5>
+                  <h5 className='s-24 w-700'>{title}</h5>
                   {/* Text */}
-                  <p>
-                    Sodales tempor sapien quaerat ipsum undo congue laoreet
-                    turpis neque auctor turpis vitae dolor luctus placerat magna
-                    and ligula cursus purus vitae purus an ipsum suscipit
-                  </p>
+                  <p>{subtitle}</p>
                 </div>{' '}
                 {/* END TEXT BOX */}
                 {/* TEXT BOX */}
                 <div className='txt-box mb-0'>
                   {/* Title */}
-                  <h5 className='s-24 w-700'>Full access to all features</h5>
+                  <h5 className='s-24 w-700'>{heading}</h5>
                   {/* List */}
                   <ul className='simple-list'>
-                    <li className='list-item'>
-                      <p>
-                        Cursus purus suscipit vitae cubilia magnis volute
-                        egestas vitae sapien turpis sodales magna undo aoreet
-                        primis
-                      </p>
-                    </li>
-                    <li className='list-item'>
-                      <p className='mb-0'>
-                        Tempor sapien quaerat an ipsum laoreet purus and sapien
-                        dolor an ultrice ipsum aliquam undo congue dolor cursus
-                        purus congue and ipsum purus sapien a blandit
-                      </p>
-                    </li>
+                    {points?.map((point, index) => (
+                      <li key={point?.id} className='list-item'>
+                        <p>{point?.point}</p>
+                      </li>
+                    ))}
                   </ul>
                   {/* Button */}
                   <Link
                     href='#features-2'
-                    className='btn btn-sm r-04 btn--tra-black hover--theme'
-                  >
-                    What&apos;s possible?
+                    className='btn btn-sm r-04 btn--tra-black hover--theme'>
+                    {button_text}
                   </Link>
                 </div>{' '}
                 {/* END TEXT BOX */}

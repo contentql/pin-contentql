@@ -1,8 +1,21 @@
-import hero15Img from '/public/images/hero-15-img.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Hero15() {
+import { Media } from '@/payload-types'
+
+export default function Hero15({
+  title,
+  sub_title,
+  button_text,
+  description,
+  background_image,
+}: {
+  title?: string
+  sub_title?: string
+  button_text?: string
+  description?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section id='hero-15' className='bg--scroll hero-section'>
@@ -12,24 +25,17 @@ export default function Hero15() {
             <div className='col-md-6'>
               <div className='hero-15-txt wow fadeInRight'>
                 {/* Title */}
-                <h2 className='s-54 w-700'>
-                  Create Your Website Easily. Go Code-Free.
-                </h2>
+                <h2 className='s-54 w-700'>{title}</h2>
                 {/* Text */}
-                <p className='p-lg'>
-                  Unlock the freedom to design your website effortlessly, free
-                  from the complexities of coding.
-                </p>
+                <p className='p-lg'>{sub_title}</p>
                 {/* Button */}
                 <Link
                   href='#banner-7'
-                  className='btn r-04 btn--theme hover--tra-black'
-                >
-                  Get started for free
+                  className='btn r-04 btn--theme hover--tra-black'>
+                  {button_text}
                 </Link>
                 <p className='p-sm btn-txt ico-15'>
-                  <span className='flaticon-check' /> No credit card needed,
-                  free 14-day trial
+                  <span className='flaticon-check' /> {description}
                 </p>
               </div>
             </div>{' '}
@@ -37,7 +43,13 @@ export default function Hero15() {
             {/* HERO IMAGE */}
             <div className='col-md-6'>
               <div className='hero-15-img text-center wow fadeInLeft'>
-                <Image className='img-fluid' src={hero15Img} alt='hero-image' />
+                <Image
+                  className='img-fluid'
+                  src={background_image?.url || ''}
+                  alt={background_image?.url || ''}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
           </div>{' '}

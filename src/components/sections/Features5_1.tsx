@@ -1,10 +1,30 @@
-import f06 from '/public/images/f_01.png'
-import f06Dark from '/public/images/f_01_dark.png'
-import f04 from '/public/images/f_02.png'
-import f04Dark from '/public/images/f_02_dark.png'
 import Image from 'next/image'
 
-export default function Features5_1() {
+import { Media } from '@/payload-types'
+
+export default function Features5_1({
+  title,
+  sub_title,
+  heading1,
+  light_theme_image1,
+  dark_theme_image1,
+  light_theme_image2,
+  dark_theme_image2,
+  heading2,
+  description1,
+  description2,
+}: {
+  title?: string
+  sub_title?: string
+  heading1?: string
+  light_theme_image1?: Media
+  dark_theme_image1?: Media
+  light_theme_image2?: Media
+  dark_theme_image2?: Media
+  heading2?: string
+  description1?: string
+  description2?: string
+}) {
   return (
     <>
       <section id='features-5' className='pt-100 features-section division'>
@@ -14,13 +34,9 @@ export default function Features5_1() {
             <div className='col-md-10 col-lg-9'>
               <div className='section-title mb-70'>
                 {/* Title */}
-                <h2 className='s-50 w-700'>
-                  Reach your audience through social media marketing
-                </h2>
+                <h2 className='s-50 w-700'>{title}</h2>
                 {/* Text */}
-                <p className='s-21 color--grey'>
-                  Ligula risus auctor tempus magna feugiat lacinia.
-                </p>
+                <p className='s-21 color--grey'>{sub_title}</p>
               </div>
             </div>
           </div>
@@ -32,23 +48,24 @@ export default function Features5_1() {
                 <div className='fbox-5 fb-1 bg--white-400 r-16 wow fadeInUp'>
                   {/* Text */}
                   <div className='fbox-txt order-last order-md-2'>
-                    <h5 className='s-26 w-700'>Marketing Integrations</h5>
-                    <p>
-                      Aliquam a augue suscipit luctus diam neque purus ipsum
-                      neque and dolor primis libero
-                    </p>
+                    <h5 className='s-26 w-700'>{heading1}</h5>
+                    <p>{description1}</p>
                   </div>
                   {/* Image */}
                   <div className='fbox-5-img order-first order-md-2'>
                     <Image
                       className='img-fluid light-theme-img'
-                      src={f06}
-                      alt='feature-image'
+                      src={light_theme_image1?.url || ''}
+                      alt={light_theme_image1?.alt || ''}
+                      height={1000}
+                      width={1000}
                     />
                     <Image
                       className='img-fluid dark-theme-img'
-                      src={f06Dark}
-                      alt='feature-image'
+                      src={dark_theme_image1?.url || ''}
+                      alt={dark_theme_image1?.alt || ''}
+                      height={1000}
+                      width={1000}
                     />
                   </div>
                 </div>
@@ -61,22 +78,23 @@ export default function Features5_1() {
                   <div className='fbox-5-img'>
                     <Image
                       className='img-fluid light-theme-img'
-                      src={f04}
-                      alt='feature-image'
+                      src={light_theme_image2?.url || ''}
+                      alt={light_theme_image2?.alt || ''}
+                      height={1000}
+                      width={1000}
                     />
                     <Image
                       className='img-fluid dark-theme-img'
-                      src={f04Dark}
-                      alt='feature-image'
+                      src={dark_theme_image2?.url || ''}
+                      alt={dark_theme_image2?.alt || ''}
+                      height={1000}
+                      width={1000}
                     />
                   </div>
                   {/* Text */}
                   <div className='fbox-txt'>
-                    <h5 className='s-26 w-700'>Enhance Engagement</h5>
-                    <p>
-                      Aliquam a augue suscipit luctus diam neque purus ipsum
-                      neque and dolor primis libero
-                    </p>
+                    <h5 className='s-26 w-700'>{heading2}</h5>
+                    <p>{description2}</p>
                   </div>
                 </div>
               </div>{' '}
