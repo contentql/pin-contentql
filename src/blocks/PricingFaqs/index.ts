@@ -27,22 +27,24 @@ export const PricingFaqs: Block = {
       required: true,
       fields: [
         {
-          name: 'question_number',
-          label: 'Question number',
-          type: 'number',
-          required: true,
-        },
-        {
           name: 'question',
           label: 'Question',
           type: 'text',
           required: true,
         },
         {
-          name: 'answer',
-          label: 'Answer',
-          type: 'textarea',
+          name: 'answer_paragraphs',
+          label: 'Answer Paragraphs',
+          type: 'array',
           required: true,
+          fields: [
+            {
+              name: 'answer',
+              label: 'Answer',
+              type: 'textarea',
+              required: true,
+            },
+          ],
         },
       ],
     },

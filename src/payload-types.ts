@@ -399,9 +399,11 @@ export interface Page {
             title: string;
             sub_title: string;
             questions: {
-              question_number: number;
               question: string;
-              answer: string;
+              answer_paragraphs: {
+                answer: string;
+                id?: string | null;
+              }[];
               id?: string | null;
             }[];
             id?: string | null;
@@ -601,7 +603,6 @@ export interface Page {
             title: string;
             sub_title: string;
             questions: {
-              question_number: number;
               question: string;
               answer_paragraphs: {
                 answer: string;
@@ -1048,9 +1049,11 @@ export interface Page {
             title: string;
             sub_title: string;
             questions: {
-              question_number: number;
               question: string;
-              answer: string;
+              answer_paragraphs: {
+                answer: string;
+                id?: string | null;
+              }[];
               id?: string | null;
             }[];
             id?: string | null;
