@@ -1941,6 +1941,26 @@ export interface Page {
             blockName?: string | null;
             blockType: 'terms';
           }
+        | {
+            title: string;
+            sub_title: string;
+            descriptions: {
+              description: string;
+              id?: string | null;
+            }[];
+            terms: {
+              s_number: number;
+              title: string;
+              descriptions: {
+                description: string;
+                id?: string | null;
+              }[];
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'cookies';
+          }
       )[]
     | null;
   updatedAt: string;

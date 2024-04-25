@@ -19,6 +19,7 @@ import Brands1_12 from '@/components/sections/Brands1_12'
 import Brands1_17 from '@/components/sections/Brands1_17'
 import Brands1_22 from '@/components/sections/Brands1_22'
 import Careers_1 from '@/components/sections/Careers_1'
+import Cookies from '@/components/sections/Cookies'
 import Ct01_7 from '@/components/sections/Ct01_7'
 import Ct01_8 from '@/components/sections/Ct01_8'
 import Ct01_12 from '@/components/sections/Ct01_12'
@@ -310,4 +311,5 @@ export const blocks: any = {
   integrations1_8: Integrations1_8,
   banner14_1: Banner14_1,
   terms: Terms,
+  cookies: Cookies,
 }

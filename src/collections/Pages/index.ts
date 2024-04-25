@@ -19,6 +19,7 @@ import { Brands1_12 } from '../../blocks/Brands1_12'
 import { Brands1_17 } from '../../blocks/Brands1_17'
 import { Brands1_22 } from '../../blocks/Brands1_22'
 import { Careers_1 } from '../../blocks/Careers_1'
+import { Cookies } from '../../blocks/Cookies'
 import { Ct01_7 } from '../../blocks/Ct01_7'
 import { Ct01_8 } from '../../blocks/Ct01_8'
 import { Ct01_12 } from '../../blocks/Ct01_12'
@@ -340,6 +341,7 @@ export const Pages: CollectionConfig = {
         Integrations1_8,
         Banner14_1,
         Terms,
+        Cookies,
       ],
     },
   ],
