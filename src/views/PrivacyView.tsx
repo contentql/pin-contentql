@@ -2,7 +2,7 @@
 
 import Layout from '../components/layout/Layout'
 
-import Privacy from '@/components/sections/Privacy'
+import Terms from '@/components/sections/Terms'
 
 export default function PrivacyView() {
   return (
@@ -11,7 +11,7 @@ export default function PrivacyView() {
         headerStyle={1}
         footerStyle={3}
         headerCls='navbar-dark inner-page-header'>
-        <Privacy />
+        <Terms />
       </Layout>
     </>
   )
