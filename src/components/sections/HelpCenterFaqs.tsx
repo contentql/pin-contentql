@@ -124,7 +124,9 @@ const HelpCenterFaqs = ({ title, links, list_of_questions }: Props) => {
                                 }}>
                                 {/* Text */}
                                 {answer.map(ans => {
-                                  return <p>{ans.answer_paragraph}</p>
+                                  return (
+                                    <p key={ans?.id}>{ans.answer_paragraph}</p>
+                                  )
                                 })}
                               </div>
                             </li>
