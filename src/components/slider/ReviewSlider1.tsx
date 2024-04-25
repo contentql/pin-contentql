@@ -65,8 +65,7 @@ export default function ReviewSlider1({
         {reviews?.map((review, index) => (
           <SwiperSlide
             key={review?.id}
-            className='review-1 bg--white-100 block-shadow r-08'
-          >
+            className='review-1 bg--white-100 block-shadow r-08'>
             {/* Quote Icon */}
             <div className='review-ico ico-65'>
               <span className='flaticon-quote' />

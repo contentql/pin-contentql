@@ -1,16 +1,22 @@
-import tool1 from '/public/images/png_icons/tool-1.png'
-import tool2 from '/public/images/png_icons/tool-2.png'
-import tool3 from '/public/images/png_icons/tool-3.png'
-import tool4 from '/public/images/png_icons/tool-4.png'
-import tool5 from '/public/images/png_icons/tool-5.png'
-import tool6 from '/public/images/png_icons/tool-6.png'
-import tool7 from '/public/images/png_icons/tool-7.png'
-import tool8 from '/public/images/png_icons/tool-8.png'
-import tool9 from '/public/images/png_icons/tool-9.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Integrations1_8() {
+import { Media } from '@/payload-types'
+
+export default function Integrations1_8({
+  title,
+  subtitle,
+  integrations,
+}: {
+  title?: string
+  subtitle?: string
+  integrations?: {
+    title: string
+    subtitle: string
+    integration_image: string | Media
+    id?: string | null
+  }[]
+}) {
   return (
     <>
       <section id='integrations-1' className='py-100 integrations-section'>
@@ -20,13 +26,9 @@ export default function Integrations1_8() {
             <div className='col-md-8'>
               <div className='section-title mb-70'>
                 {/* Title */}
-                <h2 className='s-48 w-700'>
-                  Automate your workflow with our integrations
-                </h2>
+                <h2 className='s-48 w-700'>{title}</h2>
                 {/* Text */}
-                <p className='s-21 color--grey'>
-                  Ligula risus auctor tempus magna feugiat lacinia.
-                </p>
+                <p className='s-21 color--grey'>{subtitle}</p>
               </div>
             </div>
           </div>
@@ -34,194 +36,36 @@ export default function Integrations1_8() {
           <div className='integrations-1-wrapper'>
             <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 rows-2'>
               {/* TOOL #1 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-1 r-12 mb-30 wow fadeInUp'>
-                  {/* Icon */}
-                  <div className='in_tool-logo-wrap'>
-                    <div className='in_tool-logo ico-60'>
-                      <Image
-                        className='img-fluid'
-                        src={tool1}
-                        alt='brand-logo'
-                      />
+              {integrations?.map((integration, index) => (
+                <div key={integration?.id} className='col'>
+                  <Link
+                    href='#'
+                    className={`in_tool it-${index + 1} r-12 mb-30 wow fadeInUp`}>
+                    {/* Icon */}
+                    <div className='in_tool-logo-wrap'>
+                      <div className='in_tool-logo ico-60'>
+                        <Image
+                          className='img-fluid'
+                          src={
+                            (integration?.integration_image as Media)?.url || ''
+                          }
+                          alt={
+                            (integration?.integration_image as Media)?.url || ''
+                          }
+                          height={500}
+                          width={500}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  {/* Text */}
-                  <div className='in_tool-txt'>
-                    <h6 className='s-20 w-700'>Zapier</h6>
-                    <p className='p-sm'>Share findings</p>
-                  </div>
-                </Link>
-              </div>{' '}
+                    {/* Text */}
+                    <div className='in_tool-txt'>
+                      <h6 className='s-20 w-700'>{integration?.title}</h6>
+                      <p className='p-sm'>{integration?.subtitle}</p>
+                    </div>
+                  </Link>
+                </div>
+              ))}
               {/* END FEATURE BOX #1 */}
-              {/* TOOL #2 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-2 r-12 mb-30 wow fadeInUp'>
-                  {/* Icon */}
-                  <div className='in_tool-logo-wrap'>
-                    <div className='in_tool-logo ico-60'>
-                      <Image
-                        className='img-fluid'
-                        src={tool2}
-                        alt='brand-logo'
-                      />
-                    </div>
-                  </div>
-                  {/* Text */}
-                  <div className='in_tool-txt'>
-                    <h6 className='s-20 w-700'>Google Analytics</h6>
-                    <p className='p-sm'>Share findings</p>
-                  </div>
-                </Link>
-              </div>{' '}
-              {/* END FEATURE BOX #2 */}
-              {/* TOOL #3 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-3 r-12 mb-30 wow fadeInUp'>
-                  {/* Icon */}
-                  <div className='in_tool-logo-wrap'>
-                    <div className='in_tool-logo ico-60'>
-                      <Image
-                        className='img-fluid'
-                        src={tool3}
-                        alt='brand-logo'
-                      />
-                    </div>
-                  </div>
-                  {/* Text */}
-                  <div className='in_tool-txt'>
-                    <h6 className='s-20 w-700'>Amplitude</h6>
-                    <p className='p-sm'>Share findings</p>
-                  </div>
-                </Link>
-              </div>{' '}
-              {/* END FEATURE BOX #3 */}
-              {/* TOOL #4 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-4 r-12 mb-30 wow fadeInUp'>
-                  {/* Icon */}
-                  <div className='in_tool-logo-wrap'>
-                    <div className='in_tool-logo ico-60'>
-                      <Image
-                        className='img-fluid'
-                        src={tool4}
-                        alt='brand-logo'
-                      />
-                    </div>
-                  </div>
-                  {/* Text */}
-                  <div className='in_tool-txt'>
-                    <h6 className='s-20 w-700'>Hubspot</h6>
-                    <p className='p-sm'>Share findings</p>
-                  </div>
-                </Link>
-              </div>{' '}
-              {/* END FEATURE BOX #4 */}
-              {/* TOOL #5 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-5 r-12 mb-30 wow fadeInUp'>
-                  {/* Icon */}
-                  <div className='in_tool-logo-wrap'>
-                    <div className='in_tool-logo ico-60'>
-                      <Image
-                        className='img-fluid'
-                        src={tool5}
-                        alt='brand-logo'
-                      />
-                    </div>
-                  </div>
-                  {/* Text */}
-                  <div className='in_tool-txt'>
-                    <h6 className='s-20 w-700'>MailChimp</h6>
-                    <p className='p-sm'>Import data</p>
-                  </div>
-                </Link>
-              </div>{' '}
-              {/* END FEATURE BOX #5 */}
-              {/* TOOL #6 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-6 r-12 mb-30 wow fadeInUp'>
-                  {/* Icon */}
-                  <div className='in_tool-logo-wrap'>
-                    <div className='in_tool-logo ico-60'>
-                      <Image
-                        className='img-fluid'
-                        src={tool6}
-                        alt='brand-logo'
-                      />
-                    </div>
-                  </div>
-                  {/* Text */}
-                  <div className='in_tool-txt'>
-                    <h6 className='s-20 w-700'>Slack</h6>
-                    <p className='p-sm'>Share findings</p>
-                  </div>
-                </Link>
-              </div>{' '}
-              {/* END FEATURE BOX #6 */}
-              {/* TOOL #7 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-7 r-12 wow fadeInUp'>
-                  {/* Icon */}
-                  <div className='in_tool-logo-wrap'>
-                    <div className='in_tool-logo ico-60'>
-                      <Image
-                        className='img-fluid'
-                        src={tool7}
-                        alt='brand-logo'
-                      />
-                    </div>
-                  </div>
-                  {/* Text */}
-                  <div className='in_tool-txt'>
-                    <h6 className='s-20 w-700'>Dropbox</h6>
-                    <p className='p-sm'>Import data</p>
-                  </div>
-                </Link>
-              </div>{' '}
-              {/* END FEATURE BOX #7 */}
-              {/* TOOL #8 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-8 r-12 wow fadeInUp'>
-                  {/* Icon */}
-                  <div className='in_tool-logo-wrap'>
-                    <div className='in_tool-logo ico-60'>
-                      <Image
-                        className='img-fluid'
-                        src={tool8}
-                        alt='brand-logo'
-                      />
-                    </div>
-                  </div>
-                  {/* Text */}
-                  <div className='in_tool-txt'>
-                    <h6 className='s-20 w-700'>Trello</h6>
-                    <p className='p-sm'>Share findings</p>
-                  </div>
-                </Link>
-              </div>{' '}
-              {/* END FEATURE BOX #8 */}
-              {/* TOOL #9 */}
-              <div className='col'>
-                <Link href='#' className='in_tool it-9 r-12 wow fadeInUp'>
-                  {/* Icon */}
-                  <div className='in_tool-logo-wrap'>
-                    <div className='in_tool-logo ico-60'>
-                      <Image
-                        className='img-fluid'
-                        src={tool9}
-                        alt='brand-logo'
-                      />
-                    </div>
-                  </div>
-                  {/* Text */}
-                  <div className='in_tool-txt'>
-                    <h6 className='s-20 w-700'>Google Drive</h6>
-                    <p className='p-sm'>Import data</p>
-                  </div>
-                </Link>
-              </div>{' '}
-              {/* END FEATURE BOX #9 */}
             </div>
           </div>{' '}
           {/* END INTEGRATIONS-1 WRAPPER */}
@@ -231,8 +75,7 @@ export default function Integrations1_8() {
               <div className='more-btn text-center mt-60 wow fadeInUp'>
                 <Link
                   href='/integrations'
-                  className='btn btn--tra-black hover--theme'
-                >
+                  className='btn btn--tra-black hover--theme'>
                   View all integrations
                 </Link>
               </div>

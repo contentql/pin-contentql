@@ -1,7 +1,19 @@
-import img09 from '/public/images/img-09.png'
 import Image from 'next/image'
 
-export default function Ct02_2() {
+import { Media } from '@/payload-types'
+
+export default function Ct02_2({
+  features,
+  background_image,
+}: {
+  features?: {
+    s_no: number
+    title: string
+    description: string
+    id?: string | null
+  }[]
+  background_image?: Media
+}) {
   return (
     <>
       <section className='pt-100 ct-02 content-section division'>
@@ -11,69 +23,36 @@ export default function Ct02_2() {
             {/* IMAGE BLOCK */}
             <div className='col-md-6'>
               <div className='img-block left-column wow fadeInRight'>
-                <Image className='img-fluid' src={img09} alt='content-image' />
+                <Image
+                  className='img-fluid'
+                  src={background_image?.url || ''}
+                  alt={background_image?.alt || ''}
+                  height={1000}
+                  width={1000}
+                />
               </div>
             </div>
             {/* TEXT BLOCK */}
             <div className='col-md-6'>
               <div className='txt-block right-column wow fadeInLeft'>
                 {/* CONTENT BOX #1 */}
-                <div className='cbox-2 process-step'>
-                  {/* Icon */}
-                  <div className='ico-wrap'>
-                    <div className='cbox-2-ico bg--theme color--white'>1</div>
-                    <span className='cbox-2-line' />
+                {features?.map((feature, index) => (
+                  <div key={feature?.id} className='cbox-2 process-step'>
+                    {/* Icon */}
+                    <div className='ico-wrap'>
+                      <div className='cbox-2-ico bg--theme color--white'>
+                        {feature?.s_no}
+                      </div>
+                      <span className='cbox-2-line' />
+                    </div>
+                    {/* Text */}
+                    <div className='cbox-2-txt'>
+                      <h5 className='s-22 w-700'>{feature?.title}</h5>
+                      <p>{feature?.description}</p>
+                    </div>
                   </div>
-                  {/* Text */}
-                  <div className='cbox-2-txt'>
-                    <h5 className='s-22 w-700'>Register in 30 seconds</h5>
-                    <p>
-                      Register swiftly with ContentQL, initiating your journey
-                      to website creation in just 30 seconds. Seamlessly unlock
-                      the power of intuitive design tools
-                    </p>
-                  </div>
-                </div>{' '}
+                ))}
                 {/* END CONTENT BOX #1 */}
-                {/* CONTENT BOX #2 */}
-                <div className='cbox-2 process-step'>
-                  {/* Icon */}
-                  <div className='ico-wrap'>
-                    <div className='cbox-2-ico bg--theme color--white'>2</div>
-                    <span className='cbox-2-line' />
-                  </div>
-                  {/* Text */}
-                  <div className='cbox-2-txt'>
-                    <h5 className='s-22 w-700'>Choose Your Preference</h5>
-                    <p>
-                      In a world of diverse digital possibilities, your journey
-                      begins with a simple decision. Whether crafting an
-                      immersive website, designing engaging popups, or narrating
-                      captivating stories.
-                    </p>
-                  </div>
-                </div>{' '}
-                {/* END CONTENT BOX #2 */}
-                {/* CONTENT BOX #3 */}
-                <div className='cbox-2 process-step'>
-                  {/* Icon */}
-                  <div className='ico-wrap'>
-                    <div className='cbox-2-ico bg--theme color--white'>3</div>
-                  </div>
-                  {/* Text */}
-                  <div className='cbox-2-txt'>
-                    <h5 className='s-22 w-700'>
-                      Design Your Masterpiece: Begin or Personalize
-                    </h5>
-                    <p className='mb-0'>
-                      Your digital canvas awaits your touch. Whether you&apos;re
-                      an artist starting with a blank slate or a curator
-                      enhancing existing beauty, our platform empowers you to
-                      shape your vision.
-                    </p>
-                  </div>
-                </div>{' '}
-                {/* END CONTENT BOX #3 */}
               </div>
             </div>{' '}
             {/* END TEXT BLOCK */}

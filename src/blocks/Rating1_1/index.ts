@@ -20,13 +20,23 @@ export const Rating1_1: Block = {
       required: true,
       fields: [
         {
-          name: 'background_image',
-          label: 'Background Image',
+          name: 'light_theme_image',
+          label: 'Light Theme Image',
           type: 'upload',
           relationTo: 'media',
           required: true,
           admin: {
-            description: 'rating image',
+            description: 'Light Theme image',
+          },
+        },
+        {
+          name: 'dark_theme_image',
+          label: 'Dark Theme Image',
+          type: 'upload',
+          relationTo: 'media',
+          required: true,
+          admin: {
+            description: 'Dark Theme image',
           },
         },
         {

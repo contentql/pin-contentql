@@ -2,6 +2,7 @@ import { Block } from 'payload/types'
 
 export const Faqs3_1: Block = {
   slug: 'faqs3_1',
+  imageURL: '/images/blocks/Faqs3_1.jpg',
   labels: {
     singular: 'Faqs3_1 Block',
     plural: 'Faqs3_1 Blocks',
@@ -38,10 +39,18 @@ export const Faqs3_1: Block = {
           required: true,
         },
         {
-          name: 'answer',
-          label: 'Answer',
-          type: 'textarea',
+          name: 'answer_paragraphs',
+          label: 'Answer Paragraphs',
+          type: 'array',
           required: true,
+          fields: [
+            {
+              name: 'answer',
+              label: 'Answer',
+              type: 'textarea',
+              required: true,
+            },
+          ],
         },
       ],
     },

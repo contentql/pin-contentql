@@ -1,8 +1,17 @@
 import VideoPopup from '../elements/VidepPopup'
-import hero1_3 from '/public/images/hero-1.3.png'
 import Image from 'next/image'
 
-export default function Lnk3_1() {
+import { Media } from '@/payload-types'
+
+export default function Lnk3_1({
+  title,
+  sub_title,
+  background_image,
+}: {
+  sub_title?: string
+  title?: string
+  background_image?: Media
+}) {
   return (
     <>
       <section id='lnk-3' className='bg--04 ct-10 content-section division'>
@@ -13,13 +22,9 @@ export default function Lnk3_1() {
               <div className='col-md-10 col-lg-9'>
                 <div className='section-title mb-70'>
                   {/* Title */}
-                  <h2 className='s-50 w-700'>
-                    Track the progress towards objectives with key results
-                  </h2>
+                  <h2 className='s-50 w-700'>{title}</h2>
                   {/* Text */}
-                  <p className='s-21'>
-                    Ligula risus auctor tempus magna feugiat lacinia.
-                  </p>
+                  <p className='s-21'>{sub_title}</p>
                 </div>
               </div>
             </div>
@@ -32,8 +37,10 @@ export default function Lnk3_1() {
                   {/* Preview Image */}
                   <Image
                     className='img-fluid'
-                    src={hero1_3}
-                    alt='video-preview'
+                    src={background_image?.url || ''}
+                    alt={background_image?.alt || ''}
+                    height={2000}
+                    width={2000}
                   />
                 </div>
               </div>
