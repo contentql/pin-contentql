@@ -2,6 +2,7 @@ import { Block } from 'payload/types'
 
 export const Features5_1: Block = {
   slug: 'features5_1',
+  imageURL: '/images/blocks/Features5_1.jpg',
   labels: { singular: 'Features5_1 Block', plural: 'Features5_1 Blocks' },
   fields: [
     {
