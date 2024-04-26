@@ -2,6 +2,7 @@ import { Block } from 'payload/types'
 
 export const Integrations2_1: Block = {
   slug: 'integrations2_1',
+  imageURL: '/images/blocks/Integrations2_1.jpg',
   labels: {
     singular: 'Integrations2_1 Block',
     plural: 'Integrations2_1 Blocks',
