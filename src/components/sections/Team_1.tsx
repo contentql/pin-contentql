@@ -42,7 +42,7 @@ const Team_1 = ({
                 <div className='team-member mb-50 wow fadeInUp'>
                   {/* Team Member Photo */}
                   <div className='team-member-photo r-14'>
-                    <div className='hover-overlay'>
+                    <div className=''>
                       <Image
                         className='img-fluid'
                         src={(card?.image as Media)?.url || ''}
