@@ -43,7 +43,7 @@ export default function Projects1_3({
                     {/* Image */}
                     <div className='project-preview r-10'>
                       {/* Project Preview */}
-                      <div className='hover-overlay'>
+                      <div className=''>
                         <Image
                           className='img-fluid'
                           src={(cardData?.background_image as Media)?.url || ''}
