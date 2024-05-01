@@ -39,7 +39,7 @@ const ExpertsTeam = ({
                   className='team-member mb-60 wow fadeInUp'>
                   {/* Team Member Photo */}
                   <div className='team-member-photo r-14'>
-                    <div className='hover-overlay'>
+                    <div className=''>
                       <Image
                         className='img-fluid'
                         src={(team_card?.image as Media)?.url || ''}

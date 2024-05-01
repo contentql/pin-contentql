@@ -11,6 +11,7 @@ export interface Config {
     users: User;
     media: Media;
     pages: Page;
+    blogs: Blog;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
@@ -1966,6 +1967,37 @@ export interface Page {
           }
       )[]
     | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blogs".
+ */
+export interface Blog {
+  id: string;
+  tag: string;
+  title: string;
+  image: string | Media;
+  description: string;
+  creator_name: string;
+  created_date: string;
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  content_html?: string | null;
   updatedAt: string;
   createdAt: string;
 }

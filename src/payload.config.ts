@@ -6,6 +6,7 @@ import dotenv from 'dotenv'
 import path from 'path'
 import { buildConfig } from 'payload/config'
 
+import { Blogs } from './collections/Blogs'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import Users from './collections/Users'
@@ -21,7 +22,7 @@ dotenv.config({
 
 export default buildConfig({
   serverURL: process.env.NEXT_PUBLIC_SERVER_URL!,
-  collections: [Users, Media, Pages],
+  collections: [Users, Media, Pages, Blogs],
   globals: [Header, Footer],
   routes: {
     admin: '/admin',
