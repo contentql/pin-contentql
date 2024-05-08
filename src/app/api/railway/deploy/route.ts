@@ -88,10 +88,12 @@ const variables = {
   },
 }
 
-export async function GET(request: Request) {
+const handler = async () => {
   const res = await fetch(
     `https://hasura-template-production.up.railway.app/v1/graphql`,
+
     {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'x-hasura-admin-secret': process.env.HASURA_API_KEY!,
@@ -104,3 +106,5 @@ export async function GET(request: Request) {
 
   return Response.json({ data })
 }
+
+export { handler as GET, handler as POST }
